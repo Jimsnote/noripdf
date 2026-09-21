@@ -43,13 +43,15 @@ console.log('wrote public/wasm/manifest.json');
 //   core 的 .wasm.js 加载器按 worker 脚本所在目录解析同名 .wasm —— 所以全部文件平铺同目录。
 // - langPath 直接拼接 `${langPath}/eng.traineddata.gz`（自定义 langPath 时不再附加 lang/版本段）。
 // - lstmOnly 模式用 4.0.0_best_int 语言数据（更小更准）。
+// - 한국어 시장 대응：eng + kor 双语种（混排文档识别更好）。
 // ---------------------------------------------------------------------------
 const tesseractOut = join(root, 'public', 'tesseract');
 mkdirSync(tesseractOut, { recursive: true });
 
 const tesseractPkg = dirname(require.resolve('tesseract.js/package.json'));
 const corePkg = dirname(require.resolve('tesseract.js-core/package.json'));
-const langPkg = dirname(require.resolve('@tesseract.js-data/eng/package.json'));
+const engPkg = dirname(require.resolve('@tesseract.js-data/eng/package.json'));
+const korPkg = dirname(require.resolve('@tesseract.js-data/kor/package.json'));
 
 const tesseractFiles = [
   join(tesseractPkg, 'dist', 'worker.min.js'),
@@ -58,7 +60,8 @@ const tesseractFiles = [
     join(corePkg, `tesseract-core-${variant}.wasm.js`),
     join(corePkg, `tesseract-core-${variant}.wasm`),
   ]),
-  join(langPkg, '4.0.0_best_int', 'eng.traineddata.gz'),
+  join(engPkg, '4.0.0_best_int', 'eng.traineddata.gz'),
+  join(korPkg, '4.0.0_best_int', 'kor.traineddata.gz'),
 ];
 for (const src of tesseractFiles) {
   copyFileSync(src, join(tesseractOut, basename(src)));

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { FileText, Loader2, Trash2 } from 'lucide-react';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 import { pdfToMarkdown } from '@/lib/pdf/pdf-to-markdown';
 import { FileDropzone } from './FileDropzone';
 import { ToolShell } from './ToolShell';

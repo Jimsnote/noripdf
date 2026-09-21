@@ -7,127 +7,127 @@ import type { Guide } from './types';
 export const howToAddPageNumbersToPdf: Guide = {
   slug: 'how-to-add-page-numbers-to-pdf',
   toolSlug: 'page-numbers',
-  title: 'How to Add Page Numbers to a PDF (Free)',
+  title: 'PDF에 페이지 번호 추가하는 방법 (무료)',
   description:
-    'Add page numbers to a PDF in your browser: six positions, "1 of N" format, custom start page and font size. Free, no uploads, no sign-up.',
+    '브라우저에서 PDF에 페이지 번호를 추가하세요: 6가지 위치, "1 / N" 형식, 시작 페이지와 글자 크기 지정. 무료, 업로드 없음, 가입 없음.',
   intro:
-    'The quickest way to add page numbers to a PDF is to stamp them right in your browser: open the free [CoolPDF Page Numbers tool](/page-numbers/), drop in your file, pick one of six positions and a format — plain numbers or "1 of N" — and download the result as numbered.pdf. Everything runs locally on your device: the file is never uploaded, there is no account, and the original stays untouched.',
+    'PDF에 페이지 번호를 추가하는 가장 빠른 방법은 브라우저에서 바로 번호를 찍는 것입니다: 무료 [CPdf 페이지 번호 추가 도구](/page-numbers/)를 열고 파일을 끌어 넣은 뒤, 6가지 위치와 형식 — 일반 숫자 또는 "1 / N" — 중 하나를 고릅니다. 결과는 numbered.pdf로 다운로드됩니다. 모든 처리는 기기 내부에서 이루어집니다: 파일이 업로드되지 않고, 계정이 필요 없으며, 원본은 그대로 유지됩니다.',
   quickSteps: [
-    'Open the Page Numbers tool and drag your PDF onto the upload area — or click to browse. One file at a time, up to 100 MB on desktop (50 MB on mobile).',
-    'Choose a Position — any corner, or centered at the top or bottom — and a Format: "Number only (1, 2, 3…)" or "Number and total (1 of N)".',
-    'Optionally adjust First number, Start numbering on page, and Font size, then click "Add Page Numbers".',
-    'Click "Download" to save the result as numbered.pdf. The original file stays untouched on your device.',
+    '페이지 번호 추가 도구를 열고 PDF를 업로드 영역으로 드래그 앤 드롭하세요. 클릭하여 파일을 찾아도 됩니다. 한 번에 하나씩, 데스크톱 최대 100 MB(모바일 50 MB)까지 처리할 수 있습니다.',
+    '위치 — 네 모서리 또는 위쪽/아래쪽 가운데 — 와 형식을 선택하세요: "숫자만 (1, 2, 3…)" 또는 "숫자와 총 페이지 수 (1 / N)".',
+    '필요하면 첫 번호, 번호 매길 시작 페이지, 글자 크기를 조정한 뒤 "페이지 번호 추가"를 클릭하세요.',
+    '"다운로드"를 클릭하면 결과가 numbered.pdf로 저장됩니다. 원본 파일은 기기에 그대로 남습니다.',
   ],
   sections: [
     {
-      heading: 'Step-by-step: adding page numbers with CoolPDF',
+      heading: '단계별 안내: CPdf로 페이지 번호 추가하기',
       paragraphs: [
-        'Open the [Page Numbers tool](/page-numbers/) — nothing to install, no account to create. Add your PDF by dragging it onto the upload area, or click to browse. The tool numbers one PDF at a time.',
-        'Two settings shape the look. Position offers six radio choices — top or bottom edge, left, center, or right — and the number is drawn 24 points (about 8 mm) in from the edge in dark gray Helvetica. Format is either "Number only (1, 2, 3…)" or "Number and total (1 of N)".',
-        'Three numeric fields control the scheme: First number (default 1), Start numbering on page (default 1 — earlier pages stay clean), and Font size (6–72 pt, default 12). Click "Add Page Numbers"; the stamping runs on your device in a second or two. On the download card, click Download — the output is always named numbered.pdf.',
+        '[페이지 번호 추가 도구](/page-numbers/)를 여세요 — 설치할 것도 만들 계정도 없습니다. PDF를 업로드 영역으로 드래그하거나 클릭하여 파일을 선택하세요. 이 도구는 한 번에 하나의 PDF만 처리합니다.',
+        '모양을 결정하는 설정은 두 가지입니다. 위치는 위쪽/아래쪽 가장자리에 왼쪽, 가운데, 오른쪽 6개의 라디오 버튼이며, 숫자는 가장자리에서 24포인트(약 8mm) 안쪽에 진한 회색 Helvetica로 그려집니다. 형식은 "숫자만 (1, 2, 3…)" 또는 "숫자와 총 페이지 수 (1 / N)" 중 하나입니다.',
+        '세 가지 숫자 필드가 번호 체계를 제어합니다: 첫 번호(기본값 1), 번호 매길 시작 페이지(기본값 1 — 앞 페이지는 그대로 비워둡니다), 글자 크기(6~72pt, 기본값 12). "페이지 번호 추가"를 클릭하면 번호 찍기가 기기에서 1~2초 만에 끝납니다. 다운로드 카드에서 다운로드를 클릭하면 결과는 항상 numbered.pdf라는 이름으로 저장됩니다.',
       ],
       bullets: [
-        'One PDF at a time, up to 100 MB on desktop (50 MB on mobile)',
-        'Six positions; numbers sit 24 pt in from the page edge',
-        'Font size adjustable from 6 to 72 pt (default 12)',
-        'Output is always saved as numbered.pdf',
+        '한 번에 하나의 PDF, 데스크톱 최대 100 MB(모바일 50 MB)',
+        '6가지 위치; 숫자는 페이지 가장자리에서 24pt 안쪽에 배치',
+        '글자 크기 6~72pt 조절(기본값 12)',
+        '결과는 항상 numbered.pdf로 저장',
       ],
       image: {
         src: '/guides/how-to-add-page-numbers-to-pdf/step-1.png',
-        alt: 'The CoolPDF Page Numbers options panel, with six position radio buttons, the "Number only" and "Number and total (1 of N)" format choices, and fields for first number, start page, and font size.',
+        alt: 'CPdf 페이지 번호 추가 도구에 PDF가 추가된 화면. 위치 6개 라디오 버튼이 보이고 아래 가운데가 선택되어 있음',
       },
     },
     {
-      heading: 'Skipping the cover page — or continuing a sequence',
+      heading: '표지를 건너뛰거나 기존 번호를 이어가기',
       paragraphs: [
-        'Most documents that need numbers also have pages that should stay clean — a cover, a title page, a table of contents. Set "Start numbering on page" to 2 and everything before it stays untouched; with "First number" at 1, the body begins at page 1.',
-        'The same two fields also continue an existing sequence: if a report was split into separate files, set "First number" to wherever the previous file ended, and this file picks up the count without a gap.',
-        'In the "1 of N" format the total is the document\u2019s full page count — number from page 2 of a 10-page PDF and the first stamped page reads "1 of 10", not "1 of 9".',
+        '번호가 필요한 문서에는 대개 깨끗하게 남겨두어야 할 페이지가 있습니다 — 표지, 제목 페이지, 목차가 그렇습니다. "번호 매길 시작 페이지"를 2로 설정하면 그 앞의 페이지는 그대로이고, "첫 번호"가 1이면 본문이 1페이지부터 시작됩니다.',
+        '같은 두 필드로 기존 번호 순서도 이어갈 수 있습니다. 보고서가 여러 파일로 나뉘었다면 "첫 번호"를 앞 파일이 끝낸 숫자로 설정하세요. 이 파일은 빈틈 없이 이어서 매겨집니다.',
+        '"숫자와 총 페이지 수 (1 / N)" 형식에서 N은 문서 전체 페이지 수입니다. 10페이지짜리 PDF의 2페이지부터 번호를 매기면 처음 찍히는 페이지는 "1 / 10"으로 표시되며 "1 / 9"가 아닙니다.',
       ],
     },
     {
-      heading: 'Numbering confidential documents without uploading them',
+      heading: '업로드 없이 기밀 문서에 번호 매기기',
       paragraphs: [
-        'Page numbers are usually the last step before a document leaves your hands: the legal filing due at midnight, the board pack, the thesis for the printer. The file is finished — and at its most sensitive — at exactly the moment most online tools ask you to upload it to someone else\u2019s server.',
-        'CoolPDF stamps the numbers where the file already is: your browser reads the PDF, draws the digits, and saves the result back to your disk; nothing crosses the network, so there is no copy to intercept, log, or forget to delete. Load the page, disconnect from the internet, and numbering still works.',
+        '페이지 번호는 보통 문서가 손을 떠나기 직전, 즉 가장 민감해진 순간에 찍습니다 — 자정 마감인 소송 제출 서류, 이사회 자료, 인쇄소로 보내할 학위 논문이 그렇습니다. 그리고 그 순간이 정확히 대부분의 온라인 도구가 파일을 타인의 서버에 올리라고 요구하는 순간이기도 합니다.',
+        'CPdf는 파일이 있는 곳, 바로 기기 안에서 번호를 찍습니다. 브라우저가 PDF를 읽고 숫자를 그린 뒤 결과를 디스크에 저장합니다. 네트워크를 전혀 거치지 않으므로 가로챌 복사본도, 로그도, 삭제하는 것을 잊을 사본도 존재하지 않습니다. 페이지를 불러온 뒤 인터넷 연결을 끊어도 번호 매기기는 그대로 작동합니다.',
       ],
     },
     {
-      heading: 'What to do after numbering',
+      heading: '번호를 매긴 다음에는',
       paragraphs: [
-        'Numbers belong on the final, combined document — if your report is still several files, run it through [Merge PDF](/merge-pdf/) first and number the merged result. If the order needs fixing first, [Organize PDF](/organize-pdf/) rearranges pages visually.',
-        'For documents going out the door, two tools pair naturally: [Add a Watermark](/watermark-pdf/) stamps a "DRAFT" or "CONFIDENTIAL" label, and [Protect PDF](/protect-pdf/) adds an open password before you send. Too heavy for email? [Compress PDF](/compress-pdf/) shrinks the file without touching the numbers.',
+        '번호는 최종적으로 합쳐진 문서에 찍는 것이 원칙입니다. 보고서가 아직 여러 파일이라면 먼저 [PDF 병합](/merge-pdf/)으로 합친 뒤 결과물에 번호를 매기세요. 순서를 먼저 바로잡아야 한다면 [PDF 페이지 정리](/organize-pdf/)로 페이지를 시각적으로 재배열할 수 있습니다.',
+        '문서를 내보내 때는 두 도구가 자연스럽게 이어집니다: [PDF 워터마크](/watermark-pdf/)로 "초안"이나 "기밀" 표시를 찍고, [PDF 보호](/protect-pdf/)로 보내기 전에 열기 비밀번호를 겁니다. 이메일에 넣기엔 너무 크다면 [PDF 압축](/compress-pdf/)으로 번호를 손상시키지 않고 파일 크기를 줄이세요.',
       ],
       image: {
         src: '/guides/how-to-add-page-numbers-to-pdf/step-2.png',
-        alt: 'The download card after numbering, showing the numbered.pdf file name, the output file size, and the Download button.',
+        alt: '페이지 번호 추가 완료 후 파일이 준비되었습니다 카드에 numbered.pdf(3.8 KB)와 다운로드 버튼이 보이는 화면',
       },
     },
   ],
   alternatives: [
     {
-      heading: 'Adobe Acrobat (paid)',
+      heading: 'Adobe Acrobat (유료)',
       paragraphs: [
-        'Acrobat\u2019s Edit PDF mode has a Header & Footer dialog with full control over position, font, and starting page — the polished paid option. It needs a subscription, and the web version uploads your file to Adobe\u2019s servers. If you already have Acrobat it does a fine job; otherwise a free browser tool covers the same numbering with no install and no upload.',
+        'Acrobat의 PDF 편집 모드에는 위치, 글꼴, 시작 페이지까지 세밀하게 제어하는 머리글/바닥글 대화상자가 있어 완성도 높은 유료 옵션입니다. 구독이 필요하고, 웹 버전은 파일을 Adobe 서버에 업로드합니다. 이미 Acrobat이 있다면 잘 쓸 수 있지만, 그렇지 않다면 무료 브라우저 도구가 설치나 업로드 없이 같은 번호 매기기를 처리합니다.',
       ],
     },
     {
-      heading: 'Microsoft Word: the conversion workaround',
+      heading: 'Microsoft Word: 변환 우회 방법',
       paragraphs: [
-        'Word opens most PDFs by converting them into editable documents, where Insert → Page Number works as usual; export back to PDF when done. The catch is the round trip: conversion re-flows the layout, and fonts and spacing often shift. Stamping numbers onto the original PDF, as CoolPDF does, leaves the layout untouched.',
+        'Word는 대부분의 PDF를 편집 가능한 문서로 변환하여 열고, 여기서 끼우기 → 페이지 번호를 평소처럼 사용한 뒤 완성하면 PDF로 다시 내보내야 합니다. 문제는 왕복 변환입니다. 레이아웃이 다시 흐르고 글꼴과 여백이 흔들리는 경우가 많습니다. CPdf처럼 원본 PDF 위에 번호를 찍는 방식은 레이아웃을 그대로 둡니다.',
       ],
     },
     {
-      heading: 'LibreOffice Draw (free desktop)',
+      heading: 'LibreOffice Draw (무료 데스크톱)',
       paragraphs: [
-        'The free LibreOffice suite opens PDFs in Draw, where a page-number field can sit in a header or footer — genuinely free, offline, and private. The friction: every PDF imports as an editable drawing, and complex layouts can wobble. For occasional numbering a browser tool is quicker; for heavy editing, LibreOffice earns its install.',
+        '무료인 LibreOffice 제품군은 Draw에서 PDF를 열고, 머리글이나 바닥글에 페이지 번호 필드를 둘 수 있어 진정으로 무료이고 오프라인이며 사생활을 지킵니다. 불편한 점은 모든 PDF가 편집 가능한 도면으로 들어오며 복잡한 레이아웃이 흔들릴 수 있다는 것입니다. 가끔 번호를 찍는 경우라면 브라우저 도구가 더 빠르고, 대규모 편집이라면 LibreOffice 설치를 고려할 만합니다.',
       ],
     },
   ],
   edgeCases: [
     {
-      heading: 'The PDF is password-protected',
+      heading: 'PDF가 비밀번호로 보호된 경우',
       paragraphs: [
-        'Encrypted PDFs cannot be numbered — the tool stops with "This PDF is password-protected and cannot be processed here." If you know the password, save an open copy with [Unlock PDF](/unlock-pdf/) first and number that copy. Without it, ask the sender for an unprotected version.',
+        '암호화된 PDF에는 번호를 매길 수 없습니다 — 도구는 "이 PDF는 비밀번호로 보호되어 있어 여기서 처리할 수 없습니다."라고 알리고 멈춥니다. 비밀번호를 안다면 먼저 [PDF 잠금 해제](/unlock-pdf/)로 열기 가능한 사본을 저장한 뒤 그 사본에 번호를 매기세요. 비밀번호가 없다면 보낸 사람에게 보호되지 않은 버전을 요청하세요.',
       ],
     },
     {
-      heading: 'The file is over the size limit',
+      heading: '파일 크기 제한을 넘는 경우',
       paragraphs: [
-        'The limits — one PDF, up to 100 MB on desktop and 50 MB on mobile — exist because the whole document is held in your device\u2019s memory while the numbers are drawn. Oversized files are refused at the upload area. The fix is usually [Compress PDF](/compress-pdf/): shrink the file first, then add numbers to the smaller copy.',
+        '제한 — PDF 하나, 데스크톱 최대 100 MB, 모바일 50 MB — 이 존재하는 이유는 번호를 그리는 동안 문서 전체가 기기 메모리에 올라가기 때문입니다. 초과한 파일은 업로드 영역에서 거부됩니다. 해결 방법은 보통 [PDF 압축](/compress-pdf/)입니다: 먼저 파일을 줄인 뒤 작아진 사본에 번호를 매기세요.',
       ],
     },
     {
-      heading: 'Numbering starts beyond the last page',
+      heading: '시작 페이지가 마지막 페이지보다 큰 경우',
       paragraphs: [
-        'If "Start numbering on page" points past the last page, the tool reports that the range exceeds the page count instead of silently doing nothing — check the count in your viewer and pick a page within range. If a number lands on an existing footer, switch to the opposite edge or a free corner: numbers sit 24 points in from the edge, over whatever is already there.',
+        '"번호 매길 시작 페이지"가 마지막 페이지를 지나면 도구는 조용히 아무것도 하지 않는 대신 페이지 수를 초과했다고 알립니다 — 뷰어에서 페이지 수를 확인하고 범위 안의 페이지를 고르세요. 번호가 기존 바닥글 위에 겹치면 반대 가장자리나 빈 모서리로 바꾸세요. 번호는 가장자리에서 24포인트 안쪽에, 이미 있는 내용 위에 그려집니다.',
       ],
     },
   ],
   faqs: [
     {
-      q: 'Is adding page numbers with CoolPDF really free?',
-      a: 'Yes — every tool on CoolPDF is free forever, with no daily quotas, watermarks, or premium tiers. The numbering runs on your own device, so there is no server bill to pass on to you.',
+      q: 'CPdf로 페이지 번호 추가는 정말 무료인가요?',
+      a: '네 — CPdf의 모든 도구는 영구히 무료이며 일일 할당량, 워터마크, 프리미엄 요금제가 없습니다. 번호 매기기가 기기 안에서 이루어지므로 사용자에게 전가할 서버 비용도 없습니다.',
     },
     {
-      q: 'What are the limits?',
-      a: 'One PDF at a time, up to 100 MB on desktop (50 MB on mobile). There is no page-count limit, and the font size can be set anywhere from 6 to 72 pt.',
+      q: '제한 사항은 무엇인가요?',
+      a: '한 번에 PDF 하나, 데스크톱 최대 100 MB(모바일 50 MB)까지입니다. 페이지 수 제한은 없고, 글자 크기는 6~72pt 범위 어디서든 설정할 수 있습니다.',
     },
     {
-      q: 'Is it safe to number confidential documents here?',
-      a: 'Yes. Your file is processed locally in your browser and never uploaded to any server — you can even disconnect after the page loads and it still works. Closing the tab removes every trace of the document.',
+      q: '기밀 문서를 여기서 번호 매겨도 안전한가요?',
+      a: '네. 파일은 브라우저 안에서 로컬로 처리되며 서버에 업로드되지 않습니다. 페이지를 불러온 후 인터넷 연결을 끊어도 작동합니다. 탭을 닫으면 문서의 흔적이 모두 사라집니다.',
     },
     {
-      q: 'Can I skip the cover page or start from a different number?',
-      a: 'Yes. Set "Start numbering on page" to 2 (or later) to leave earlier pages clean, and use "First number" to begin the visible count anywhere — handy when a document continues a sequence from another file.',
+      q: '표지를 건너뛰거나 다른 숫자부터 시작할 수 있나요?',
+      a: '네. "번호 매길 시작 페이지"를 2(또는 그 이후)로 설정하면 앞쪽 페이지를 깨끗하게 남겨두고, "첫 번호"로 보이는 번호를 원하는 숫자부터 시작할 수 있습니다. 다른 파일의 번호를 이어가는 문서에 특히 유용합니다.',
     },
     {
-      q: 'Do I need to sign up or install anything?',
-      a: 'No. There is no account, no email address, and nothing to install. Open the tool page, drop in your PDF, and number it — in any modern browser, on desktop or mobile.',
+      q: '가입하거나 설치해야 하나요?',
+      a: '아니요. 계정도, 이메일 주소도, 설치할 프로그램도 없습니다. 도구 페이지를 열고 PDF를 끌어 넣으면 바로 번호를 매길 수 있습니다 — 데스크톱과 모바일의 모든 최신 브라우저에서 동작합니다.',
     },
     {
-      q: 'Will the numbers show up in other viewers and in print?',
-      a: 'Yes. Numbers are drawn into the PDF as real text in the standard Helvetica font — not an overlay — so they appear in every viewer and in print. The rest of the document is not re-rendered or recompressed.',
+      q: '번호가 다른 뷰어와 인총에서도 보이나요?',
+      a: '네. 번호는 오버레이가 아니라 표준 Helvetica 글꼴의 실제 텍스트로 PDF 안에 그려지므로 모든 뷰어와 인총물에 나타납니다. 문서 나머지 부분은 다시 렌더링되거나 재압축되지 않습니다.',
     },
   ],
   related: ['how-to-add-watermark-to-pdf', 'how-to-merge-pdf', 'how-to-password-protect-pdf'],

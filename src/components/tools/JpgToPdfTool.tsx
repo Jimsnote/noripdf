@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { Image as ImageIcon, Loader2, Trash2 } from 'lucide-react';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 import { normalizeImageForPdf } from '@/lib/pdf/image-orientation';
 import { warmPdfLib } from '@/lib/pdf/pdf-lib';
 import {

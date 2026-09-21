@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import JSZip from 'jszip';
 import { FileText, Loader2, Trash2 } from 'lucide-react';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 import { extractImagesFromPdf } from '@/lib/pdf/extract-images';
 import { FileDropzone } from './FileDropzone';
 import { ToolShell } from './ToolShell';

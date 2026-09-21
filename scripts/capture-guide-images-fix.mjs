@@ -110,7 +110,7 @@ async function main() {
   await run('rotate step-1', async () => {
     await gotoTool('rotate-pdf');
     await upload([join(TMP, 'sample-a.pdf')]);
-    await page.getByText('Selected pages only').click();
+    await page.getByLabel('선택한 페이지만').click();
     await page.locator('input[type="text"]').first().fill('1, 3, 5-8');
     await shotViewport('how-to-rotate-pdf', 'step-1', page.locator('input[type="text"]').first(), 'options with range filled');
   });
@@ -119,7 +119,7 @@ async function main() {
   await run('markdown step-1', async () => {
     await gotoTool('pdf-to-markdown');
     await upload([join(TMP, 'sample-a.pdf')]);
-    await page.getByText('Selected pages only').click();
+    await page.getByText('선택한 페이지만').click();
     await page.locator('input[type="text"]').first().fill('1-3, 5');
     await shotViewport('how-to-convert-pdf-to-markdown', 'step-1', page.locator('input[type="text"]').first(), 'range typed');
   });
@@ -133,7 +133,7 @@ async function main() {
 
   // jpg-to-pdf step-2: options panel (orientation + placement selects)
   await run('jpg-to-pdf step-2', async () => {
-    const orientation = page.getByText('Page orientation').first();
+    const orientation = page.getByText('페이지 방향').first();
     await shotViewport('how-to-convert-jpg-to-pdf', 'step-2', orientation, 'options panel');
   });
 
@@ -141,19 +141,19 @@ async function main() {
   await run('watermark step-2', async () => {
     await gotoTool('watermark-pdf');
     await upload([join(TMP, 'sample-a.pdf')]);
-    await page.getByText(/Image \(PNG or JPG\)/).click();
+    await page.getByText('이미지 (PNG 또는 JPG)').click();
     await page.waitForTimeout(400);
     const inputs = page.locator('input[type="file"]');
     await inputs.nth(1).setInputFiles(logo);
     await page.waitForTimeout(600);
-    await shotViewport('how-to-add-watermark-to-pdf', 'step-2', page.getByText('Image size').first(), 'image watermark options');
+    await shotViewport('how-to-add-watermark-to-pdf', 'step-2', page.getByText('이미지 크기 (페이지 너비 기준)').first(), 'image watermark options');
   });
 
   // protect step-2: permissions panel in default state
   await run('protect step-2', async () => {
     await gotoTool('protect-pdf');
     await upload([join(TMP, 'sample-a.pdf')]);
-    await shotViewport('how-to-password-protect-pdf', 'step-2', page.getByText('Printing').first(), 'permissions panel');
+    await shotViewport('how-to-password-protect-pdf', 'step-2', page.getByText('인쇄').first(), 'permissions panel');
   });
 
   // organize step-2: one tile rotated, one deleted (grid close-up)
@@ -162,9 +162,9 @@ async function main() {
     await upload([join(TMP, 'sample-a.pdf')]);
     await page.locator('img[src^="data:image"]').first().waitFor({ timeout: 30000 });
     await page.waitForTimeout(1000);
-    await page.getByRole('button', { name: 'Rotate page 90°' }).first().click();
+    await page.getByRole('button', { name: '페이지 90° 회전' }).first().click();
     await page.waitForTimeout(1200);
-    await page.getByRole('button', { name: 'Delete page' }).nth(1).click();
+    await page.getByRole('button', { name: '페이지 삭제' }).nth(1).click();
     await page.waitForTimeout(600);
     const grid = page.locator('img[src^="data:image"]').first().locator('xpath=ancestor-or-self::*[contains(@class,"grid")][1]');
     if (await grid.count()) {

@@ -26,7 +26,7 @@ import {
   Trash2,
   Undo2,
 } from 'lucide-react';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 import { organizePdf } from '@/lib/pdf/organize';
 import { warmPdfLib } from '@/lib/pdf/pdf-lib';
 import { loadPdfJsDocument, renderThumbnail, type PdfJsDocument } from '@/lib/pdf/pdfjs';

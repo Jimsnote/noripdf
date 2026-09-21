@@ -1,5 +1,5 @@
 import type { Locale } from '@/i18n/config';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 import { SignPdfTool } from '@/components/tools/SignPdfTool';
 import { ToolPageScaffold } from './ToolPageScaffold';
 

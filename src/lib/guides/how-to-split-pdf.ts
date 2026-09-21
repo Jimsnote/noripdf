@@ -1,66 +1,66 @@
 import type { Guide } from './types';
 
 /**
- * Facts below were checked against components/tools/SplitPdfTool.tsx,
- * lib/pdf/split.ts, lib/pdf/page-ranges.ts, and the split-pdf entry in
- * i18n/locales/en.ts — keep them in sync.
+ * 아래 사실들은 components/tools/SplitPdfTool.tsx, lib/pdf/split.ts,
+ * lib/pdf/page-ranges.ts, 그리고 i18n/locales/ko.ts의 split-pdf 항목과
+ * 대조해 확인한 내용입니다 — 도구 동작이 바뀌면 이 파일도 함께 맞춰 주세요.
  */
 export const howToSplitPdf: Guide = {
   slug: 'how-to-split-pdf',
   toolSlug: 'split-pdf',
-  title: 'How to Split a PDF into Pages or Ranges (Free)',
+  title: 'PDF를 페이지 또는 범위로 분할하는 방법 (무료)',
   description:
-    'Split a PDF into single pages, custom ranges, or equal chunks — free, in your browser. No uploads, no sign-up. Step-by-step with all three split modes.',
+    'PDF를 한 페이지씩, 원하는 범위(1-3, 5-8), 동일한 묶음으로 무료로 분할하세요. 브라우저에서 바로 처리되며 업로드와 가입이 필요 없습니다. 세 가지 분할 모드를 모두 다루는 단계별 안내.',
   intro:
-    'The fastest way to split a PDF is to do it right in your browser: open the free [CoolPDF Split PDF tool](/split-pdf/), drop in one document, choose a mode — every page separately, custom ranges like 1-3, 5-8, or equal chunks — click Split PDF, and download the parts. Because the splitting runs locally on your device, the file is never uploaded: no server, no account, no queue, and no watermark on the output.',
+    'PDF를 분할하는 가장 빠른 방법은 브라우저에서 바로 처리하는 것입니다. 무료인 [CPdf PDF 분할 도구](/split-pdf/)를 열고 문서 하나를 끌어 넣은 뒤 모드를 선택하세요 — 모든 페이지를 개별 파일로, 1-3, 5-8 같은 직접 지정 범위로, 또는 동일한 묶음으로 나눌 수 있습니다. 그다음 "PDF 분할" 버튼을 클릭하고 결과를 다운로드하면 됩니다. 분할 작업이 기기에서 로컬로 실행되므로 파일은 업로드되지 않습니다. 서버도, 계정도, 대기열도 없으며 출력 결과에 워터마크도 없습니다.',
   quickSteps: [
-    'Open the Split PDF tool and drag one PDF onto the upload area — or click it to browse your device.',
-    'Choose a split mode: "Extract all pages", "Split by ranges" (type something like 1-3, 5-8), or "Split every N pages" (set the pages-per-file number).',
-    'Click "Split PDF". The document is divided locally in your browser, usually within seconds.',
-    'Click "Download" — a single part comes as a PDF; several parts are bundled into split.zip. The original file stays untouched.',
+    'PDF 분할 도구를 열고 업로드 영역에 PDF 하나를 끌어 놓으세요. 또는 영역을 클릭해 기기에서 파일을 선택할 수 있습니다.',
+    '분할 모드를 선택하세요: "모든 페이지 추출", "범위로 분할"(예: 1-3, 5-8 입력), "N페이지마다 분할"(파일당 페이지 수 설정).',
+    '"PDF 분할"을 클릭하세요. 문서는 브라우저 안에서 기기 로컬로 분할되며 보통 몇 초면 끝납니다.',
+    '"다운로드"를 클릭하세요. 결과가 하나면 PDF로, 여러 개면 split.zip으로 묶여 받습니다. 원본 파일은 그대로 유지됩니다.',
   ],
   sections: [
     {
-      heading: 'Step-by-step: splitting a PDF with CoolPDF',
+      heading: '단계별 안내: CPdf로 PDF 분할하기',
       paragraphs: [
-        'Open the [Split PDF tool](/split-pdf/) — nothing to install, no account. Drag one PDF onto the upload area, or click it to browse: a single file, up to 100 MB on desktop (50 MB on mobile). It appears as a row showing its name and size; the trash icon removes it if you grabbed the wrong one.',
-        'Pick a split mode. "Extract all pages" makes every page its own one-page PDF: page-1.pdf, page-2.pdf, and so on. "Split by ranges" takes an expression like 1-3, 5-8 and makes one PDF per segment — pages-1-3.pdf, pages-5-8.pdf. "Split every N pages" cuts equal chunks: set Pages per file to 2 and a ten-page scan becomes five files, pages-1-2.pdf through pages-9-10.pdf.',
-        'Click "Split PDF". Everything runs on your device, so speed depends on the document, not your connection. One part downloads directly as a PDF; two or more are bundled into an archive named split.zip. The original file is never modified.',
+        '[PDF 분할 도구](/split-pdf/)를 열기만 하면 됩니다 — 설치할 것도, 계정도 없습니다. 업로드 영역에 PDF 하나를 끌어 놓거나 클릭해 기기에서 선택하세요. 파일은 한 번에 하나, 데스크톱 최대 100MB(모바일 50MB)까지 가능합니다. 파일 이름과 크기가 표시된 행으로 나타나며, 잘못 골랐다면 휴지통 아이콘으로 제거할 수 있습니다.',
+        '분할 모드를 고르세요. "모든 페이지 추출"은 각 페이지를 한 장짜리 PDF로 만듭니다. page-1.pdf, page-2.pdf처럼요. "범위로 분할"은 1-3, 5-8 같은 표현을 받아 범위별로 PDF 하나씩 만듭니다 — pages-1-3.pdf, pages-5-8.pdf입니다. "N페이지마다 분할"은 동일한 크기로 잘라냅니다. 파일당 페이지 수를 2로 설정하면 10페이지 스캔본이 pages-1-2.pdf부터 pages-9-10.pdf까지 다섯 개로 나뉩니다.',
+        '"PDF 분할"을 클릭하세요. 모든 처리가 기기에서 이루어지므로 속도는 네트워크가 아니라 문서에 따라 결정됩니다. 결과가 하나면 PDF로 바로 다운로드되고, 두 개 이상이면 split.zip이라는 압축 파일로 묶입니다. 원본 파일은 수정되지 않습니다.',
       ],
       bullets: [
-        'One PDF at a time, up to 100 MB on desktop (50 MB on mobile)',
-        '"Extract all pages" supports documents up to 500 pages; the other modes have no page cap',
-        'One part downloads as a PDF; several parts come as split.zip',
-        'Pages are copied unchanged — no recompression, no watermark',
+        'PDF는 한 번에 하나, 데스크톱 최대 100MB(모바일 50MB)',
+        '"모든 페이지 추출"은 최대 500페이지 문서까지 지원하며, 다른 모드는 페이지 수 제한이 없습니다',
+        '결과가 하나면 PDF로, 여러 개면 split.zip으로 다운로드',
+        '페이지는 원본 그대로 복사됩니다 — 재압축도, 워터마크도 없습니다',
       ],
       image: {
         src: '/guides/how-to-split-pdf/step-1.png',
-        alt: 'The Split PDF tool with a document added, showing the radio choices Extract all pages, Split by ranges, and Split every N pages.',
+        alt: '문서를 추가한 CPdf PDF 분할 도구 화면. 모든 페이지 추출, 범위별 분할, N페이지마다 분할 선택 항목이 보입니다.',
       },
     },
     {
-      heading: 'Writing page ranges that work',
+      heading: '제대로 작동하는 페이지 범위 입력법',
       paragraphs: [
-        'Separate segments with commas — 1-3, 5, 8-10 makes three PDFs: pages 1-3, page 5 alone, and pages 8-10. Spaces are ignored, a trailing comma does no harm, and a segment typed twice is extracted only once. File names follow the segment: pages-1-3.pdf for a range, page-5.pdf for a single page, with a numeric suffix if two names collide.',
-        'The parser also understands non-English keyboards — Chinese commas and enumeration marks, semicolons, full-width dashes and digits, even tildes — so 1－3，5 is read as 1-3, 5. It rejects a reversed range like 8-5, letters, or a page beyond the end of the document, with a clear error and no processing until the range is fixed.',
+        '범위는 쉼표로 구분합니다 — 1-3, 5, 8-10을 입력하면 PDF 세 개가 만들어집니다. 1-3페이지, 5페이지 단독, 8-10페이지입니다. 공백은 무시되고 끝에 붙은 쉼표도 문제없으며, 같은 범위를 두 번 입력해도 한 번만 추출됩니다. 파일 이름은 범위를 따라갑니다. 범위면 pages-1-3.pdf, 한 페이지면 page-5.pdf이며, 이름이 겹치면 숫자 접미사가 붙습니다.',
+        '파서는 영어가 아닌 키보드 입력도 이해합니다. 중국어 쉼표와 숫자 목록 기호, 세미콜론, 전각 대시와 전각 숫자, 물결표까지도요. 1－3，5를 입력하면 1-3, 5로 읽습니다. 8-5 같은 역순 범위, 알파벳, 문서 페이지 수를 넘는 숫자는 명확한 오류 메시지와 함께 거부되며, 범위를 고치기 전까지 처리되지 않습니다.',
       ],
     },
     {
-      heading: 'Splitting is usually about sharing less',
+      heading: '분할의 목적은 보통 "더 적게 공유하기"입니다',
       paragraphs: [
-        'People rarely split a PDF for their own filing — they do it to hand over a piece of something larger: one invoice out of a bookkeeping export, the two relevant pages of a long contract, a chapter from a 300-page scan. With a conventional online splitter, sharing less of the document starts with uploading all of it to someone else\u2019s server.',
-        'CoolPDF removes that contradiction. The splitting engine is delivered to your browser, and the file is read, divided, and saved on your own machine — no byte of it crosses the network. That is safe enough for payslips, tax records, and HR paperwork, on a work laptop or public Wi-Fi. Load the page, go offline, and it still works; close the tab and nothing remains.',
+        '사람들이 자신의 정리를 위해 PDF를 분할하는 경우는 드뭅니다. 큰 문서 중 일부를 넘겨주기 위해서죠. 장부에서 특정 송장 하나만, 긴 계약서에서 필요한 두 페이지만, 300페이지 스캔본에서 한 챕터만 떼어 보내는 식입니다. 기존의 온라인 분할 도구로는 문서의 일부만 공유하려는 순간, 전체를 타인의 서버에 업로드하는 것부터 시작합니다.',
+        'CPdf는 이 모순을 없앱니다. 분할 엔진이 브라우저로 전달되고, 파일은 사용자의 기기에서 읽히고 나뉘고 저장됩니다. 한 바이트도 네트워크를 타지 않습니다. 그래서 월급명세서, 세금 기록, 인사 문서도 안심하고 처리할 수 있으며, 회사 노트북이든 공공 Wi-Fi든 상관없습니다. 페이지를 불러온 뒤 오프라인으로 전환해도 작동하고, 탭을 닫으면 아무 흔적도 남지 않습니다.',
       ],
     },
     {
-      heading: 'What to do with the split parts',
+      heading: '분할 결과로 이어지는 작업들',
       paragraphs: [
-        'A split is often the middle of a job, not the end. Extracted pages going out as email attachments can be shrunk with [Compress PDF](/compress-pdf/). If you pulled pages to assemble a new packet, [Merge PDF](/merge-pdf/) combines them with cover letters and appendices in the order you choose.',
-        'Scans often need a second pass: [Rotate PDF](/rotate-pdf/) fixes the one landscape page that came out sideways, and [Organize PDF](/organize-pdf/) rearranges or deletes pages visually. Sending a sensitive extract on its own? [Protect PDF](/protect-pdf/) adds a password first.',
+        '분할은 종종 작업의 중간 단계입니다. 추출한 페이지를 이메일 첨부로 보낼 때는 [PDF 압축](/compress-pdf/)으로 용량을 줄일 수 있습니다. 페이지를 뽑아 새 문서 꾸러미를 만든다면 [PDF 병합](/merge-pdf/)으로 표지나 부록을 원하는 순서로 합칠 수 있습니다.',
+        '스캔본은 두 번째 작업이 필요할 때가 많습니다. [PDF 회전](/rotate-pdf/)으로 옆으로 누운 가로 페이지 하나를 바로잡고, [PDF 페이지 정리](/organize-pdf/)로 페이지를 시각적으로 재배열하거나 삭제하세요. 민감한 추출본을 단독으로 보낸다면 [PDF 보호](/protect-pdf/)로 먼저 암호를 걸어두세요.',
       ],
       image: {
         src: '/guides/how-to-split-pdf/step-2.png',
-        alt: 'The download card after splitting, showing the split.zip file name, the archive size, and the Download button.',
+        alt: '분할 완료 후 파일이 준비되었습니다 카드에 split.zip(5.1 KB)와 다운로드 버튼이 보이는 화면',
       },
     },
   ],
@@ -68,62 +68,62 @@ export const howToSplitPdf: Guide = {
     {
       heading: 'macOS Preview',
       paragraphs: [
-        'On a Mac, Preview extracts pages without extra software: open the PDF, show the thumbnail sidebar, select the pages you want, and drag them to the desktop to make a new PDF of just those pages. It is free, offline, and private, but macOS-only, and selecting scattered ranges by clicking thumbnails gets tedious. CoolPDF\u2019s typed ranges (1-3, 5-8) do the same selection in any browser, on any OS.',
+        'Mac에서는 Preview가 별도 소프트웨어 없이 페이지를 추출합니다. PDF를 열고 썸네일 사이드바를 표시한 뒤 원하는 페이지를 선택해 바탕 화면으로 드래그하면, 선택한 페이지만 담긴 새 PDF가 만들어집니다. 무료이고 오프라인에서 작동하며 프라이버시도 지켜지지만, macOS에서만 가능하고 흩어진 페이지를 썸네일을 클릭해 고르는 일은 금방 지루해집니다. CPdf에 입력하는 범위(1-3, 5-8)는 어떤 브라우저에서든, 어떤 OS에서든 같은 선택을 해줍니다.',
       ],
     },
     {
-      heading: 'Print to PDF',
+      heading: 'PDF로 인쇄(Print to PDF)',
       paragraphs: [
-        'Every operating system has a virtual PDF printer: open the file, choose Print, pick Microsoft Print to PDF or Save as PDF, and enter a page range. It works in a pinch, but printing re-renders the document — links, form fields, and bookmarks are flattened — and each range is a separate print job. A real splitter like CoolPDF keeps the original page data intact.',
+        '모든 운영체제에는 가상 PDF 프린터가 있습니다. 파일을 열고 인쇄를 선택한 뒤 Microsoft Print to PDF 또는 "PDF로 저장"을 고르고 페이지 범위를 입력하면 됩니다. 급할 때는 유용하지만, 인쇄 과정에서 문서가 다시 렌더링되어 링크, 양식 필드, 북마크가 모두 평면화됩니다. 그리고 범위별로 인쇄 작업을 따로 실행해야 합니다. CPdf 같은 실제 분할 도구는 원본 페이지 데이터를 그대로 유지합니다.',
       ],
     },
     {
-      heading: 'Adobe Acrobat (paid)',
+      heading: 'Adobe Acrobat(유료)',
       paragraphs: [
-        'Acrobat\u2019s Organize Pages and Split tools are the polished paid option, able to split by page count, file size, or top-level bookmarks. They require a subscription and a desktop install, and the web version uploads your files to Adobe\u2019s servers. If Acrobat is already on your machine it is excellent — otherwise a free, no-upload browser tool covers everyday splitting.',
+        'Acrobat의 페이지 구성 및 분할 도구는 세련된 유료 옵션으로, 페이지 수, 파일 크기, 최상위 북마크 기준으로 분할할 수 있습니다. 구독과 데스크톱 설치가 필요하고, 웹 버전은 파일을 Adobe 서버에 업로드합니다. 기기에 Acrobat이 이미 들어 있다면 훌륭한 선택입니다. 그렇지 않다면 무료이고 업로드가 없는 브라우저 도구로 일상적인 분할을 충분히 처리할 수 있습니다.',
       ],
     },
   ],
   edgeCases: [
     {
-      heading: 'The PDF is password-protected',
+      heading: 'PDF가 암호로 보호되어 있는 경우',
       paragraphs: [
-        'An encrypted document cannot be split until its protection is removed — the tool reports "This PDF is password-protected and cannot be processed here." If you know the password, run the file through [Unlock PDF](/unlock-pdf/) first and split the unprotected copy. Without the password, ask the sender for an open version — there is no legitimate way around someone else\u2019s protection.',
+        '암호화된 문서는 보호가 해제되기 전까지 분할할 수 없습니다. 도구는 "이 PDF는 암호로 보호되어 있어 여기서 처리할 수 없습니다."라고 알립니다. 암호를 안다면 먼저 [PDF 잠금 해제](/unlock-pdf/)를 실행해 보호가 없는 복사본을 만든 뒤 분할하세요. 암호를 모른다면 보낸 사람에게 열어둔 버전을 요청하세요. 타인이 걸어 둔 보호를 우회할 정당한 방법은 없습니다.',
       ],
     },
     {
-      heading: 'The range is rejected',
+      heading: '범위가 거부되는 경우',
       paragraphs: [
-        'A reversed range (8-5), letters, or an empty field produces "Invalid page range. Use numbers and hyphens, for example 1-3, 5.", and a page beyond the document length gives "The page range exceeds the number of pages in the document." Nothing is processed until the expression parses — spaces, stray commas, and full-width punctuation are all fine.',
+        '역순 범위(8-5), 알파벳, 빈 칸은 "잘못된 페이지 범위입니다. 숫자와 하이픈을 사용하세요. 예: 1-3, 5."라는 메시지를, 문서 길이를 넘는 페이지는 "페이지 범위가 문서의 페이지 수를 초과합니다."라는 메시지를 냅니다. 표현이 올바르게 해석되기 전까지 아무것도 처리되지 않으며, 공백이나 잘못 들어간 쉼표, 전각 문장 부호는 전혀 문제없습니다.',
       ],
     },
     {
-      heading: 'The file is too large, or the document too long',
+      heading: '파일이 너무 크거나 문서가 너무 긴 경우',
       paragraphs: [
-        'Over 100 MB (50 MB on mobile) the upload is refused — shrink the file with [Compress PDF](/compress-pdf/) first, then split the smaller copy. "Extract all pages" also caps at 500 pages, since every output is held in memory until the ZIP is built; longer documents can use ranges or every-N-pages mode, which have no page cap.',
+        '100MB(모바일 50MB)를 넘으면 업로드가 거부됩니다. 먼저 [PDF 압축](/compress-pdf/)으로 파일을 줄인 뒤 작은 복사본을 분할하세요. "모든 페이지 추출"은 500페이지까지 제한됩니다. 모든 출력 결과가 ZIP이 만들어질 때까지 메모리에 들어 있기 때문입니다. 더 긴 문서는 페이지 수 제한이 없는 범위 분할이나 N페이지마다 분할 모드를 사용하세요.',
       ],
     },
   ],
   faqs: [
     {
-      q: 'Is splitting PDFs with CoolPDF really free?',
-      a: 'Yes — every tool on CoolPDF is free forever, with no daily quotas, watermarks, or premium tiers. The split runs on your own device, so there is no server bill to pass on to you.',
+      q: 'CPdf로 PDF를 분할하는 것은 정말 무료인가요?',
+      a: '네 — CPdf의 모든 도구는 영구적으로 무료이며 일일 할당량, 워터마크, 프리미엄 등급이 없습니다. 분할이 사용자의 기기에서 실행되므로 서버 비용이 발생하지 않고, 그래서 사용자에게 전가될 비용도 없습니다.',
     },
     {
-      q: 'What are the limits when splitting?',
-      a: 'One PDF at a time, up to 100 MB on a desktop computer (50 MB on mobile). "Extract all pages" handles documents up to 500 pages; splitting by ranges or every N pages has no page-count cap.',
+      q: '분할할 때 제한은 무엇인가요?',
+      a: 'PDF는 한 번에 하나, 데스크톱 최대 100MB(모바일 50MB)까지 가능합니다. "모든 페이지 추출"은 최대 500페이지 문서까지 처리하며, 범위 분할과 N페이지마다 분할은 페이지 수 제한이 없습니다.',
     },
     {
-      q: 'Is it safe to split confidential documents here?',
-      a: 'Yes. The file is processed locally in your browser and is never uploaded to any server. You can disconnect from the internet after the page loads and the split still works; closing the tab removes every trace of the document.',
+      q: '기밀 문서를 여기서 분할해도 안전한가요?',
+      a: '네. 파일은 브라우저 안에서 로컬로 처리되며 어떤 서버에도 업로드되지 않습니다. 페이지를 불러온 후 인터넷 연결을 끊어도 분할은 정상 작동하고, 탭을 닫으면 문서의 모든 흔적이 사라집니다.',
     },
     {
-      q: 'Do I need to sign up or install anything?',
-      a: 'No. There is no account, no email address, and nothing to install. Open the tool page, add your PDF, and split — it works in any modern browser, on desktop and mobile.',
+      q: '가입이나 설치가 필요한가요?',
+      a: '아니요. 계정도, 이메일 주소도, 설치할 것도 없습니다. 도구 페이지를 열고 PDF를 추가한 뒤 분할하면 됩니다. 데스크톱과 모바일의 모든 최신 브라우저에서 작동합니다.',
     },
     {
-      q: 'Will splitting reduce the quality of my PDF?',
-      a: 'No. Pages are copied into the new documents at the object level — nothing is recompressed or re-rendered. Text stays sharp and selectable, images keep their original resolution, and annotations are carried over unchanged.',
+      q: '분할하면 PDF 품질이 떨어지나요?',
+      a: '아니요. 페이지는 새 문서에 객체 수준에서 그대로 복사됩니다. 재압축도 재렌더링도 없습니다. 텍스트는 또렷하고 선택 가능한 상태를 유지하고, 이미지는 원래 해상도를 그대로 가지며, 주석도 변경 없이 옮겨집니다.',
     },
   ],
   related: ['how-to-merge-pdf', 'how-to-organize-pdf-pages', 'how-to-compress-pdf'],

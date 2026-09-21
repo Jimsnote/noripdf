@@ -1,5 +1,5 @@
 import type { Locale } from '@/i18n/config';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 import { PageNumbersTool } from '@/components/tools/PageNumbersTool';
 import { ToolPageScaffold } from './ToolPageScaffold';
 

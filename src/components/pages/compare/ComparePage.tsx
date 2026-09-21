@@ -10,7 +10,7 @@ interface ComparePageProps {
 
 /**
  * Renders a /compare/ page: breadcrumb, H1, honest verdict, feature
- * comparison table (CoolPDF column highlighted), the competitor's genuine
+ * comparison table (CPdf column highlighted), the competitor's genuine
  * strengths, fact-check line with sources, FAQ accordion, and a closing CTA.
  * Emits Article and FAQPage JSON-LD from the same data as the visible content.
  */
@@ -41,16 +41,16 @@ export function ComparePage({ compare }: ComparePageProps) {
       <JsonLd data={articleLd} />
       <JsonLd data={faqLd} />
 
-      <nav aria-label="Breadcrumb" className="text-sm text-slate-500">
-        <Link href="/" className="hover:text-brand-700">Home</Link>
+      <nav aria-label="이동 경로" className="text-sm text-slate-500">
+        <Link href="/" className="hover:text-brand-700">홈</Link>
         <span className="mx-2">/</span>
-        <Link href="/compare/" className="hover:text-brand-700">Compare</Link>
+        <Link href="/compare/" className="hover:text-brand-700">비교</Link>
         <span className="mx-2">/</span>
         <span className="text-slate-700">{compare.competitor}</span>
       </nav>
 
       <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-        {compare.title.replace(/ \| CoolPDF$/, '')}
+        {compare.title.replace(/ \| CPdf$/, '')}
       </h1>
       <p className="mt-4 text-lg leading-relaxed text-slate-700">{compare.verdict}</p>
 
@@ -59,10 +59,10 @@ export function ComparePage({ compare }: ComparePageProps) {
           <thead>
             <tr className="border-b border-slate-200 bg-slate-50">
               <th className="px-4 py-3 font-semibold text-slate-500" scope="col">
-                <span className="sr-only">Feature</span>
+                <span className="sr-only">기능</span>
               </th>
               <th className="bg-brand-50 px-4 py-3 font-bold text-brand-700" scope="col">
-                CoolPDF
+                CPdf
               </th>
               <th className="px-4 py-3 font-semibold text-slate-700" scope="col">
                 {compare.competitor}
@@ -86,7 +86,7 @@ export function ComparePage({ compare }: ComparePageProps) {
       <section className="mt-8 rounded-xl border border-slate-200 bg-slate-50 p-5">
         <h2 className="flex items-center gap-2 text-base font-bold text-slate-900">
           <Scale className="h-5 w-5 text-brand-600" aria-hidden />
-          Where {compare.competitor} is genuinely better
+          {compare.competitor}이(가) 실제로 더 나은 부분
         </h2>
         <ul className="mt-3 space-y-2 text-sm leading-relaxed text-slate-700">
           {compare.theirStrengths.map((item) => (
@@ -99,7 +99,7 @@ export function ComparePage({ compare }: ComparePageProps) {
       </section>
 
       <p className="mt-6 text-xs text-slate-500">
-        {compare.factChecked}. Sources:{' '}
+        {compare.factChecked}. 출처:{' '}
         {compare.sources.map((source, index) => (
           <span key={source.url}>
             {index > 0 ? ', ' : ''}
@@ -114,24 +114,24 @@ export function ComparePage({ compare }: ComparePageProps) {
             </a>
           </span>
         ))}
-        . Competitor features and prices may have changed since — check their site for the latest.
+        . 경쟁 서비스의 기능과 가격은 이후 변경되었을 수 있으니 최신 정보는 해당 사이트에서 확인하세요.
       </p>
 
       <div className="mt-8 rounded-xl border border-brand-200 bg-brand-50 p-6 text-center">
         <p className="text-lg font-semibold text-slate-900">
-          Try the difference yourself — free, no sign-up, nothing to upload.
+          직접 차이를 체험해 보세요 — 무료, 가입 없이, 업로드 없이.
         </p>
         <Link
           href="/"
           className="mt-4 inline-flex items-center gap-2 rounded-lg bg-brand-600 px-6 py-3 text-base font-semibold text-white shadow-sm transition-colors hover:bg-brand-700"
         >
-          Open CoolPDF tools <ArrowRight className="h-5 w-5" aria-hidden />
+          CPdf 도구 열기 <ArrowRight className="h-5 w-5" aria-hidden />
         </Link>
       </div>
 
       <section className="mt-10">
         <h2 className="text-2xl font-bold tracking-tight text-slate-900">
-          Frequently asked questions
+          자주 묻는 질문
         </h2>
         <div className="mt-4 divide-y divide-slate-200 rounded-xl border border-slate-200">
           {compare.faqs.map((item) => (

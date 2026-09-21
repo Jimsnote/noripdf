@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { FileText, Loader2, Trash2 } from 'lucide-react';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 import { parsePageRanges } from '@/lib/pdf/page-ranges';
 import { warmPdfLib } from '@/lib/pdf/pdf-lib';
 import { rotatePdf, type RotationAngle } from '@/lib/pdf/rotate';

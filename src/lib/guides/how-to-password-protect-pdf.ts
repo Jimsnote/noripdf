@@ -7,60 +7,60 @@ import type { Guide } from './types';
 export const howToPasswordProtectPdf: Guide = {
   slug: 'how-to-password-protect-pdf',
   toolSlug: 'protect-pdf',
-  title: 'How to Password Protect a PDF (AES-256)',
+  title: 'PDF에 비밀번호 보호를 설정하는 방법 (AES-256)',
   description:
-    'Password-protect a PDF with AES-256 encryption, right in your browser. Set an open password and recipient permissions — no upload, free, no sign-up.',
+    '브라우저에서 바로 AES-256 암호화로 PDF를 비밀번호로 보호하세요. 개방용 비밀번호와 받는 사람 권한을 설정할 수 있습니다. 업로드 없음, 무료, 가입 불필요.',
   intro:
-    'To password-protect a PDF, open the free [CoolPDF Protect PDF tool](/protect-pdf/), drop in your file, type a password of at least six characters twice, choose what recipients may do — printing, copying, editing — and click Protect PDF to download protected.pdf. The encryption is AES-256, the strongest the PDF standard defines, and it runs entirely on your device: the file and the password never leave your browser.',
+    'PDF에 비밀번호 보호를 설정하려면 무료 [PDF 보호 도구](/protect-pdf/)를 열고 파일을 끌어다 놓은 뒤, 6자 이상의 비밀번호를 두 번 입력하고, 받는 사람이 할 수 있는 일 — 인쇄, 복사, 편집 — 을 선택한 다음 "PDF 보호" 버튼을 클릭하면 됩니다. 결과는 protected.pdf로 다운로드됩니다. 암호화에는 PDF 표준이 정의한 가장 강력한 AES-256이 사용되며, 완전히 사용자의 기기 안에서 실행됩니다. 파일도 비밀번호도 브라우저를 벗어나지 않습니다.',
   quickSteps: [
-    'Open the [Protect PDF tool](/protect-pdf/) and drop one PDF onto the upload area — or click it to browse. Up to 100 MB on desktop, 50 MB on mobile.',
-    'Type a password of at least 6 characters and repeat it in "Confirm password"; the tool refuses to start if the two do not match.',
-    'Under "Permissions for recipients", pick a printing level and toggle copying, modifying, commenting, page assembly, and screen-reader access.',
-    'Click "Protect PDF", then Download. The encrypted copy is saved as protected.pdf — the original on your device stays untouched.',
+    'PDF 보호 도구를 열고 PDF를 업로드 영역에 드래그하거나 클릭하여 파일을 선택합니다. 한 번에 한 개, 데스크톱 최대 100 MB(모바일 50 MB)까지 가능합니다.',
+    '"비밀번호 (6자 이상)" 입력란에 비밀번호를 입력하고 "비밀번호 확인" 입력란에 다시 입력합니다. 두 입력이 일치하지 않으면 도구가 시작되지 않습니다.',
+    '"받는 사람 권한"에서 인쇄 수준을 선택하고 복사, 수정, 주석, 페이지 편집, 스크린 리더 접근 권한을 켜거나 끕니다.',
+    '"PDF 보호" 버튼을 클릭한 다음 "다운로드"를 클릭합니다. 암호화된 사본은 protected.pdf로 저장되며, 기기의 원본 파일은 그대로 유지됩니다.',
   ],
   sections: [
     {
-      heading: 'Step-by-step: protecting a PDF with CoolPDF',
+      heading: '단계별 안내: CPdf로 PDF 보호하기',
       paragraphs: [
-        'Open the [Protect PDF tool](/protect-pdf/) and add one PDF by dragging it onto the upload area, or click to browse — one file at a time, up to 100 MB on desktop and 50 MB on mobile. The first run downloads the encryption engine (about 1.2 MB), cached for later runs.',
-        'Enter your password twice. The minimum is six characters and both fields must match — the tool refuses to start otherwise, saving you from encrypting with a typo. Store it in a password manager: there is no recovery option.',
-        'Click "Protect PDF". The file is encrypted with AES-256 inside your browser tab — by qpdf, the same open-source engine available on the command line — and the download card appears with the result, always named protected.pdf. The original is never modified: keep it until the copy opens with the password you expect.',
+        '[PDF 보호 도구](/protect-pdf/)를 열어보세요. PDF를 업로드 영역에 드래그하거나 클릭해서 파일을 선택합니다. 한 번에 한 개씩, 데스크톱 최대 100 MB(모바일 50 MB)까지 가능합니다. 처음 실행 시에는 암호화 엔진(약 1.2 MB)이 다운로드되고, 이후에는 캐시됩니다.',
+        '비밀번호를 두 번 입력하세요. 최소 6자이며 두 입력란이 일치해야 합니다. 일치하지 않으면 도구가 시작되지 않으므로 오타로 암호화하는 실수를 방지할 수 있습니다. 비밀번호 관리자에 보관하세요. 복구 방법은 없습니다.',
+        '"PDF 보호" 버튼을 클릭하세요. 파일은 브라우저 탭 안에서 AES-256으로 암호화됩니다. 사용되는 엔진은 명령줄에서도 쓰이는 오픈소스 qpdf입니다. 다운로드 카드에 결과가 표시되며, 파일명은 항상 protected.pdf입니다. 원본은 절대 수정되지 않으므로, 사본이 예상한 비밀번호로 열릴 때까지 원본을 보관하세요.',
       ],
       bullets: [
-        'One PDF per run — up to 100 MB on desktop, 50 MB on mobile',
-        'Password: at least 6 characters, entered twice',
-        'AES-256 encryption, with a randomly generated owner password',
-        'Output is always saved as protected.pdf',
+        '한 번에 PDF 한 개, 데스크톱 최대 100 MB, 모바일 50 MB',
+        '비밀번호: 최소 6자, 두 번 입력',
+        'AES-256 암호화, 소유자 비밀번호는 무작위로 생성',
+        '결과는 항상 protected.pdf로 저장',
       ],
       image: {
         src: '/guides/how-to-password-protect-pdf/step-1.png',
-        alt: 'The Protect PDF tool after a file is added: the Password and Confirm password fields above the permissions panel, with the blue Protect PDF button below.',
+        alt: '파일이 추가된 CPdf PDF 보호 도구 화면. 비밀번호와 비밀번호 확인 입력란에 비밀번호가 입력되어 있고 아래에 받는 사람 권한 항목이 보임',
       },
     },
     {
-      heading: 'Choosing the right permissions',
+      heading: '받는 사람 권한 올바르게 설정하기',
       paragraphs: [
-        'The "Permissions for recipients" panel decides what someone may do after opening the file with the password. Printing offers Allowed, Low quality only, and Not allowed; five checkboxes cover copying text and images, modifying the document, comments and form filling, inserting, rotating, and deleting pages, and text extraction for screen readers.',
-        'The defaults suit everyday sharing: full printing, copying, and commenting allowed, but modifying the document or rearranging its pages blocked. Lock everything down — no printing, no copying — for drafts and contracts you want strictly read-only.',
-        'Two honest caveats. Permissions are policy, not DRM: Acrobat, Chrome, and Preview respect them, but a non-compliant reader can ignore them. And with AES-256 the PDF spec keeps screen-reader access enabled, so the accessibility checkbox cannot truly turn it off.',
+        '"받는 사람 권한" 패널은 비밀번호로 파일을 연 뒤 받는 사람이 무엇을 할 수 있는지 결정합니다. 인쇄는 허용, 저품질만 허용, 허용 안 함 중에서 선택할 수 있고, 다섯 개의 체크박스로 텍스트 및 이미지 복사, 문서 수정, 주석 및 양식 입력, 페이지 삽입·회전·삭제, 스크린 리더용 텍스트 추출을 제어합니다.',
+        '기본값은 일상적인 공유에 맞춰져 있습니다. 인쇄, 복사, 주석은 허용되지만 문서 수정과 페이지 재정렬은 차단됩니다. 초안이나 엄격히 읽기 전용으로 둘 계약서라면 모든 것을 잠그세요 — 인쇄도, 복사도 불가능하게.',
+        '두 가지 정직한 주의사항이 있습니다. 권한은 정책이지 DRM이 아닙니다. Acrobat, Chrome, Preview는 이를 존중하지만, 비호환 리더는 무시할 수 있습니다. 그리고 AES-256에서는 PDF 규격상 스크린 리더 접근이 항상 활성화되므로, 접근성 체크박스로 실제로 끌 수는 없습니다.',
       ],
       image: {
         src: '/guides/how-to-password-protect-pdf/step-2.png',
-        alt: 'The permissions panel with the three printing options — Allowed, Low quality only, Not allowed — above the five permission checkboxes in their default states.',
+        alt: '파일이 추가된 CPdf PDF 보호 도구 화면. 비밀번호 입력란 두 개가 비어 있고 그 아래에 받는 사람 권한 패널이 시작됨',
       },
     },
     {
-      heading: 'Why protecting locally matters more here than anywhere else',
+      heading: '로컬에서 보호하는 것이 특히 중요한 이유',
       paragraphs: [
-        'Password-protecting a PDF is usually the last step before sending something sensitive — a payslip, a bank statement, a contract. With a server-based tool, the unprotected original crosses the internet first, and the password goes to infrastructure you do not control. The protection step itself becomes the leak.',
-        'CoolPDF inverts that: the file is read locally, encrypted inside your browser tab, and saved straight back to your disk. The password never crosses the network — there is no server that could receive it. You can even disconnect after the page loads and keep encrypting; close the tab, and both file and password are gone.',
+        'PDF에 비밀번호 보호를 설정하는 것은 보통 민감한 무언가 — 급여 명세서, 은행 거래 명세서, 계약서 — 를 보내기 직전의 마지막 단계입니다. 서버 기반 도구로는 보호되지 않은 원본이 먼저 인터넷을 가로지르고, 비밀번호는 사용자가 통제할 수 없는 인프라로 전달됩니다. 보호하는 단계 자체가 유출 지점이 되는 셈입니다.',
+        'CPdf는 이를 뒤집습니다. 파일은 로컬에서 읽히고, 브라우저 탭 안에서 암호화된 뒤 바로 디스크로 저장됩니다. 비밀번호는 네트워크를 절대 거치지 않습니다. 받을 서버가 애초에 없기 때문입니다. 페이지를 불러온 후에는 네트워크를 끊고 계속 암호화할 수도 있습니다. 탭을 닫으면 파일과 비밀번호가 모두 사라집니다.',
       ],
     },
     {
-      heading: 'Protect the file you actually meant to send',
+      heading: '실제로 보낸 파일에 보호를 설정하세요',
       paragraphs: [
-        'Encryption goes on last, once the document is final. Need to share only one chapter? Extract it with [Split PDF](/split-pdf/) first — an encrypted PDF cannot be split, merged, or compressed until it is unlocked. Same for size: to fit an email attachment limit, run [Compress PDF](/compress-pdf/) before protecting, not after.',
-        'Combining several documents into one dossier? [Merge PDF](/merge-pdf/) them first, then protect the result. And if you later need the file open again, [Unlock PDF](/unlock-pdf/) removes the password locally, with the same no-upload guarantees.',
+        '암호화는 문서가 확정된 마지막 단계에 적용하세요. 한 챕터만 공유해야 하나요? 먼저 [PDF 분할](/split-pdf/)로 추출하세요. 암호화된 PDF는 잠금 해제 전까지 분할, 병합, 압축이 불가능합니다. 크기도 마찬가지입니다. 이메일 첨부 제한에 맞추려면 [PDF 압축](/compress-pdf/)을 보호하기 전에 실행하세요.',
+        '여러 문서를 하나의 파일로 묶나요? 먼저 [PDF 병합](/merge-pdf/)로 합친 뒤 결과에 보호를 설정하세요. 나중에 다시 비밀번호 없이 열어야 한다면 [PDF 잠금 해제](/unlock-pdf/)로 로컬에서 비밀번호를 제거할 수 있습니다. 업로드 없이 동일한 보장이 적용됩니다.',
       ],
     },
   ],
@@ -68,56 +68,56 @@ export const howToPasswordProtectPdf: Guide = {
     {
       heading: 'macOS Preview',
       paragraphs: [
-        'On a Mac, Preview encrypts PDFs without extra software: File → Export as PDF, tick Encrypt, set an open password. It is free and offline, but macOS-only, and permission controls are basic — print and copy restrictions hide behind Print → Save as PDF → Security Options. CoolPDF brings the same offline privacy to any browser, with the full permission panel on one screen.',
+        'Mac에서 Preview는 별도 소프트웨어 없이 PDF를 암호화합니다. 파일 → PDF로 내보내기를 선택하고 암호화를 체크한 뒤 개방용 비밀번호를 설정하면 됩니다. 무료이며 오프라인에서 동작하지만 macOS에서만 가능하고, 권한 제어는 기본 수준입니다. 인쇄 및 복사 제한은 인쇄 → PDF로 저장 → 보안 옵션 메뉴 뒤에 숨어 있습니다. CPdf는 동일한 오프라인 프라이버시를 모든 브라우저에 제공하며, 전체 권한 패널을 한 화면에 보여 줍니다.',
       ],
     },
     {
-      heading: 'Adobe Acrobat (paid)',
+      heading: 'Adobe Acrobat (유료)',
       paragraphs: [
-        'Acrobat’s Protect tool is the polished paid route: an open password, editing and printing restrictions, certificate-based security. It needs a subscription, and the free online version uploads your file to Adobe’s servers before encrypting. If you already pay for Acrobat it is excellent — otherwise a free, local browser tool covers the same AES-256 ground.',
+        'Acrobat의 보호 도구는 다듬어진 유료 경로입니다. 개방용 비밀번호, 편집 및 인쇄 제한, 인증서 기반 보안을 제공합니다. 구독이 필요하고, 무료 온라인 버전은 암호화 전에 파일을 Adobe 서버에 업로드합니다. 이미 Acrobat을 구독 중이라면 훌륭한 선택입니다. 그렇지 않다면 무료 로컬 브라우저 도구가 동일한 AES-256을 다룹니다.',
       ],
     },
   ],
   edgeCases: [
     {
-      heading: 'The PDF is already password-protected',
+      heading: 'PDF에 이미 비밀번호 보호가 설정된 경우',
       paragraphs: [
-        'qpdf cannot read an encrypted file without its password, so the tool stops with "This PDF is password-protected and cannot be processed here." To change the password or permissions, unlock it with [Unlock PDF](/unlock-pdf/) first — you will need the current password — then protect the unlocked copy. Without the password, ask the sender for an unprotected version.',
+        'qpdf는 비밀번호 없이 암호화된 파일을 읽을 수 없으므로, 도구는 "이 PDF는 비밀번호로 보호되어 있어 여기서 처리할 수 없습니다."라고 알리고 중단합니다. 비밀번호나 권한을 변경하려면 먼저 [PDF 잠금 해제](/unlock-pdf/)로 잠금을 해제하세요. 현재 비밀번호가 필요합니다. 그다음 해제된 사본에 보호를 설정하세요. 비밀번호를 모른다면 발신자에게 보호되지 않은 버전을 요청하세요.',
       ],
     },
     {
-      heading: 'The file is rejected for size or type',
+      heading: '크기 또는 형식 때문에 파일이 거부되는 경우',
       paragraphs: [
-        'Only PDF files are supported, one at a time, up to 100 MB on desktop and 50 MB on mobile — the whole file is held in device memory during encryption. Oversized? Shrink it with [Compress PDF](/compress-pdf/) first (compression must come before encryption). Not a PDF at all? Convert it first — [JPG to PDF](/jpg-to-pdf/) handles scans — then protect the result.',
+        'PDF 파일만 지원되며 한 번에 한 개, 데스크톱 최대 100 MB(모바일 50 MB)까지 가능합니다. 암호화 중에는 파일 전체가 기기 메모리에 올라가기 때문입니다. 크기가 크다면 먼저 [PDF 압축](/compress-pdf/)으로 줄이세요. 압축은 암호화보다 먼저 와야 합니다. PDF가 아니라면 먼저 변환하세요. 스캔 이미지는 [JPG를 PDF로](/jpg-to-pdf/)로 처리한 뒤 결과를 보호하면 됩니다.',
       ],
     },
     {
-      heading: 'You forgot the password',
+      heading: '비밀번호를 잊어버린 경우',
       paragraphs: [
-        'There is no recovery — that is the point of strong encryption. CoolPDF never sees or stores your password, and the owner password guarding the permissions is random and discarded. Keep it in a password manager, and keep the unprotected original until the copy opens.',
+        '복구 방법은 없습니다. 강력한 암호화의 요점이 그것입니다. CPdf는 비밀번호를 보거나 저장한 적이 없고, 권한을 지키는 소유자 비밀번호는 무작위로 생성된 뒤 폐기됩니다. 비밀번호는 관리자에 보관하고, 사본이 열릴 때까지 보호되지 않은 원본은 유지하세요.',
       ],
     },
   ],
   faqs: [
     {
-      q: 'Is password-protecting a PDF with CoolPDF really free?',
-      a: 'Yes — every tool is free forever, with no quotas, watermarks, or premium tiers. Encryption runs on your device, so there is no server bill to pass on.',
+      q: 'CPdf로 PDF 비밀번호 보호는 정말 무료인가요?',
+      a: '네. 모든 도구는 영원히 무료이며, 일일 제한이나 워터마크, 유료 플랜이 없습니다. 암호화가 사용자 기기에서 실행되므로 전가할 서버 비용도 없습니다.',
     },
     {
-      q: 'How strong is the encryption?',
-      a: 'AES-256 — the strongest encryption the PDF standard defines, the same grade banks and governments use. Without the password, the content cannot be read.',
+      q: '암호화는 얼마나 강력한가요?',
+      a: 'AES-256입니다. PDF 표준이 정의한 가장 강력한 암호화로, 은행과 정부가 사용하는 것과 같은 등급입니다. 비밀번호 없이는 내용을 읽을 수 없습니다.',
     },
     {
-      q: 'What are the limits?',
-      a: 'One PDF at a time, up to 100 MB on desktop (50 MB on mobile). Passwords must be at least 6 characters and are entered twice to catch typos.',
+      q: '제한은 어떻게 되나요?',
+      a: '한 번에 PDF 한 개, 데스크톱 최대 100 MB(모바일 50 MB)입니다. 비밀번호는 최소 6자이며, 오타를 방지하기 위해 두 번 입력해야 합니다.',
     },
     {
-      q: 'Is it safe to protect confidential documents here?',
-      a: 'Yes. The file and the password never leave your browser. The engine (about 1.2 MB) is cached after first use, so later runs even work offline; closing the tab removes every trace.',
+      q: '기밀 문서를 여기서 보호해도 안전한가요?',
+      a: '네. 파일도 비밀번호도 브라우저를 벗어나지 않습니다. 엔진(약 1.2 MB)은 처음 사용 후 캐시되므로 이후 실행은 오프라인에서도 동작합니다. 탭을 닫으면 모든 흔적이 제거됩니다.',
     },
     {
-      q: 'Do the permissions work in every PDF reader?',
-      a: 'Compliant readers — Acrobat, Chrome, macOS Preview — respect the restrictions, but they are policy rather than DRM. One spec quirk: with AES-256, screen-reader access stays enabled regardless of the accessibility checkbox.',
+      q: '모든 PDF 리더에서 권한이 작동하나요?',
+      a: '호환 리더 — Acrobat, Chrome, macOS Preview — 는 제한을 존중하지만, 이들은 정책이지 DRM이 아닙니다. 사양상의 특이점 하나: AES-256에서는 스크린 리더 접근이 체크박스와 무관하게 항상 활성화됩니다.',
     },
   ],
   related: ['how-to-unlock-pdf', 'how-to-compress-pdf', 'how-to-add-watermark-to-pdf'],

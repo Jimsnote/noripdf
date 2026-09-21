@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { Download, FileCheck2, FileText, Loader2, Trash2 } from 'lucide-react';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 import { compressPdf, type CompressionLevel } from '@/lib/pdf/compress';
 import type { HeavyProgress } from '@/lib/pdf/heavy-worker';
 import { FileDropzone } from './FileDropzone';

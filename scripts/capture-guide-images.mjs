@@ -64,7 +64,7 @@ async function makePdf(name, pageCount, label) {
     const [r, g, b] = colors[i % colors.length];
     page.drawRectangle({ x: 0, y: 0, width: 595, height: 842, color: rgb(r, g, b) });
     page.drawText(`${label} — Page ${i + 1}`, { x: 60, y: 700, size: 28, font, color: rgb(0.2, 0.25, 0.5) });
-    page.drawText('CoolPDF guide sample document', { x: 60, y: 660, size: 14, font, color: rgb(0.4, 0.45, 0.6) });
+    page.drawText('CPdf guide sample document', { x: 60, y: 660, size: 14, font, color: rgb(0.4, 0.45, 0.6) });
   }
   await writeFile(join(TMP, name), await doc.save());
   return join(TMP, name);
@@ -131,10 +131,12 @@ function serve() {
 
 // ---------- per-tool scenarios ----------
 
-const READY = 'Your file is ready';
+const READY = '파일이 준비되었습니다';
 
 async function shot(page, guide, step, note) {
-  await page.locator('h1').first().scrollIntoViewIfNeeded();
+  const ready = page.getByText(READY);
+  if (await ready.count()) await ready.first().scrollIntoViewIfNeeded();
+  else await page.locator('h1').first().scrollIntoViewIfNeeded();
   await page.waitForTimeout(350);
   const dir = join(DEST, guide);
   await mkdir(dir, { recursive: true });
@@ -159,73 +161,73 @@ const scenarios = (s) => [
   {
     tool: 'merge-pdf', guide: 'how-to-merge-pdf', steps: [
       ['step-1', async (p) => upload(p, [s.pdfA, s.pdfB, s.pdfC]), 'three files added'],
-      ['step-2', async (p) => processAndWait(p, 'Merge PDF', 'merged.pdf'), 'download card'],
+      ['step-2', async (p) => processAndWait(p, 'PDF 병합', 'merged.pdf'), 'download card'],
     ],
   },
   {
     tool: 'split-pdf', guide: 'how-to-split-pdf', steps: [
       ['step-1', async (p) => upload(p, [s.pdfA]), 'file added'],
-      ['step-2', async (p) => processAndWait(p, 'Split PDF', 'split.zip'), 'zip download card'],
+      ['step-2', async (p) => processAndWait(p, 'PDF 분할', 'split.zip'), 'zip download card'],
     ],
   },
   {
     tool: 'compress-pdf', guide: 'how-to-compress-pdf', steps: [
       ['step-1', async (p) => upload(p, [s.pdfA]), 'file added, levels visible'],
-      ['step-2', async (p) => processAndWait(p, 'Compress PDF', 'compressed.pdf', 180000), 'compression result'],
+      ['step-2', async (p) => processAndWait(p, 'PDF 압축', 'compressed.pdf', 180000), 'compression result'],
     ],
   },
   {
     tool: 'rotate-pdf', guide: 'how-to-rotate-pdf', steps: [
       ['step-1', async (p) => upload(p, [s.pdfA]), 'file added'],
-      ['step-2', async (p) => processAndWait(p, 'Rotate PDF', 'rotated.pdf'), 'download card'],
+      ['step-2', async (p) => processAndWait(p, 'PDF 회전', 'rotated.pdf'), 'download card'],
     ],
   },
   {
     tool: 'organize-pdf', guide: 'how-to-organize-pdf-pages', steps: [
       ['step-1', async (p) => { await upload(p, [s.pdfA]); await p.locator('img[src^="data:image"]').first().waitFor({ timeout: 30000 }); await p.waitForTimeout(1500); }, 'thumbnail grid'],
-      ['step-2', async (p) => processAndWait(p, 'Download organized PDF', 'organized.pdf'), 'download card'],
+      ['step-2', async (p) => processAndWait(p, '정리된 PDF 다운로드', 'organized.pdf'), 'download card'],
     ],
   },
   {
     tool: 'pdf-to-jpg', guide: 'how-to-convert-pdf-to-jpg', steps: [
       ['step-1', async (p) => upload(p, [s.pdfA]), 'file added'],
-      ['step-2', async (p) => processAndWait(p, 'Convert to images', 'images.zip'), 'zip download card'],
+      ['step-2', async (p) => processAndWait(p, '이미지로 변환', 'images.zip'), 'zip download card'],
     ],
   },
   {
     tool: 'jpg-to-pdf', guide: 'how-to-convert-jpg-to-pdf', steps: [
       ['step-1', async (p) => upload(p, [s.photo1, s.photo2]), 'two photos added'],
-      ['step-2', async (p) => processAndWait(p, 'Convert to PDF', 'images.pdf'), 'download card'],
+      ['step-2', async (p) => processAndWait(p, 'PDF로 변환', 'images.pdf'), 'download card'],
     ],
   },
   {
     tool: 'protect-pdf', guide: 'how-to-password-protect-pdf', steps: [
       ['step-1', async (p) => { await upload(p, [s.pdfA]); await p.locator('input[type="password"]').first().fill('demo1234'); await p.locator('input[type="password"]').nth(1).fill('demo1234'); }, 'password filled'],
-      ['step-2', async (p) => processAndWait(p, 'Protect PDF', 'protected.pdf', 120000), 'download card'],
+      ['step-2', async (p) => processAndWait(p, 'PDF 보호', 'protected.pdf', 120000), 'download card'],
     ],
   },
   {
     tool: 'unlock-pdf', guide: 'how-to-unlock-pdf', steps: [
       ['step-1', async (p) => { await upload(p, [s.protectedPdf]); await p.locator('input[type="password"]').first().fill('test1234'); }, 'protected file + password'],
-      ['step-2', async (p) => processAndWait(p, 'Unlock PDF', 'unlocked.pdf', 120000), 'download card'],
+      ['step-2', async (p) => processAndWait(p, 'PDF 잠금 해제', 'unlocked.pdf', 120000), 'download card'],
     ],
   },
   {
     tool: 'watermark-pdf', guide: 'how-to-add-watermark-to-pdf', steps: [
       ['step-1', async (p) => { await upload(p, [s.pdfA]); const t = p.locator('input[type="text"]').first(); if (await t.count()) await t.fill('CONFIDENTIAL'); }, 'text watermark options'],
-      ['step-2', async (p) => processAndWait(p, 'Add Watermark', 'watermarked.pdf'), 'download card'],
+      ['step-2', async (p) => processAndWait(p, '워터마크 추가', 'watermarked.pdf'), 'download card'],
     ],
   },
   {
     tool: 'page-numbers', guide: 'how-to-add-page-numbers-to-pdf', steps: [
       ['step-1', async (p) => upload(p, [s.pdfA]), 'file added'],
-      ['step-2', async (p) => processAndWait(p, 'Add Page Numbers', 'numbered.pdf'), 'download card'],
+      ['step-2', async (p) => processAndWait(p, '페이지 번호 추가', 'numbered.pdf'), 'download card'],
     ],
   },
   {
     tool: 'pdf-to-markdown', guide: 'how-to-convert-pdf-to-markdown', steps: [
       ['step-1', async (p) => upload(p, [s.pdfA]), 'file added'],
-      ['step-2', async (p) => processAndWait(p, 'Convert to Markdown', 'download.md'), 'download card'],
+      ['step-2', async (p) => processAndWait(p, 'Markdown으로 변환', 'download.md'), 'download card'],
     ],
   },
 ];

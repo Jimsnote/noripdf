@@ -1,7 +1,7 @@
 import { ArrowDown, ArrowRight, CheckCircle2, Lock, Zap } from 'lucide-react';
 import Link from 'next/link';
 import type { Locale } from '@/i18n/config';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 import { guides } from '@/lib/guides';
 import { localizedPath, localizedUrl } from '@/lib/seo';
 import { GITHUB_URL, SITE_NAME } from '@/lib/site';
@@ -168,23 +168,23 @@ export function HomePage({ locale, dict }: HomePageProps) {
         </div>
       </section>
 
-      {/* Guides & Tutorials — guides are English-only, so this module is too */}
-      {locale === 'en' ? (
+      {/* Guides & Tutorials — Korean-only site, so this module always renders */}
+      {locale === 'ko' ? (
         <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <h2 className="text-2xl font-bold tracking-tight text-slate-900">
-                Guides &amp; Tutorials
+                PDF 가이드 및 튜토리얼
               </h2>
               <p className="mt-2 text-slate-600">
-                In-depth, step-by-step tutorials for getting the most out of every tool.
+                모든 도구를 최대한 활용하기 위한 단계별 튜토리얼입니다.
               </p>
             </div>
             <Link
               href="/guides/"
               className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 hover:text-brand-800"
             >
-              All guides
+              모든 가이드
               <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>
           </div>

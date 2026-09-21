@@ -1,8 +1,8 @@
-export const locales = ['en', 'de', 'fr', 'it', 'es', 'pt', 'zh', 'ja'] as const;
+export const locales = ['ko'] as const;
 
 export type Locale = (typeof locales)[number];
 
-export const defaultLocale: Locale = 'en';
+export const defaultLocale: Locale = 'ko';
 
 /** Locales that live under a path prefix (everything except the default). */
 export const prefixedLocales = locales.filter((l) => l !== defaultLocale) as Exclude<
@@ -16,24 +16,10 @@ export function isLocale(value: string): value is Locale {
 
 /** Human-readable native names, used by the language switcher. */
 export const localeLabels: Record<Locale, string> = {
-  en: 'English',
-  de: 'Deutsch',
-  fr: 'Français',
-  it: 'Italiano',
-  es: 'Español',
-  pt: 'Português',
-  zh: '中文',
-  ja: '日本語',
+  ko: '한국어',
 };
 
 /** Open Graph locale values (og:locale). */
 export const ogLocales: Record<Locale, string> = {
-  en: 'en_US',
-  de: 'de_DE',
-  fr: 'fr_FR',
-  it: 'it_IT',
-  es: 'es_ES',
-  pt: 'pt_PT',
-  zh: 'zh_CN',
-  ja: 'ja_JP',
+  ko: 'ko_KR',
 };

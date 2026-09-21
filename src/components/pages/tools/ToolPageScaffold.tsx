@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import Link from 'next/link';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import type { Locale } from '@/i18n/config';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 import { getGuideForTool } from '@/lib/guides';
 import { localizedUrl } from '@/lib/seo';
 import { splitLeadSentence } from '@/lib/text';
@@ -49,7 +49,7 @@ interface ToolPageScaffoldProps {
  */
 export function ToolPageScaffold({ locale, dict, slug, children }: ToolPageScaffoldProps) {
   const copy = dict.toolPages[slug];
-  // English-only long-form tutorial attached to this tool, if one exists.
+  // Korean-only long-form tutorial attached to this tool, if one exists.
   const guide = getGuideForTool(slug);
   // Tool-specific FAQs plus the site-wide shared ones (e.g. usage limits).
   const faqItems = [...copy.faq, ...dict.sharedToolFaq];

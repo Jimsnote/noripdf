@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { FileText, Loader2, ShieldAlert, Trash2 } from 'lucide-react';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 import { unlockPdf } from '@/lib/pdf/protect';
 import type { HeavyProgress } from '@/lib/pdf/heavy-worker';
 import { FileDropzone } from './FileDropzone';

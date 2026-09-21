@@ -1,5 +1,5 @@
 /**
- * Data model for the /compare/ pages (English-only, like the guides).
+ * Data model for the /compare/ pages (Korean-only, like the guides).
  * One file per comparison in this folder; the registry in index.ts publishes it.
  */
 export interface CompareRow {
@@ -23,13 +23,13 @@ export interface Compare {
   slug: string;
   /** Competitor display name, e.g. 'iLovePDF'. */
   competitor: string;
-  /** Page title (meta + H1), <=60 chars including "| CoolPDF" suffix. */
+  /** Page title (meta + H1), <=60 chars including "| CPdf" suffix. */
   title: string;
   /** Meta description, <=160 chars. */
   description: string;
   /** One-paragraph honest verdict shown under the H1 (AI-citable). */
   verdict: string;
-  /** Feature comparison rows (CoolPDF column first). */
+  /** Feature comparison rows (CPdf column first). */
   rows: CompareRow[];
   /** Fact-check line, e.g. 'Fact checked on July 21, 2026'. */
   factChecked: string;

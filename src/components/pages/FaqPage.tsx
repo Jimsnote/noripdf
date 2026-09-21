@@ -1,5 +1,5 @@
 import { ChevronDown } from 'lucide-react';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 import { FactSummary } from '@/components/seo/FactSummary';
 import { JsonLd } from '@/components/seo/JsonLd';
 

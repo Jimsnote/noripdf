@@ -37,6 +37,7 @@
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
+    "@tesseract.js-data/kor": "^1.0.0",
     "@types/node": "^22.10.2",
     "@types/qrcode": "^1.5.6",
     "@types/react": "^19.0.2",

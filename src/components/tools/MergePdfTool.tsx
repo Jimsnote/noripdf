@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { ArrowDown, ArrowUp, FileText, Loader2, Trash2 } from 'lucide-react';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 import { mergePdfs } from '@/lib/pdf/merge';
 import { warmPdfLib } from '@/lib/pdf/pdf-lib';
 import { FileDropzone } from './FileDropzone';

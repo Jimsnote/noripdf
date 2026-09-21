@@ -23,7 +23,7 @@ import {
   ScanText,
   type LucideIcon,
 } from 'lucide-react';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 
 export type ToolStatus = 'live' | 'coming-soon';
 

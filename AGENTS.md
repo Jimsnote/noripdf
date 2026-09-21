@@ -1,4 +1,4 @@
-# CoolPDF — AI Agent 项目指南
+# CPdf — AI Agent 项目指南
 
 > 本文档面向 AI 编程助手。阅读本文档前，请默认你对本项目一无所知。
 > 它的作用是让你在不重读全部历史的情况下，安全、正确地延续开发。
@@ -8,7 +8,7 @@
 
 ## 1. 项目一句话
 
-CoolPDF 是面向海外用户的**纯浏览器端 PDF 工具站**（类 ilovepdf.com），**零后端**：全部 22 个工具的处理都在浏览器（JS/WASM/Web Worker）完成。核心卖点三支柱：**No Uploads（文件永不离开设备）/ No Sign-Up / Free Forever**。变现目标 Google AdSense（未接入，接入清单见 `docs/TODO.md`）。
+CPdf（品牌 2026-09 由 CoolPDF 更名，规避与 coolpdf.com 撞名；域名 getcoolpdf.com 不变）是**面向韩国用户的纯浏览器端 PDF 工具站**（类 ilovepdf.com），**零后端**：全部 22 个工具的处理都在浏览器（JS/WASM/Web Worker）完成。核心卖点三支柱（韩语固定术语见 ko.ts，此处不转写避免错字）：**无上传（文件永不离开设备）/ 免注册 / 永久免费**。变现目标 Google AdSense（未接入，接入清单见 `docs/TODO.md`）。
 
 - **线上**：https://getcoolpdf.com（Cloudflare Workers Static Assets，www 已 301 到主域）
 - **仓库**：https://github.com/Jimsnote/coolpdf（Public，**AGPL-3.0**——因压缩用 Ghostscript WASM）
@@ -18,7 +18,7 @@ CoolPDF 是面向海外用户的**纯浏览器端 PDF 工具站**（类 ilovepdf
 
 - Next.js 15（App Router，`output: 'export'` 静态导出到 `out/`）+ React 19 + TypeScript **strict** + Tailwind 3.4
 - Node 22（`.nvmrc` + `engines: >=20 <23`，勿升级换大版本）
-- 8 语言 i18n：**en 在根路径（无前缀），de/fr/it/es/pt/zh/ja 在 `[locale]` 前缀下**；route groups 双根布局 `src/app/(en)/` 与 `src/app/(i18n)/[locale]/`（各带 `<html lang>`）
+- 韩语单语 i18n：**ko 为唯一语言兼默认语言，全部页面在根路径（无前缀）**；route group 单根布局 `src/app/(ko)/`（`<html lang="ko">`）。旧 7 语言前缀 URL 由 `public/_redirects` 301 到对应根路径页面
 - 核心库：`@cantoo/pdf-lib`（页面对象操作，**必须经 `src/lib/pdf/pdf-lib.ts` 的 `getPdfLib()` 动态 import，禁止静态 import 进首屏**）、`pdfjs-dist` v6（渲染/文本提取，懒加载经 `src/lib/pdf/pdfjs.ts`）、`@jspawn/ghostscript-wasm` + `@jspawn/qpdf-wasm`（Worker 内）、`heic-to/csp`（HEIC 解码，**LGPL-3.0**，libheif wasm 内嵌、blob URL 起 Worker，零 eval 过 CSP，懒加载）、jszip、@dnd-kit
 - 部署：`wrangler.jsonc`（assets → ./out）+ Deploy command `npx wrangler deploy`；`public/_headers`（CSP）；`scripts/copy-wasm.mjs`（postinstall+prebuild 生成 `public/wasm/`（含 manifest.json）与 `public/tesseract/`（OCR 引擎/语言包），两目录均 gitignore）
 - PWA：`public/sw.js`（Service Worker，访问过的页面与静态资源离线可用）+ `public/manifest.webmanifest` + `src/components/layout/ServiceWorkerRegister.tsx`（仅生产注册）
@@ -30,7 +30,7 @@ CoolPDF 是面向海外用户的**纯浏览器端 PDF 工具站**（类 ilovepdf
 3. **范围输入已做归一化**（`src/lib/pdf/page-ranges.ts`）：中文逗号/顿号/分号、全角破折号/数字、尾随逗号容错。不要绕过 `normalizeRangeInput`。
 4. **工具组件处理开始时必须 `setResult(null)`**：否则处理失败后旧结果卡残留，用户会下载到上一个任务的文件（真实事故）。
 5. **jpg-to-pdf 的 EXIF 方向**：必须经 `src/lib/pdf/image-orientation.ts` 矫正，否则手机竖拍照片侧躺 90°。
-6. **route groups 重构过**：路由文件只存在于 `(en)/` 和 `(i18n)/[locale]/`；`src/app/` 根下只剩 sitemap.ts/robots.ts/global-not-found.tsx/icon。移动页面目录后 dev server 必须重启（缓存路由清单）。
+6. **route group 现为单根 `(ko)/`**；`src/app/` 根下只剩 sitemap.ts/robots.ts/global-not-found.tsx/icon。移动页面目录后必须重启 dev server 并删 `.next`（stale 的 `.next/types/validator.ts` 会让 type-check 报已删除路由的错）。
 7. **sitemap.ts/robots.ts 需 `export const dynamic = 'force-static'`**（Next 15 静态导出要求）。
 8. **TS 5.7+ 的 `Uint8Array` 不能直接赋给 `BlobPart`**——统一用 `src/components/tools/blob.ts` 的 `pdfBlob()`。
 9. **Windows + Node 22 特有**：postcss.config.js 必须 CommonJS；不用 next/font/google（用系统字体栈）；Node 下跑 pdf.js 测试需 DOMMatrix 等 polyfill（仅测试环境）。
@@ -40,31 +40,30 @@ CoolPDF 是面向海外用户的**纯浏览器端 PDF 工具站**（类 ilovepdf
 
 ```
 src/
-├── app/(en)/            # 英文页（根路径）：layout/not-found + 5 内容页 + 20 工具页
-├── app/(i18n)/[locale]/ # 其他 7 语言镜像（generateStaticParams，dynamicParams=false）
+├── app/(ko)/            # 全部页面（根路径，韩语）：layout/not-found + 5 内容页 + 22 工具页 + guides/compare
 ├── app/sitemap.ts       # 由 tools.ts 的 live 工具派生，勿硬编码；无 lastmod（刻意）
 ├── app/robots.ts        # 放行 AI 爬虫（GPTBot/ClaudeBot/PerplexityBot 等）
 ├── components/
-│   ├── layout/          # Header（语言切换器同路径互转）/Footer/SiteShell/AnalyticsScript
+│   ├── layout/          # Header/Footer/SiteShell/AnalyticsScript（无语言切换器，单语站）
 │   ├── pages/           # 页面共享组件（路由文件只做薄封装）
 │   ├── pages/tools/ToolPageScaffold.tsx  # 工具页骨架（SEO 内容 + 三层 JSON-LD）
 │   ├── tools/           # ToolShell/FileDropzone/DownloadCard/EngineStatus + 12 工具组件
 │   ├── seo/             # JsonLd / FactSummary（GEO 定型文案）
 │   └── ads/AdBanner.tsx # 未放置；env 控制
-├── i18n/locales/*.ts    # 8 语言字典，**en 是 Dictionary 类型源头，必须同构**（tsc 强制）
+├── i18n/locales/ko.ts   # 唯一字典，**Dictionary 类型源头**（`export type Dictionary = typeof ko`，结构即契约）
 ├── lib/site.ts          # SITE_URL / GITHUB_URL（env 可覆盖）
 ├── lib/seo.ts           # buildAlternates / pageMetadata / localizedPath / OG_IMAGE_URL
-├── lib/tools.ts         # 20 工具注册表（slug/图标/status）
-├── lib/guides/          # 教程内容系统（仅英文）：types.ts + index.ts 注册表 + 每篇一个 <slug>.ts 数据文件
+├── lib/tools.ts         # 22 工具注册表（slug/图标/status）
+├── lib/guides/          # 教程内容系统（韩语）：types.ts + index.ts 注册表 + 每篇一个 <slug>.ts 数据文件
 └── lib/pdf/             # 纯函数处理层（与 React 解耦，Node 可测）
 ```
 
-**教程（Guides）系统**：教程页在 `src/app/(en)/guides/`（仅英文，无 hreflang），由 `src/components/pages/guides/GuidePage.tsx` 渲染数据文件。新增教程：在 `src/lib/guides/` 加数据文件（结构见 `how-to-merge-pdf.ts` exemplar，正文链接用 `[label](/path/)` 语法）→ 在 `index.ts` 注册（sitemap/索引页/工具页互链自动生效）。截图由 `scripts/capture-guide-images.mjs`（+ `*-fix.mjs`）用 Playwright 对 `out/` 实拍生成，存 `public/guides/<slug>/`；改图后必须核对数据文件里的 alt 与画面一致。
+**教程（Guides）系统**：教程页在 `src/app/(ko)/guides/`（韩语，无 hreflang），由 `src/components/pages/guides/GuidePage.tsx` 渲染数据文件。新增教程：在 `src/lib/guides/` 加数据文件（结构见 `how-to-merge-pdf.ts` exemplar，正文链接用 `[label](/path/)` 语法）→ 在 `index.ts` 注册（sitemap/索引页/工具页互链自动生效）。截图由 `scripts/capture-guide-images.mjs`（+ `*-fix.mjs`）用 Playwright 对 `out/` 实拍生成，存 `public/guides/<slug>/`；改图后必须核对数据文件里的 alt 与画面一致。
 
 ## 5. 工作约定
 
-- **新增工具**：`lib/pdf/` 纯函数 → `components/tools/` 组件 → ToolPageScaffold 加 slug → `(en)/` + `(i18n)/[locale]/` 各加薄路由 → 8 语言字典加 `toolPages` 条目（**只增不改既有 key**）→ `tools.ts` 置 live → 验证 → Node 实测核心逻辑
-- **i18n**：先改 en.ts（类型源头），其余 7 语言同步；metaTitle ≤60 字符、metaDescription ≤160、zh title ≤30 汉字、ja title ≤35 全角字符；术语表见各字典既有译法（三支柱固定）。**新工具允许英文先行**：其余语言插英文占位保证同构（heic-to-pdf 首例），翻译作为独立后续任务
+- **新增工具**：`lib/pdf/` 纯函数 → `components/tools/` 组件 → ToolPageScaffold 加 slug → `(ko)/` 加薄路由 → ko.ts 加 `toolPages` 条目（**只增不改既有 key**，它是类型源头）→ `tools.ts` 置 live → 验证 → Node 实测核心逻辑
+- **韩语文案**：ko.ts 是唯一字典，key/结构/数组长度即全站类型契约；metaTitle ≤60 字符（韩语按 Naver 截断习惯尽量 ≤35 字）、metaDescription ≤160；工具名/三支柱等固定术语以 ko.ts 既有译法为准。**血泪：AI 输出韩文时'免费'一词及若干高频词极易被写成错字音节（非词汇的 jamo 组合）**，写入后必须用码点脚本校验——`node -e "console.log('무료')"` 取标准形，全局扫描替换所有变体，再 dump 唯一词表目检；**绝不用手打韩文做替换**
 - **验证三件套**（提交前必跑）：`npm run type-check` / `npm run lint` / `npm run build`
 - **测试**：无测试框架；核心逻辑用临时 Node 脚本实测（用后删除）。CJS 模式编译（`tsc --module commonjs`）再 require，避免 ESM 路径坑
 - **git**：main 分支，英文 commit message；用户已授权本地 commit；**push 前必须经用户确认**（GitHub Desktop 由用户操作）
@@ -78,6 +77,6 @@ src/
 
 ## 7. 当前状态与下一步
 
-- 已完成：M1-M4 工具全量（现 22 个，8 语言齐全）+ SEO/GEO 基建；三路对抗审查 + 两批修复闭环；上线；www 统一；压缩/保护/解锁生产实测通过；siritools 对标批次①-④（上传计数器、FAQ 首句加粗、工具链推荐、PWA、QR 码、OCR）
-- 进行中/待办：`docs/TODO.md`（Search Console 提交 → 养收录 → AdSense；二期：Word/Excel→Markdown、证件照排版；OCR 多语言扩展）
+- 已完成：M1-M4 工具全量（22 个）+ SEO/GEO 基建；三路对抗审查 + 两批修复闭环；上线；www 统一；压缩/保护/解锁生产实测通过；siritools 对标批次①-④（上传计数器、FAQ 首句加粗、工具链推荐、PWA、QR 码、OCR）；**2026-09 韩语单语化 + 品牌更名 CPdf**（删除 7 语言及 `(i18n)/[locale]` 路由、新增 ko.ts 全量字典、guides/compare/llms.txt/manifest 全韩化、OCR 升级 eng+kor 双语种识别、旧前缀 URL 走 `_redirects` 301）
+- 进行中/待办：`docs/TODO.md`（Search Console / Naver Search Advisor 提交 → 养收录 → AdSense；二期：证件照排版；OCR 更多语言）
 - 已知限制：文字水印 canvas 路径、EXIF 重编码路径未经 Node 测试（浏览器已人工验收）；qpdf AES-256 下 accessibility 权限不生效（规范行为，FAQ 已说明）

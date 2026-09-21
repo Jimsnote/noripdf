@@ -7,59 +7,59 @@ import type { Guide } from './types';
 export const howToCompressPdf: Guide = {
   slug: 'how-to-compress-pdf',
   toolSlug: 'compress-pdf',
-  title: 'How to Compress a PDF to Reduce File Size',
+  title: 'PDF 파일 크기를 줄이는 압축 방법',
   description:
-    'Reduce PDF file size in your browser with three quality levels (72–300 DPI). No uploads, no sign-up — files never leave your device. Free step-by-step guide.',
+    '브라우저에서 세 가지 품질 수준(72~300 DPI)으로 PDF 파일 크기를 줄이세요. 업로드 없이, 가입 없이 — 파일이 기기를 떠나지 않습니다. 무료 단계별 가이드.',
   intro:
-    'The fastest way to compress a PDF is to do it right in your browser: open the free [CoolPDF Compress PDF tool](/compress-pdf/), drop in a file up to 150 MB, pick one of three quality levels, click Compress PDF, and download the result as compressed.pdf. Unlike most online compressors, CoolPDF runs the Ghostscript engine locally on your device — your document is never uploaded, and there is no account, no queue, and no watermark.',
+    'PDF를 압축하는 가장 빠른 방법은 브라우저에서 바로 처리하는 것입니다. 무료 [CPdf PDF 압축 도구](/compress-pdf/)를 열고 최대 150 MB까지 파일을 끌어다 놓은 뒤 세 가지 품질 수준 중 하나를 고르고 PDF 압축 버튼을 클릭하면, 결과물이 compressed.pdf로 다운로드됩니다. 대부분의 온라인 압축 도구와 달리 CPdf는 Ghostscript 엔진을 사용자 기기에서 로컬로 실행하므로 문서가 업로드되지 않으며, 계정도 대기도 워터마크도 없습니다.',
   quickSteps: [
-    'Open the Compress PDF tool and drag your PDF onto the upload area — or click it to browse (one file at a time, up to 150 MB on desktop).',
-    'Choose a compression level: Extreme for the smallest size, Recommended for a balance (the default), or Light for print quality.',
-    'Click "Compress PDF" — the first run downloads the ~15 MB compression engine once, then it is cached.',
-    'Click "Download" to save the result as compressed.pdf and compare the before-and-after sizes — the original file stays untouched.',
+    'PDF 압축 도구를 열고 PDF를 업로드 영역에 드래그하세요. 영역을 클릭해서 파일을 찾아도 됩니다(한 번에 하나, 데스크톱 기준 최대 150 MB).',
+    '압축 수준을 선택하세요. 가장 작은 용량은 Extreme, 균형 추천(기본값)은 Recommended, 인쇄 품질은 Light입니다.',
+    '"PDF 압축"을 클릭하세요. 처음 실행하면 약 15 MB 크기의 압축 엔진이 한 번 다운로드된 후 캐시됩니다.',
+    '다운로드 버튼을 눌러 결과를 compressed.pdf로 저장하고 압축 전후 크기를 비교하세요. 원본 파일은 그대로 유지됩니다.',
   ],
   sections: [
     {
-      heading: 'Step-by-step: compressing a PDF with CoolPDF',
+      heading: '단계별 안내: CPdf로 PDF 압축하기',
       paragraphs: [
-        'Open the [Compress PDF tool](/compress-pdf/) and add your file: drag it onto the upload area, or click the area to browse. The row under the dropzone confirms the file name and size before anything runs.',
-        'Now pick a compression level. The three cards spell out the trade-off: Extreme for the smallest possible file, Recommended — preselected — for a balance, and Light when the document will be printed. Not sure? Stay on Recommended.',
-        'Click "Compress PDF". The first run downloads the compression engine — about 15 MB of Ghostscript as WebAssembly — which is cached afterwards, so later runs start instantly. You see page-by-page progress while it works; large files can take several minutes. The download card shows the before-and-after sizes and the percentage saved — click Download to save compressed.pdf.',
+        '[PDF 압축 도구](/compress-pdf/)를 열고 파일을 추가하세요. 업로드 영역에 드래그하거나, 영역을 클릭해서 파일을 찾으면 됩니다. 실행 전에 드롭존 아래쪽 줄에 파일 이름과 크기가 표시됩니다.',
+        '이제 압축 수준을 고르세요. 세 장의 카드는 각각의 장단점을 보여 줍니다. 가장 작은 용량은 Extreme, 미리 선택된 균형 옵션은 Recommended, 인쇄할 문서라면 Light입니다. 잘 모르겠다면 Recommended 그대로 두세요.',
+        '"PDF 압축"을 클릭하세요. 처음 실행하면 Ghostscript를 WebAssembly로 묶은 약 15 MB 압축 엔진이 다운로드되며, 이후에는 캐시되어 두 번째부터는 바로 시작됩니다. 작업 중에는 페이지별 진행 상태가 표시되며, 큰 파일은 몇 분 정도 걸릴 수 있습니다. 다운로드 카드에는 압축 전후 크기와 절약된 비율이 나타나고, 다운로드 버튼을 누르면 compressed.pdf로 저장됩니다.',
       ],
       bullets: [
-        'One PDF at a time',
-        'Up to 150 MB per file on desktop, 50 MB on mobile',
-        'Three levels: Extreme (72 DPI), Recommended (150 DPI), Light (300 DPI)',
-        'Output is always saved as compressed.pdf',
+        '한 번에 PDF 하나',
+        '데스크톱 기준 파일당 최대 150 MB, 모바일 50 MB',
+        '세 가지 수준: Extreme(72 DPI), Recommended(150 DPI), Light(300 DPI)',
+        '결과는 항상 compressed.pdf로 저장',
       ],
       image: {
         src: '/guides/how-to-compress-pdf/step-1.png',
-        alt: 'The CoolPDF Compress PDF upload area with one PDF added, and the three compression level cards — Extreme, Recommended, and Light — with Recommended selected.',
+        alt: 'CPdf PDF 압축 도구에 PDF가 추가된 화면. 세 가지 압축 수준 카드가 보이고 가운데 균형 옵션이 선택되어 있습니다.',
       },
     },
     {
-      heading: 'Choosing the right compression level',
+      heading: '압축 수준 고르는 법',
       paragraphs: [
-        'The three levels are Ghostscript\u2019s standard downsampling presets; what changes is the DPI your images end up at. Extreme drops to 72 DPI — fine on screen, soft in print. Recommended lands at 150 DPI: crisp on screen, fine for casual printouts, right for most documents. Light keeps 300 DPI, print-ready, and mainly re-encodes images more efficiently — modest savings, no visible change. Text and vector graphics stay untouched at every level.',
-        'One honest caveat: compression can only shrink what is shrinkable. A text-heavy PDF exported from Word has almost no image data, so even Extreme may trim only a few percent, while a 40-page phone scan can drop to a tenth of its size.',
+        '세 수준은 Ghostscript의 표준 다운샘플링 프리셋으로, 달라지는 것은 이미지가 도달하는 DPI뿐입니다. Extreme는 72 DPI로 낮추며 화면에서는 괜찮지만 인쇄하면 흐릿합니다. Recommended는 150 DPI로, 화면에서는 선명하고 가벼운 인쇄에도 적합해 대부분의 문서에 맞습니다. Light는 300 DPI를 유지한 채 인쇄 품질을 그대로 두고 주로 이미지를 더 효율적으로 재인코딩하므로 용량 절감 폭은 작지만 화질 변화는 없습니다. 모든 수준에서 텍스트와 벡터 그래픽은 그대로 유지됩니다.',
+        '정직하게 말해 압축은 줄일 수 있는 것만 줄입니다. Word에서 내보낸 텍스트 위주의 PDF는 이미지 데이터가 거의 없어 Extreme로도 몇 퍼센트밖에 줄지 않을 수 있고, 반면 휴대폰으로 스캔한 40페이지 문서는 크기의 1/10까지 줄어들 수 있습니다.',
       ],
     },
     {
-      heading: 'Compressing sensitive documents without uploading them',
+      heading: '업로드 없이 민감한 문서 압축하기',
       paragraphs: [
-        'The PDFs that need compressing are usually on their way somewhere: a portfolio to a recruiter, bank statements to a landlord, medical reports to an insurer — and most mail servers bounce attachments over about 25 MB, so shrinking is often mandatory, not cosmetic. A conventional online compressor, meanwhile, makes you upload that very document to a stranger\u2019s server first.',
-        'CoolPDF runs the same Ghostscript engine print shops have trusted for decades, compiled to WebAssembly and executed on your own machine: the file is read from disk, rebuilt smaller, and handed back — nothing is transmitted. Once the engine is cached you can even go offline and keep compressing; closing the tab leaves no trace.',
+        '압축이 필요한 PDF는 보통 어딘가로 보내는 직전입니다. 채용 담당자에게 보내는 포트폴리오, 집주인에게 보내는 은행 거래내역, 보험사에게 보내는 진료 기록 등이 그렇습니다. 대부분의 메일 서버는 25 MB가 넘는 첨부 파일을 거부하므로, 용량 줄이기가 선택이 아니라 필수인 경우가 많습니다. 그런데 기존 온라인 압축 도구는 정작 그 문서를 모르는 서버에 먼저 업로드하게 합니다.',
+        'CPdf는 인쇄소에서 수십 년간 신뢰해 온 같은 Ghostscript 엔진을 WebAssembly로 컴파일해 사용자 기기에서 실행합니다. 파일은 디스크에서 읽혀 더 작게 재구성된 뒤 그 자리에서 돌려받을 뿐, 전송되는 것은 없습니다. 엔진이 캐시된 후에는 오프라인 상태에서도 압축할 수 있고, 탭을 닫으면 흔적이 남지 않습니다.',
       ],
     },
     {
-      heading: 'When compressing alone is not enough',
+      heading: '압축만으로 부족할 때',
       paragraphs: [
-        'If the file is still too big after Extreme, the honest fix is to shrink the content, not the pixels. Extract the pages you need with [Split PDF](/split-pdf/) — one chapter, not the whole report — or delete filler pages with [Organize PDF](/organize-pdf/), then compress the leaner document. Bundling scans instead? [Merge them into one PDF](/merge-pdf/) first and compress the bundle afterwards.',
-        'If the compressed file is about to travel, lock it first: [Protect PDF](/protect-pdf/) adds a password the same browser-local way, so an intercepted attachment stays unreadable.',
+        'Extreme로 압축한 뒤에도 파일이 여전히 크다면, 정직한 해답은 픽셀이 아니라 내용을 줄이는 것입니다. [PDF 분할](/split-pdf/)로 필요한 페이지만 추출하세요(전체 보고서가 아니라 한 챕터만), 또는 [PDF 페이지 정리](/organize-pdf/)로 불필요한 페이지를 삭제한 뒤 더 가벼워진 문서를 압축하세요. 스캔 여러 장을 묶는 경우라면 먼저 [하나의 PDF로 병합](/merge-pdf/)한 뒤 묶음 파일을 압축하세요.',
+        '압축한 파일을 곧 보낼 예정이라면 먼저 잠그세요. [PDF 보호](/protect-pdf/)로 같은 브라우저 로컬 방식으로 비밀번호를 추가하면, 중간에 가로채더라도 열 수 없습니다.',
       ],
       image: {
         src: '/guides/how-to-compress-pdf/step-2.png',
-        alt: 'The download card shown after a successful compression, displaying the compressed.pdf file name, the original and new file sizes, the percentage saved, and the Download button.',
+        alt: 'CPdf PDF 압축 도구 화면. 파일이 준비되었습니다 카드에 compressed.pdf 크기가 2.8 KB에서 6.9 KB로 147% 증가했다는 안내와 다운로드 버튼이 보임',
       },
     },
   ],
@@ -67,62 +67,62 @@ export const howToCompressPdf: Guide = {
     {
       heading: 'macOS Preview',
       paragraphs: [
-        'Preview on macOS shrinks PDFs without extra software: open the file, choose File → Export, and pick the "Reduce File Size" Quartz filter. Free and offline, but a single blunt setting — image quality often suffers, with no level to dial. CoolPDF gives the same offline privacy in any browser, with three explicit quality levels.',
+        'macOS의 Preview는 별도 소프트웨어 없이 PDF를 줄입니다. 파일을 열고 파일 → 내보내기를 선택한 뒤 "파일 크기 줄이기" Quartz 필터를 고르세요. 무료이며 오프라인에서 동작하지만 설정이 하나뿐이라 이미지 품질이 눈에 띄게 손상되는 경우가 많고, 조절할 수준이 없습니다. CPdf는 같은 오프라인 프라이버시를 모든 브라우저에서, 세 가지 명확한 품질 수준과 함께 제공합니다.',
       ],
     },
     {
-      heading: 'Adobe Acrobat (paid)',
+      heading: 'Adobe Acrobat (유료)',
       paragraphs: [
-        'Adobe\u2019s online compressor is polished, but it uploads your files to Adobe\u2019s servers and nudges you toward a paid Acrobat plan; the desktop app\u2019s Reduced Size PDF command requires that subscription too. If you already pay for Acrobat, great — otherwise a free browser tool with no upload, install, or account covers the same ground.',
+        'Adobe의 온라인 압축 도구는 완성도가 높지만, 파일을 Adobe 서버에 업로드하고 유료 Acrobat 플랜으로 유도합니다. 데스크톱 앱의 "크기 축소 PDF" 명령도 그 구독이 필요합니다. 이미 Acrobat을 구독 중이라면 좋은 선택이지만, 그렇지 않다면 업로드·설치·계정 없이 같은 일을 하는 무료 브라우저 도구로 충분합니다.',
       ],
     },
     {
-      heading: 'The Print to PDF workaround',
+      heading: '"PDF로 인쇄" 우회 방법',
       paragraphs: [
-        'A common DIY trick is "printing" the PDF to a new file with Microsoft Print to PDF or the browser\u2019s print dialog. It sometimes reduces size, but re-rendering flattens the document — links, form fields, and bookmarks are lost — so it is a last resort; a dedicated compressor like CoolPDF rewrites the file without destroying its structure.',
+        '흔한 DIY 요령은 Microsoft Print to PDF 또는 브라우저 인쇄 대화상자로 PDF를 "인쇄"해 새 파일로 만드는 것입니다. 용량이 줄기도 하지만 다시 렌더링되면서 문서가 평탄화되어 링크, 양식 필드, 북마크가 사라지므로 최후의 수단입니다. CPdf 같은 전용 압축 도구는 문서 구조를 손상하지 않고 파일을 다시 씁니다.',
       ],
     },
   ],
   edgeCases: [
     {
-      heading: 'The PDF is password-protected',
+      heading: 'PDF가 비밀번호로 보호되어 있습니다',
       paragraphs: [
-        'An encrypted PDF fails with "This PDF is password-protected and cannot be processed here." Know the password? Remove the protection with [Unlock PDF](/unlock-pdf/) first, then compress the unlocked copy. Without it, ask the sender for an unprotected version.',
+        '암호화된 PDF는 "이 PDF는 비밀번호로 보호되어 있어 여기서 처리할 수 없습니다"라는 메시지와 함께 실패합니다. 비밀번호를 안다면 먼저 [PDF 잠금 해제](/unlock-pdf/)로 보호를 제거한 뒤 풀린 파일을 압축하세요. 비밀번호가 없으면 보낼 사람에게 보호되지 않은 버전을 요청하세요.',
       ],
     },
     {
-      heading: 'The file is over the size limit',
+      heading: '파일이 크기 제한을 초과합니다',
       paragraphs: [
-        'The dropzone rejects files above 150 MB on desktop (50 MB on mobile), because the whole document is held in your device\u2019s memory while it is rebuilt. The workaround: split the PDF with [Split PDF](/split-pdf/), compress each part, then [merge them back](/merge-pdf/). Large scans also take time — after three minutes a "Still working" note appears; let it finish.',
+        '드롭존은 데스크톱 기준 150 MB(모바일 50 MB)를 넘는 파일을 거부합니다. 문서 전체가 재구성되는 동안 기기 메모리에 올라가기 때문입니다. 해결 방법: [PDF 분할](/split-pdf/)로 나눈 뒤 각 부분을 압축하고, 다시 [병합](/merge-pdf/)하세요. 큰 스캔 파일은 시간이 걸립니다. 3분이 지나면 "작업 진행 중" 안내가 나타나는데, 완료될 때까지 기다리면 됩니다.',
       ],
     },
     {
-      heading: 'The result came out larger than the original',
+      heading: '결과물이 원본보다 커진 경우',
       paragraphs: [
-        'Occasionally the compressed file comes out bigger, and the tool says so, suggesting the Light level. That happens with already-optimized PDFs — output from another compressor, or pages of mostly vector graphics. Keep your original; there is nothing left to squeeze.',
+        '드물게 압축 결과가 더 커지기도 하는데, 이때 도구가 이를 알려 주며 Light 수준을 제안합니다. 이미 최적화된 PDF — 다른 압축 도구의 출력물이거나 벡터 그래픽 위주의 페이지 — 에서 일어나는 현상입니다. 원본을 보관하세요. 더 이상 줄일 것이 없는 상태입니다.',
       ],
     },
   ],
   faqs: [
     {
-      q: 'Is compressing PDFs with CoolPDF really free?',
-      a: 'Yes — every tool on CoolPDF is free forever, with no daily quotas, watermarks, or premium tiers. The compression runs on your own device, so there is no server bill to pass on to you.',
+      q: 'CPdf로 PDF 압축은 정말 무료인가요?',
+      a: '네. CPdf의 모든 도구는 영원히 무료이며 일일 할당량, 워터마크, 유료 요금제가 없습니다. 압축은 사용자 기기에서 실행되므로 서버 비용이 발생하지 않고, 그래서 사용자에게 전가할 비용도 없습니다.',
     },
     {
-      q: 'What are the limits when compressing?',
-      a: 'One PDF at a time, up to 150 MB on desktop or 50 MB on mobile; very large documents can take several minutes, so keep the tab open until the download card appears.',
+      q: '압축할 때 제한은 어떻게 되나요?',
+      a: '한 번에 PDF 하나, 데스크톱 최대 150 MB, 모바일 최대 50 MB입니다. 아주 큰 문서는 몇 분 정도 걸릴 수 있으니, 다운로드 카드가 나타날 때까지 탭을 열어 두세요.',
     },
     {
-      q: 'Is it safe to compress confidential documents here?',
-      a: 'Yes. The engine runs locally in your browser; your file is never uploaded. Once the engine is cached you can even compress offline; closing the tab removes every trace.',
+      q: '기밀 문서를 여기서 압축해도 안전한가요?',
+      a: '네. 엔진은 브라우저 안에서 로컬로 실행되고 파일은 업로드되지 않습니다. 엔진이 캐시된 후에는 오프라인으로도 압축할 수 있고, 탭을 닫으면 모든 흔적이 사라집니다.',
     },
     {
-      q: 'Do I need to sign up or install anything?',
-      a: 'No account, no email address, nothing to install. The only download is the ~15 MB compression engine on the first run, cached afterwards so it starts instantly.',
+      q: '가입하거나 설치해야 하나요?',
+      a: '계정도 이메일 주소도 설치할 것도 없습니다. 다운로드되는 것은 처음 실행 시 약 15 MB 크기의 압축 엔진뿐이며, 이후에는 캐시되어 즉시 시작됩니다.',
     },
     {
-      q: 'Will compression reduce the quality of my PDF?',
-      a: 'Text and vector graphics stay exactly as they are; only images are downsampled to the level\u2019s DPI — 72 (Extreme), 150 (Recommended), or 300 (Light). Pick Light for printing; Recommended is right for screen sharing.',
+      q: '압축하면 PDF 품질이 떨어지나요?',
+      a: '텍스트와 벡터 그래픽은 그대로 유지되며, 이미지만 해당 수준의 DPI로 다운샘플링됩니다. 72(Extreme), 150(Recommended), 300(Light)입니다. 인쇄용이라면 Light를, 화면 공유라면 Recommended가 적합합니다.',
     },
   ],
   related: ['how-to-merge-pdf', 'how-to-split-pdf', 'how-to-password-protect-pdf'],

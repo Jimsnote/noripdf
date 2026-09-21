@@ -1,120 +1,120 @@
 import type { Guide } from './types';
 
 /**
- * Facts below were checked against components/tools/XlsxToMarkdownTool.tsx and
- * the toolPages dictionary entry — keep them in sync.
+ * 아래 사실은 components/tools/XlsxToMarkdownTool.tsx와
+ * i18n/locales/ko.ts의 toolPages 항목을 기준으로 확인했습니다 — 동기화를 유지하세요.
  */
 export const howToConvertXlsxToMarkdown: Guide = {
   slug: 'how-to-convert-xlsx-to-markdown',
   toolSlug: 'xlsx-to-markdown',
-  title: 'How to Convert Excel to Markdown Tables — Free, Local',
+  title: 'Excel을 Markdown 표로 변환하는 방법 — 무료, 로컬 처리',
   description:
-    'Step-by-step: convert .xlsx/.xls workbooks to Markdown tables — one section per sheet — locally in your browser. Free, no upload, no sign-up.',
+    '단계별 안내: .xlsx/.xls 워크북을 Markdown 표로 변환하기 — 시트당 하나의 섹션 — 브라우저에서 로컬로 처리합니다. 무료, 업로드 없음, 가입 불필요.',
   intro:
-    'The quickest way to convert an Excel workbook to Markdown is to do it locally in your browser: open the free [CoolPDF Excel to Markdown tool](/xlsx-to-markdown/), drop in a .xlsx or .xls file, click Convert to Markdown, and download the result as download.md. Every non-empty sheet becomes a "## Sheet: <name>" section with a GitHub-flavored Markdown table, and everything runs on your own device — the workbook is never uploaded, and no account is needed.',
+    'Excel 워크북을 Markdown으로 변환하는 가장 빠른 방법은 브라우저에서 로컬로 처리하는 것입니다: 무료인 [CPdf XLSX를 Markdown으로 도구](/xlsx-to-markdown/)를 열고, .xlsx 또는 .xls 파일을 놓은 뒤, "Markdown으로 변환" 버튼을 클릭하고 결과를 download.md로 다운로드하세요. 내용이 있는 모든 시트는 GitHub Flavored Markdown 표가 포함된 "## Sheet: <name>" 섹션이 되며, 모든 처리는 사용자의 기기에서 이루어집니다 — 워크북은 업로드되지 않고 계정도 필요 없습니다.',
   quickSteps: [
-    'Open the Excel to Markdown tool and drop in a .xlsx or .xls workbook.',
-    'Click "Convert to Markdown" — every non-empty sheet is converted locally in your browser.',
-    'Click Download on the result card to save the file as download.md.',
-    'Each sheet appears as a Markdown table under its own "## Sheet: <name>" heading — paste them into docs, wikis, or an AI tool.',
+    'XLSX를 Markdown으로 도구를 열고 .xlsx 또는 .xls 워크북을 놓습니다.',
+    '"Markdown으로 변환"을 클릭하면 내용이 있는 모든 시트가 브라우저에서 로컬로 변환됩니다.',
+    '결과 카드에서 다운로드를 클릭하면 파일이 download.md로 저장됩니다.',
+    '각 시트는 "## Sheet: <name>" 제목 아래에 Markdown 표로 표시됩니다 — 문서, 위키 또는 AI 도구에 붙여 넣으세요.',
   ],
   sections: [
     {
-      heading: 'Step-by-step: converting with CoolPDF',
+      heading: '단계별 안내: CPdf로 변환하기',
       paragraphs: [
-        'Open the [Excel to Markdown tool](/xlsx-to-markdown/) — nothing to install, no account to create. Drag a workbook onto the upload area, or click it to pick one from a file dialog. Both modern .xlsx and legacy .xls files work.',
-        'Click "Convert to Markdown". Every non-empty sheet in the workbook is read and rebuilt as a Markdown table, right in your browser tab.',
-        'When the download card appears, click Download. The result is saved as download.md, and the original workbook is never modified.',
+        '[XLSX를 Markdown으로 도구](/xlsx-to-markdown/)를 엽니다 — 설치할 것도, 만들 계정도 없습니다. 워크북을 업로드 영역에 드래그하거나, 클릭해서 파일 선택 대화상자에서 골라도 됩니다. 최신 .xlsx와 구형 .xls 파일 모두 지원됩니다.',
+        '"Markdown으로 변환"을 클릭하세요. 워크북에 있는 내용이 있는 모든 시트가 읽혀서 브라우저 탭 안에서 Markdown 표로 다시 만들어집니다.',
+        '다운로드 카드가 나타나면 다운로드를 클릭하세요. 결과는 download.md로 저장되며 원본 워크북은 절대 수정되지 않습니다.',
       ],
       bullets: [
-        'Both .xlsx and .xls workbooks are supported',
-        'Every non-empty sheet becomes its own table section',
-        'Output is always saved as download.md',
-        'The original workbook is never modified',
+        '.xlsx와 .xls 워크북 모두 지원',
+        '내용이 있는 모든 시트가 각각의 표 섹션이 됨',
+        '결과는 항상 download.md로 저장',
+        '원본 워크북은 절대 수정되지 않음',
       ],
     },
     {
-      heading: 'What the Markdown output looks like',
+      heading: 'Markdown 출력 결과의 모습',
       paragraphs: [
-        'Each sheet gets a "## Sheet: <name>" heading followed by a GitHub-flavored Markdown table. The first non-empty row of the sheet becomes the table header, and the rest of the rows follow as data rows — ready to render in GitHub, GitLab, Obsidian, or any Markdown viewer.',
-        'Cells are exported with their computed values as stored in the file, not the formulas behind them. Merged regions keep their value in the top-left cell and come out empty elsewhere — which is usually what you want for section header rows. Formatting like colors, borders, and number styles does not carry over: Markdown tables are plain text, values only.',
+        '각 시트에는 "## Sheet: <name>" 제목이 붙고 그 뒤에 GitHub Flavored Markdown 표가 따라옵니다. 시트의 첫 번째 내용이 있는 행이 표 헤더가 되고 나머지 행은 데이터 행으로 이어집니다 — GitHub, GitLab, Obsidian 또는 어떤 Markdown 뷰어에서도 렌더링할 수 있는 상태로 나옵니다.',
+        '셀에는 수식이 아니라 파일에 저장된 계산된 값으로 내보내집니다. 병합된 영역은 값이 왼쪽 위 셀에만 남고 나머지는 비어 있습니다 — 섹션 헤더 행에는 보통 이렇게 나오는 것이 좋습니다. 색상, 테두리, 숫자 서식 같은 서식은 넘어가지 않습니다. Markdown 표는 일반 텍스트이므로 값만 전달됩니다.',
       ],
     },
     {
-      heading: 'Why tables-as-Markdown — and why locally',
+      heading: '표를 Markdown으로 만드는 이유 — 그리고 로컬로 처리하는 이유',
       paragraphs: [
-        'A Markdown table travels well: paste quarterly figures into a report, drop a price list into a wiki, or hand an entire budget to ChatGPT or Claude in a form they parse reliably — far better than a screenshot and far cheaper than re-typing. It is also diff-friendly, so spreadsheet data can finally live in version control.',
-        'Spreadsheets tend to hold the numbers that matter most: budgets, payroll, client lists, financial models. Upload-based converters send all of that to someone else’s infrastructure first. CoolPDF reads the workbook and builds the Markdown entirely on your device — nothing is transmitted, and closing the tab removes every trace.',
+        'Markdown 표는 어디에서나 잘 쓸 수 있습니다: 분기별 수치를 보고서에 붙여 넣거나, 가격표를 위키에 넣거나, 예산 전체를 스크린샷보다 훨씬 잘, 다시 입력하는 것보다 훨씬 적은 비용으로 ChatGPT나 Claude가 안정적으로 파싱할 수 있는 형태로 전달할 수 있습니다. 차이 비교에도 친화적이라서, 스프레드시트 데이터가 마침내 버전 관리 안에서 살 수 있습니다.',
+        '스프레드시트에는 가장 중요한 숫자가 들어 있는 경우가 많습니다: 예산, 급여, 고객 목록, 재무 모델. 업로드 방식 변환기는 이 모든 것을 먼저 다른 사람의 인프라로 보냅니다. CPdf는 워크북을 읽고 Markdown을 만드는 전 과정을 사용자의 기기에서 수행합니다 — 전송되는 것은 아무것도 없고, 탭을 닫으면 모든 흔적이 사라집니다.',
       ],
     },
     {
-      heading: 'Combining the conversion with other tools',
+      heading: '다른 도구와 변환 함께 사용하기',
       paragraphs: [
-        'Need the same treatment for a document? [Word to Markdown](/docx-to-markdown/) preserves headings, lists, and tables from .docx files, and [PDF to Markdown](/pdf-to-markdown/) does the same for a PDF’s text layer.',
-        'Only one sheet of a big workbook matters? Convert everything anyway — the sheets arrive in separate sections, so deleting the ones you do not need takes seconds.',
+        '문서에 같은 처리가 필요하신가요? [DOCX를 Markdown으로](/docx-to-markdown/)는 .docx 파일의 제목, 목록, 표를 유지하고, [PDF를 Markdown으로](/pdf-to-markdown/)는 PDF의 텍스트 레이어에 대해 같은 일을 합니다.',
+        '큰 워크북에서 시트 하나만 필요한가요? 그래도 전체를 변환하세요 — 시트는 각각의 섹션으로 나뉘어 나오므로 필요 없는 섹션을 삭제하는 데는 몇 초면 충분합니다.',
       ],
     },
   ],
   alternatives: [
     {
-      heading: 'Copy and paste from Excel',
+      heading: 'Excel에서 복사하여 붙여 넣기',
       paragraphs: [
-        'Selecting a range and pasting it into an editor gives you tab-separated text: the values arrive, but without the | --- | table markup you still do the table formatting by hand. For a handful of cells that is fine; for a whole workbook, CoolPDF writes the tables for you.',
+        '범위를 선택해 편집기에 붙여 넣으면 탭으로 구분된 텍스트가 됩니다: 값은 들어오지만 | --- | 표 마크업이 없으므로 표 서식은 여전히 손으로 만들어야 합니다. 셀 몇 개라면 이렇게 합니다. 그런데 워크북 전체라면 CPdf가 표를 대신 작성합니다.',
       ],
     },
     {
-      heading: 'Save as CSV, sheet by sheet',
+      heading: 'CSV로 저장하기 — 시트별로 하나씩',
       paragraphs: [
-        'Excel can save any sheet as a CSV file — free and offline, but one sheet at a time, with no header conventions and no way to drop the result into a document as a rendered table. Markdown tables are one conversion away instead of one formatting session per sheet.',
+        'Excel에서는 어떤 시트든 CSV 파일로 저장할 수 있습니다 — 무료에 오프라인이지만, 한 번에 시트 하나씩만 가능하고 헤더 규칙도 없으며, 결과를 렌더링된 표 상태로 문서에 넣을 방법도 없습니다. Markdown 표라면 변환 한 번이면 되지, 시트마다 서식 작업을 한 번씩 할 필요가 없습니다.',
       ],
     },
     {
-      heading: 'Online converters',
+      heading: '온라인 변환기',
       paragraphs: [
-        'Cloud converters will turn an uploaded workbook into Markdown, often with limits on file size and rows. The real cost is the upload itself: financial models, payroll, and client lists are exactly the files that should not sit in someone else’s queue. A local tool that never transmits the file is the safer default.',
+        '클라우드 변환기는 업로드한 워크북을 Markdown으로 바꿔 주지만, 파일 크기와 행 수 제한이 있는 경우가 많습니다. 진짜 대가는 업로드 그 자체입니다: 재무 모델, 급여 명단, 고객 목록은 정말로 남의 대기열에 있으면 안 되는 파일들입니다. 파일을 전송하지 않는 로컬 도구가 더 안전한 기본 선택입니다.',
       ],
     },
   ],
   edgeCases: [
     {
-      heading: 'The workbook uses formulas',
+      heading: '워크북에 수식이 있는 경우',
       paragraphs: [
-        'Cells are exported with their computed values as stored in the file, not the formulas themselves. If a sheet was recently edited, save it in Excel first so the stored results are up to date, then convert.',
+        '셀은 수식 자체가 아니라 파일에 저장된 계산된 값으로 내보내집니다. 시트를 최근에 편집했다면 먼저 Excel에서 저장해 저장된 결과를 최신으로 만든 뒤 변환하세요.',
       ],
     },
     {
-      heading: 'Merged cells and nested headers',
+      heading: '병합된 셀과 다단 헤더',
       paragraphs: [
-        'Merged regions keep their value in the top-left cell; the rest of the merged cells come out empty. Multi-row headers flatten into a single header row — for heavily structured reports, expect a minute of tidying rather than a perfect mirror.',
+        '병합된 영역은 값이 왼쪽 위 셀에만 남고 나머지 병합 셀은 비어서 나옵니다. 여러 행으로 된 헤더는 하나의 헤더 행으로 평탄화됩니다 — 구조가 복잡한 보고서라면 완벽한 복제라기보다 잠깐의 다듬질을 기대하세요.',
       ],
     },
     {
-      heading: 'Very wide sheets',
+      heading: '매우 넓은 시트',
       paragraphs: [
-        'Markdown tables scale to many columns, but a 40-column sheet is unwieldy in any text format. Consider copying only the key columns into a new sheet before converting, so the output stays readable.',
+        'Markdown 표는 열이 많아도 되지만, 40열짜리 시트는 어떤 텍스트 형식에서도 다루기 힘듭니다. 변환 전에 핵심 열로 새 시트를 만들어 복사해 두면 출력 결과가 읽기 편하게 유지됩니다.',
       ],
     },
   ],
   faqs: [
     {
-      q: 'Is converting Excel to Markdown with CoolPDF free?',
-      a: 'Yes — every CoolPDF tool is free forever, with no watermarks, daily quotas, or premium tier. The conversion runs on your own device, so there is no server bill to pass on.',
+      q: 'CPdf에서 Excel을 Markdown으로 변환하는 것은 무료인가요?',
+      a: '그렇습니다 — 모든 CPdf 도구는 워터마크, 일일 제한, 프리미엄 요금제 없이 영원히 무료입니다. 변환은 사용자의 기기에서 실행되므로 전달할 서버 비용도 없습니다.',
     },
     {
-      q: 'How are sheets handled?',
-      a: 'Every non-empty sheet becomes a "## Sheet: <name>" section with a GitHub-flavored Markdown table. The first non-empty row becomes the table header.',
+      q: '시트는 어떻게 처리되나요?',
+      a: '내용이 있는 모든 시트는 GitHub Flavored Markdown 표가 포함된 "## Sheet: <name>" 섹션이 됩니다. 첫 번째 내용이 있는 행이 표 헤더가 됩니다.',
     },
     {
-      q: 'Are formulas converted?',
-      a: 'Cells are exported with their computed values as stored in the file, not the formulas themselves.',
+      q: '수식도 변환되나요?',
+      a: '셀은 수식 자체가 아니라 파일에 저장된 계산된 값으로 내보내집니다.',
     },
     {
-      q: 'What about .xls files?',
-      a: 'Both modern .xlsx and legacy .xls workbooks are supported.',
+      q: '.xls 파일은 어떻게 되나요?',
+      a: '최신 .xlsx와 구형 .xls 워크북 모두 지원됩니다.',
     },
     {
-      q: 'Is it safe to convert confidential spreadsheets here?',
-      a: 'Yes. The workbook is read and converted entirely in your browser and never uploaded anywhere. Disconnect from the internet after the page loads and it still works; closing the tab removes every trace.',
+      q: '기밀 스프레드시트를 여기서 변환해도 안전한가요?',
+      a: '네. 워크북은 브라우저 안에서 모두 읽히고 변환되며 어디에도 업로드되지 않습니다. 페이지를 불러온 후 인터넷 연결을 끊어도 동작하고, 탭을 닫으면 모든 흔적이 사라집니다.',
     },
   ],
   related: ['how-to-convert-docx-to-markdown', 'how-to-convert-pdf-to-markdown', 'how-to-compress-pdf'],

@@ -7,73 +7,73 @@ import type { Guide } from './types';
 export const howToRotatePdf: Guide = {
   slug: 'how-to-rotate-pdf',
   toolSlug: 'rotate-pdf',
-  title: 'How to Rotate PDF Pages and Save the Result',
+  title: 'PDF 페이지를 회전하고 결과를 저장하는 방법',
   description:
-    'Rotate PDF pages by 90°, 180°, or 270° and save the change permanently — all pages or only the ones you list, right in your browser. Free, no uploads.',
+    'PDF 페이지를 90°, 180°, 270°로 회전하고 변경 사항을 영구 저장하세요. 전체 페이지 또는 지정한 페이지만 적용 가능하며, 브라우저에서 바로 처리됩니다. 무료, 업로드 없음.',
   intro:
-    'The fastest way to rotate a PDF permanently is to do it in your browser: open the free [CoolPDF Rotate PDF tool](/rotate-pdf/), drop in your file, pick 90°, 180°, or 270° clockwise, choose all pages or just the ones you list, and download the fixed document as rotated.pdf. The rotation is saved into the file itself — and because CoolPDF processes everything locally, your document is never uploaded to a server.',
+    'PDF를 영구적으로 회전하는 가장 빠른 방법은 브라우저에서 처리하는 것입니다. 무료 [CPdf PDF 회전 도구](/rotate-pdf/)를 열고 파일을 드래그 앤 드롭한 뒤 90°, 180°, 270° 중 원하는 각도를 선택하세요. 전체 페이지에 적용하거나 입력한 페이지에만 적용할 수 있으며, 처리가 끝나면 회전이 반영된 rotated.pdf로 다운로드할 수 있습니다. 회전 정보는 파일 자체에 저장되고, CPdf는 모든 처리를 기기 안에서 수행하므로 문서가 서버에 업로드되지 않습니다.',
   quickSteps: [
-    'Open the [Rotate PDF tool](/rotate-pdf/) and drag your PDF onto the upload area — or click it to browse. One file at a time, up to 100 MB on desktop (50 MB on mobile).',
-    'Pick a rotation angle — 90°, 180°, or 270° — under "Rotation angle (clockwise)".',
-    'Under "Apply to", choose "All pages" or "Selected pages only" and type the pages to turn, for example 1, 3, 5-8. Then click "Rotate PDF".',
-    'Click "Download" on the "Your file is ready" card to save the result as rotated.pdf. The original file stays untouched.',
+    '[PDF 회전 도구](/rotate-pdf/)를 열고 PDF를 업로드 영역에 드래그하거나 클릭해서 파일을 선택하세요. 한 번에 한 개의 파일만 처리할 수 있으며, 크기는 데스크톱 최대 100 MB, 모바일 최대 50 MB입니다.',
+    '"회전 각도 (시계 방향)"에서 90°, 180°, 270° 중 하나를 선택하세요.',
+    '"적용 대상"에서 "전체 페이지" 또는 "선택한 페이지만"을 고르고 회전할 페이지를 입력하세요(예: 1, 3, 5-8). 그런 다음 "PDF 회전" 버튼을 클릭하세요.',
+    '"파일이 준비되었습니다" 카드에서 "다운로드"를 클릭하면 결과가 rotated.pdf로 저장됩니다. 원본 파일은 그대로 유지됩니다.',
   ],
   sections: [
     {
-      heading: 'Step-by-step: rotating a PDF with CoolPDF',
+      heading: 'CPdf로 PDF 회전하기: 단계별 안내',
       paragraphs: [
-        'Open the [Rotate PDF tool](/rotate-pdf/) — no install, no account. Drag your PDF onto the upload area, or click it to browse; the trash icon on the file row clears the current file so you can start over.',
-        'Choose the rotation under "Rotation angle (clockwise)": 90°, 180°, or 270°. Then set the scope under "Apply to". "All pages" turns the whole document; "Selected pages only" reveals a Pages field listing exactly what to fix — single pages, ranges, or both, like 1, 3, 5-8.',
-        'Click "Rotate PDF" — because the work happens in your browser, a typical document finishes in a second or two. Click Download on the "Your file is ready" card; the result is always named rotated.pdf, and your original file is never modified.',
+        '[PDF 회전 도구](/rotate-pdf/)를 여세요. 설치나 계정이 필요 없습니다. PDF를 업로드 영역에 드래그하거나 클릭해서 파일을 선택하세요. 파일 행의 휴지통 아이콘을 누르면 현재 파일을 지우고 처음부터 다시 시작할 수 있습니다.',
+        '"회전 각도 (시계 방향)"에서 90°, 180°, 270°를 선택하세요. 그다음 "적용 대상"에서 범위를 정하세요. "전체 페이지"는 문서 전체를 회전하고, "선택한 페이지만"을 고르면 수정할 페이지를 직접 입력할 수 있습니다. 단일 페이지, 범위, 또는 둘을 함께 입력할 수 있습니다(예: 1, 3, 5-8).',
+        '"PDF 회전"을 클릭하세요. 처리가 브라우저 안에서 이루어지므로 일반적인 문서는 1~2초 안에 완료됩니다. "파일이 준비되었습니다" 카드에서 다운로드를 클릭하세요. 결과는 항상 rotated.pdf라는 이름으로 저장되며 원본 파일은 절대 수정되지 않습니다.',
       ],
       bullets: [
-        'One PDF per run, up to 100 MB on desktop (50 MB on mobile)',
-        'Angles: 90°, 180°, or 270° clockwise',
-        'Page lists accept single pages and ranges: 1, 3, 5-8',
-        'Output is always saved as rotated.pdf',
+        '한 번에 PDF 1개, 데스크톱 최대 100 MB(모바일 최대 50 MB)',
+        '각도: 시계 방향 90°, 180°, 270°',
+        '페이지 목록에는 단일 페이지와 범위 입력 가능: 1, 3, 5-8',
+        '결과는 항상 rotated.pdf로 저장됨',
       ],
       image: {
         src: '/guides/how-to-rotate-pdf/step-1.png',
-        alt: 'The CoolPDF Rotate PDF options panel showing the 90°, 180°, and 270° angle radio buttons, the "All pages" and "Selected pages only" scope choices, and the Pages input filled with 1, 3, 5-8.',
+        alt: 'PDF 회전 도구의 옵션 패널 화면. 회전 각도 90°, 적용 대상 선택한 페이지만이 선택되어 있고 페이지 입력란에는 1, 3, 5-8이 입력됨',
       },
     },
     {
-      heading: 'Picking the right angle — and fixing mixed documents',
+      heading: '올바른 각도 고르기 — 그리고 섞여 있는 문서 수정하기',
       paragraphs: [
-        'Upside-down pages need 180°. Sideways pages need 90° or 270° — guess wrong and the page just lies on its other side, so run the tool again with the opposite angle. Rotation here is cumulative: each pass adds to the page\u2019s existing rotation rather than replacing it, so re-running is safe and always lands upright.',
-        'Real-world PDFs are often mixed: a portrait report with one landscape chart, a scan batch where one page fed through rotated. Use "Selected pages only" for those, and combine passes when pages need different angles — rotate pages 4 and 9 by 90° first, then drop rotated.pdf back in and turn page 12 by 270°.',
+        '뒤집힌 페이지에는 180°가 필요합니다. 옆으로 누운 페이지에는 90° 또는 270°를 사용하세요. 잘못 선택하면 페이지가 반대쪽으로 눕기 때문에, 그럴 때는 반대 각도로 다시 실행하면 됩니다. 여기서 회전은 누적됩니다. 각 실행은 기존 회전을 덮어쓰는 대신 더해지므로, 반복 실행해도 안전하고 언제나 올바른 방향으로 놓입니다.',
+        '실제 PDF는 종종 섞여 있습니다. 세로 보고서에 가로 차트 한 페이지가 끼어 있는 경우, 스캔 배치에서 한 페이지만 뒤틀려 들어온 경우 등입니다. 이럴 때는 "선택한 페이지만"을 사용하고, 페이지마다 다른 각도가 필요하면 여러 번 나눠 실행하세요. 예를 들어 4, 9페이지를 90°로 먼저 회전한 다음 rotated.pdf를 다시 넣고 12페이지를 270°로 돌리는 식입니다.',
       ],
     },
     {
-      heading: 'The classic case: scans that came out sideways',
+      heading: '가장 흔한 사례: 옆으로 나온 스캔',
       paragraphs: [
-        'Nine times out of ten, a page that needs rotating was born on a camera or a scanner: a signed contract photographed in landscape, a form that went through the feeder at an angle, a receipt captured one page too wide. The text is fine — it is just lying on its side.',
-        'Fix the whole batch in one pass with "All pages", or pick out the odd ones with "Selected pages only" — a scan run usually means most pages are fine and one or two fed through rotated. And if the pages started as phone photos, [JPG to PDF](/jpg-to-pdf/) reads each image\u2019s orientation flag and builds them upright from the start, no fix-up pass needed.',
+        '회전이 필요한 페이지는 십중팔구 카메라나 스캐너에서 나왔습니다. 가로로 촬영된 서명 계약서, 급지대에 비스듬히 들어간 서식, 한 페이지가 넓게 잡힌 영수증 등이 그렇습니다. 텍스트 자체는 온전합니다. 그저 옆으로 누워 있을 뿐입니다.',
+        '"전체 페이지"로 전체 배치를 한 번에 수정하거나, "선택한 페이지만"으로 누운 페이지만 골라내세요. 스캔 작업은 보통 대부분의 페이지는 정상이고 한두 페이지만 뒤틀려 있는 경우가 많습니다. 그리고 페이지가 휴대폰 사진에서 시작됐다면 [JPG를 PDF로](/jpg-to-pdf/)가 각 이미지의 방향 플래그를 읽어 처음부터 올바른 방향으로 문서를 만들어 줍니다.',
       ],
     },
     {
-      heading: 'Rotate it and keep it rotated: the save trap',
+      heading: '회전한 뒤 유지하기: 저장의 함정',
       paragraphs: [
-        'The most common rotation frustration goes like this: you open the PDF, click the rotate button in your viewer, the page looks right — you close it, and next time it is sideways again. Your click was fine; that button only turns your view, and viewers never write the change back into the file.',
-        'A rotation only survives sharing when it is stored in the document itself. That is what CoolPDF does: the new orientation is written into the page settings following the PDF standard, so the file opens upright in Acrobat, Preview, Chrome, and on phones — for you and for everyone you send it to.',
+        '회전에서 가장 흔한 좌절은 이렇습니다. PDF를 열고 뷰어의 회전 버튼을 누르면 페이지가 바로 보입니다. 그런데 닫았다가 다시 열곤 또 옆으로 누워 있습니다. 클릭은 잘못되지 않았습니다. 그 버튼은 화면 표시만 바꿀 뿐이고, 뷰어는 그 변경을 파일에 기록하지 않기 때문입니다.',
+        '회전은 문서 자체에 저장될 때만 공유 후에도 유지됩니다. CPdf는 바로 그렇게 동작합니다. 새 방향이 PDF 표준에 따라 페이지 설정에 기록되므로, Acrobat, Preview, Chrome, 휴대폰에서 모두 올바른 방향으로 열립니다. 나눠 준 상대방에게도 마찬가지입니다.',
       ],
     },
     {
-      heading: 'Why rotate locally instead of uploading the scan?',
+      heading: '스캔을 업로드하는 대신 로컬에서 회전하는 이유',
       paragraphs: [
-        'Pages that need rotating almost always come from a scanner or a phone camera: signed contracts, ID documents, medical forms, receipts. Those are exactly the files you should think twice about uploading to a stranger\u2019s server just to turn them upright.',
-        'CoolPDF keeps the whole job on your device: the rotation runs in your browser, nothing is transmitted or stored anywhere else, and closing the tab leaves no trace — you can even disconnect once the page has loaded. For documents covered by an NDA, that removes the upload question entirely.',
+        '회전이 필요한 페이지는 거의 항상 스캐너나 휴대폰 카메라에서 나옵니다. 서명된 계약서, 신분증, 진료 서류, 영수증 등이 그렇습니다. 이런 파일을 바로 세우기 위해 낯선 서버에 업로드하는 것은 한 번 더 생각해봐야 합니다.',
+        'CPdf는 모든 작업을 기기 안에서 처리합니다. 회전이 브라우저에서 실행되고, 어디에도 전송되거나 저장되지 않으며, 탭을 닫으면 흔적이 남지 않습니다. 페이지가 로드된 후에는 인터넷 연결을 끊어도 됩니다. NDA가 적용되는 문서라면 업로드 여부를 고민할 필요 자체가 사라집니다.',
       ],
     },
     {
-      heading: 'What to do after rotating',
+      heading: '회전 후에 할 일',
       paragraphs: [
-        'A rotated scan is often one step in a bigger cleanup. If the file is too heavy to email, run it through [Compress PDF](/compress-pdf/). To reorder pages, delete blanks, or pull out a chapter, use [Organize PDF](/organize-pdf/) or [Split PDF](/split-pdf/).',
-        'And if the sideways pages started as phone photos, skip the scan-and-fix cycle next time: [JPG to PDF](/jpg-to-pdf/) builds a PDF straight from your images and applies each photo\u2019s orientation automatically, so pages come out upright from the start.',
+        '회전된 스캔은 종종 더 큰 정리 작업의 한 단계입니다. 파일이 이메일 보내기에 너무 크면 [PDF 압축](/compress-pdf/)을 실행하세요. 페이지 순서를 바꾸거나 빈 페이지를 삭제하거나 한 장을 떼어내리면 [PDF 페이지 정리](/organize-pdf/) 또는 [PDF 분할](/split-pdf/)을 사용하세요.',
+        '그리고 옆으로 누운 페이지가 휴대폰 사진에서 시작됐다면 다음부터는 스캔 후 수정 사이클을 건너뛰세요. [JPG를 PDF로](/jpg-to-pdf/)는 이미지에서 바로 PDF를 만들면서 각 사진의 방향을 자동으로 적용하므로, 처음부터 페이지가 올바르게 나옵니다.',
       ],
       image: {
         src: '/guides/how-to-rotate-pdf/step-2.png',
-        alt: 'The "Your file is ready" download card after rotating, showing the rotated.pdf file name, the output file size, and the Download button.',
+        alt: '회전 완료 후 파일이 준비되었습니다 카드에 rotated.pdf(2.8 KB)와 다운로드 버튼이 보이는 화면',
       },
     },
   ],
@@ -81,66 +81,66 @@ export const howToRotatePdf: Guide = {
     {
       heading: 'macOS Preview',
       paragraphs: [
-        'On a Mac, Preview rotates PDFs without extra software: open the file, show the thumbnail sidebar, select the pages, then Tools → Rotate Left or Rotate Right — File → Save keeps the change. It is free and works offline, but macOS-only, and with no way to type a page list, fixing scattered pages means hunting through thumbnails. CoolPDF gives you the same offline privacy in any browser, with explicit page ranges.',
+        'Mac에서는 Preview로 별도 소프트웨어 없이 PDF를 회전할 수 있습니다. 파일을 열고 썸네일 사이드바를 표시한 뒤 페이지를 선택하고 도구 → 왼쪽으로 회전 또는 오른쪽으로 회전을 선택하세요. 파일 → 저장으로 변경 사항을 유지할 수 있습니다. 무료이며 오프라인에서도 동작하지만 macOS에서만 사용할 수 있고, 페이지 목록을 입력할 수 없어 흩어진 페이지를 수정하려면 썸네일을 일일이 찾아야 합니다. CPdf는 브라우저 어디서나 동일한 오프라인 프라이버시를 제공하면서도 페이지 범위를 직접 지정할 수 있습니다.',
       ],
     },
     {
-      heading: 'Adobe Acrobat (paid) — and its free web version',
+      heading: 'Adobe Acrobat (유료) — 그리고 무료 웹 버전',
       paragraphs: [
-        'Adobe Acrobat Pro rotates individual pages or the whole document from its Organize Pages view — the polished option if you already pay for the subscription. Adobe\u2019s free online rotate tool exists too, but it uploads your file to Adobe\u2019s servers and asks for an Adobe account before you can download. Without a subscription, a browser tool with no upload and no account covers the same ground.',
+        'Adobe Acrobat Pro는 페이지 정리 보기에서 개별 페이지나 문서 전체를 회전합니다. 이미 구독 중이라면 세련된 선택지입니다. Adobe의 무료 온라인 회전 도구도 있지만, 파일을 Adobe 서버에 업로드하고 다운로드 전에 Adobe 계정을 요구합니다. 구독이 없다면 업로드도 계정도 없는 브라우저 도구로 같은 일을 처리할 수 있습니다.',
       ],
     },
     {
-      heading: 'The rotate button in your PDF viewer',
+      heading: 'PDF 뷰어의 회전 버튼',
       paragraphs: [
-        'Most viewers — Acrobat Reader, Chrome, Edge, Firefox — have a rotate button, but it only rotates your view. Close the file and the change is gone — the rotation was never written into the document, so the next person sees the page sideways again. For a file that opens upright everywhere, the rotation has to be saved into the PDF — which is exactly what CoolPDF does.',
+        'Acrobat Reader, Chrome, Edge, Firefox 등 대부분의 뷰어에는 회전 버튼이 있지만, 화면 표시만 회전시킬 뿐입니다. 파일을 닫으면 변경 사항이 사라집니다. 회전이 문서에 기록된 적이 없기 때문에, 다음에 여는 사람에게도 여전히 옆으로 보입니다. 어디서나 올바른 방향으로 열리는 파일을 원한다면 회전을 PDF 안에 저장해야 하며, CPdf는 바로 그렇게 합니다.',
       ],
     },
   ],
   edgeCases: [
     {
-      heading: 'The PDF is password-protected',
+      heading: 'PDF가 암호로 보호되는 경우',
       paragraphs: [
-        'An encrypted PDF cannot be rotated until its protection is removed — the tool reports "This PDF is password-protected and cannot be processed here." If you know the password, save an unprotected copy with [Unlock PDF](/unlock-pdf/) first, then rotate that copy. Without the password, ask the sender for an unprotected version.',
+        '암호로 보호된 PDF는 보호가 해제되기 전까지 회전할 수 없습니다. 도구는 "이 PDF는 암호로 보호되어 있어 여기서 처리할 수 없습니다."라고 안내합니다. 비밀번호를 알고 있다면 [PDF 잠금 해제](/unlock-pdf/)로 보호 없는 사본을 먼저 저장한 뒤 해당 사본을 회전하세요. 비밀번호가 없다면 보내신 사람에게 보호되지 않은 버전을 요청하세요.',
       ],
     },
     {
-      heading: 'The file is too large',
+      heading: '파일이 너무 큰 경우',
       paragraphs: [
-        'The limit is 100 MB per file on desktop and 50 MB on mobile — the file is held in memory during processing, and the error names the limit when you exceed it. Long scans are the usual suspects: shrink the document with [Compress PDF](/compress-pdf/) first, then rotate the smaller file.',
+        '크기 제한은 데스크톱에서 파일당 100 MB, 모바일에서 50 MB입니다. 처리 중 파일이 메모리에 올라가며, 제한을 초과하면 오류 메시지에 그 내용이 표시됩니다. 긴 스캔 문서가 흔한 원인입니다. [PDF 압축](/compress-pdf/)으로 문서를 줄인 뒤 작은 파일을 회전하세요.',
       ],
     },
     {
-      heading: 'The page list is rejected',
+      heading: '페이지 목록이 거부되는 경우',
       paragraphs: [
-        'Two messages come from the Pages field. "Invalid page range. Use numbers and hyphens, for example 1-3, 5." means the syntax is off — a typo, or a reversed range like 8-5. "The page range exceeds the number of pages in the document." means you listed a page beyond the document\u2019s length. Pages are numbered from 1, duplicates are harmless, and spaces or a trailing comma are ignored — so "1,3, 5 - 8" works as well as 1, 3, 5-8.',
+        '페이지 입력란에서 나오는 메시지는 두 가지입니다. "페이지 범위가 올바르지 않습니다. 숫자와 하이픈을 사용하세요(예: 1-3, 5)."는 형식이 잘못되었다는 뜻입니다. 오타이거나 8-5처럼 역순 범위를 입력한 경우입니다. "페이지 범위가 문서의 페이지 수를 초과합니다."는 문서 페이지 수보다 큰 번호를 입력한 경우입니다. 페이지는 1부터 번호가 매겨지며, 중복은 무해하고 공백이나 마지막 쉼표는 무시되므로 "1,3, 5 - 8"도 1, 3, 5-8과 동일하게 작동합니다.',
       ],
     },
   ],
   faqs: [
     {
-      q: 'Is rotating a PDF with CoolPDF really free?',
-      a: 'Yes — free forever, with no daily quotas, watermarks, premium tiers, or sign-up. The rotation runs on your own device, so there is no server bill to pass on to you.',
+      q: 'CPdf로 PDF 회전은 정말 무료인가요?',
+      a: '네. 일일 제한, 워터마크, 프리미엄 등급, 가입 요구 없이 영구적으로 무료입니다. 회전이 사용자 기기에서 실행되므로 서버 비용이 발생하지 않아 그 비용을 전가할 이유도 없습니다.',
     },
     {
-      q: 'What are the limits?',
-      a: 'One PDF at a time, up to 100 MB on desktop and 50 MB on mobile. There is no fixed page-count limit, and you can run the tool repeatedly to give different pages different angles.',
+      q: '제한은 어떻게 되나요?',
+      a: '한 번에 PDF 1개, 데스크톱 최대 100 MB, 모바일 최대 50 MB입니다. 페이지 수 제한은 없으며, 도구를 반복해서 실행해 페이지마다 다른 각도를 적용할 수 있습니다.',
     },
     {
-      q: 'How do I rotate just one page of a PDF?',
-      a: 'Choose "Selected pages only" under "Apply to" and type the page number — just 7 for page 7. Only that page is turned; everything else stays exactly as it was. You can mix single pages and ranges freely, like 1, 3, 5-8.',
+      q: 'PDF의 특정 페이지 하나만 회전하려면 어떻게 하나요?',
+      a: '"적용 대상"에서 "선택한 페이지만"을 고르고 페이지 번호를 입력하세요. 7페이지만 회전하려면 7만 입력하면 됩니다. 해당 페이지만 회전되고 나머지는 그대로 유지됩니다. 단일 페이지와 범위를 자유롭게 섞어 1, 3, 5-8처럼 입력할 수도 있습니다.',
     },
     {
-      q: 'Is it safe to rotate confidential documents here?',
-      a: 'Yes. Your file is processed locally in your browser and never uploaded to any server. You can even disconnect from the internet after the page loads; closing the tab removes every trace.',
+      q: '기밀 문서를 여기서 회전해도 안전한가요?',
+      a: '네. 파일은 브라우저 안에서 로컬로 처리되며 어떤 서버에도 업로드되지 않습니다. 페이지가 로드된 후에는 인터넷 연결을 끊어도 되고, 탭을 닫으면 모든 흔적이 제거됩니다.',
     },
     {
-      q: 'Does rotating reduce the quality of my PDF?',
-      a: 'No. Rotating only changes the page\u2019s rotation setting — nothing is re-rendered or recompressed. Text stays selectable, images keep their original resolution, and the file size stays essentially the same.',
+      q: '회전하면 PDF 품질이 떨어지나요?',
+      a: '아니요. 회전은 페이지의 회전 설정만 바꿀 뿐이며 렌더링이나 재압축은 일어나지 않습니다. 텍스트는 계속 선택할 수 있고, 이미지는 원래 해상도를 유지하며, 파일 크기도 사실상 동일합니다.',
     },
     {
-      q: 'Will the rotation stay after I download and share the file?',
-      a: 'Yes. The new orientation is written into the PDF following the standard, so every compliant reader — Acrobat, Preview, Chrome, phone viewers — shows the pages upright. A viewer\u2019s rotate-view button, by contrast, is never saved.',
+      q: '다운로드해서 파일을 공유해도 회전이 유지되나요?',
+      a: '네. 새 방향이 표준에 따라 PDF 안에 기록되므로 Acrobat, Preview, Chrome, 휴대폰 뷰어를 포함한 모든 표준 준수 리더에서 페이지가 올바른 방향으로 표시됩니다. 반면 뷰어의 화면 회전 버튼은 절대 저장되지 않습니다.',
     },
   ],
   related: ['how-to-organize-pdf-pages', 'how-to-compress-pdf', 'how-to-convert-jpg-to-pdf'],

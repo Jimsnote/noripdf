@@ -7,58 +7,58 @@ import type { Guide } from './types';
 export const howToUnlockPdf: Guide = {
   slug: 'how-to-unlock-pdf',
   toolSlug: 'unlock-pdf',
-  title: 'How to Unlock a PDF You Have the Password To',
+  title: '비밀번호를 알고 있는 PDF를 잠금 해제하는 방법',
   description:
-    'Step-by-step: remove a PDF password in your browser — the file and password never leave your device. Free, no sign-up; download the result as unlocked.pdf.',
+    '단계별 안내: 브라우저에서 PDF 비밀번호를 제거하세요. 파일과 비밀번호는 기기를 벗어나지 않습니다. 무료, 가입 불필요. 결과는 unlocked.pdf로 다운로드합니다.',
   intro:
-    'The fastest way to unlock a PDF you have the password to is to remove the protection right in your browser: open the free [CoolPDF Unlock PDF tool](/unlock-pdf/), drop in the protected file, type its password, click Unlock PDF, and download the result as unlocked.pdf. The decryption runs locally on your device — the document and the password never leave your computer, and there is no account, no queue, and no watermark.',
+    '비밀번호를 알고 있는 PDF를 잠금 해제하는 가장 빠른 방법은 브라우저에서 직접 보호를 제거하는 것입니다. 무료 [PDF 잠금 해제 도구](/unlock-pdf/)를 열고, 보호된 파일을 끌어다 놓은 뒤 비밀번호를 입력하고, "PDF 잠금 해제" 버튼을 클릭하면 결과를 unlocked.pdf로 다운로드할 수 있습니다. 복호화는 기기 안에서 로컬로 실행되므로 문서와 비밀번호는 컴퓨터를 절대 떠나지 않으며, 계정도, 대기열도, 워터마크도 없습니다.',
   quickSteps: [
-    'Open the Unlock PDF tool and drag the protected PDF onto the upload area — or click it to browse. One file at a time, up to 100 MB on desktop (50 MB on mobile).',
-    'Type the document\u2019s password into "Current password (if needed)". If the PDF opens without one but blocks printing or copying, leave the field blank.',
-    'Click "Unlock PDF". The protection is removed locally, usually in seconds; the first run downloads a ~1.2 MB engine that is cached afterwards.',
-    'Click "Download" to save the result as unlocked.pdf. It now opens in any reader without a password; the original file stays untouched.',
+    'PDF 잠금 해제 도구를 열고 보호된 PDF를 업로드 영역에 드래그하거나, 클릭하여 파일을 선택합니다. 한 번에 한 개, 데스크톱 최대 100 MB(모바일 50 MB)까지 가능합니다.',
+    '"현재 비밀번호(필요한 경우)" 입력란에 문서의 비밀번호를 입력합니다. 비밀번호 없이 열리지만 인쇄나 복사가 차단된 PDF라면 입력란을 비워 둡니다.',
+    '"PDF 잠금 해제" 버튼을 클릭합니다. 보호가 로컬에서 제거되며 보통 몇 초면 끝납니다. 처음 실행 시에는 약 1.2 MB 크기의 엔진이 다운로드되고 이후에는 캐시됩니다.',
+    '"다운로드" 버튼을 클릭하여 결과를 unlocked.pdf로 저장합니다. 이제 비밀번호 없이 어떤 리더에서도 열리며, 원본 파일은 그대로 유지됩니다.',
   ],
   sections: [
     {
-      heading: 'Step-by-step: unlocking a PDF with CoolPDF',
+      heading: '단계별 안내: CPdf로 PDF 잠금 해제하기',
       paragraphs: [
-        'Open the [Unlock PDF tool](/unlock-pdf/) — nothing to install, no account. Drag the protected PDF onto the upload area, or click it to browse. The amber reminder is worth reading once: only unlock PDFs you own or have permission to modify.',
-        'Type the password you use to open the document — or, if the file opens fine but refuses to print or copy, leave the field blank: CoolPDF tries an empty password first, which is what those restriction-only files accept. A wrong password brings up "The password is incorrect. Please try again." — retry without re-adding the file.',
-        'Click "Unlock PDF". Decryption runs in a background worker, so the page stays responsive; the first use downloads about 1.2 MB of engine, cached afterwards. When the download card appears, save the result — always unlocked.pdf. The original file is never modified.',
+        '[PDF 잠금 해제 도구](/unlock-pdf/)를 열어보세요. 설치도, 계정도 필요 없습니다. 보호된 PDF를 업로드 영역에 드래그하거나 클릭해서 파일을 선택합니다. 주황색 안내 문구는 한 번 읽어볼 가치가 있습니다. 소유한 PDF 또는 수정 허가를 받은 PDF만 잠금 해제하세요.',
+        '문서를 열 때 사용하는 비밀번호를 입력하세요. 파일은 잘 열리지만 인쇄나 복사가 거부된다면 입력란을 비워 두세요. CPdf는 먼저 빈 비밀번호를 시도하는데, 제한만 걸린 파일이 바로 그것을 허용하기 때문입니다. 비밀번호가 틀리면 "비밀번호가 올바르지 않습니다. 다시 시도해 주세요."가 표시되며, 파일을 다시 추가하지 않고 재시도할 수 있습니다.',
+        '"PDF 잠금 해제" 버튼을 클릭하세요. 복호화는 백그라운드 워커에서 실행되므로 페이지가 멈추지 않습니다. 처음 사용 시 엔진 약 1.2 MB가 다운로드되고 이후에는 캐시됩니다. 다운로드 카드가 나타나면 결과를 저장하세요. 파일명은 항상 unlocked.pdf입니다. 원본 파일은 절대 수정되지 않습니다.',
       ],
       bullets: [
-        'One PDF per run, up to 100 MB on desktop, 50 MB on mobile',
-        'Password field can stay blank for restriction-only files',
-        'Output is always saved as unlocked.pdf',
+        '한 번에 PDF 한 개, 데스크톱 최대 100 MB, 모바일 50 MB',
+        '제한만 걸린 파일은 비밀번호 입력란을 비워 둘 수 있음',
+        '결과는 항상 unlocked.pdf로 저장',
       ],
       image: {
         src: '/guides/how-to-unlock-pdf/step-1.png',
-        alt: 'The CoolPDF Unlock PDF tool with a protected bank statement added, showing the "Current password (if needed)" field filled in and the Unlock PDF button below it.',
+        alt: '비밀번호 입력란이 채워진 상태로 보호된 파일이 추가된 CPdf PDF 잠금 해제 도구 화면',
       },
     },
     {
-      heading: 'Unlocking bank statements without handing over the password',
+      heading: '비밀번호를 타인에게 넘기지 않고 명세서 잠금 해제하기',
       paragraphs: [
-        'The PDFs people unlock are usually the sensitive ones: bank statements, payslips, tax drafts. A conventional online unlocker asks you to upload the still-protected file and type its password into someone else\u2019s web form — the two things that should never travel together, sent together.',
-        'CoolPDF removes protection where the file already lives: the document is read from your own disk, decrypted with the password you type locally, and saved straight back — no upload, no password log, no copy left behind. You can even disconnect after the page loads and keep unlocking. Close the tab, and no trace of the file or the password remains.',
+        '사람들이 잠금 해제하는 PDF는 대부분 민감한 문서입니다. 은행 명세서, 급여명세서, 세금 초안 등이죠. 기존의 온라인 잠금 해제 서비스는 여전히 보호된 파일을 업로드하고 비밀번호까지 타인의 웹 폼에 입력하도록 요구합니다. 절대 함께 전송돼서는 안 되는 두 가지를 함께 보내는 셈입니다.',
+        'CPdf는 파일이 있는 그 자리에서 보호를 제거합니다. 문서는 사용자의 디스크에서 직접 읽히고, 입력한 비밀번호로 로컬에서 복호화된 뒤 바로 다시 저장됩니다. 업로드도, 비밀번호 로그도, 남는 사본도 없습니다. 페이지를 불러온 후 네트워크를 끊어도 계속 잠금 해제할 수 있습니다. 탭을 닫으면 파일과 비밀번호의 흔적이 전혀 남지 않습니다.',
       ],
     },
     {
-      heading: 'What unlocking removes — and what it leaves alone',
+      heading: '잠금 해제가 제거하는 것과 건드리지 않는 것',
       paragraphs: [
-        'An encrypted PDF can carry two protections at once: an open password that gates the document, and permission flags that block printing, copying, or editing. Unlocking strips the whole encryption layer in one pass — the saved copy opens without a password and carries no restrictions.',
-        'Everything else stays as it was — pages, text, images, annotations, and bookmarks are not re-rendered or recompressed, and the output opens in any reader. To protect it again later with a stronger password, run it through [Protect PDF](/protect-pdf/) and pick your own.',
+        '암호화된 PDF에는 보호가 두 겹으로 걸려 있을 수 있습니다. 문서 열기를 막는 개방용 비밀번호와, 인쇄·복사·편집을 차단하는 권한 플래그입니다. 잠금 해제는 암호화 계층 전체를 한 번에 제거하므로, 저장된 사본은 비밀번호 없이 열리며 제한도 없습니다.',
+        '그 외 모든 것은 그대로 유지됩니다. 페이지, 텍스트, 이미지, 주석, 북마크가 다시 렌더링되거나 압축되지 않으며, 결과 파일은 어떤 리더에서도 열립니다. 나중에 더 강력한 비밀번호로 다시 보호하려면 [PDF 보호](/protect-pdf/) 도구를 실행해 원하는 비밀번호를 설정하세요.',
       ],
     },
     {
-      heading: 'What to do with the unlocked copy',
+      heading: '잠금 해제된 사본으로 할 수 있는 일',
       paragraphs: [
-        'A locked PDF refuses to cooperate with other tools — you cannot merge a protected statement into a tax dossier or shrink a protected scan for email. Once unlocked, those jobs open up: combine files in [Merge PDF](/merge-pdf/), or extract the pages you need with [Split PDF](/split-pdf/).',
-        'If the unlocked copy is headed for an inbox, [Compress PDF](/compress-pdf/) brings it to attachment-friendly sizes. For a contract about to circulate, [Watermark PDF](/watermark-pdf/) and [Page Numbers](/page-numbers/) finish the job in the same tab.',
+        '잠긴 PDF는 다른 도구와 협조하지 않습니다. 보호된 명세서를 세금 서류에 병합하거나, 보호된 스캔본을 이메일용으로 줄이는 것도 불가능합니다. 잠금이 해제되면 이런 작업이 열립니다. [PDF 병합](/merge-pdf/)로 파일을 합치거나, [PDF 분할](/split-pdf/)로 필요한 페이지만 추출하세요.',
+        '잠금 해제된 사본을 메일로 보낼 예정이라면 [PDF 압축](/compress-pdf/)으로 첨부하기 좋은 크기로 줄일 수 있습니다. 계약서를 돌리기 직전이라면 [PDF 워터마크](/watermark-pdf/)와 [페이지 번호 추가](/page-numbers/)로 같은 탭에서 마무리하세요.',
       ],
       image: {
         src: '/guides/how-to-unlock-pdf/step-2.png',
-        alt: 'The download card shown after a successful unlock, displaying the unlocked.pdf file name, the output file size, and the Download button.',
+        alt: '잠금 해제 완료 후 파일이 준비되었습니다 카드에 unlocked.pdf(1.8 KB)와 다운로드 버튼이 보이는 화면',
       },
     },
   ],
@@ -66,62 +66,62 @@ export const howToUnlockPdf: Guide = {
     {
       heading: 'macOS Preview',
       paragraphs: [
-        'On a Mac, open the locked PDF in Preview, enter the password, then File → Export as PDF saves an unprotected copy. Free, built in, and offline — but macOS-only, and the export re-saves the whole document rather than just lifting the encryption. CoolPDF gives the same offline privacy in any browser, on any OS.',
+        'Mac에서 잠긴 PDF를 Preview로 열고 비밀번호를 입력한 뒤, 파일 → PDF로 내보내기를 선택하면 보호되지 않은 사본이 저장됩니다. 무료이며 기본 제공되어 오프라인에서도 동작하지만, macOS에서만 가능하고 내보내기 과정에서 문서 전체를 다시 저장합니다. CPdf는 어떤 브라우저에서든, 어떤 운영체제에서든 동일한 오프라인 프라이버시를 제공합니다.',
       ],
     },
     {
-      heading: 'The Chrome print workaround',
+      heading: 'Chrome 인쇄 우회 방법',
       paragraphs: [
-        'Open the PDF in Chrome, enter the password, press Ctrl+P (Cmd+P on a Mac), and "Save as PDF". It costs nothing, but printing re-renders the document — form fields are flattened, and links or bookmarks can be lost. CoolPDF removes only the encryption and leaves the file itself untouched.',
+        'PDF를 Chrome에서 열고 비밀번호를 입력한 뒤 Ctrl+P(Mac에서는 Cmd+P)를 누르고 "PDF로 저장"을 선택합니다. 비용은 들지 않지만, 인쇄 과정에서 문서가 다시 렌더링됩니다. 양식 필드가 평탄화되고 링크나 북마크가 사라질 수 있습니다. CPdf는 암호화만 제거하고 파일 자체는 그대로 둡니다.',
       ],
     },
     {
-      heading: 'Adobe Acrobat (paid)',
+      heading: 'Adobe Acrobat (유료)',
       paragraphs: [
-        'In Acrobat Pro you enter the password and set the security method to "No Security". It needs a subscription and an install or Adobe account, and the web version uploads both file and password to Adobe\u2019s servers. If you already pay for Acrobat it is excellent; otherwise a free browser tool covers the same ground with no install, account, or upload.',
+        'Acrobat Pro에서는 비밀번호를 입력하고 보안 방식을 "보안 없음"으로 설정합니다. 구독이 필요하고 설치 또는 Adobe 계정이 필요하며, 웹 버전은 파일과 비밀번호를 Adobe 서버에 업로드합니다. 이미 Acrobat을 구독 중이라면 훌륭한 선택입니다. 그렇지 않다면 무료 브라우저 도구가 설치나 계정, 업로드 없이 동일한 작업을 처리합니다.',
       ],
     },
   ],
   edgeCases: [
     {
-      heading: 'The PDF opens fine, but printing or copying is blocked',
+      heading: 'PDF는 잘 열리는데 인쇄나 복사가 차단됨',
       paragraphs: [
-        'That is a restriction-only file: an owner password with no open password, so any reader can display it. Leave the password field blank and click Unlock PDF — the tool tries an empty password first, which is what these files accept — and the unlocked copy prints and copies normally. (If you see "This PDF is not password-protected, so there is nothing to unlock," the file was never encrypted.)',
+        '제한만 걸린 파일입니다. 개방용 비밀번호 없이 소유자 비밀번호만 설정된 경우로, 어떤 리더에서도 표시할 수 있습니다. 비밀번호 입력란을 비워 두고 "PDF 잠금 해제" 버튼을 클릭하세요. 이 도구는 먼저 빈 비밀번호를 시도하는데, 이런 파일이 바로 그것을 허용하기 때문입니다. 잠금 해제된 사본은 정상적으로 인쇄되고 복사됩니다. ("이 PDF는 비밀번호로 보호되지 않아 잠금 해제할 내용이 없습니다."가 표시된다면 파일이 암호화된 적이 없는 것입니다.)',
       ],
     },
     {
-      heading: '"The password is incorrect. Please try again."',
+      heading: '"비밀번호가 올바르지 않습니다. 다시 시도해 주세요."',
       paragraphs: [
-        'Check the mundane culprits first: caps lock, wrong keyboard layout, or a trailing space pasted from an email. Fix it and retry — the file stays loaded. If the password is truly forgotten, there is no legitimate way back: CoolPDF is not a password cracker, and AES-256 cannot realistically be guessed. Ask the sender or your bank for an unprotected copy.',
+        '먼저 흔한 실수를 확인하세요. Caps Lock, 잘못된 키보드 레이아웃, 이메일에서 붙여 넣은 비밀번호 끝의 공백 등입니다. 수정한 뒤 재시도하면 파일은 그대로 유지됩니다. 비밀번호를 정말 잊었다면 정당한 복구 방법은 없습니다. CPdf는 비밀번호 크래킹 도구가 아니며, AES-256은 사실상 추측이 불가능합니다. 발신자나 은행에 보호되지 않은 사본을 요청하세요.',
       ],
     },
     {
-      heading: 'The file is over the size limit',
+      heading: '파일 크기 제한 초과',
       paragraphs: [
-        'Unlocking holds the whole document in your device\u2019s memory, hence the 100 MB desktop / 50 MB mobile limit. For oversized files, the free qpdf command line does the same job offline with no size cap: qpdf --decrypt --password=YOURS in.pdf out.pdf — the same qpdf CoolPDF compiles to WebAssembly.',
+        '잠금 해제는 문서 전체를 기기 메모리에 올려 처리하므로, 데스크톱 100 MB, 모바일 50 MB 제한이 있습니다. 초대용량 파일은 무료 qpdf 명령줄 도구로 오프라인에서 동일한 작업을 크기 제한 없이 처리할 수 있습니다. qpdf --decrypt --password=YOURS in.pdf out.pdf — CPdf가 WebAssembly로 컴파일하는 바로 그 qpdf입니다.',
       ],
     },
   ],
   faqs: [
     {
-      q: 'Is unlocking a PDF with CoolPDF really free?',
-      a: 'Yes — free forever, no daily quotas, watermarks, or premium tiers. The decryption runs on your own device, so there is no server bill to pass on.',
+      q: 'CPdf로 PDF 잠금 해제는 정말 무료인가요?',
+      a: '네. 영원히 무료이며, 일일 제한이나 워터마크, 유료 플랜이 없습니다. 복호화가 사용자 기기에서 실행되므로 전가할 서버 비용도 없습니다.',
     },
     {
-      q: 'I forgot the password. Can CoolPDF crack it?',
-      a: 'No. CoolPDF removes protection only when you know the current password — it is not a cracking tool, and AES-256 cannot realistically be guessed. Ask the sender for an unprotected copy.',
+      q: '비밀번호를 잊었습니다. CPdf로 크래킹할 수 있나요?',
+      a: '아니요. CPdf는 현재 비밀번호를 알고 있을 때만 보호를 제거합니다. 크래킹 도구가 아니며, AES-256은 사실상 추측이 불가능합니다. 발신자에게 보호되지 않은 사본을 요청하세요.',
     },
     {
-      q: 'Is it legal to unlock a PDF?',
-      a: 'Yes — for documents you own or have permission to modify, like your own archived statements. Removing protection from files you have no rights to may violate law or contracts.',
+      q: 'PDF 잠금 해제는 합법인가요?',
+      a: '소유한 문서나 수정 허가를 받은 문서라면 네, 합법입니다. 예를 들어 직접 보관 중인 명세서가 해당합니다. 권한 없는 파일의 보호를 제거하면 법이나 계약 위반일 수 있습니다.',
     },
     {
-      q: 'Is it safe to unlock confidential documents here?',
-      a: 'Yes. The file is decrypted locally in your browser; neither the document nor the password is ever sent anywhere. Disconnect after the page loads and it still works; closing the tab removes every trace.',
+      q: '여기서 기밀 문서를 잠금 해제해도 안전한가요?',
+      a: '네. 파일은 브라우저에서 로컬로 복호화되며, 문서도 비밀번호도 어디에도 전송되지 않습니다. 페이지를 불러온 후 연결을 끊어도 정상 작동하고, 탭을 닫으면 모든 흔적이 제거됩니다.',
     },
     {
-      q: 'Will unlocking change the document?',
-      a: 'No. Only the encryption layer is removed — every page, image, annotation, and bookmark stays exactly as it was, and the unlocked file opens in any PDF reader.',
+      q: '잠금 해제가 문서를 변경하나요?',
+      a: '아니요. 암호화 계층만 제거됩니다. 모든 페이지, 이미지, 주석, 북마크가 그대로 유지되며, 잠금 해제된 파일은 어떤 PDF 리더에서도 열립니다.',
     },
   ],
   related: ['how-to-password-protect-pdf', 'how-to-merge-pdf', 'how-to-compress-pdf'],

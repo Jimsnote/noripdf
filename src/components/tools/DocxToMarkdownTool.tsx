@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { FileText, Loader2, Trash2 } from 'lucide-react';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 import { docxToMarkdown } from '@/lib/office/docx-to-markdown';
 import { warmOfficeConverters } from '@/lib/office/lazy-office';
 import { FileDropzone } from './FileDropzone';

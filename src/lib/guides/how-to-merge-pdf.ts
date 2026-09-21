@@ -8,52 +8,52 @@ import type { Guide } from './types';
 export const howToMergePdf: Guide = {
   slug: 'how-to-merge-pdf',
   toolSlug: 'merge-pdf',
-  title: 'How to Merge PDF Files Online (Free, No Sign-Up)',
+  title: 'PDF 파일 온라인 병합 방법 (무료, 가입 불필요)',
   description:
-    'Step-by-step: merge PDF files into one document right in your browser. Free, no uploads, no sign-up — reorder, combine up to 20 files, download in seconds.',
+    '단계별 안내: 브라우저에서 바로 여러 PDF 파일을 하나로 병합하세요. 무료, 업로드 없음, 가입 불필요 — 순서 조정, 최대 20개 파일 결합, 몇 초 만에 다운로드.',
   intro:
-    'The simplest way to merge PDF files online is to combine them right in your browser: open the free [CoolPDF Merge PDF tool](/merge-pdf/), drop in 2–20 files, arrange them in the order you want, click Merge PDF, and download the result as merged.pdf. Unlike most online mergers, CoolPDF processes everything locally on your device — your documents are never uploaded to a server, and there is no account, no queue, and no watermark.',
+    'PDF 파일을 온라인에서 병합하는 가장 간단한 방법은 브라우저에서 바로 결합하는 것입니다. 무료로 사용할 수 있는 [CPdf PDF 병합 도구](/merge-pdf/)를 열고, 2~20개 파일을 드래그 앤 드롭으로 추가한 뒤, 원하는 순서로 배열하고, PDF 병합 버튼을 클릭하면 결과물이 merged.pdf로 다운로드됩니다. 대부분의 온라인 병합 도구와 달리 CPdf는 모든 처리를 기기 내에서 수행하므로 문서가 서버에 업로드되지 않으며, 계정도 대기열도 워터마크도 없습니다.',
   quickSteps: [
-    'Open the Merge PDF tool and drag 2–20 PDF files onto the upload area — or click it to browse your device instead.',
-    'Put the files in the order you want with the up and down arrows; the list order becomes the page order of the merged document.',
-    'Click the "Merge PDF" button. The files are combined locally in your browser, usually within a few seconds.',
-    'Click "Download" to save the result as merged.pdf. Your original files stay untouched on your device.',
+    'PDF 병합 도구를 열고 2~20개의 PDF 파일을 업로드 영역에 드래그하세요. 또는 영역을 클릭해 기기에서 직접 선택할 수 있습니다.',
+    '위아래 화살표로 파일을 원하는 순서로 배열하세요. 목록 순서가 병합된 문서의 페이지 순서가 됩니다.',
+    'PDF 병합 버튼을 클릭하세요. 파일은 브라우저 내에서 로컬로 결합되며 보통 몇 초 안에 완료됩니다.',
+    '다운로드 버튼을 클릭해 결과물을 merged.pdf로 저장하세요. 원본 파일은 기기에서 그대로 유지됩니다.',
   ],
   sections: [
     {
-      heading: 'Step-by-step: merging PDFs with CoolPDF',
+      heading: '단계별 안내: CPdf로 PDF 병합하기',
       paragraphs: [
-        'Open the [Merge PDF tool](/merge-pdf/) — nothing to install, no account to create. Add files by dragging them onto the upload area, or click it to pick them from a file dialog.',
-        'Once the files are listed, set the order before you merge: every entry has up and down arrows, and the list order becomes the page order of the output — cover letter first, then the main document, then attachments. If a file slipped in by mistake, remove it with the trash icon.',
-        'Click "Merge PDF" and give your browser a few seconds — because the merge runs on your device, the time depends on file sizes, not your internet connection. When the download card appears, click Download to save the combined file; it is always named merged.pdf. The originals are never modified.',
+        '[PDF 병합 도구](/merge-pdf/)를 열어보세요 — 설치할 것도 만들 계정도 없습니다. 파일을 업로드 영역으로 드래그하거나, 영역을 클릭해 파일 대화상자에서 선택하세요.',
+        '파일이 목록에 표시되면 병합 전에 순서를 정하세요: 각 항목에 위아래 화살표가 있으며, 목록 순서가 결과물의 페이지 순서가 됩니다 — 표지부터, 본문 문서, 첨부 파일 순이 됩니다. 실수로 들어온 파일은 휴지통 아이콘으로 제거하세요.',
+        'PDF 병합 버튼을 클릭하고 몇 초 기다리세요 — 병합이 기기에서 실행되므로 소요 시간은 인터넷 속도가 아니라 파일 크기에 따라 달라집니다. 다운로드 카드가 나타나면 다운로드를 클릭해 결합된 파일을 저장하세요. 파일 이름은 항상 merged.pdf입니다. 원본은 절대 수정되지 않습니다.',
       ],
       bullets: [
-        '2–20 PDF files per merge',
-        'Up to 100 MB per file on desktop, 50 MB on mobile',
-        'Up to 300 MB combined across all files',
-        'Output is always saved as merged.pdf',
+        '한 번에 2~20개 PDF 파일',
+        '파일당 최대 100 MB(데스크톱), 모바일 50 MB',
+        '모든 파일 합산 최대 300 MB',
+        '결과물은 항상 merged.pdf로 저장',
       ],
       image: {
         src: '/guides/how-to-merge-pdf/step-1.png',
-        alt: 'The CoolPDF Merge PDF upload area with three PDF files added, each row showing the file name, its size, and the up, down, and remove buttons.',
+        alt: '파일 이름과 크기, 위아래 이동 및 삭제 버튼이 표시된 여러 PDF 파일이 추가된 CPdf PDF 병합 업로드 영역',
       },
     },
     {
-      heading: 'Why merging locally matters for contracts and financial documents',
+      heading: '계약서와 재무 문서에서 로컬 병합이 중요한 이유',
       paragraphs: [
-        'The PDFs people merge are rarely random files — they are signed contracts, payslips, tax returns, medical reports, and application dossiers. With a conventional online merger, every one of those documents is uploaded to a remote server before any processing happens, and you are asked to trust that the copies are deleted responsibly.',
-        'CoolPDF inverts that model: the merging software is delivered to your browser, and your files never leave your device. Nothing is transmitted, queued, or stored anywhere else, which makes the tool safe to use on a work laptop, on public Wi-Fi, or with documents covered by an NDA. You can even load the page, disconnect from the internet, and keep merging — it still works. Close the tab, and no trace of your documents remains.',
+        '사람들이 병합하는 PDF는 흔한 임의의 파일이 아니라 서명된 계약서, 급여명세서, 세금 신고서, 의료 기록, 지원 서류 묶음입니다. 일반적인 온라인 병합 도구라면 처리 시작 전에 이 모든 문서가 원격 서버에 업로드되고, 사용자는 복사본이 책임감 있게 삭제되길 믿어야 합니다.',
+        'CPdf는 이 모델을 뒤집습니다: 병합 소프트웨어가 브라우저로 전달되고 파일은 기기를 떠나지 않습니다. 전송도 대기열도 외부 저장도 없으므로, 회사 노트북에서나 공공 Wi-Fi에서, 또는 NDA가 적용되는 문서를 다룰 때도 안심하고 쓸 수 있습니다. 페이지를 불러온 뒤 인터넷 연결을 끊어도 병합이 그대로 작동합니다. 탭을 닫으면 문서의 흔적이 전혀 남지 않습니다.',
       ],
     },
     {
-      heading: 'What to do after merging',
+      heading: '병합 후에는 무엇을 할까요',
       paragraphs: [
-        'Merging is often one step in a larger cleanup. If the combined file came out heavier than expected, run it through [Compress PDF](/compress-pdf/) to shrink it for email attachments. Need only a chapter or a specific date range from the result? [Split PDF](/split-pdf/) extracts exactly the pages you want into a new document.',
-        'If the page order needs fine-tuning — a scanned signature page that belongs at the end — [Organize PDF](/organize-pdf/) lets you rearrange, rotate, or delete individual pages visually. And for long reports, [Page Numbers](/page-numbers/) adds consistent numbering in one pass.',
+        '병합은 종종 더 큰 정리 작업의 한 단계입니다. 결합된 파일이 예상보다 크게 나왔다면 [PDF 압축](/compress-pdf/) 도구로 이메일에 첨부할 수 있는 크기까지 줄이세요. 결과물에서 특정 장이나 날짜 구간만 필요하다면 [PDF 분할](/split-pdf/)로 원하는 페이지만 새 문서로 추출할 수 있습니다.',
+        '페이지 순서를 세부 조정해야 한다면 — 예를 들어 스캔한 서명 페이지를 맨 뒤로 옮겨야 한다면 — [PDF 페이지 정리](/organize-pdf/)로 개별 페이지를 시각적으로 재배열, 회전, 삭제할 수 있습니다. 그리고 긴 보고서에는 [페이지 번호 추가](/page-numbers/)로 일관된 번호를 한 번에 넣을 수 있습니다.',
       ],
       image: {
         src: '/guides/how-to-merge-pdf/step-2.png',
-        alt: 'The download card shown after a successful merge, displaying the merged.pdf file name, the output file size, and the Download button.',
+        alt: '병합 완료 후 파일이 준비되었습니다 카드에 merged.pdf(4.9 KB)와 다운로드 버튼이 보이는 화면',
       },
     },
   ],
@@ -61,62 +61,62 @@ export const howToMergePdf: Guide = {
     {
       heading: 'macOS Preview',
       paragraphs: [
-        'On a Mac, Preview merges PDFs without extra software: open a PDF, show the thumbnail sidebar, drag additional PDFs into the list, then export with File → Export as PDF. It is free and works offline, but macOS-only, and reordering many pages by dragging thumbnails gets fiddly. CoolPDF offers the same offline privacy in any browser, on any operating system, with arrow buttons for precise ordering.',
+        'Mac에서는 Preview로 추가 소프트웨어 없이 PDF를 병합할 수 있습니다: PDF를 열고 썸네일 사이드바를 표시한 뒤, 다른 PDF를 썸네일 목록으로 드래그한 뒤 파일 → PDF로 내보내기를 선택해 저장하세요. 무료이며 오프라인에서 작동하지만 macOS 전용이고, 썸네일을 드래그해 많은 페이지를 재정렬하다 보면 번거로워집니다. CPdf는 브라우저만 있다면 모든 운영체제에서 동일한 오프라인 프라이버시를 제공하며, 화살표 버튼으로 정확한 순서 지정이 가능합니다.',
       ],
     },
     {
-      heading: 'Windows: the Print to PDF workaround',
+      heading: 'Windows: PDF 인쇄 우회 방법',
       paragraphs: [
-        'Windows has no built-in PDF merger. The usual workaround is the Microsoft Print to PDF virtual printer: combine the documents in an app that can print them, then print or save the result as a new PDF. It works in a pinch, but printing re-renders everything — links, form fields, and bookmarks are flattened — so a direct merger like CoolPDF is both faster and lossless.',
+        'Windows에는 기본 제공 PDF 병합 기능이 없습니다. 흔한 우회 방법은 Microsoft Print to PDF 가상 프린터를 쓰는 것입니다: 문서를 인쇄할 수 있는 앱에서 함께 열고, 결과를 새 PDF로 인쇄하거나 저장합니다. 급할 때는 쓸 만하지만, 인쇄 과정에서 모든 것이 다시 렌더링되어 링크, 양식 필드, 북마크가 평탄화됩니다. CPdf 같은 직접 병합 도구가 더 빠르고 무손실입니다.',
       ],
     },
     {
-      heading: 'Adobe Acrobat (paid)',
+      heading: 'Adobe Acrobat (유료)',
       paragraphs: [
-        'Adobe Acrobat\u2019s Combine Files tool is the polished paid option: drag in files, reorder thumbnails, and combine, with extras like bookmark handling. It requires a subscription, a desktop install or an Adobe account, and the web version uploads your files to Adobe\u2019s servers. If you already pay for Acrobat it is excellent — otherwise a free browser tool with no install, account, or upload covers the same ground.',
+        'Adobe Acrobat의 Combine Files 도구는 완성도 높은 유료 옵션입니다: 파일을 드래그하고, 썸네일로 순서를 바꾸고, 결합하면 되며, 북마크 처리 같은 추가 기능도 있습니다. 구독이 필요하고 데스크톱 설치 또는 Adobe 계정이 요구되며, 웹 버전은 파일을 Adobe 서버에 업로드합니다. 이미 Acrobat을 구독 중이라면 훌륭한 선택입니다 — 그렇지 않다면 설치, 계정, 업로드가 전혀 없는 무료 브라우저 도구로 같은 일을 처리할 수 있습니다.',
       ],
     },
   ],
   edgeCases: [
     {
-      heading: 'One of the PDFs is password-protected',
+      heading: 'PDF 중 하나가 비밀번호로 보호되어 있을 때',
       paragraphs: [
-        'An encrypted PDF cannot be merged until its protection is removed — the file refuses to open without the password. If you know the password, run it through [Unlock PDF](/unlock-pdf/) first to save an unprotected copy, then merge that copy. Without the password, ask the sender for an unprotected version — there is no legitimate way around someone else\u2019s protection.',
+        '암호화된 PDF는 보호가 해제되기 전까지 병합할 수 없습니다 — 비밀번호 없이는 파일이 열리지 않습니다. 비밀번호를 알고 있다면 먼저 [PDF 잠금 해제](/unlock-pdf/)로 보호되지 않은 사본을 저장한 뒤, 그 사본을 병합하세요. 비밀번호가 없다면 보낸 사람에게 보호되지 않은 버전을 요청하세요 — 타인의 보호를 우회할 합법적인 방법은 없습니다.',
       ],
     },
     {
-      heading: 'Files are too large, or there are too many',
+      heading: '파일이 너무 크거나 너무 많을 때',
       paragraphs: [
-        'The limits — 2–20 files, 100 MB each on desktop (50 MB on mobile), 300 MB combined — exist because every file is held in your device\u2019s memory during the merge. If you hit the size ceiling, shrink the biggest files with [Compress PDF](/compress-pdf/) first and merge the compressed versions. Over the file count? Split the job into batches and merge the batch results.',
+        '한계 — 2~20개 파일, 데스크톱 파일당 100 MB(모바일 50 MB), 합산 300 MB — 는 병합 중 모든 파일이 기기 메모리에 올라가기 때문에 존재합니다. 크기 한도에 걸리면 먼저 [PDF 압축](/compress-pdf/)으로 가장 큰 파일을 줄인 뒤 압축된 버전을 병합하세요. 파일 개수가 넘으면 작업을 여러 묶음으로 나눈 뒤 묶음별 결과를 다시 병합하세요.',
       ],
     },
     {
-      heading: 'Bookmarks and interactive forms',
+      heading: '북마크와 대화형 양식',
       paragraphs: [
-        'Pages are copied into the merged document exactly as they are, so text, images, and annotations survive intact. Document-level extras are the exception: the outline (the bookmark sidebar) is not carried over, and interactive form fields deserve a quick check in the output. If your documents rely on bookmarks, keep the originals alongside the merged file.',
+        '페이지는 있는 그대로 병합된 문서로 복사되므로 텍스트, 이미지, 주석은 그대로 유지됩니다. 예외는 문서 단위 부가 기능입니다: 개요(북마크 사이드바)는 이어지지 않으며, 대화형 양식 필드는 결과물에서 한 번쯤 확인해 보는 것이 좋습니다. 문서가 북마크에 의존한다면 원본을 병합된 파일과 함께 보관하세요.',
       ],
     },
   ],
   faqs: [
     {
-      q: 'Is merging PDFs with CoolPDF really free?',
-      a: 'Yes — every tool on CoolPDF is free forever, with no daily quotas, watermarks, or premium tiers. The merge runs on your own device, so there is no server bill to pass on to you.',
+      q: 'CPdf로 PDF 병합은 정말 무료인가요?',
+      a: '네 — CPdf의 모든 도구는 무료로 영구 이용 가능하며, 일일 제한, 워터마크, 프리미엄 요금제가 없습니다. 병합은 사용자 기기에서 실행되므로 서버 비용이 발생하지 않아 사용자에게 전가될 일도 없습니다.',
     },
     {
-      q: 'What are the limits when merging?',
-      a: 'You can combine 2–20 PDF files at once. Each file can be up to 100 MB on a desktop computer (50 MB on mobile devices), and all files together can total up to 300 MB.',
+      q: '병합할 때의 제한은 얼마나 되나요?',
+      a: '한 번에 2~20개의 PDF 파일을 결합할 수 있습니다. 파일당 최대 100 MB(데스크톱), 모바일 50 MB까지 가능하며, 모든 파일의 합산 크기는 최대 300 MB입니다.',
     },
     {
-      q: 'Is it safe to merge confidential documents here?',
-      a: 'Yes. Your files are processed locally in your browser and are never uploaded to any server. You can even disconnect from the internet after the page loads and the merge still works; closing the tab removes every trace of your documents.',
+      q: '기밀 문서를 여기서 병합해도 안전한가요?',
+      a: '네. 파일은 브라우저 내에서 로컬로 처리되며 어떤 서버에도 업로드되지 않습니다. 페이지가 로드된 뒤 인터넷 연결을 끊어도 병합은 그대로 작동하며, 탭을 닫으면 문서의 모든 흔적이 사라집니다.',
     },
     {
-      q: 'Do I need to sign up or install anything?',
-      a: 'No. There is no account, no email address, and nothing to install. Open the tool page, add your files, and merge — it works in any modern browser, on desktop and mobile.',
+      q: '가입하거나 설치해야 하나요?',
+      a: '아니요. 계정도, 이메일 주소도, 설치할 것도 없습니다. 도구 페이지를 열고 파일을 추가해 병합하면 됩니다 — 데스크톱과 모바일의 모든 최신 브라우저에서 작동합니다.',
     },
     {
-      q: 'Will merging reduce the quality of my PDFs?',
-      a: 'No. CoolPDF copies pages into the new document at the object level — there is no recompression and no re-rendering. Text stays sharp and selectable, images keep their original resolution, and the output is a normal PDF that opens anywhere.',
+      q: '병합하면 PDF 품질이 떨어지나요?',
+      a: '아니요. CPdf는 페이지를 객체 수준에서 새 문서로 복사하므로 재압축도 재렌더링도 없습니다. 텍스트는 선명하고 선택 가능한 상태를 유지하고, 이미지는 원본 해상도를 그대로 유지하며, 결과물은 어디서나 열리는 일반 PDF입니다.',
     },
   ],
   related: ['how-to-split-pdf', 'how-to-organize-pdf-pages', 'how-to-compress-pdf'],

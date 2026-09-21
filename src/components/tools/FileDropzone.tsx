@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, type ChangeEvent, type DragEvent } from 'react';
 import { CloudUpload } from 'lucide-react';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 import { takeHandoff } from '@/lib/tool-handoff';
 import { UploadMeter } from './UploadMeter';
 

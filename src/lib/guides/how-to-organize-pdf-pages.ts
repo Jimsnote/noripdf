@@ -10,122 +10,122 @@ import type { Guide } from './types';
 export const howToOrganizePdfPages: Guide = {
   slug: 'how-to-organize-pdf-pages',
   toolSlug: 'organize-pdf',
-  title: 'How to Rearrange, Delete, Rotate PDF Pages',
+  title: 'PDF 페이지 순서 바꾸기, 삭제, 회전 방법',
   description:
-    'Rearrange PDF pages with drag and drop, rotate or delete pages, and download the result — all in your browser. Free, no uploads, no sign-up.',
+    '브라우저에서 드래그 앤 드롭으로 PDF 페이지 순서를 바꾸고, 페이지를 회전하거나 삭제한 뒤 결과를 다운로드하세요. 무료, 업로드 없음, 가입 없음.',
   intro:
-    'The fastest way to rearrange, delete, or rotate PDF pages is to do it right in your browser: open the free [CoolPDF Organize PDF tool](/organize-pdf/), drop in a file, then drag the page thumbnails into place, rotate the sideways ones, and delete what you do not need. Click "Download organized PDF" and save the result as organized.pdf. Everything runs locally on your device — the file is never uploaded, and there is no account, queue, or watermark.',
+    'PDF 페이지의 순서를 바꾸거나 삭제, 회전하는 가장 빠른 방법은 브라우저에서 바로 처리하는 것입니다. 무료 [CPdf PDF 페이지 정리 도구](/organize-pdf/)를 열고 파일을 놓은 뒤, 페이지 썸네일을 원하는 위치로 드래그하고, 옆으로 누운 페이지는 회전시키고, 필요 없는 페이지는 삭제하세요. "정리된 PDF 다운로드"를 클릭하면 organized.pdf로 결과를 저장합니다. 모든 처리는 기기에서 로컬로 이루어지며, 파일이 업로드되지 않고 계정이나 대기열, 워터마크도 없습니다. 인터넷 연결 없이도 동작하고, 원본 파일은 전혀 변경되지 않습니다.',
   quickSteps: [
-    'Open the Organize PDF tool and drag one PDF (up to 100 MB) onto the upload area — or click it to browse.',
-    'Drag the thumbnails into the order you want. The badge under each page always shows the original page number.',
-    'Rotate a page 90° or mark it for deletion with the buttons on its thumbnail — the toolbar applies both to selected pages at once, and deletions are reversible.',
-    'Click "Download organized PDF" and save the result as organized.pdf. Your original file is never modified.',
+    'PDF 페이지 정리 도구를 열고 PDF 하나(최대 100 MB)를 업로드 영역으로 드래그하거나, 영역을 클릭해 파일을 선택하세요.',
+    '썸네일을 원하는 순서로 드래그하세요. 각 페이지 아래의 배지에는 원래 페이지 번호가 계속 표시됩니다.',
+    '썸네일의 버튼으로 페이지를 90° 회전하거나 삭제로 표시하세요. 도구 모음에서는 선택한 페이지에 두 작업을 일괄 적용할 수 있고, 삭제는 되돌릴 수 있습니다.',
+    '"정리된 PDF 다운로드"를 클릭하고 organized.pdf로 결과를 저장하세요. 원본 파일은 변경되지 않습니다.',
   ],
   sections: [
     {
-      heading: 'Step-by-step: rearranging pages with CoolPDF',
+      heading: '단계별 안내: CPdf로 페이지 순서 바꾸기',
       paragraphs: [
-        'Open the [Organize PDF tool](/organize-pdf/) and drop in one PDF — or click the upload area to browse. The limit is 100 MB per file on desktop and 50 MB on mobile, and only PDF files are accepted. Pages appear as thumbnails in a grid; long documents render the first 30 previews immediately, with "Load more previews" fetching 60 more at a time.',
-        'Reordering is literal: grab a thumbnail, drag it to its new position, and drop it. The badge under each page always shows the original page number, so you know where a page came from after you move it. There is no separate "apply" step — the grid order is the page order of the output.',
-        'To handle several pages at once, click thumbnails to select them, then use the toolbar: Select all, Delete selected, Rotate selected 90°. A counter keeps the tally — "18 of 24 pages will be kept" — so you know what the output will contain.',
+        '[PDF 페이지 정리 도구](/organize-pdf/)를 열고 PDF 하나를 놓거나, 업로드 영역을 클릭해 파일을 선택하세요. 파일 크기 제한은 데스크톱에서 파일당 100 MB, 모바일에서 50 MB이며, PDF 파일만 지원됩니다. 페이지는 그리드 형태의 썸네일로 표시되며, 긴 문서는 처음 30개 미리보기가 바로 렌더링되고 "미리보기 더 불러오기"를 누를 때마다 60개씩 추가됩니다.',
+        '순서 변경은 직관적입니다. 썸네일을 잡아 새 위치로 드래그한 뒤 놓으세요. 각 페이지 아래의 배지에는 원래 페이지 번호가 항상 표시되므로, 이동한 뒤에도 해당 페이지의 출처를 알 수 있습니다. 별도의 "적용" 단계는 없습니다. 그리드에 표시된 순서가 출력 PDF의 페이지 순서입니다.',
+        '여러 페이지를 한 번에 처리하려면 썸네일을 클릭해 선택한 뒤 도구 모음을 사용하세요. 전체 선택, 선택한 페이지 삭제, 선택한 페이지 90° 회전이 가능합니다. "24페이지 중 18페이지가 유지됩니다"와 같은 카운터가 표시되어 출력에 무엇이 들어가는지 확인할 수 있습니다.',
       ],
       bullets: [
-        'One PDF at a time, up to 100 MB (50 MB on mobile)',
-        'Drag-and-drop reordering with live page previews',
-        'Rotate in 90° steps; deletion is reversible until you download',
-        'Output is always saved as organized.pdf',
+        'PDF 파일 1개, 최대 100 MB(모바일 50 MB)',
+        '실시간 페이지 미리보기와 함께 드래그 앤 드롭으로 순서 변경',
+        '90° 단위 회전, 삭제는 다운로드 전까지 되돌릴 수 있음',
+        '결과는 항상 organized.pdf로 저장됨',
       ],
       image: {
         src: '/guides/how-to-organize-pdf-pages/step-1.png',
-        alt: 'The CoolPDF Organize PDF grid showing page thumbnails after a document is loaded, with the selection toolbar above it and the kept-pages counter on the right.',
+        alt: '문서를 불러온 뒤 CPdf PDF 페이지 정리 그리드에 페이지 썸네일이 표시된 화면. 그리드 위에 선택 도구 모음, 오른쪽에 유지 페이지 수 카운터가 보임',
       },
     },
     {
-      heading: 'Rotating and deleting pages — and getting them back',
+      heading: '페이지 회전과 삭제 — 그리고 되살리기',
       paragraphs: [
-        'Every thumbnail carries two buttons. "Rotate page 90°" turns the page a quarter-turn clockwise per click — twice for an upside-down scan, three times to turn the other way. The rotation is written into the output, so sideways scans stay fixed in every viewer.',
-        '"Delete page" marks a page rather than removing it: the thumbnail fades to grayscale under a red "Deleted" badge, and the same spot offers "Restore page"; the Reset button undoes everything at once. And if you mark every single page, the tool refuses with "At least one page must remain in the document" instead of handing you an empty file.',
+        '모든 썸네일에는 버튼 두 개가 있습니다. "페이지 90° 회전"은 클릭할 때마다 페이지를 오른쪽으로 90도씩 돌립니다. 거꾸로 된 스캔은 두 번, 반대 방향으로 돌리려면 세 번 클릭하세요. 회전은 출력 파일에 그대로 반영되므로, 옆으로 누운 스캔도 모든 뷰어에서 바로잡힌 상태로 유지됩니다.',
+        '"페이지 삭제"는 페이지를 실제로 제거하는 대신 삭제 표시를 합니다. 썸네일은 흐리게 처리되고 빨간 "삭제됨" 배지가 표시되며, 같은 자리에서 "페이지 복원"을 누를 수 있습니다. 재설정 버튼으로 모든 작업을 한 번에 되돌릴 수도 있습니다. 만약 모든 페이지를 삭제로 표시하면, 빈 파일을 만들지 않고 "문서에는 최소한 1페이지가 남아 있어야 합니다"라는 안내가 표시됩니다.',
       ],
       image: {
         src: '/guides/how-to-organize-pdf-pages/step-2.png',
-        alt: 'Close-up of the Organize PDF grid: the third page thumbnail has been rotated 90 degrees and now shows its content sideways, while selection checkboxes mark the pages chosen for a batch action.',
+        alt: 'PDF 페이지 정리 그리드의 썸네일 네 개. 첫 번째 페이지에 삭제됨 배지와 복원 버튼이 표시되어 있고 나머지 페이지에는 회전과 삭제 버튼이 있음',
       },
     },
     {
-      heading: 'Reordering confidential pages without uploading them',
+      heading: '업로드 없이 기밀 페이지 정리하기',
       paragraphs: [
-        'Organizing is usually the last step before a document leaves your hands: pulling the signed page to the front of a contract bundle, stripping blank scans out of a tax file, removing one salary page before forwarding an HR packet. These are exactly the files you least want on someone else\u2019s server.',
-        'CoolPDF renders the previews and shuffles the pages entirely in your browser: the file is read from your own disk and the rebuilt PDF is saved straight back to it — no upload, no queue, no temporary copy. Load the page, disconnect from the internet, and it still works; close the tab and nothing of the document remains.',
+        '페이지 정리는 보통 문서를 남에게 보내기 직전 마지막 단계입니다. 계약서 묶음에서 서명한 페이지를 맨 앞으로 끌어오거나, 세금 신고 파일에서 빈 스캔을 제거하거나, 인사 자료를 전달하기 전에 급여 페이지 한 장을 빼내는 작업이 여기에 해당합니다. 이런 파일일수록 남의 서버에 올리고 싶지 않은 파일입니다.',
+        'CPdf는 미리보기 렌더링과 페이지 재배치를 전부 브라우저 안에서 처리합니다. 파일은 사용자 기기의 디스크에서 읽히고, 다시 작성된 PDF은 그대로 기기에 저장됩니다. 업로드도 대기열도 임시 복사본도 없습니다. 페이지를 불러온 뒤 인터넷 연결을 끊어도 동작하며, 탭을 닫으면 문서의 흔적이 남지 않습니다.',
       ],
     },
     {
-      heading: 'When organizing is only half the job',
+      heading: '페이지 정리가 일의 절반에 불과할 때',
       paragraphs: [
-        'If every page needs the same rotation fix, [Rotate PDF](/rotate-pdf/) turns the whole file in one pass. When you want to pull pages out rather than delete them — a chapter to share, an invoice to archive — [Split PDF](/split-pdf/) extracts a page range into its own document.',
-        'A common order of operations is to [merge files first](/merge-pdf/), organize the combined pages here, then [add page numbers](/page-numbers/) so the sequence reads cleanly. Too heavy to email? Finish with [Compress PDF](/compress-pdf/).',
+        '모든 페이지에 같은 회전이 필요하다면 [PDF 회전](/rotate-pdf/)으로 파일 전체를 한 번에 돌리세요. 페이지를 삭제하는 대신 떼어 내고 싶다면 — 나눠 보낼 장이나 보관할 청구서 등 — [PDF 분할](/split-pdf/)로 페이지 범위를 별도 문서로 추출할 수 있습니다.',
+        '일반적인 작업 순서는 [먼저 파일을 합치고](/merge-pdf/), 합쳐진 페이지를 여기서 정리한 뒤, [페이지 번호를 추가](/page-numbers/)해 순서가 깔끔하게 읽히도록 하는 것입니다. 이메일로 보내기엔 너무 크다면 마지막으로 [PDF 압축](/compress-pdf/)을 이용하세요.',
       ],
     },
   ],
   alternatives: [
     {
-      heading: 'macOS Preview',
+      heading: 'macOS 미리보기(Preview)',
       paragraphs: [
-        'On a Mac, Preview covers all three jobs: show View → Thumbnails, drag to reorder, select pages and press Delete, and use Tools → Rotate Left/Right. It is free and offline, but macOS-only, and edits the document in place — once you save, deletions are permanent. CoolPDF gives the same offline privacy in any browser, with a restore option that makes experimenting safe.',
+        'Mac에서는 미리보기(Preview)로 세 가지 작업을 모두 처리할 수 있습니다. 보기 → 미리보기 표시를 켜고, 드래그로 순서를 바꾸고, 페이지를 선택해 Delete 키를 누르고, 도구 → 왼쪽/오른쪽으로 회전을 사용하세요. 무료이며 오프라인에서 동작하지만 macOS에서만 사용할 수 있고, 문서를 직접 수정하므로 저장하는 순간 삭제가 영구 적용됩니다. CPdf는 같은 오프라인 프라이버시를 모든 브라우저에서 제공하며, 복원 기능이 있어 안심하고 시도해 볼 수 있습니다.',
       ],
     },
     {
-      heading: 'Adobe Acrobat (paid)',
+      heading: 'Adobe Acrobat(유료)',
       paragraphs: [
-        'Acrobat\u2019s Organize Pages view is the polished paid reference: drag thumbnails, rotate, delete, insert, and extract in one grid. It requires a subscription and a desktop install, and the web version uploads your file to Adobe\u2019s servers. If you already pay for Acrobat it is excellent — otherwise CoolPDF covers the same ground without the account or the upload.',
+        'Acrobat의 페이지 구성 보기는 완성도 높은 유료 표준입니다. 그리드에서 썸네일을 드래그하고, 회전, 삭제, 삽입, 추출을 한 화면에서 처리할 수 있습니다. 하지만 구독과 데스크톱 설치가 필요하고, 웹 버전은 파일을 Adobe 서버에 업로드합니다. 이미 Acrobat을 구독 중이라면 훌륭한 선택입니다. 그렇지 않다면 CPdf로 계정 없이, 업로드 없이 같은 작업을 처리할 수 있습니다.',
       ],
     },
     {
-      heading: 'The print-a-page-range workaround',
+      heading: '페이지 범위 인쇄라는 우회 방법',
       paragraphs: [
-        'Any system with a PDF printer can "delete" pages by printing only the ranges you keep. It costs nothing, but printing re-renders the document — links, form fields, and bookmarks are flattened — and you can only omit pages, not reorder or rotate. For anything beyond a quick trim, a real organizer is cleaner and lossless.',
+        'PDF 가상 프린터가 있는 시스템이라면, 유지할 페이지 범위만 인쇄해 "삭제"와 같은 효과를 낼 수 있습니다. 비용은 들지 않지만, 인쇄 과정에서 문서가 다시 렌더링되어 링크, 양식 필드, 북마크가 모두 평탄화됩니다. 그리고 페이지를 생략하는 것만 가능하고 순서를 바꾸거나 회전할 수는 없습니다. 간단한 다듬기 이상의 작업이라면 실제 페이지 정리 도구가 더 깔끔하고 무손실입니다.',
       ],
     },
   ],
   edgeCases: [
     {
-      heading: 'The PDF is password-protected',
+      heading: 'PDF가 암호로 보호되어 있는 경우',
       paragraphs: [
-        'A protected PDF cannot even be previewed without its password, so the tool stops at load with "This PDF is password-protected and cannot be processed here." If you know the password, save an unprotected copy with [Unlock PDF](/unlock-pdf/) first, then organize that copy.',
+        '암호로 보호된 PDF는 비밀번호 없이 미리보기조차 불가능하므로, 도구는 "이 PDF는 암호로 보호되어 있어 여기서 처리할 수 없습니다"라는 안내와 함께 로드 단계에서 중단됩니다. 비밀번호를 알고 있다면, 먼저 [PDF 잠금 해제](/unlock-pdf/)로 보호되지 않은 사본을 저장한 뒤 그 사본을 정리하세요.',
       ],
     },
     {
-      heading: 'The file is too large',
+      heading: '파일이 너무 큰 경우',
       paragraphs: [
-        'The 100 MB desktop limit (50 MB on mobile) exists because the whole file is held in your device\u2019s memory while you work. An oversized file is refused by name, with the limit shown. The usual fix is [Compress PDF](/compress-pdf/): shrink first, then organize the lighter copy.',
+        '작업하는 동안 파일 전체가 기기 메모리에 올라가기 때문에 데스크톱 100 MB, 모바일 50 MB 제한이 있습니다. 크기를 초과한 파일은 파일명과 함께 제한 크기를 안내하며 거부됩니다. 일반적인 해결 방법은 [PDF 압축](/compress-pdf/)입니다. 먼저 크기를 줄인 뒤 가벼워진 사본을 정리하세요.',
       ],
     },
     {
-      heading: 'Very long documents',
+      heading: '페이지가 매우 많은 문서',
       paragraphs: [
-        'There is no page-count cap, but previews cost memory — so only the first 30 pages render on load and "Load more previews" adds 60 per click. If you mark every page for deletion, the tool stops you with "At least one page must remain in the document" rather than producing an empty PDF.',
+        '페이지 수 제한은 없지만, 미리보기는 메모리를 소모하므로 처음에는 앞 30페이지만 렌더링되고 "미리보기 더 불러오기"를 누를 때마다 60페이지씩 추가됩니다. 모든 페이지를 삭제로 표시하면, 빈 PDF를 만들지 않고 "문서에는 최소한 1페이지가 남아 있어야 합니다"라는 안내가 표시됩니다.',
       ],
     },
   ],
   faqs: [
     {
-      q: 'Is organizing PDF pages with CoolPDF really free?',
-      a: 'Yes — every tool is free forever, with no daily quotas, watermarks, or premium tiers. The processing runs on your own device, so there is no server bill to pass on to you.',
+      q: 'CPdf로 PDF 페이지 정리는 정말 무료인가요?',
+      a: '네. 모든 도구는 영구적으로 무료이며, 일일 사용량 제한이나 워터마크, 유료 요금제가 없습니다. 처리는 사용자 기기에서 이루어지므로 서버 비용을 사용자에게 전가할 일도 없습니다.',
     },
     {
-      q: 'What are the limits?',
-      a: 'One PDF at a time, up to 100 MB per file on desktop (50 MB on mobile). There is no cap on the page count — previews simply render in batches to keep memory use in check.',
+      q: '사용 제한은 어떻게 되나요?',
+      a: '한 번에 PDF 1개, 데스크톱에서 파일당 최대 100 MB(모바일 50 MB)입니다. 페이지 수에는 제한이 없으며, 메모리 사용을 조절하기 위해 미리보기만 배치로 렌더링됩니다.',
     },
     {
-      q: 'Is it safe to reorganize confidential documents here?',
-      a: 'Yes. Your file is processed locally in your browser and never uploaded to any server. You can even disconnect from the internet after the page loads and keep working; closing the tab removes every trace of it.',
+      q: '기밀 문서를 여기서 정리해도 안전한가요?',
+      a: '네. 파일은 브라우저에서 로컬로 처리되며 어떤 서버에도 업로드되지 않습니다. 페이지를 불러온 뒤 인터넷 연결을 끊고 계속 작업할 수도 있으며, 탭을 닫으면 모든 흔적이 제거됩니다.',
     },
     {
-      q: 'Do I need to sign up or install anything?',
-      a: 'No. There is no account, no email address, and nothing to install. Open the tool page, drop in a PDF, and start dragging pages — it works in any modern browser, on desktop and mobile.',
+      q: '가입하거나 무언가를 설치해야 하나요?',
+      a: '아니요. 계정도, 이메일 주소도, 설치할 것도 없습니다. 도구 페이지를 열고 PDF를 놓으면 바로 페이지를 드래그할 수 있습니다. 데스크톱과 모바일의 모든 최신 브라우저에서 동작합니다.',
     },
     {
-      q: 'Does deleting or rotating pages reduce quality?',
-      a: 'No. Pages are copied into the new document at the object level — no recompression, no re-rendering — and rotation just sets an orientation flag every viewer respects. One caveat: the document outline (bookmark sidebar) is not carried over, so keep the original if you rely on bookmarks.',
+      q: '페이지를 삭제하거나 회전하면 품질이 떨어지나요?',
+      a: '아니요. 페이지는 객체 수준에서 새 문서로 복사되므로 재압축이나 재렌더링이 없고, 회전은 모든 뷰어가 인식하는 방향 플래그만 설정합니다. 한 가지 주의점은 문서 개요(북마크 사이드바)가 이어지지 않는다는 것입니다. 북마크에 의존한다면 원본을 보관하세요.',
     },
   ],
   related: ['how-to-rotate-pdf', 'how-to-split-pdf', 'how-to-merge-pdf'],

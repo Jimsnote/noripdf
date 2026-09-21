@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { Download, QrCode as QrCodeIcon } from 'lucide-react';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 import { ToolShell } from './ToolShell';
 
 type EcLevel = 'L' | 'M' | 'Q' | 'H';

@@ -1,5 +1,5 @@
 import type { Locale } from '@/i18n/config';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 import { XlsxToMarkdownTool } from '@/components/tools/XlsxToMarkdownTool';
 import { ToolPageScaffold } from './ToolPageScaffold';
 

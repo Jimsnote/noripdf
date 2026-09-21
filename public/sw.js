@@ -1,5 +1,5 @@
 /**
- * CoolPDF Service Worker — 离线可用的核心。
+ * CPdf Service Worker — 离线可用的核心。
  *
  * 缓存策略：
  * - /_next/static/**（内容哈希、不可变）：cache-first

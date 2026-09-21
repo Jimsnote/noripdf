@@ -9,7 +9,7 @@ import {
   Plus,
   X,
 } from 'lucide-react';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 import { applySignatures, displayRectToPdf, type SignaturePlacement } from '@/lib/pdf/sign-pdf';
 import { canvasToBlob, loadPdfJsDocument, type PdfJsDocument } from '@/lib/pdf/pdfjs';
 import { warmPdfLib } from '@/lib/pdf/pdf-lib';

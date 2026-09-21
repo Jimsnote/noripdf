@@ -7,118 +7,118 @@ import type { Guide } from './types';
 export const howToAddWatermarkToPdf: Guide = {
   slug: 'how-to-add-watermark-to-pdf',
   toolSlug: 'watermark-pdf',
-  title: 'How to Add a Watermark to a PDF Document',
+  title: 'PDF에 워터마크를 추가하는 방법',
   description:
-    'Add a text or image watermark to every page of your PDF — tiled or centered, with size, color, and opacity controls — right in your browser. Free, no upload.',
+    '브라우저에서 바로 PDF의 모든 페이지에 텍스트나 이미지 워터마크를 추가하세요. 타일/가운데 배치, 크기·색상·불투명도 조절, 업로드 없이 무료.',
   intro:
-    'The fastest way to add a watermark to a PDF is to stamp it right in your browser: open the free [CoolPDF Watermark PDF tool](/watermark-pdf/), drop in your document, type a wording like CONFIDENTIAL or upload a logo, choose tiled or centered placement, click Add Watermark, and download the result as watermarked.pdf. Because CoolPDF processes the file locally on your device, the unwatermarked original is never uploaded anywhere — no account, no queue, no waiting.',
+    'PDF에 워터마크를 추가하는 가장 빠른 방법은 브라우저에서 바로 찍는 것입니다. 무료 [CPdf PDF 워터마크 도구](/watermark-pdf/)를 열고 문서를 끌어다 놓은 뒤, CONFIDENTIAL 같은 문구를 입력하거나 로고를 업로드하고, 타일 또는 가운데 배치를 선택한 다음 "워터마크 추가"를 클릭하면 watermarked.pdf로 결과를 다운로드할 수 있습니다. CPdf는 파일을 기기 안에서 처리하므로 워터마크가 없는 원본이 어디에도 업로드되지 않습니다. 계정도, 대기열도, 기다림도 없습니다.',
   quickSteps: [
-    'Open the [Watermark PDF tool](/watermark-pdf/) and drag your PDF onto the upload area, or click to browse — one file at a time, up to 100 MB on desktop (50 MB on mobile).',
-    'Keep the type on "Text" and enter your wording (up to 100 characters), or switch to "Image (PNG or JPG)" and upload a logo.',
-    'Set the font size and color (or the image size), pick an opacity, choose Tiled or Centered placement, then click "Add Watermark".',
-    'Click "Download" to save the result as watermarked.pdf. Every page is stamped, and your original file stays untouched.',
+    '[PDF 워터마크 도구](/watermark-pdf/)를 열고 PDF를 업로드 영역에 드래그하거나 클릭해서 선택하세요. 한 번에 한 개, 데스크톱 최대 100 MB(모바일 50 MB)까지 가능합니다.',
+    '유형을 "텍스트"로 유지하고 문구를 입력하세요(최대 100자). "이미지(PNG 또는 JPG)"로 바꾸면 로고를 업로드할 수 있습니다.',
+    '글자 크기와 색상(또는 이미지 크기)을 정하고 불투명도를 선택한 뒤 타일 또는 가운데 배치를 고르고 "워터마크 추가"를 클릭하세요.',
+    '"다운로드"를 클릭하면 watermarked.pdf로 저장됩니다. 모든 페이지에 찍히며 원본 파일은 그대로 유지됩니다.',
   ],
   sections: [
     {
-      heading: 'Step-by-step: adding a text watermark',
+      heading: '단계별 안내: 텍스트 워터마크 추가하기',
       paragraphs: [
-        'Open the [Watermark PDF tool](/watermark-pdf/) and add your PDF — drag it onto the upload area, or click to browse. With the type set to Text, enter the wording (up to 100 characters; the placeholder suggests CONFIDENTIAL). The font size slider runs 16–96 pt, and the text is drawn with your device\u2019s own fonts, so Chinese, Arabic, or emoji wording works exactly like English.',
-        'Opacity runs 5–50% — the 20% default keeps body text legible — and Placement offers Tiled, repeated diagonally so the mark cannot be cropped out, or Centered, a single 45° stamp in the middle. Click "Add Watermark"; the download card appears with the file, always named watermarked.pdf.',
+        '[PDF 워터마크 도구](/watermark-pdf/)를 열고 PDF를 추가하세요. 업로드 영역에 드래그하거나 클릭해서 선택하면 됩니다. 유형이 텍스트로 설정된 상태에서 문구를 입력하세요(최대 100자, 플레이스홀더에는 CONFIDENTIAL이 제안됩니다). 글자 크기 슬라이더는 16~96pt이며, 텍스트는 기기에 설치된 폰트로 그려지므로 한글이나 아랍어, 이모지 문구도 영어와 똑같이 작동합니다.',
+        '불투명도는 5~50%이며, 기본값 20%는 본문 텍스트를 읽기 편하게 유지합니다. 배치는 타일(대각선으로 반복되어 잘라낼 수 없게)과 가운데(페이지 중앙에 45°로 한 번) 중에서 고를 수 있습니다. "워터마크 추가"를 클릭하면 다운로드 카드에 파일이 표시되며, 이름은 항상 watermarked.pdf입니다.',
       ],
       bullets: [
-        'One PDF at a time, up to 100 MB on desktop (50 MB on mobile)',
-        'Text up to 100 characters, font size 16–96 pt',
-        'Opacity 5–50%; tiled or centered at a fixed 45° diagonal',
+        '한 번에 PDF 한 개, 데스크톱 최대 100 MB(모바일 50 MB)',
+        '텍스트 최대 100자, 글자 크기 16~96pt',
+        '불투명도 5~50%, 45° 대각선으로 타일 또는 가운데 배치',
       ],
       image: {
         src: '/guides/how-to-add-watermark-to-pdf/step-1.png',
-        alt: 'The CoolPDF text watermark options with CONFIDENTIAL typed, font size at 48 pt, a gray color swatch, opacity 20%, and the Tiled placement selected.',
+        alt: 'CPdf PDF 워터마크 도구에 PDF가 추가되고 워터마크 종류가 텍스트로 선택된 화면. 워터마크 텍스트 입력란에는 CONFIDENTIAL이 입력되어 있음',
       },
     },
     {
-      heading: 'Stamping a logo or image instead',
+      heading: '로고나 이미지로 찍기',
       paragraphs: [
-        'Switch the type to "Image (PNG or JPG)" and a second upload area appears — only PNG and JPG files are accepted. For logos, PNG is the right choice: its transparency is preserved, so the page content stays visible around your mark instead of sitting behind a white box.',
-        'The "Image size (relative to page width)" slider scales the stamp from 10% to 100% of the page width, starting at 40%; the aspect ratio is kept, and oversized stamps are shrunk to fit. Centered at low opacity reads like a letterhead logo, Tiled at 30–40% covers the page for drafts.',
+        '유형을 "이미지(PNG 또는 JPG)"로 바꾸면 두 번째 업로드 영역이 나타나며, PNG와 JPG 파일만 허용됩니다. 로고라면 PNG가 적합합니다. 투명 배경이 유지되어 마크 주변의 페이지 내용이 흰색 상자 뒤에 가려지지 않고 그대로 보입니다.',
+        '"이미지 크기(페이지 너비 대비)" 슬라이더는 페이지 너비의 10%~100%로 크기를 조절하며 기본값은 40%입니다. 가로세로 비율은 유지되고, 너무 큰 마크는 알아서 축소됩니다. 낮은 불투명도로 가운데에 두면 문서 상단 로고처럼 보이고, 30~40%로 타일 배치하면 초안용으로 페이지 전체를 덮습니다.',
       ],
       image: {
         src: '/guides/how-to-add-watermark-to-pdf/step-2.png',
-        alt: 'The image watermark options with a logo.png added, size at 40% of page width, opacity 20%, and the Centered placement selected.',
+        alt: 'CPdf PDF 워터마크 도구의 이미지 워터마크 옵션 화면. logo.png가 추가되고 이미지 크기 40%, 불투명도 20%, 바둑판식 배치가 선택되어 있음',
       },
     },
     {
-      heading: 'Watermark sensitive documents without uploading them',
+      heading: '업로드 없이 민감한 문서에 워터마크 찍기',
       paragraphs: [
-        'A watermark is usually the last step before a document leaves your hands: a draft contract marked CONFIDENTIAL, an ID copy stamped "for the May rental application only". With a conventional online tool, the unprotected original — the most sensitive version — is uploaded to a server before the watermark touches it.',
-        'CoolPDF stamps the watermark where the file already is: the wording is rendered with your device\u2019s fonts and drawn onto the pages in the browser tab — nothing is transmitted or stored anywhere else. The Network tab in DevTools shows zero uploads, and closing the tab removes every trace.',
+        '워터마크는 보통 문서가 내 손을 떠나기 직전의 마지막 단계입니다. CONFIDENTIAL 표시가 있는 계약서 초안, "5월 임대 신청 전용"이라고 찍힌 신분증 사본 등이 있죠. 기존 온라인 도구라면 워터마크가 찍히기 전에 가장 민감한 보호되지 않은 원본이 서버에 업로드됩니다.',
+        'CPdf는 파일이 있는 바로 그곳에서 워터마크를 찍습니다. 문구는 기기의 폰트로 렌더링되어 브라우저 탭 안의 페이지 위에 그려지며, 어디에도 전송되거나 저장되지 않습니다. 개발자 도구의 네트워크 탭에서 업로드가 0건인 것을 확인할 수 있고, 탭을 닫으면 모든 흔적이 사라집니다.',
       ],
     },
     {
-      heading: 'Finishing the document: protect, number, and shrink it',
+      heading: '문서 마무리: 보호, 페이지 번호, 용량 줄이기',
       paragraphs: [
-        'Watermarking rarely happens in isolation. A document confidential enough to stamp usually deserves a password too — [Password Protect PDF](/protect-pdf/) encrypts the watermarked file. For multi-page reports, [Page Numbers](/page-numbers/) adds consistent numbering.',
-        'The stamp adds almost nothing to the file size — the same image is embedded once and reused on every page. If the result still needs to fit an email limit, [Compress PDF](/compress-pdf/) brings it back under the limit with the stamp intact.',
+        '워터마크는 거의 혼자 쓰이지 않습니다. 찍을 만큼 중요한 문서라면 보통 비밀번호도 걸어야 하죠. [PDF 보호](/protect-pdf/)로 워터마크가 찍힌 파일을 암호화할 수 있습니다. 여러 페이지 보고서라면 [페이지 번호 추가](/page-numbers/)로 일관된 번호를 매기세요.',
+        '워터마크는 파일 크기를 거의 늘리지 않습니다. 같은 이미지가 한 번만 임베드되어 모든 페이지에서 재사용되기 때문입니다. 결과물이 이메일 첨부 제한에 맞아야 한다면 [PDF 압축](/compress-pdf/)으로 워터마크를 그대로 유지하면서 한도 아래로 줄일 수 있습니다.',
       ],
     },
   ],
   alternatives: [
     {
-      heading: 'Microsoft Word or Google Docs (before the PDF exists)',
+      heading: 'Microsoft Word 또는 Google Docs(PDF로 내보내기 전)',
       paragraphs: [
-        'If you still have the source document, watermark it there: Word has Design → Watermark with custom text and pictures, and Google Docs offers Insert → Watermark. It costs nothing extra, but only works for documents you authored — a scan or a contract received as a PDF has no source file. CoolPDF stamps the document you actually have.',
+        '원본 문서가 아직 있다면 그 단계에서 워터마크를 넣으세요. Word에는 디자인 → 워터마크에 사용자 지정 텍스트와 그림이 있고, Google Docs에는 삽입 → 워터마크가 있습니다. 별도 비용 없이 할 수 있지만, 직접 만든 문서에만 해당됩니다. 스캔본이나 PDF로 받은 계약서에는 원본 파일이 없습니다. CPdf는 실제로 가지고 있는 그 문서에 바로 찍어 줍니다.',
       ],
     },
     {
-      heading: 'Adobe Acrobat (paid)',
+      heading: 'Adobe Acrobat(유료)',
       paragraphs: [
-        'Acrobat Pro has the most complete watermark feature — text or image, rotation, opacity, page ranges — under Edit PDF → Watermark → Add. It needs a paid subscription, and the web version uploads your file to Adobe\u2019s servers. If Acrobat is already installed it is excellent; otherwise a free browser tool covers the everyday CONFIDENTIAL stamp.',
+        'Acrobat Pro에는 가장 완전한 워터마크 기능 — 텍스트 또는 이미지, 회전, 불투명도, 페이지 범위 — 이 PDF 편집 → 워터마크 → 추가 아래에 있습니다. 유료 구독이 필요하고, 웹 버전은 파일을 Adobe 서버에 업로드합니다. 이미 설치되어 있다면 훌륭하지만, 그렇지 않다면 무료 브라우저 도구로도 일상적인 CONFIDENTIAL 표시는 충분히 가능합니다.',
       ],
     },
   ],
   edgeCases: [
     {
-      heading: 'The PDF is password-protected',
+      heading: 'PDF가 비밀번호로 보호되어 있는 경우',
       paragraphs: [
-        'An encrypted PDF cannot be opened for stamping — the tool answers "This PDF is password-protected and cannot be processed here." If you know the password, save an unprotected copy with [Unlock PDF](/unlock-pdf/), watermark that copy, and re-protect it afterwards. Without the password, ask the sender for an open version.',
+        '암호화된 PDF는 워터마크를 찍을 수 없어서, 도구는 "이 PDF는 비밀번호로 보호되어 있어 여기서 처리할 수 없습니다."라고 알립니다. 비밀번호를 알고 있다면 [PDF 잠금 해제](/unlock-pdf/)로 보호되지 않은 사본을 저장한 뒤 그 사본에 워터마크를 찍고 나중에 다시 보호하세요. 비밀번호가 없으면 보낸 사람에게 열 수 있는 버전을 요청하세요.',
       ],
     },
     {
-      heading: 'The file is too large',
+      heading: '파일이 너무 큰 경우',
       paragraphs: [
-        'The limit is 100 MB per file on desktop, 50 MB on mobile — the whole document is held in memory while it is stamped, and oversized files are refused at the upload area. Shrink the document with [Compress PDF](/compress-pdf/) first, then watermark the compressed version; the stamp is drawn afterwards, so it stays crisp.',
+        '한 파일당 데스크톱 100 MB, 모바일 50 MB 제한입니다. 문서 전체가 메모리에 올라간 상태에서 찍히므로, 초대형 파일은 업로드 영역에서 거부됩니다. 먼저 [PDF 압축](/compress-pdf/)으로 문서를 줄인 뒤 압축본에 워터마크를 찍으세요. 워터마크는 그 이후에 그려지므로 선명하게 유지됩니다.',
       ],
     },
     {
-      heading: 'Your logo is not a PNG or JPG',
+      heading: '로고가 PNG나 JPG가 아닌 경우',
       paragraphs: [
-        'Only PNG and JPG are accepted — drop a GIF, SVG, or WebP and the tool answers "Only JPG and PNG images are supported." Export the artwork to PNG first — transparency survives, which is what you want for a logo — and rasterize SVG at a generous resolution so the stamp stays sharp.',
+        'PNG와 JPG만 허용되므로, GIF, SVG, WebP를 넣으면 도구가 "JPG와 PNG 이미지만 지원됩니다."라고 알립니다. 이미지를 먼저 PNG로 내보내세요세요. 투명 배경이 유지되어 로고에 딱 맞고, SVG는 라스터화할 때 넉넉한 해상도로 저장해야 마크가 선명합니다.',
       ],
     },
   ],
   faqs: [
     {
-      q: 'Is adding a watermark with CoolPDF really free?',
-      a: 'Yes — free forever, with no daily quotas and no premium tier. CoolPDF never adds its own branding: the only watermark is the one you put there.',
+      q: 'CPdf로 워터마크를 추가하는 것은 정말 무료인가요?',
+      a: '네 — 영원히 무료이며 일일 할당량도, 유료 플랜도 없습니다. CPdf는 자체 브랜딩을 추가하지 않습니다. 워터마크는 오직 직접 넣은 것만 존재합니다.',
     },
     {
-      q: 'What are the limits when watermarking?',
-      a: 'One PDF at a time, up to 100 MB on desktop (50 MB on mobile). Text allows up to 100 characters at 16–96 pt, opacity runs 5–50%, and image stamps scale from 10% to 100% of the page width.',
+      q: '워터마크를 찍을 때 제한은 무엇인가요?',
+      a: '한 번에 PDF 한 개, 데스크톱 최대 100 MB(모바일 50 MB)입니다. 텍스트는 16~96pt에서 최대 100자까지, 불투명도는 5~50%이며, 이미지 마크는 페이지 너비의 10%~100%로 조절됩니다.',
     },
     {
-      q: 'Is it safe to watermark confidential documents here?',
-      a: 'Yes. The file is processed locally in your browser and never uploaded — disconnect from the internet after the page loads and stamping still works. Closing the tab removes every trace.',
+      q: '여기서 기밀 문서에 워터마크를 찍어도 안전한가요?',
+      a: '네. 파일은 브라우저 안에서 로컬로 처리되며 업로드되지 않습니다. 페이지를 불러온 후 인터넷을 끊어도 워터마크는 그대로 작동합니다. 탭을 닫으면 모든 흔적이 사라집니다.',
     },
     {
-      q: 'Do I need to sign up or install anything?',
-      a: 'No. There is no account, no email address, and nothing to install — open the tool page, drop in your PDF, and stamp it, in any modern browser on desktop or mobile.',
+      q: '가입하거나 뭔가 설치해야 하나요?',
+      a: '아니요. 계정도, 이메일 주소도, 설치할 것도 없습니다. 도구 페이지를 열고 PDF를 끌어다 놓으면 바로 찍을 수 있습니다. 데스크톱과 모바일의 모든 최신 브라우저에서 작동합니다.',
     },
     {
-      q: 'Can I watermark only some pages?',
-      a: 'Not directly — the stamp is applied to every page of the document. To watermark one section only, extract those pages with [Split PDF](/split-pdf/), stamp the extracted file, then put everything back together with [Merge PDF](/merge-pdf/).',
+      q: '일부 페이지에만 워터마크를 찍을 수 있나요?',
+      a: '직접으로는 불가능합니다. 워터마크는 문서의 모든 페이지에 적용됩니다. 특정 구간에만 찍으려면 [PDF 분할](/split-pdf/)로 해당 페이지를 추출하고, 추출한 파일에 워터마크를 찍은 뒤 [PDF 병합](/merge-pdf/)으로 다시 합치세요.',
     },
     {
-      q: 'Will the watermark look blurry when people zoom in?',
-      a: 'No. Text watermarks are rendered at four times their final size, so wording stays sharp under zoom, and image stamps keep your image\u2019s resolution. The page content underneath is never re-rendered.',
+      q: '워터마크를 확대하면 흐려 보이나요?',
+      a: '아니요. 텍스트 워터마크는 실제 크기의 4배 해상도로 렌더링되므로 확대해도 문구가 선명하고, 이미지 마크는 원본 해상도를 유지합니다. 그 아래의 페이지 내용은 다시 렌더링되지 않습니다.',
     },
   ],
   related: ['how-to-password-protect-pdf', 'how-to-add-page-numbers-to-pdf', 'how-to-compress-pdf'],

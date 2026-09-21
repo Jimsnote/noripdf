@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Github } from 'lucide-react';
 import type { Locale } from '@/i18n/config';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 import { localizedPath } from '@/lib/seo';
 import { GITHUB_URL } from '@/lib/site';
 

@@ -1,5 +1,5 @@
 import type { Locale } from '@/i18n/config';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 import { OcrPdfTool } from '@/components/tools/OcrPdfTool';
 import { ToolPageScaffold } from './ToolPageScaffold';
 

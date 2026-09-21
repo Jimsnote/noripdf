@@ -3,114 +3,114 @@ import type { Guide } from './types';
 export const pdfToolsThatDontUpload: Guide = {
   slug: '5-pdf-tools-that-dont-upload-your-files',
   toolSlug: null,
-  title: '5 PDF Tools That Don’t Upload Your Files (2026) | CoolPDF',
+  title: '파일을 업로드하지 않는 PDF 도구 5가지 (2026) | CPdf',
   description:
-    'A fact-checked roundup of PDF tools that process files locally on your device — no uploads, no server copies. Features, limits, and prices compared for 2026.',
+    '계약서, 금융 기록, 의료 파일을 남의 서버에 올리지 않고 내 기기에서 처리하는 PDF 도구 5가지를 검증해 비교했습니다. 2026년 기준 기능, 제한, 가격을 정리했습니다.',
   intro:
-    'Most online PDF tools work by uploading your documents to someone else’s server. If your PDFs contain contracts, financial records, or medical files, that is a real exposure. The tools below all do the work locally on your own device — in the browser or as desktop software — so your files never leave your hands. Here is how the five best options compare in 2026.',
+    '파일을 업로드하지 않고 내 기기에서 직접 처리하는 PDF 도구 5가지를 사실 확인 후 비교했습니다. 대부분의 온라인 PDF 도구는 문서를 다른 회사의 서버에 올리는 방식이라, 계약서·금융 기록·의료 파일에는 실질적인 유출 위험이 있습니다. 아래 도구들은 처리 전부를 사용자 기기 안에서 수행하므로 파일이 당신 손을 떠나지 않습니다. 2026년 기준 최고의 선택지 5가지를 비교해 드립니다.',
   quickSteps: [
-    'Best free unlimited option: CoolPDF — 17 tools, no task limits, no account, open source.',
-    'Best for visual page editing: LocalPDF — studio-style editor, freemium with page caps.',
-    'Best tool variety: ToolPDFs — 57 small tools, free tier capped at 20 operations/day.',
-    'Best long-standing veteran: PDF24 Tools — broad free suite with a Windows desktop app.',
-    'Best paid desktop app: Sejda Desktop — full toolset including inline text editing.',
+    '무료 무제한 최고 옵션: CPdf — 17개 도구, 작업 제한 없음, 계정 불필요, 오픈 소스.',
+    '시각적 페이지 편집에 최적: LocalPDF — 스튜디오 스타일 편집기, 무료 버전은 페이지 수 제한.',
+    '도구 종류 최다: ToolPDFs — 57개 소형 도구, 무료 버전은 하루 20회 작업까지.',
+    '오랜 역사의 노련한 선택: PDF24 Tools — 광범위한 무료 스위트에 Windows 데스크톱 앱 제공.',
+    '유료 데스크톱 최고: Sejda Desktop — 인라인 텍스트 편집까지 갖춘 풀 도구셋.',
   ],
   sections: [
     {
-      heading: '1. CoolPDF — free, unlimited, and open source',
+      heading: '1. CPdf — 무료, 무제한, 오픈 소스',
       paragraphs: [
-        'Our own pick, and not just out of loyalty: [CoolPDF](/) is the only option here that is completely free with **no task limits at all**, no account, and no watermarks. Seventeen tools — merge, split, compress, protect, unlock, watermark, page numbers, organize/remove/extract/reorder pages, PDF↔JPG, PDF/Word/Excel to Markdown, and image extraction — all run as WebAssembly in your browser.',
-        'The code is AGPL-3.0 open source, so the "files never leave your device" claim is auditable, and the site works offline after the first load. The interface is available in 7 languages, and every tool ships with a full tutorial with real screenshots. The catch: it is ad-supported (ads are how it stays free), and there is no PDF-to-Word or OCR.',
+        '자체 추천이지만 충성심 때문만은 아닙니다. [CPdf](/)는 이 목록에서 완전히 무료이면서 **작업 제한이 전혀 없는** 유일한 선택지입니다. 계정도 없고 워터마크도 없습니다. 17개 도구 — 병합, 분할, 압축, 보호, 잠금 해제, 워터마크, 페이지 번호, 페이지 정리/삭제/추출/재정렬, PDF↔JPG, PDF/Word/Excel → Markdown, 이미지 추출 — 모두 브라우저 안에서 WebAssembly로 실행됩니다.',
+        '코드는 AGPL-3.0 오픈 소스라서 "파일이 기기를 떠나지 않는다"는 주장을 누구나 검증할 수 있고, 첫 로딩 후에는 오프라인에서도 작동합니다. 인터페이스는 7개 언어로 제공되며 모든 도구에 실제 스크린샷이 담긴 상세 튜토리얼이 있습니다. 단점은 광고 지원 방식이라는 점(광고로 무료를 유지합니다)이고, PDF를 Word로 변환하거나 OCR 기능은 없습니다.',
       ],
       bullets: [
-        'Price: free, ad-supported — no premium tier',
-        'Limits: none on tasks; file size bounded by device memory (~100 MB desktop)',
-        'Best for: everyday PDF work with zero friction and zero uploads',
+        '가격: 무료, 광고 지원 — 프리미엄 티어 없음',
+        '제한: 작업 수 제한 없음; 파일 크기는 기기 메모리에 따라 결정 (데스크톱 약 100 MB)',
+        '추천 용도: 업로드 걱정 없이 매일 쓰는 PDF 작업',
       ],
     },
     {
-      heading: '2. LocalPDF — the studio-style editor',
+      heading: '2. LocalPDF — 스튜디오 스타일 편집기',
       paragraphs: [
-        'LocalPDF takes a different shape: instead of one page per tool, you get a single workspace where you open PDFs side by side and drag pages between them, "like paper on a desk". It is genuinely pleasant for visual page surgery, and it also does local OCR in the browser — a rare trick.',
-        'The free tier caps you at 3 workspaces and 25 pages per document; Pro is $3.99/month. It is a strong choice if your work is mostly rearranging and annotating pages rather than high-volume conversions.',
+        'LocalPDF는 형태가 다릅니다. 도구마다 별도 페이지가 있는 대신, 하나의 작업 공간에서 PDF를 나란히 열고 페이지를 드래그해 옮길 수 있습니다. 마치 "책상 위의 종이"를 다루는 것처럼요. 시각적 페이지 작업에 정말 편하고, 브라우저 안에서 로컬 OCR까지 지원합니다 — 드문 기능입니다.',
+        '무료 버전은 작업 공간 3개, 문서당 25페이지까지 제한되며 Pro는 월 $3.99입니다. 대량 변환보다 페이지를 재배치하고 주석을 다는 일이 대부분이라면 좋은 선택입니다.',
       ],
       bullets: [
-        'Price: free tier + Pro $3.99/month',
-        'Limits: 25 pages per document and 3 workspaces on the free tier',
-        'Best for: visual page editing and local OCR',
+        '가격: 무료 버전 + Pro 월 $3.99',
+        '제한: 무료 버전에서 문서당 25페이지, 작업 공간 3개',
+        '추천 용도: 시각적 페이지 편집과 로컬 OCR',
       ],
     },
     {
-      heading: '3. ToolPDFs — the Swiss-army workspace',
+      heading: '3. ToolPDFs — 스위스 아미 나이프 작업 공간',
       paragraphs: [
-        'ToolPDFs packs 57 tools into one tab: PDF basics plus image converters, text utilities, and developer helpers (JSON formatters, hash tools, and the like). Everything runs client-side, and the site is refreshingly honest about its limits.',
-        'The free tier allows 20 operations per day with a 25 MB file cap; Pro starts at $3.99/month, with a limited founding lifetime deal. If you want many small utilities in one place, it is a good fit — the PDF toolset itself is solid but not the deepest.',
+        'ToolPDFs는 57개 도구를 하나의 탭에 담았습니다. PDF 기본 도구 외에 이미지 변환기, 텍스트 유틸리티, 개발자 도우미(JSON 포맷터, 해시 도구 등)까지 있습니다. 모든 것이 클라이언트 측에서 실행되며, 사이트는 자체 한계에 대해 솔직하게 밝힙니다.',
+        '무료 버전은 하루 20회 작업에 파일당 25 MB 제한이며, Pro는 월 $3.99부터 시작하고 한정된 창립 기념 평생 라이선스 딜도 있습니다. 여러 소형 유틸리티를 한곳에 모아두고 싶다면 잘 맞습니다. PDF 도구셋 자체는 탄탄하지만 가장 깊이 있는 편은 아닙니다.',
       ],
       bullets: [
-        'Price: free tier + Pro from $3.99/month',
-        'Limits: 20 operations/day and 25 MB files on the free tier',
-        'Best for: one tab for PDF plus text/image/dev utilities',
+        '가격: 무료 버전 + Pro 월 $3.99부터',
+        '제한: 무료 버전에서 하루 20회 작업, 파일당 25 MB',
+        '추천 용도: PDF와 텍스트/이미지/개발 유틸리티를 한 탭에서',
       ],
     },
     {
-      heading: '4. PDF24 Tools — the veteran free suite',
+      heading: '4. PDF24 Tools — 오랜 역사의 무료 스위트',
       paragraphs: [
-        'PDF24, from the German company Geek Software, has offered free PDF tools for well over a decade: a large online suite plus PDF24 Creator, a Windows desktop app that processes files locally. The web tools are free with ads; the desktop app is free too.',
-        'The desktop app is the privacy-relevant part: it covers merging, splitting, compressing, OCR, and more, entirely offline — but it is Windows-only, and the interface feels its age. The online suite, by contrast, does upload files.',
+        '독일 Geek Software사의 PDF24는 십수 년 넘게 무료 PDF 도구를 제공해 왔습니다. 방대한 온라인 스위트와, 파일을 로컬에서 처리하는 Windows 데스크톱 앱인 PDF24 Creator를 함께 제공합니다. 웹 도구는 광고와 함께 무료이고 데스크톱 앱도 무료입니다.',
+        '개인정보 관점에서 중요한 것은 데스크톱 앱입니다. 병합, 분할, 압축, OCR 등을 완전히 오프라인으로 처리합니다. 다만 Windows 전용이고 인터페이스는 연식이 느껴집니다. 반면 온라인 스위트는 파일을 업로드합니다.',
       ],
       bullets: [
-        'Price: free (ad-supported web suite; free Windows desktop app)',
-        'Limits: desktop app is Windows-only',
-        'Best for: a no-cost, offline-capable suite on Windows',
+        '가격: 무료 (웹 스위트는 광고 지원; Windows 데스크톱 앱 무료)',
+        '제한: 데스크톱 앱은 Windows 전용',
+        '추천 용도: Windows에서 오프라인으로 쓸 수 있는 무상 스위트',
       ],
     },
     {
-      heading: '5. Sejda Desktop — the paid heavyweight',
+      heading: '5. Sejda Desktop — 유료 중량급',
       paragraphs: [
-        'Sejda’s web tools upload files, but Sejda Desktop is a fully local application: the same broad toolset — including inline PDF text editing, forms, and Bates numbering — running on your own machine.',
-        'It is the most complete local toolkit here, at around $63/year per user. Worth it if you need to edit existing PDF text or handle legal-style documents regularly; overkill if you just merge and compress.',
+        'Sejda의 웹 도구는 파일을 업로드하지만, Sejda Desktop은 완전한 로컬 애플리케이션입니다. 인라인 PDF 텍스트 편집, 양식, Bates 번호 매기기를 포함한 똑같이 광범위한 도구셋이 내 컴퓨터에서 실행됩니다.',
+        '여기서 가장 완성도 높은 로컬 툴킷으로, 사용자당 연 약 $63입니다. 기존 PDF 텍스트를 직접 편집하거나 법무 스타일 문서를 정기적으로 다룬다면 값어치를 합니다. 병합과 압축만 필요하다면 과한 투자입니다.',
       ],
       bullets: [
-        'Price: from around $63/year',
-        'Limits: paid; web version (uploads) is a separate free tier with hourly caps',
-        'Best for: heavy-duty local work including real text editing',
+        '가격: 연 약 $63부터',
+        '제한: 유료; 웹 버전(업로드 방식)은 별도의 무료 티어로 시간당 제한 있음',
+        '추천 용도: 실제 텍스트 편집을 포함한 고강도 로컬 작업',
       ],
     },
     {
-      heading: 'How to verify a "no upload" claim yourself',
+      heading: '"무 업로드" 주장을 직접 검증하는 방법',
       paragraphs: [
-        'Do not take any site’s word for it — including ours. Open your browser’s DevTools (F12) → Network tab, then process a file. If the tool is truly local, you will see zero file uploads: only static assets and maybe analytics. A second test: load the page, disconnect from the internet, and try the tool again. If it still works, your file never went anywhere.',
+        '어떤 사이트의 주장이라도 — 우리 사이트 포함 — 그대로 믿지 마세요. 브라우저의 개발자 도구(F12)에서 네트워크 탭을 연 다음 파일을 처리해 보세요. 도구가 진짜 로컬이라면 파일 업로드가 전혀 보이지 않습니다. 정적 리소스와 접속 분석 정도만 나올 뿐입니다. 두 번째 테스트는, 페이지를 불러온 뒤 인터넷 연결을 끊고 도구를 다시 실행해 보는 것입니다. 그래도 작동한다면 파일이 어디로도 나가지 않은 것입니다.',
       ],
     },
   ],
   alternatives: [
     {
-      heading: 'When an upload-based tool is actually fine',
+      heading: '업로드 방식 도구가 실제로 괜찮은 경우',
       paragraphs: [
-        'For non-sensitive documents, upload-based giants like iLovePDF are convenient and offer things local tools often lack — PDF to Word, server-side OCR, API automation. The rule of thumb: if the file would not hurt you in public, use whatever is easiest; if it would, use one of the local options above.',
+        '민감하지 않은 문서라면 iLovePDF 같은 업로드 방식의 거대 서비스가 편리합니다. 로컬 도구에 흔히 없는 기능 — PDF를 Word로 변환, 서버 측 OCR, API 자동화 — 을 제공하기 때문입니다. 경험칙은 이렇습니다. 공개되어도 피해가 없는 파일이라면 가장 편한 도구를 쓰고, 피해가 될 수 있는 파일이라면 위의 로컬 옵션 중 하나를 사용하세요.',
       ],
     },
   ],
   edgeCases: [
     {
-      heading: 'A note on "deleted after 2 hours" promises',
+      heading: '"2시간 뒤 삭제" 약속에 대해',
       paragraphs: [
-        'Many upload-based tools promise to delete your files quickly. That is better than indefinite retention, but the file still crosses the wire, sits on infrastructure you do not control, and is subject to policies you have not read. Local processing removes the question entirely.',
+        '많은 업로드 방식 도구가 파일을 빨리 삭제하겠다고 약속합니다. 무기한 보관보다는 낫지만, 파일은 여전히 네트워크를 지나 내가 관리하지 않는 인프라에 머물고, 읽어보지 않은 정책의 적용을 받습니다. 로컬 처리는 이 질문 자체를 없애 줍니다.',
       ],
     },
   ],
   faqs: [
     {
-      q: 'Are browser-based tools really as safe as desktop apps?',
-      a: 'When they are genuinely client-side, yes — the processing happens in your browser’s sandbox on your device, exactly like a desktop app. The key difference is delivery: browser tools need no install and work on any OS, while desktop apps are better for very large files that exceed browser memory.',
+      q: '브라우저 기반 도구가 데스크톱 앱만큼 정말 안전한가요?',
+      a: '진정한 클라이언트 측 도구라면 그렇습니다. 처리는 브라우저의 샌드박스 안, 내 기기에서 일어나며 데스크톱 앱과 정확히 같습니다. 핵심 차이는 전달 방식입니다. 브라우저 도구는 설치 없이 모든 OS에서 작동하고, 데스크톱 앱은 브라우저 메모리를 넘어서는 아주 큰 파일에 더 적합합니다.',
     },
     {
-      q: 'Why is CoolPDF free with no limits while others cap usage?',
-      a: 'Server-based tools pay for every file they process, so they cap free tiers to control costs. CoolPDF’s processing happens on your device — our marginal cost per task is zero, so there is nothing to cap. The site is funded by unobtrusive ads.',
+      q: 'CPdf는 왜 제한 없이 무료인데 다른 서비스는 사용량을 제한하나요?',
+      a: '서버 기반 도구는 처리하는 파일마다 비용을 지불하므로 무료 티어를 제한해 비용을 관리합니다. CPdf의 처리는 사용자 기기에서 일어나므로 작업당 우리의 한계 비용이 0입니다. 제한할 이유가 없는 것입니다. 사이트는 눈에 띄지 않는 광고로 운영됩니다.',
     },
     {
-      q: 'Which of these works offline?',
-      a: 'CoolPDF, LocalPDF, and ToolPDFs work offline after the page loads (processing is local). PDF24 Creator and Sejda Desktop are offline by design as installed apps. The web suites of PDF24 and Sejda require a connection because they upload files.',
+      q: '이 중에서 오프라인으로 작동하는 것은 무엇인가요?',
+      a: 'CPdf, LocalPDF, ToolPDFs는 페이지 로딩 후 오프라인에서 작동합니다(처리가 로컬이므로). PDF24 Creator와 Sejda Desktop은 설치형 앱으로 원래 오프라인입니다. 반면 PDF24와 Sejda의 웹 스위트는 파일을 업로드하므로 인터넷 연결이 필요합니다.',
     },
   ],
   related: ['how-to-merge-pdf', 'how-to-compress-pdf', 'how-to-password-protect-pdf'],

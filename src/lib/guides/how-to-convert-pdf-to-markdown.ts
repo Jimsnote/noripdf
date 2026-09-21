@@ -1,128 +1,128 @@
 import type { Guide } from './types';
 
 /**
- * Facts below were checked against components/tools/PdfToMarkdownTool.tsx and
- * lib/pdf/pdf-to-markdown.ts — keep them in sync.
+ * 아래 사실은 components/tools/PdfToMarkdownTool.tsx 및
+ * lib/pdf/pdf-to-markdown.ts와 대조로 확인한 것입니다 — 동기화를 유지하세요.
  */
 export const howToConvertPdfToMarkdown: Guide = {
   slug: 'how-to-convert-pdf-to-markdown',
   toolSlug: 'pdf-to-markdown',
-  title: 'How to Convert PDF to Markdown (Local, Free)',
+  title: 'PDF를 Markdown으로 변환하는 방법 (로컬 처리, 무료)',
   description:
-    'Step-by-step: convert PDF to clean Markdown — headings, paragraphs, and lists detected automatically — locally in your browser. Free, no upload, no sign-up.',
+    '단계별 안내: 제목, 단락, 목록을 자동으로 감지해 PDF를 깔끔한 Markdown으로 변환합니다. 브라우저에서 로컬로 처리되며, 무료이고 업로드나 가입이 필요 없습니다.',
   intro:
-    'The fastest way to convert a PDF to Markdown is to do it locally in your browser: open the free [CoolPDF PDF to Markdown tool](/pdf-to-markdown/), drop in your file, click Convert to Markdown, and download the result as download.md. Headings, paragraphs, and lists are detected automatically, and repeating headers and footers are stripped. Because the extraction runs entirely on your own device, the document is never uploaded — no account, no queue, and no copy left on someone else\u2019s server.',
+    'PDF를 Markdown으로 변환하는 가장 빠른 방법은 브라우저에서 로컬로 처리하는 것입니다. 무료 [CPdf PDF를 Markdown으로 도구](/pdf-to-markdown/)를 열고, 파일을 드롭한 뒤 “Markdown으로 변환” 버튼을 클릭하면 결과가 download.md로 다운로드됩니다. 제목, 단락, 목록은 자동으로 감지되고, 반복되는 머리글과 바닥글은 제거되며, 필요한 페이지 범위만 골라 변환할 수도 있습니다. 추출 과정이 기기 안에서 전부 이루어지므로 문서가 업로드되지 않습니다. 계정도, 대기열도, 남의 서버에 남는 복사본도 없습니다.',
   quickSteps: [
-    'Open the PDF to Markdown tool and drag one PDF onto the upload area — or click it to browse your device. Files up to 100 MB work on desktop, 50 MB on mobile.',
-    'Under Pages, keep "All pages" selected, or switch to "Selected pages only" and type a range such as 1-3, 5.',
-    'Click "Convert to Markdown". The text is extracted and structured locally in your browser, usually within a few seconds.',
-    'Click "Download" on the result card to save the file as download.md, then open it in any editor or notes app.',
+    'PDF를 Markdown으로 도구를 열고 업로드 영역에 PDF를 드래그하거나, 클릭해서 기기에서 파일을 선택합니다. 데스크톱은 파일당 최대 100 MB, 모바일은 최대 50 MB까지 지원됩니다.',
+    '페이지 옵션에서 “모든 페이지”를 유지하거나, “선택한 페이지만”으로 바꾸고 1-3, 5 같은 범위를 입력합니다.',
+    '“Markdown으로 변환” 버튼을 클릭합니다. 텍스트가 브라우저 안에서 로컬로 추출되어 구조화되며, 보통 몇 초면 끝납니다.',
+    '결과 카드의 “다운로드” 버튼을 클릭해 download.md로 저장한 뒤, 원하는 편집기나 메모 앱에서 엽니다.',
   ],
   sections: [
     {
-      heading: 'Step-by-step: converting with CoolPDF',
+      heading: '단계별 안내: CPdf로 변환하기',
       paragraphs: [
-        'Open the [PDF to Markdown tool](/pdf-to-markdown/) — nothing to install, no account to create. Drag a file onto the upload area, or click it to pick one from a file dialog.',
-        'Decide how much of the document you need. The default, "All pages", converts everything. Switch to "Selected pages only" and a text field appears for a range like 1-3, 5 — useful when you only need chapter 3 of a long manual.',
-        'Click "Convert to Markdown" and give the browser a moment. The work happens on your device, so the time depends on the document, not your connection. When the download card appears, click Download; the result is always saved as download.md, and the original PDF is never modified.',
+        '[PDF를 Markdown으로 도구](/pdf-to-markdown/)를 엽니다. 설치할 것도, 만들 계정도 없습니다. 업로드 영역에 파일을 드래그하거나, 클릭해 파일 선택 대화상자에서 고릅니다.',
+        '문서 중 얼마나 필요한지 정합니다. 기본값인 “모든 페이지”면 전체를 변환합니다. “선택한 페이지만”으로 바꾸면 1-3, 5 같은 범위를 입력할 텍스트 필드가 나타납니다. 긴 매뉴얼에서 3장만 필요할 때 유용합니다.',
+        '“Markdown으로 변환”을 클릭하고 잠시 기다립니다. 작업은 기기 안에서 이루어지므로 소요 시간은 네트워크가 아니라 문서에 따라 달라집니다. 다운로드 카드가 나타나면 다운로드를 클릭합니다. 결과는 항상 download.md로 저장되며, 원본 PDF는 절대 수정되지 않습니다.',
       ],
       bullets: [
-        'One PDF per conversion',
-        'Up to 100 MB per file on desktop, 50 MB on mobile',
-        'Page ranges like 1-3, 5 for partial conversions',
-        'Output is always saved as download.md',
+        '한 번에 PDF 1개',
+        '데스크톱 파일당 최대 100 MB, 모바일 50 MB',
+        '일부만 변환할 때는 1-3, 5 같은 페이지 범위',
+        '결과는 항상 download.md로 저장',
       ],
       image: {
         src: '/guides/how-to-convert-pdf-to-markdown/step-1.png',
-        alt: 'The CoolPDF PDF to Markdown page with a PDF file loaded, the "Selected pages only" option chosen, and the range 1-3, 5 typed into the Pages field.',
+        alt: 'CPdf PDF를 Markdown으로 도구에 PDF 파일을 불러오고, “선택한 페이지만” 옵션을 선택한 뒤 페이지 필드에 1-3, 5 범위를 입력한 화면',
       },
     },
     {
-      heading: 'What the Markdown output looks like',
+      heading: 'Markdown 출력 결과의 모습',
       paragraphs: [
-        'The converter reads the PDF\u2019s text layer and rebuilds structure from visual cues. The most common font size is treated as body text; noticeably larger lines become headings — #, ##, or ### depending on how much bigger they are. Bullet lines (•, -, *) become "- " items, numbered lines keep their numbers, and wide vertical gaps start new paragraphs.',
-        'On top of that, short text repeated in the same spot on most pages — page numbers, running titles, confidentiality footers — is detected and dropped. Detection is heuristic, so treat the result as a strong first draft: skim the headings once and fix the occasional misjudged line. One more limit: images are skipped; the .md file is text only. Export figure pages with [PDF to JPG](/pdf-to-jpg/) if you need them.',
+        '변환기는 PDF의 텍스트 레이어를 읽고 시각적 단서로 구조를 재구성합니다. 가장 흔한 글자 크기는 본문으로 처리되고, 눈에 띄게 큰 줄은 제목이 됩니다. 크기에 따라 #, ##, ###가 붙습니다. 글머리 기호 줄(•, -, *)는 “- ” 항목이 되고, 번호가 매겨진 줄은 번호를 유지하며, 세로 간격이 넓으면 새 단락이 시작됩니다.',
+        '여기에 더해 대부분의 페이지에서 같은 위치에 반복되는 짧은 텍스트 — 페이지 번호, 머리글, 기밀 유지 바닥글 — 은 감지되어 제외됩니다. 감지는 휴리스틱 방식이므로 결과를 완성본이 아니라 훌륭한 초고로 봐야 합니다. 제목을 한 번 훑으면 가끔 잘못 판단한 줄을 고칠 수 있습니다. 한 가지 제한이 더 있습니다. 이미지는 건너뛰고 .md 파일은 텍스트만 포함합니다. 그림 페이지가 필요하면 [PDF를 JPG로](/pdf-to-jpg/)로 내보낸 이미지를 쓰세요.',
       ],
     },
     {
-      heading: 'Why local conversion matters for unpublished documents',
+      heading: '미공개 문서에 로컬 변환이 중요한 이유',
       paragraphs: [
-        'PDF to Markdown is rarely casual work. People convert draft papers to keep editing in Obsidian, internal reports to quote in documentation, contracts to feed into an AI assistant clause by clause. The popular routes — cloud converters, "chat with your PDF" services — all start the same way: upload the document to someone else\u2019s server and trust their retention policy.',
-        'CoolPDF runs the extraction where the file already is: a PDF engine in your browser tab reads the text layer, builds the Markdown in memory, and saves it straight to disk — nothing is transmitted. That makes it safe for manuscripts, client material, or anything under NDA, even on a work laptop or hotel Wi-Fi. Load the page, go offline, and it still converts; close the tab, and nothing remains.',
+        'PDF를 Markdown으로 변환하는 일은 가벼운 작업이 아닌 경우가 많습니다. 사람들은 Obsidian에서 계속 편집하려고 논문 초고를, 내부 보고서를 문서화 자료에 인용하려고, 계약서를 AI 어시스턴트에 조항별로 넣으려고 변환합니다. 클라우드 변환기, “PDF와 대화” 서비스 같은 인기 경로는 모두 같은 방식으로 시작합니다. 문서를 남의 서버에 업로드하고 보관 정책을 믿는 것이죠.',
+        'CPdf는 추출을 파일이 이미 있는 곳에서 실행합니다. 브라우저 탭 안의 PDF 엔진이 텍스트 레이어를 읽고, 메모리에서 Markdown을 만들어 바로 디스크에 저장합니다. 전송되는 것은 아무것도 없습니다. 원고, 클라이언트 자료, NDA 대상 문건이라도 회사 노트북이나 호텔 Wi-Fi에서도 안전합니다. 페이지를 불러온 뒤 오프라인으로 전환해도 변환되고, 탭을 닫으면 흔적이 남지 않습니다.',
       ],
     },
     {
-      heading: 'Combining the conversion with other tools',
+      heading: '다른 도구와 조합하기',
       paragraphs: [
-        'Say you only need the methods chapter of a thesis as Markdown — "Selected pages only" does that in place, no separate splitting step. If the PDF is too large to load, shrink it with [Compress PDF](/compress-pdf/) first; the text layer survives compression, so the Markdown comes out the same.',
-        'If the file is password-protected, remove the protection with [Unlock PDF](/unlock-pdf/) — you will need the password — and convert the unlocked copy. Need figures as well as text? [PDF to JPG](/pdf-to-jpg/) turns any page into an image you can embed.',
+        '논문의 “방법” 장만 Markdown으로 필요하다고 합시다. “선택한 페이지만”으로 별도 분할 단계 없이 그대로 처리할 수 있습니다. PDF가 너무 커서 불러올 수 없다면 [PDF 압축](/compress-pdf/)으로 먼저 줄이세요. 텍스트 레이어는 압축 후에도 남으므로 Markdown 결과는 같습니다.',
+        '파일이 암호로 보호되어 있다면 [PDF 잠금 해제](/unlock-pdf/)로 보호를 해제한 뒤(비밀번호 필요) 해제된 사본을 변환하세요. 그림도 텍스트도 필요하다면 [PDF를 JPG로](/pdf-to-jpg/)로 페이지를 이미지로 만들어 삽입할 수 있습니다.',
       ],
       image: {
         src: '/guides/how-to-convert-pdf-to-markdown/step-2.png',
-        alt: 'The download card after a successful conversion, showing the download.md file name, the Markdown file size, and the Download button.',
+        alt: '변환 완료 후 파일이 준비되었습니다 카드에 download.md(103 B)와 다운로드 버튼이 보이는 화면',
       },
     },
   ],
   alternatives: [
     {
-      heading: 'Copy and paste from any PDF reader',
+      heading: '아무 PDF 리더에서 복사해 붙여넣기',
       paragraphs: [
-        'Every PDF reader lets you select text and copy it into a Markdown editor. It is free and offline, but you get raw text with no structure — headings, lists, and paragraph breaks must be rebuilt by hand, and multi-column pages paste in a scrambled order. Fine for a paragraph or two; for a whole document, CoolPDF\u2019s automatic structure detection saves real time.',
+        '모든 PDF 리더에서 텍스트를 선택해 Markdown 편집기로 복사할 수 있습니다. 무료이고 오프라인에서 되지만, 구조 없는 날것의 텍스트만 얻습니다. 제목, 목록, 단락 나눔을 손으로 다시 만들어야 하고, 여러 단으로 된 페이지는 뒤섞인 순서로 붙습니다. 단락 몇 개면 그만이지만, 문서 전체는 CPdf의 자동 구조 감지가 실제 시간을 아껴줍니다.',
       ],
     },
     {
-      heading: 'Pandoc, with a DOCX detour',
+      heading: 'Pandoc, DOCX 우회 경로',
       paragraphs: [
-        'Pandoc is the power tool for document conversion, with one caveat: it cannot read PDF files. The usual route is PDF to DOCX in Word or LibreOffice, then Pandoc on the command line — free, offline, and scriptable, but two conversions plus some terminal comfort. CoolPDF covers the same ground in one step, with nothing to install.',
+        'Pandoc은 문서 변환의 강력한 도구지만 한 가지 주의점이 있습니다. PDF 파일을 읽지 못합니다. 일반적인 경로는 Word나 LibreOffice에서 PDF를 DOCX로 바꾼 뒤 명령줄에서 Pandoc을 쓰는 것입니다. 무료이고 오프라인에서 되며 스크립트로 자동화할 수 있지만, 변환 두 번과 터미널 사용에 어느 정도 익숙함이 필요합니다. CPdf는 같은 결과를 설치 없이 한 단계로 처리합니다.',
       ],
     },
     {
-      heading: 'AI assistants and cloud converters',
+      heading: 'AI 어시스턴트와 클라우드 변환기',
       paragraphs: [
-        'ChatGPT-style assistants and online converters will turn an uploaded PDF into Markdown, often with impressive cleanup. The trade-offs are the upload itself, size caps on free tiers, and accounts or daily quotas. For a public manual that may be fine; for anything confidential, a local tool that never transmits the file is the safer default.',
+        'ChatGPT 스타일 어시스턴트와 온라인 변환기는 업로드된 PDF를 Markdown으로 바꿔주며 종종 인상적인 정리를 보여줍니다. 대가는 업로드 자체, 무료 등급의 크기 제한, 계정이나 일일 할당량입니다. 공개 매뉴얼이라면 괜찮을 수 있지만, 기밀 문서라면 파일을 전송하지 않는 로컬 도구가 더 안전한 기본 선택입니다.',
       ],
     },
   ],
   edgeCases: [
     {
-      heading: 'You get "scanned images with no extractable text"',
+      heading: '“추출할 텍스트가 없는 스캔 이미지”라는 메시지가 나올 때',
       paragraphs: [
-        'Scans are photos of pages with no text layer to read, so the tool stops with "This PDF appears to be scanned images with no extractable text." Run the file through OCR software first — many scanner apps can add a text layer — then convert the OCRed copy.',
+        '스캔본은 읽을 텍스트 레이어가 없는 페이지 사진이므로, 도구는 “이 PDF는 추출 가능한 텍스트가 없는 스캔 이미지로 보입니다.”라며 멈춥니다. 먼저 OCR 소프트웨어로 파일을 처리하세요. 많은 스캐너 앱이 텍스트 레이어를 추가할 수 있습니다. 그런 다음 OCR이 적용된 사본을 변환하세요.',
       ],
     },
     {
-      heading: 'The PDF is password-protected',
+      heading: 'PDF가 암호로 보호되어 있을 때',
       paragraphs: [
-        'An encrypted PDF cannot be opened at all without its password, and the conversion fails with "This PDF is password-protected and cannot be processed here." If the file is yours and you know the password, save an unprotected copy with [Unlock PDF](/unlock-pdf/) first, then convert that copy.',
+        '암호화된 PDF는 비밀번호 없이는 아예 열 수 없으며, “이 PDF는 암호로 보호되어 있어 여기서 처리할 수 없습니다.”라는 오류로 변환이 실패합니다. 파일이 내 것이고 비밀번호를 안다면, 먼저 [PDF 잠금 해제](/unlock-pdf/)로 보호 없는 사본을 저장한 뒤 그 사본을 변환하세요.',
       ],
     },
     {
-      heading: 'The file is too large, or the page range is rejected',
+      heading: '파일이 너무 크거나 페이지 범위가 거부될 때',
       paragraphs: [
-        'The limit is 100 MB per file on desktop and 50 MB on mobile — the document is held in your device\u2019s memory while it is read. Over the ceiling? [Compress PDF](/compress-pdf/) usually brings the file under it. If the Pages field rejects your input, check the format — numbers, hyphens, and commas, like 1-3, 5 — and that the pages exist in the document.',
+        '제한은 데스크톱 파일당 100 MB, 모바일 50 MB입니다. 문서를 읽는 동안 기기 메모리에 올라가기 때문입니다. 한도를 넘었다면 [PDF 압축](/compress-pdf/)으로 보통 한도 아래로 줄일 수 있습니다. 페이지 필드가 입력을 거부하면 형식을 확인하세요. 숫자, 하이픈, 쉼표로 된 1-3, 5 같은 형식인지, 그리고 해당 페이지가 문서에 존재하는지 확인합니다.',
       ],
     },
   ],
   faqs: [
     {
-      q: 'Is converting PDF to Markdown with CoolPDF free?',
-      a: 'Yes — every CoolPDF tool is free forever, with no watermarks, daily quotas, or premium tier. The conversion runs on your own device, so there is no server bill to pass on.',
+      q: 'CPdf로 PDF를 Markdown으로 변환하는 것은 무료인가요?',
+      a: '네. 모든 CPdf 도구는 워터마크, 일일 할당량, 프리미엄 등급 없이 영원히 무료입니다. 변환이 사용자 기기에서 실행되므로 전달할 서버 비용도 없습니다.',
     },
     {
-      q: 'What are the limits?',
-      a: 'One PDF at a time, up to 100 MB per file on desktop and 50 MB on mobile. There is no page-count limit — long documents just take longer, because every page is read locally.',
+      q: '제한은 어떻게 되나요?',
+      a: '한 번에 PDF 1개, 데스크톱 파일당 최대 100 MB, 모바일 50 MB입니다. 페이지 수 제한은 없습니다. 모든 페이지를 로컬에서 읽기 때문에 긴 문서는 그만큼 시간이 오래 걸립니다.',
     },
     {
-      q: 'Is it safe to convert confidential documents here?',
-      a: 'Yes. The file is read and converted entirely in your browser and never uploaded anywhere. Disconnect from the internet after the page loads and it still works; closing the tab removes every trace.',
+      q: '기밀 문서를 여기서 변환해도 안전한가요?',
+      a: '네. 파일은 브라우저 안에서 전부 읽히고 변환되며 어디에도 업로드되지 않습니다. 페이지를 불러온 뒤 인터넷 연결을 끊어도 작동하고, 탭을 닫으면 모든 흔적이 사라집니다.',
     },
     {
-      q: 'Do I need to sign up or install anything?',
-      a: 'No. There is no account, no email address, and nothing to install. Open the tool page, add your PDF, and convert — it works in any modern browser, on desktop and mobile.',
+      q: '가입이나 설치가 필요한가요?',
+      a: '아니요. 계정도, 이메일 주소도, 설치할 것도 없습니다. 도구 페이지를 열고 PDF를 추가한 뒤 변환하면 됩니다. 데스크톱과 모바일의 모든 최신 브라우저에서 작동합니다.',
     },
     {
-      q: 'How accurate is the heading detection?',
-      a: 'Headings are inferred from font sizes: the most common size is treated as body text, and noticeably larger lines become #, ##, or ###. It is a heuristic, so expect a very good first draft rather than perfection — a one-minute skim catches the rare misjudged line.',
+      q: '제목 감지의 정확도는 어느 정도인가요?',
+      a: '제목은 글자 크기로 추론됩니다. 가장 흔한 크기는 본문으로 처리되고, 눈에 띄게 큰 줄은 #, ##, ###가 됩니다. 휴리스틱 방식이므로 완벽함이 아니라 아주 좋은 초고를 기대하세요. 1분 정도 훑어보고 드물게 잘못 판단한 줄을 고치면 됩니다.',
     },
   ],
   related: ['how-to-unlock-pdf', 'how-to-compress-pdf', 'how-to-convert-pdf-to-jpg'],

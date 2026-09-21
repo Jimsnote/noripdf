@@ -3,64 +3,67 @@ import type { Guide } from './types';
 /**
  * Facts checked against components/tools/PdfToJpgTool.tsx, lib/pdf/pdfjs.ts
  * (renderPageAtDpi / white canvas background) and the 'pdf-to-jpg' entry in
- * i18n/locales/en.ts — keep them in sync.
+ * i18n/locales/ko.ts — keep them in sync.
+ *
+ * This guide is written for the Korean-only CPdf site; copy is Korean
+ * 합니다체 and screenshots are captured from the Korean UI.
  */
 export const howToConvertPdfToJpg: Guide = {
   slug: 'how-to-convert-pdf-to-jpg',
   toolSlug: 'pdf-to-jpg',
-  title: 'How to Convert PDF to JPG or PNG Images',
+  title: 'PDF를 JPG 또는 PNG 이미지로 변환하는 방법',
   description:
-    'Turn PDF pages into JPG or PNG images at 72, 150, or 300 DPI — free, in your browser, no uploads, no sign-up. Includes DPI and page-range tips.',
+    'PDF 페이지를 72, 150, 300 DPI의 JPG 또는 PNG 이미지로 무료 변환하세요. 업로드 없이, 가입 없이, 브라우저에서 바로 처리됩니다. DPI와 페이지 범위 팁까지.',
   intro:
-    'The fastest way to convert a PDF to JPG or PNG images is to render it right in your browser: open the free [CoolPDF PDF to JPG tool](/pdf-to-jpg/), add your PDF, pick a format and a resolution of 72, 150, or 300 DPI, click Convert to images, and download the result. Everything runs locally on your device — the document is never uploaded, and there is no account, no queue, and no watermark.',
+    'PDF를 JPG 또는 PNG 이미지로 변환하는 가장 빠른 방법은 브라우저 안에서 직접 렌더링하는 것입니다. 무료 [CPdf PDF를 JPG로 도구](/pdf-to-jpg/)를 열고, PDF를 추가한 다음 이미지 형식과 72, 150, 300 DPI 해상도 중 하나를 선택하고, "이미지로 변환"을 클릭하고 결과를 다운로드하세요. 모든 처리가 사용자의 기기에서 로컬로 실행됩니다. 문서는 업로드되지 않으며, 계정도, 대기열도, 워터마크도 없습니다. 페이지가 로드된 후에는 인터넷 연결 없이도 작동합니다.',
   quickSteps: [
-    'Open the PDF to JPG tool and drag one PDF onto the upload area — or click it to browse (up to 100 MB on desktop, 50 MB on mobile).',
-    'Choose the image format — "JPG — smaller files" or "PNG — lossless, larger files" — and the resolution: 72, 150, or 300 DPI.',
-    'Keep "All pages", or switch to "Selected pages" and type a range like 1-3, 5, then click "Convert to images".',
-    'Download the result: one page saves directly as an image like page-1.jpg; several pages arrive as images.zip with one image per page.',
+    'PDF를 JPG로 도구를 열고 PDF를 업로드 영역으로 드래그하거나 클릭해서 찾아보세요(데스크톱 최대 100 MB, 모바일 50 MB).',
+    '이미지 형식("JPG — 파일 크기가 작음" 또는 "PNG — 무손실, 파일 크기가 큼")과 해상도(72, 150, 300 DPI)를 선택하세요.',
+    '"모든 페이지"를 유지하거나 "선택한 페이지"로 바꿔 1-3, 5 같은 범위를 입력한 다음 "이미지로 변환"을 클릭하세요.',
+    '결과를 다운로드하세요. 페이지가 하나면 page-1.jpg 같은 이미지로 바로 저장되고, 여러 페이지면 페이지당 이미지 하나씩 images.zip에 담겨 받습니다.',
   ],
   sections: [
     {
-      heading: 'Step-by-step: converting a PDF with CoolPDF',
+      heading: 'CPdf로 PDF를 변환하는 단계별 안내',
       paragraphs: [
-        'Open the [PDF to JPG tool](/pdf-to-jpg/) and add your document: drag the file onto the upload area, or click it to browse. The tool takes one PDF at a time — once loaded, the file name and size appear above the options, with a trash icon to remove it.',
-        'Three option groups follow. Image format is "JPG — smaller files" or "PNG — lossless, larger files"; Resolution offers 72, 150, and 300 DPI; under Pages, "All pages" converts everything while "Selected pages" takes a range like 1-3, 5. Each page\u2019s own rotation is respected, so sideways pages come out upright.',
-        'Click "Convert to images" — a progress line counts through the pages ("Rendering page 1 of 12…"), and since rendering runs on your device, speed depends on hardware and DPI, not your connection. Then click Download: one page saves as an image named like page-1.jpg; two or more are packed into images.zip, one image per page. The original PDF is never modified.',
+        '[PDF를 JPG로 도구](/pdf-to-jpg/)를 열고 문서를 추가하세요. 파일을 업로드 영역으로 드래그하거나 클릭해서 찾아보세요. 이 도구는 한 번에 PDF 하나만 처리합니다. 불러오면 파일 이름과 크기가 옵션 위에 표시되며, 휴지통 아이콘으로 제거할 수 있습니다.',
+        '세 가지 옵션 그룹이 이어집니다. 이미지 형식은 "JPG — 파일 크기가 작음" 또는 "PNG — 무손실, 파일 크기가 큼", 해상도는 72, 150, 300 DPI이며, 페이지에서는 "모든 페이지"는 전체를, "선택한 페이지"는 1-3, 5 같은 범위를 변환합니다. 페이지별 회전은 그대로 반영되어 눕혀진 페이지도 올바른 방향으로 나옵니다.',
+        '"이미지로 변환"을 클릭하세요. 진행 표시줄이 페이지를 세어 갑니다("페이지 렌더링 중 1/12…"). 렌더링이 기기에서 실행되므로 속도는 하드웨어와 DPI에 따라 달라지고, 네트워크 속도와는 무관합니다. 그다음 다운로드를 클릭하세요. 페이지가 하나면 page-1.jpg 같은 이름의 이미지로 저장되고, 둘 이상이면 페이지당 이미지 하나씩 images.zip에 묶입니다. 원본 PDF는 변경되지 않습니다.',
       ],
       bullets: [
-        'One PDF per conversion',
-        'Up to 100 MB per file on desktop, 50 MB on mobile',
-        'Up to 200 pages converted per run',
-        'Single page saves as page-N.jpg or .png; several pages arrive as images.zip',
+        '한 번에 PDF 하나씩 변환',
+        '데스크톱 파일당 최대 100 MB, 모바일 50 MB',
+        '한 번 실행에 최대 200페이지 변환',
+        '페이지가 하나면 page-N.jpg 또는 .png로, 여러 페이지면 images.zip으로 받기',
       ],
       image: {
         src: '/guides/how-to-convert-pdf-to-jpg/step-1.png',
-        alt: 'The CoolPDF PDF to JPG options panel showing the Image format radio buttons set to JPG, the Resolution radios set to 150 DPI, and the Pages radios set to All pages.',
+        alt: 'CPdf PDF를 JPG로 도구에 PDF가 추가된 화면. 이미지 형식은 JPG — 파일 크기가 작음으로 선택되어 있고 PNG 옵션과 해상도 설정이 보임',
       },
     },
     {
-      heading: 'JPG or PNG, and what the DPI numbers mean',
+      heading: 'JPG와 PNG 중 무엇을 고를까, DPI 숫자의 의미',
       paragraphs: [
-        'JPG is the right default for most documents: CoolPDF encodes it at 92% quality, visually indistinguishable for text, scans, and photos at a fraction of the size. PNG is lossless — every pixel exactly as rendered — keeping line art and small text perfectly crisp, but files can be several times larger. Heading for email, chat, or an upload form? JPG. Archiving a diagram-heavy page? PNG.',
-        'Resolution controls how many pixels each page gets: 72 DPI matches the PDF\u2019s on-screen size, 150 is the default for documents, 300 is print quality — and the tool itself warns that 300 DPI is slow and memory-hungry on long documents. Pages are drawn on a white background, so transparent areas come out white, not black. Devices also cap canvas size (iOS tops out near 16.7 million pixels): a page that would exceed the limit is rendered at lower resolution, with a notice afterwards.',
+        '대부분의 문서에는 JPG가 적합한 기본값입니다. CPdf는 92% 품질로 인코딩하여 텍스트, 스캔, 사진에서 육안으로 구분되지 않으면서도 훨씬 작은 크기를 만듭니다. PNG는 무손실이라 렌더링된 그대로 픽셀 하나하나를 유지해 선화와 작은 글씨를 선명하게 살리지만, 파일이 몇 배까지 커질 수 있습니다. 이메일, 채팅, 업로드 양식에 넣는다면 JPG. 도표가 많은 페이지를 보관한다면 PNG.',
+        '해상도는 페이지에 할당되는 픽셀 수를 결정합니다. 72 DPI는 PDF의 화면 크기와 같고, 150은 문서용 기본값, 300은 인쇄 품질입니다. 도구 자체에서도 300 DPI는 긴 문서에서 느리고 메모리를 많이 쓴다고 경고합니다. 페이지는 흰 배경에 그려지므로 투명 영역은 검은색이 아니라 흰색으로 나옵니다. 기기마다 캔버스 크기에 한도가 있어(iOS는 약 1,670만 픽셀에서 상한) 한도를 넘는 페이지는 더 낮은 해상도로 렌더링되고, 뒤이어 안내가 표시됩니다.',
       ],
       image: {
         src: '/guides/how-to-convert-pdf-to-jpg/step-2.png',
-        alt: 'The download card shown after converting a multi-page PDF to images, displaying the images.zip file name, its total size, and the Download button.',
+        alt: '이미지 변환 완료 후 파일이 준비되었습니다 카드에 images.zip(137.4 KB)와 다운로드 버튼이 보이는 화면',
       },
     },
     {
-      heading: 'Why convert pages to images without uploading them',
+      heading: '업로드 없이 페이지를 이미지로 변환하는 이유',
       paragraphs: [
-        'People rarely rasterize a PDF for fun — the document is usually going somewhere that demands a picture: a portal that only accepts JPG or PNG, a chat where the recipient cannot open PDFs, a slide deck that needs one page as a visual. And the pages that take this route are often the sensitive ones: ID cards, certificates, signed letters, invoices.',
-        'A conventional online converter uploads the whole document to a remote server before any images come back. CoolPDF works the other way around: the renderer — the same class of engine that powers desktop readers — comes to your browser, and the file is read from your disk, rasterized on your device, and saved straight back. Nothing crosses the network, so it is safe on a work laptop or public Wi-Fi, and it even works offline once the page has loaded.',
+        '사람들이 재미로 PDF를 래스터화하지는 않습니다. 보통 문서가 그림을 요구하는 어딘가로 향하기 때문입니다. JPG나 PNG만 받는 포털, PDF를 열 수 없는 받는 사람과의 채팅, 페이지 하나를 시각 자료로 써야 하는 슬라이드가 그렇습니다. 그리고 이 방식으로 나가는 페이지는 민감한 경우가 많습니다. 신분증, 증명서, 서명된 문서, 송장이 바로 그것입니다.',
+        '일반적인 온라인 변환기는 이미지를 돌려받기 전에 전체 문서를 원격 서버에 업로드합니다. CPdf는 정반대로 작동합니다. 렌더러 — 데스크톱 리더를 구동하는 것과 같은 계열의 엔진 — 가 브라우저로 찾아오고, 파일은 디스크에서 읽혀 기기에서 래스터화된 뒤 바로 그곳에 저장됩니다. 네트워크를 전혀 거치지 않으므로 회사 노트북이나 공공 Wi-Fi에서도 안전하고, 페이지가 로드된 후에는 오프라인에서도 작동합니다.',
       ],
     },
     {
-      heading: 'Before and after: useful combinations',
+      heading: '전후 활용: 유용한 조합',
       paragraphs: [
-        'If your PDF is over the size limit, shrink it first with [Compress PDF](/compress-pdf/) and convert the compressed copy. Password-protected? [Unlock PDF](/unlock-pdf/) saves an unprotected copy you can convert, as long as you know the password.',
-        'Need just a chapter from a long report? Type a range under Selected pages instead of converting everything — or [Split PDF](/split-pdf/) can extract those pages as a standalone PDF first. The reverse trip works too: [JPG to PDF](/jpg-to-pdf/) turns photos and scans back into a single document.',
+        'PDF가 크기 제한을 넘는다면 [PDF 압축](/compress-pdf/)으로 먼저 줄이고 압축된 사본을 변환하세요. 비밀번호로 보호되어 있나요? 비밀번호를 알고 있다면 [PDF 잠금 해제](/unlock-pdf/)로 보호되지 않은 사본을 저장한 뒤 변환할 수 있습니다.',
+        '긴 보고서에서 일부 장만 필요한가요? 전체를 변환하는 대신 선택한 페이지에 범위를 입력하세요. 또는 [PDF 분할](/split-pdf/)로 해당 페이지를 먼저 독립된 PDF로 추출할 수도 있습니다. 반대 방향도 가능합니다. [JPG를 PDF로](/jpg-to-pdf/)는 사진과 스캔을 다시 하나의 문서로 만들어 줍니다.',
       ],
     },
   ],
@@ -68,62 +71,62 @@ export const howToConvertPdfToJpg: Guide = {
     {
       heading: 'macOS Preview',
       paragraphs: [
-        'On a Mac, open the PDF in Preview, go to File → Export, and choose JPEG or PNG with a resolution slider — free, offline, good quality. The catch: it exports only the page currently shown, so 30 pages mean 30 exports. CoolPDF converts up to 200 pages in one pass, in any browser.',
+        'Mac에서 PDF를 Preview로 열고 파일 → 내보내기로 가서 해상도 슬라이더와 함께 JPEG 또는 PNG를 선택하세요. 무료이고 오프라인에서 작동하며 품질도 좋습니다. 단점은 현재 표시된 페이지만 내보낸다는 것입니다. 30페이지면 30번 내보내야 합니다. CPdf는 어떤 브라우저에서든 한 번에 최대 200페이지를 변환합니다.',
       ],
     },
     {
-      heading: 'Adobe Acrobat (paid)',
+      heading: 'Adobe Acrobat (유료)',
       paragraphs: [
-        'Acrobat\u2019s Export To → Image flow is the polished paid route, with formats from JPEG to TIFF. It needs a subscription and a desktop install, and the web version uploads files to Adobe\u2019s servers. If you already pay for Acrobat it is excellent — otherwise a free browser tool with no install, account, or upload covers the same ground.',
+        'Acrobat의 이미지로 내보내기 기능은 JPEG부터 TIFF까지 지원하는 다듬어진 유료 방법입니다. 구독과 데스크톱 설치가 필요하고, 웹 버전은 파일을 Adobe 서버에 업로드합니다. 이미 Acrobat을 쓰고 있다면 훌륭한 선택입니다. 그렇지 않다면 설치도, 계정도, 업로드도 없는 무료 브라우저 도구로 같은 일을 할 수 있습니다.',
       ],
     },
     {
-      heading: 'The Windows screenshot workaround',
+      heading: 'Windows의 스크린샷 우회 방법',
       paragraphs: [
-        'Windows has no built-in PDF-to-image converter; the fallback is zooming the page in your reader and capturing it with the Snipping Tool or Win+Shift+S. Free and offline, but quality caps at screen resolution, one screen at a time — a 300 DPI render is far sharper, and CoolPDF does every page in one run.',
+        'Windows에는 기본 제공 PDF-이미지 변환기가 없습니다. 대안은 리더에서 페이지를 확대하고 캡처 도구 또는 Win+Shift+S로 화면을 찍는 것입니다. 무료이고 오프라인에서 되지만, 품질은 화면 해상도가 상한이고 한 화면씩만 가능합니다. 300 DPI 렌더링이 훨씬 선명하며, CPdf는 모든 페이지를 한 번에 처리합니다.',
       ],
     },
   ],
   edgeCases: [
     {
-      heading: 'The PDF is password-protected',
+      heading: 'PDF가 비밀번호로 보호되어 있는 경우',
       paragraphs: [
-        'An encrypted PDF cannot be rendered at all — the tool shows "This PDF is password-protected and cannot be processed here." If you know the password, run it through [Unlock PDF](/unlock-pdf/) first and convert the unprotected copy. Without the password, ask the sender for an open version — there is no legitimate way around someone else\u2019s protection.',
+        '암호화된 PDF는 전혀 렌더링할 수 없습니다. 도구에 "이 PDF는 비밀번호로 보호되어 있어 여기서 처리할 수 없습니다."가 표시됩니다. 비밀번호를 안다면 먼저 [PDF 잠금 해제](/unlock-pdf/)를 거쳐 보호되지 않은 사본을 변환하세요. 비밀번호가 없다면 보내는 사람에게 열린 버전을 요청하세요. 타인의 보호를 정당하게 우회하는 방법은 없습니다.',
       ],
     },
     {
-      heading: 'The file is over the size limit',
+      heading: '파일이 크기 제한을 초과하는 경우',
       paragraphs: [
-        'The upload area refuses files above 100 MB on desktop (50 MB on mobile) — the whole document is held in your device\u2019s memory while rendering. The fix is usually [Compress PDF](/compress-pdf/): shrink the file, then convert the compressed copy. Scans in particular shrink dramatically with no visible change.',
+        '업로드 영역은 데스크톱 100 MB(모바일 50 MB)를 넘는 파일을 거부합니다. 렌더링하는 동안 전체 문서가 기기 메모리에 올라가기 때문입니다. 해결책은 보통 [PDF 압축](/compress-pdf/)입니다. 파일을 줄이고 압축된 사본을 변환하세요. 스캔본은 특히 눈에 띄지 않게 크기가 크게 줄어듭니다.',
       ],
     },
     {
-      heading: 'More than 200 pages, or the range is rejected',
+      heading: '200페이지를 넘거나 범위가 거부되는 경우',
       paragraphs: [
-        'The tool converts at most 200 pages per run — past that it stops with "This document has too many pages for this tool — the limit is 200 pages." The cap applies to the pages converted at once, not the document, so a 500-page file works in batches: 1-200, then 201-400, then 401-500. If a range is rejected, check the syntax — numbers and hyphens like 1-3, 5, within the page count.',
+        '이 도구는 한 번에 최대 200페이지까지 변환합니다. 그 이상이면 "이 문서는 이 도구에 너무 많은 페이지를 가지고 있습니다. 최대 200 페이지입니다."라며 중단됩니다. 이 한도는 문서 전체가 아니라 한 번에 변환하는 페이지에 적용되므로, 500페이지짜리 파일도 1-200, 201-400, 401-500처럼 나눠 진행할 수 있습니다. 범위가 거부되면 형식을 확인하세요. 1-3, 5 같은 숫자와 하이픈이며, 페이지 수 안에 있어야 합니다.',
       ],
     },
   ],
   faqs: [
     {
-      q: 'Is converting PDF to JPG with CoolPDF really free?',
-      a: 'Yes — every tool is free forever, with no daily quotas, watermarks, or premium tiers. The conversion runs on your own device, so there is no server bill to pass on to you.',
+      q: 'CPdf로 PDF를 JPG로 변환하는 것은 정말 무료인가요?',
+      a: '네. 모든 도구는 영원히 무료이며 일일 상한도, 워터마크도, 프리미엄 등급도 없습니다. 변환이 사용자의 기기에서 실행되므로 전가할 서버 비용이 없습니다.',
     },
     {
-      q: 'What are the limits?',
-      a: 'One PDF at a time, up to 100 MB on desktop (50 MB on mobile), and up to 200 pages per run — longer documents can be converted in batches with page ranges.',
+      q: '제한은 무엇인가요?',
+      a: '한 번에 PDF 하나, 데스크톱 최대 100 MB(모바일 50 MB), 한 번 실행에 최대 200페이지입니다. 더 긴 문서는 페이지 범위로 나눠 배치 변환할 수 있습니다.',
     },
     {
-      q: 'Is it safe to convert confidential documents here?',
-      a: 'Yes. Your file is rendered locally in your browser and never uploaded. Disconnect after the page loads and the conversion still works; closing the tab removes every trace of the document.',
+      q: '기밀 문서를 여기서 변환해도 안전한가요?',
+      a: '네. 파일은 브라우저 안에서 로컬로 렌더링되며 업로드되지 않습니다. 페이지가 로드된 후에는 연결을 끊어도 변환이 작동하고, 탭을 닫으면 문서의 흔적이 모두 사라집니다.',
     },
     {
-      q: 'Do I need to sign up or install anything?',
-      a: 'No account, no email address, nothing to install. Open the tool page, add your PDF, and convert — it works in any modern browser, on desktop and mobile.',
+      q: '가입하거나 무언가를 설치해야 하나요?',
+      a: '계정도, 이메일 주소도, 설치할 것도 없습니다. 도구 페이지를 열고 PDF를 추가한 뒤 변환하세요. 데스크톱과 모바일의 모든 최신 브라우저에서 작동합니다.',
     },
     {
-      q: 'Should I choose JPG or PNG — and which DPI?',
-      a: 'JPG is encoded at 92% quality — visually identical for documents and photos, and much smaller. PNG is lossless but larger; pick it for line art and pixel-perfect archives. For resolution: 72 DPI for screen use, 150 for documents, 300 for print-quality output on a few pages.',
+      q: 'JPG와 PNG 중 무엇을, DPI는 어느 것을 고를까요?',
+      a: 'JPG는 92% 품질로 인코딩되어 문서와 사진에서 육안으로 구분되지 않으며 훨씬 작습니다. PNG는 무손실이지만 크기가 큽니다. 선화와 픽셀 단위로 완벽한 보관이 필요할 때 선택하세요. 해상도는 화면용 72 DPI, 문서용 150 DPI, 인쇄 품질이 필요한 몇 페이지에는 300 DPI입니다.',
     },
   ],
   related: ['how-to-convert-jpg-to-pdf', 'how-to-compress-pdf', 'how-to-unlock-pdf'],

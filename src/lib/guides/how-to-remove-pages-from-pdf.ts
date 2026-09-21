@@ -3,44 +3,44 @@ import type { Guide } from './types';
 export const howToRemovePagesFromPdf: Guide = {
   slug: 'how-to-remove-pages-from-pdf',
   toolSlug: 'remove-pages',
-  title: 'How to Remove (Delete) Pages from a PDF — Free, No Upload',
+  title: 'PDF에서 페이지 삭제하는 방법 — 무료, 업로드 없음',
   description:
-    'Delete unwanted pages from a PDF with a visual page picker — mark pages, remove them, download. Free, no uploads, no sign-up, files never leave your device.',
+    '시각적 페이지 선택기로 PDF에서 불필요한 페이지를 표시하고 삭제한 뒤 다운로드하세요. 무료, 업로드 없음, 가입 없음, 파일은 기기를 떠나지 않습니다.',
   intro:
-    'The fastest way to remove pages from a PDF is to delete them right in your browser: open the free [CoolPDF Remove Pages tool](/remove-pages/), drop in your file, click the trash icon on every page you want gone, and download the cleaned document. Unlike classic online tools, nothing is uploaded — the file is rebuilt locally on your device, and the original stays untouched.',
+    'PDF에서 페이지를 삭제하는 가장 빠른 방법은 브라우저에서 바로 지우는 것입니다. 무료 [CPdf 페이지 삭제 도구](/remove-pages/)를 열고 파일을 드래그 앤 드롭하면 모든 페이지가 썸네일 미리보기로 표시됩니다. 삭제하려는 페이지마다 휴지통 아이콘을 클릭하고, 카운터로 남는 페이지 수를 확인한 뒤 정리된 문서를 다운로드하세요. 기존 온라인 도구와 달리 업로드되는 것은 없습니다. 파일은 사용자 기기 안에서 로컬로 다시 만들어지고, 디스크의 원본은 변경되지 않습니다.',
   quickSteps: [
-    'Open the Remove Pages tool and drop in your PDF — a live preview of every page appears.',
-    'Click the trash icon on each page you want to delete, or select several pages and use "Delete selected".',
-    'Check the counter to confirm how many pages will be kept.',
-    'Click "Remove pages & download" to save the cleaned file as removed.pdf.',
+    '페이지 삭제 도구를 열고 PDF를 업로드 영역으로 드래그하거나 클릭해서 파일을 찾으세요. 모든 페이지의 미리보기가 표시됩니다.',
+    '삭제할 페이지마다 휴지통 아이콘을 클릭하거나 여러 페이지를 선택해 "선택 항목 삭제"를 사용하세요.',
+    '카운터를 확인해 전체 페이지 중 몇 페이지가 새 문서에 유지되는지 확인하세요.',
+    '"페이지 삭제 후 다운로드"를 클릭하면 정리된 파일이 removed.pdf로 저장됩니다.',
   ],
   sections: [
     {
-      heading: 'Step-by-step: deleting PDF pages with CoolPDF',
+      heading: '단계별 안내: CPdf로 PDF 페이지 삭제하기',
       paragraphs: [
-        'Open the [Remove Pages tool](/remove-pages/) — nothing to install, no account. Add your PDF and every page shows up as a thumbnail with a live preview, so you never delete the wrong one.',
-        'To delete a single page, click its trash icon. For a batch, click pages to select them (they get a highlighted border) and press "Delete selected". Deleted pages are only marked — dimmed with a red badge — and one more click on the restore button brings them back if you change your mind.',
-        'The counter in the toolbar always shows how many of the total pages will be kept. When it looks right, click "Remove pages & download" and the cleaned document is assembled locally and saved as removed.pdf.',
+        '[페이지 삭제 도구](/remove-pages/)를 열고 PDF를 추가하면 설치나 계정 없이 바로 사용할 수 있습니다. 모든 페이지가 실시간 미리보기 썸네일로 표시되므로 잘못된 페이지를 삭제할 염려가 없습니다.',
+        '한 페이지를 삭제하려면 해당 페이지의 휴지통 아이콘을 클릭하세요. 여러 페이지를 한꺼번에 삭제하려면 페이지를 클릭해 선택(강조 테두리가 표시됨)한 뒤 "선택 항목 삭제"를 누르세요. 삭제된 페이지는 바로 제거되는 것이 아니라 어둡게 표시되고 "삭제됨" 배지가 붙으며, 마음이 바뀌면 복원 버튼을 한 번 더 클릭해 되돌릴 수 있습니다.',
+        '도구 모음의 카운터에는 전체 페이지 중 몇 페이지가 유지되는지 항상 표시됩니다. 확인했으면 "페이지 삭제 후 다운로드"를 클릭하세요. 정리된 문서가 로컬에서 조립되어 removed.pdf로 저장됩니다.',
       ],
       bullets: [
-        'Files up to 100 MB (50 MB on mobile), no page limit',
-        'Deleted pages are restorable until you download',
-        'Original file on your disk stays unchanged',
-        'Output is saved as removed.pdf',
+        '최대 100 MB(모바일에서는 50 MB), 페이지 수 제한 없음',
+        '다운로드 전까지 삭제한 페이지 복원 가능',
+        '디스크의 원본 파일은 변경되지 않음',
+        '결과물은 removed.pdf로 저장',
       ],
     },
     {
-      heading: 'Why deleting pages locally matters',
+      heading: '로컬에서 페이지를 삭제해야 하는 이유',
       paragraphs: [
-        'The pages people remove are usually the sensitive ones: a signature page, a salary figure, an attachment that was meant for someone else. Uploading the whole document to a server just to cut one page out of it is exactly backwards.',
-        'CoolPDF renders the previews and rebuilds the document entirely in your browser. Nothing is transmitted or stored anywhere else — safe for contracts, medical records, and HR paperwork, even on public Wi-Fi. Close the tab and no trace remains.',
+        '사람들이 삭제하는 페이지는 대개 민감한 페이지입니다. 서명 페이지, 급여 액수, 다른 사람을 위해 준비했다가 잘못 첨부된 파일이 그렇습니다. 페이지 한 장을 빼내기 위해 전체 문서를 서버에 업로드하는 것은 정확히 거꾸로 하는 셈입니다.',
+        'CPdf는 미리보기 렌더링과 문서 재조립을 모두 브라우저 안에서 수행합니다. 어디에도 전송되거나 저장되지 않으므로, 공공 Wi-Fi에서도 계약서, 의료 기록, 인사 문서를 안심하고 처리할 수 있습니다. 탭을 닫으면 흔적도 남지 않습니다.',
       ],
     },
     {
-      heading: 'Remove vs extract: which one do you need?',
+      heading: '삭제와 추출, 무엇이 필요한가요?',
       paragraphs: [
-        'Removing is what you want when most of the document stays: cut a few bad pages out of many. If you want the opposite — keep only a few pages out of a long document — [Extract Pages](/extract-pages/) is faster: click the pages you want and download just those.',
-        'Both tools share the same visual page picker, so you can drag pages into a new order while you are at it, or rotate the sideways ones with one click.',
+        '문서의 대부분이 남는다면 삭제가 적합합니다. 긴 문서에서 몇 페이지만 골라 남기고 싶다면 — 즉 반대의 작업이라면 — [페이지 추출](/extract-pages/) 도구가 더 빠릅니다. 원하는 페이지를 클릭하고 해당 페이지만 다운로드하면 됩니다.',
+        '두 도구는 같은 시각적 페이지 선택기를 공유하므로, 페이지를 드래그해 새 순서로 배치하거나 옆으로 누운 페이지를 한 번의 클릭으로 회전할 수도 있습니다.',
       ],
     },
   ],
@@ -48,46 +48,46 @@ export const howToRemovePagesFromPdf: Guide = {
     {
       heading: 'macOS Preview',
       paragraphs: [
-        'On a Mac, open the PDF in Preview, show the thumbnail sidebar, select the pages to delete, and press Delete. Free and offline, but macOS-only, and selecting many pages one by one gets tedious. CoolPDF gives the same local privacy in any browser, on any OS, with batch selection built in.',
+        'Mac에서는 Preview로 PDF를 열고 썸네일 사이드바를 표시한 뒤 삭제할 페이지를 선택하고 Delete 키를 누릅니다. 무료이고 오프라인에서 동작하지만 macOS에서만 가능하고, 페이지를 하나씩 골라 선택하다 보면 지루해집니다. CPdf는 모든 브라우저와 모든 운영체제에서 동일한 로컬 프라이버시를 제공하고 일괄 선택이 기본으로 내장되어 있습니다.',
       ],
     },
     {
-      heading: 'Print to PDF (page range workaround)',
+      heading: 'PDF로 인쇄하기(페이지 범위 우회 방법)',
       paragraphs: [
-        'A common trick is to "print" only the pages you want to keep into a new PDF. It works, but printing re-renders the document — links, form fields, and bookmarks are flattened. A proper page remover like CoolPDF copies the remaining pages losslessly, exactly as they were.',
+        '흔한 요령은 남기려는 페이지만 골라 새 PDF로 "인쇄"하는 것입니다. 동작은 하지만 인쇄 과정에서 문서가 다시 렌더링되므로 링크, 양식 필드, 북마크가 모두 평탄화됩니다. CPdf 같은 제대로 된 페이지 삭제 도구는 남은 페이지를 원본 그대로 손실 없이 복사합니다.',
       ],
     },
   ],
   edgeCases: [
     {
-      heading: 'The PDF is password-protected',
+      heading: 'PDF가 암호로 보호되어 있는 경우',
       paragraphs: [
-        'An encrypted PDF cannot be opened here until its protection is removed. If you know the password, run it through [Unlock PDF](/unlock-pdf/) first, then remove pages from the unlocked copy. Restriction-only PDFs (no open password) usually unlock with an empty password.',
+        '암호화된 PDF는 보호가 해제되기 전까지 여기서 열 수 없습니다. 비밀번호를 알고 있다면 먼저 [PDF 잠금 해제](/unlock-pdf/) 도구를 거친 뒤 잠금 해제된 사본에서 페이지를 삭제하세요. 열기 암호가 아니라 사용 제한만 설정된 PDF는 보통 빈 암호로 해제됩니다.',
       ],
     },
     {
-      heading: 'You deleted a page by mistake',
+      heading: '실수로 페이지를 삭제했을 경우',
       paragraphs: [
-        'No problem — deletions are only marks until you download. Click the restore button on the dimmed thumbnail (or press Reset to start over), and the page is back. Even after downloading, your original file on disk was never modified.',
+        '문제없습니다. 다운로드 전까지 삭제는 표시만 됩니다. 어둡게 표시된 썸네일의 복원 버튼을 클릭하거나, 처음부터 다시 시작하려면 "초기화"를 누르세요. 페이지가 그대로 돌아옵니다. 다운로드한 후에도 디스크의 원본 파일은 수정되지 않았습니다.',
       ],
     },
   ],
   faqs: [
     {
-      q: 'Is removing pages from a PDF free?',
-      a: 'Yes — every CoolPDF tool is free forever, with no task limits, no watermarks, and no sign-up. The processing runs on your own device, so there is no server bill to pass on to you.',
+      q: 'PDF에서 페이지를 삭제하는 것은 무료인가요?',
+      a: '네. 모든 CPdf 도구는 영구히 무료이며 작업 횟수 제한, 워터마크, 가입이 없습니다. 처리가 사용자 자신의 기기에서 실행되므로 서버 비용을 사용자에게 전가할 일도 없습니다.',
     },
     {
-      q: 'Can I undo a deleted page?',
-      a: 'Yes, any time before downloading. Removed pages are only marked and can be restored with one click. After downloading, your original file on disk is still unchanged.',
+      q: '삭제한 페이지를 되돌릴 수 있나요?',
+      a: '네, 다운로드 전이라면 언제든지 가능합니다. 삭제된 페이지는 표시만 된 상태이며 한 번의 클릭으로 복원할 수 있습니다. 다운로드 후에도 디스크의 원본 파일은 그대로입니다.',
     },
     {
-      q: 'Does removing pages reduce quality?',
-      a: 'No. The remaining pages are copied into the new document exactly as they are — no re-rendering and no recompression. Text stays selectable and images keep their original resolution.',
+      q: '페이지를 삭제하면 품질이 떨어지나요?',
+      a: '아니요. 남은 페이지는 새 문서에 있는 그대로 복사되며 재렌더링이나 재압축은 없습니다. 텍스트는 계속 선택할 수 있고 이미지는 원래 해상도를 유지합니다.',
     },
     {
-      q: 'Is it safe to delete pages from confidential documents here?',
-      a: 'Yes. Your file is processed locally in your browser and never uploaded. You can even disconnect from the internet after the page loads and everything still works.',
+      q: '기밀 문서에서 페이지를 삭제해도 안전한가요?',
+      a: '네. 파일은 브라우저에서 로컬로 처리되며 절대 업로드되지 않습니다. 페이지가 로드된 후에는 인터넷 연결을 끊어도 모든 기능이 그대로 동작합니다.',
     },
   ],
   related: ['how-to-extract-pages-from-pdf', 'how-to-organize-pdf-pages', 'how-to-split-pdf'],

@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import JSZip from 'jszip';
 import { FileText, Loader2, Trash2 } from 'lucide-react';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 import { parsePageRanges } from '@/lib/pdf/page-ranges';
 import { canvasToBlob, loadPdfJsDocument, renderPageAtDpi } from '@/lib/pdf/pdfjs';
 import { FileDropzone } from './FileDropzone';

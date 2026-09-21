@@ -42,7 +42,7 @@ function renderInline(text: string): ReactNode {
  */
 export function GuidePage({ guide }: GuidePageProps) {
   const tool = guide.toolSlug ? tools.find((t) => t.slug === guide.toolSlug) : undefined;
-  const toolName = tool ? getDictionary('en').tools[tool.i18nKey].name : null;
+  const toolName = tool ? getDictionary('ko').tools[tool.i18nKey].name : null;
   const url = `${SITE_URL}/guides/${guide.slug}/`;
 
   const articleLd = {
@@ -87,11 +87,11 @@ export function GuidePage({ guide }: GuidePageProps) {
       <JsonLd data={howToLd} />
       <JsonLd data={faqLd} />
 
-      <nav aria-label="Breadcrumb" className="text-sm text-slate-500">
+      <nav aria-label="브레드크럼" className="text-sm text-slate-500">
         <ol className="flex flex-wrap items-center gap-1.5">
           <li>
             <Link href="/" className="hover:text-brand-700">
-              Home
+              홈
             </Link>
           </li>
           <li aria-hidden className="text-slate-300">
@@ -99,7 +99,7 @@ export function GuidePage({ guide }: GuidePageProps) {
           </li>
           <li>
             <Link href="/guides/" className="hover:text-brand-700">
-              Guides
+              가이드
             </Link>
           </li>
           <li aria-hidden className="text-slate-300">
@@ -117,23 +117,23 @@ export function GuidePage({ guide }: GuidePageProps) {
       {tool && toolName ? (
         <div className="mt-8 rounded-xl border border-brand-100 bg-brand-50 p-6">
           <p className="text-sm font-semibold uppercase tracking-wide text-brand-700">
-            Free online tool
+            무료 온라인 도구
           </p>
           <p className="mt-2 leading-relaxed text-slate-700">
-            Skip the reading and go straight to the tool — no sign-up, no upload.
+            설명을 건너뛰고 도구로 바로 이동하세요 — 가입 없이, 업로드 없이.
           </p>
           <Link
             href={`/${tool.slug}/`}
             className="mt-4 inline-flex items-center gap-2 rounded-lg bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-700"
           >
-            Open the free {toolName} tool
+            무료 {toolName} 도구 열기
             <ArrowRight className="h-4 w-4" aria-hidden />
           </Link>
         </div>
       ) : null}
 
       <section className="mt-12">
-        <h2 className="text-2xl font-bold tracking-tight text-slate-900">Quick steps</h2>
+        <h2 className="text-2xl font-bold tracking-tight text-slate-900">간단 요약</h2>
         <ol className="mt-6 list-decimal space-y-3 pl-6 text-slate-700">
           {guide.quickSteps.map((step, index) => (
             <li key={index} className="leading-relaxed">
@@ -175,7 +175,7 @@ export function GuidePage({ guide }: GuidePageProps) {
       ))}
 
       <section className="mt-12">
-        <h2 className="text-2xl font-bold tracking-tight text-slate-900">Other ways</h2>
+        <h2 className="text-2xl font-bold tracking-tight text-slate-900">다른 방법</h2>
         {guide.alternatives.map((block) => (
           <div key={block.heading} className="mt-6">
             <h3 className="text-lg font-semibold text-slate-900">{block.heading}</h3>
@@ -189,7 +189,7 @@ export function GuidePage({ guide }: GuidePageProps) {
       </section>
 
       <section className="mt-12">
-        <h2 className="text-2xl font-bold tracking-tight text-slate-900">Edge cases</h2>
+        <h2 className="text-2xl font-bold tracking-tight text-slate-900">주의 사항</h2>
         {guide.edgeCases.map((block) => (
           <div key={block.heading} className="mt-6">
             <h3 className="text-lg font-semibold text-slate-900">{block.heading}</h3>
@@ -204,7 +204,7 @@ export function GuidePage({ guide }: GuidePageProps) {
 
       <section className="mt-12">
         <h2 className="text-2xl font-bold tracking-tight text-slate-900">
-          Frequently asked questions
+          자주 묻는 질문
         </h2>
         <div className="mt-6 divide-y divide-slate-200 rounded-xl border border-slate-200">
           {guide.faqs.map((faq) => (
@@ -225,7 +225,7 @@ export function GuidePage({ guide }: GuidePageProps) {
       {relatedGuides.length > 0 ? (
         <section className="mt-12">
           <h2 className="text-2xl font-bold tracking-tight text-slate-900">
-            Related guides &amp; tools
+            관련 가이드 및 도구
           </h2>
           <div className="mt-6 grid gap-5 sm:grid-cols-2">
             {relatedGuides.map((related) => {
@@ -252,7 +252,7 @@ export function GuidePage({ guide }: GuidePageProps) {
                       className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-brand-700 hover:text-brand-800"
                     >
                       <BookOpen className="h-4 w-4" aria-hidden />
-                      Open the tool
+                      도구 열기
                     </Link>
                   ) : null}
                 </div>
@@ -264,15 +264,16 @@ export function GuidePage({ guide }: GuidePageProps) {
 
       {tool && toolName ? (
         <div className="mt-16 rounded-xl bg-brand-600 p-8 text-center">
-          <h2 className="text-xl font-bold text-white">Ready to try it?</h2>
+          <h2 className="text-xl font-bold text-white">직접 사용해 보실 준비가 되셨나요?</h2>
           <p className="mt-2 text-brand-100">
-            Open the {toolName} tool and put this guide into practice — free, no sign-up.
+            {toolName} 도구를 열어 이 가이드를 바로 실습해 보세요 — 무료이며 가입 없이 이용할 수
+            있습니다.
           </p>
           <Link
             href={`/${tool.slug}/`}
             className="mt-5 inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-semibold text-brand-700 shadow-sm transition-colors hover:bg-brand-50"
           >
-            Open {toolName}
+            {toolName} 도구 열기
             <ArrowRight className="h-4 w-4" aria-hidden />
           </Link>
         </div>

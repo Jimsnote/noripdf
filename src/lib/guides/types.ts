@@ -26,7 +26,7 @@ export interface GuideFaq {
 
 /**
  * A guide is pure data: components/pages/guides/GuidePage.tsx renders it into
- * a full tutorial page. Guides are English-only, live at /guides/<slug>/, and
+ * a full tutorial page. Guides are Korean-only, live at /guides/<slug>/, and
  * carry no localized alternates.
  *
  * Copy conventions: paragraphs, quick steps and intro support inline links
@@ -38,7 +38,7 @@ export interface Guide {
   slug: string;
   /** Slug of the tool this guide belongs to (lib/tools.ts), if any. */
   toolSlug: string | null;
-  /** H1 of the page; the route appends ' | CoolPDF' for the meta title. */
+  /** H1 of the page; the route appends ' | CPdf' for the meta title. */
   title: string;
   /** Meta description, <= 160 chars. */
   description: string;

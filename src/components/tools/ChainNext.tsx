@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { ArrowRight, Loader2 } from 'lucide-react';
 import { isLocale } from '@/i18n/config';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 import { TOOL_CHAINS } from '@/lib/tool-chains';
 import { saveHandoff } from '@/lib/tool-handoff';
 
@@ -33,7 +33,7 @@ export function ChainNext({ dict, slug, blob, fileName }: ChainNextProps) {
     try {
       await saveHandoff(blob, fileName);
       const segment = window.location.pathname.split('/')[1] ?? '';
-      const prefix = isLocale(segment) && segment !== 'en' ? `/${segment}` : '';
+      const prefix = isLocale(segment) && segment !== 'ko' ? `/${segment}` : '';
       router.push(`${prefix}/${target}/?from=handoff`);
     } catch {
       setPending(null);

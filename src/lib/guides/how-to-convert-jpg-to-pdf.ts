@@ -8,122 +8,122 @@ import type { Guide } from './types';
 export const howToConvertJpgToPdf: Guide = {
   slug: 'how-to-convert-jpg-to-pdf',
   toolSlug: 'jpg-to-pdf',
-  title: 'How to Convert JPG Images to a PDF File',
+  title: 'JPG 이미지를 PDF 파일로 변환하는 방법',
   description:
-    'Turn up to 20 JPG or PNG images into one A4 PDF, right in your browser. Orientation and fit options, no uploads, no sign-up — free forever.',
+    'JPG 또는 PNG 이미지 최대 20장을 브라우저에서 바로 하나의 A4 PDF로 만드세요. 방향·배치 옵션 지원, 업로드 없음, 가입 불필요 — 영원히 무료.',
   intro:
-    'The fastest way to convert JPG images to a PDF is to do it right in your browser: open the free [CoolPDF JPG to PDF tool](/jpg-to-pdf/), drop in up to 20 JPG or PNG images, choose the page orientation and placement, click Convert to PDF, and download the result as images.pdf. Because the conversion runs locally on your device, your photos are never uploaded to a server — no account, no queue, no watermark.',
+    'JPG 이미지를 PDF로 변환하는 가장 빠른 방법은 브라우저에서 바로 처리하는 것입니다. 무료 [CPdf JPG를 PDF로 도구](/jpg-to-pdf/)를 열고, JPG 또는 PNG 이미지를 최대 20장 추가한 뒤 페이지 방향과 배치를 선택하고, "PDF로 변환"을 클릭하면 결과를 images.pdf로 다운로드할 수 있습니다. 변환은 기기에서 로컬로 실행되므로 사진이 서버에 업로드되지 않습니다. 계정도, 대기열도, 워터마크도 없습니다.',
   quickSteps: [
-    'Open the JPG to PDF tool and drag up to 20 JPG or PNG images onto the upload area — or click it to browse your device.',
-    'Choose a Page orientation: Auto follows the aspect ratio of your first image, or force Portrait or Landscape.',
-    'Pick an Image placement — Fit, Fill, or Original — then click "Convert to PDF". The conversion runs locally in your browser.',
-    'Click "Download" on the result card to save the PDF as images.pdf — one image per A4 page, in the order you added the files.',
+    'JPG를 PDF로 도구를 열고 업로드 영역에 JPG 또는 PNG 이미지를 최대 20장 드래그하거나, 영역을 클릭해 기기에서 파일을 선택하세요.',
+    '페이지 방향을 선택하세요. 자동은 첫 이미지의 가로세로 비율을 따르고, 세로 또는 가로로 강제할 수도 있습니다.',
+    '이미지 배치(맞춤, 채우기, 원본)를 고른 뒤 "PDF로 변환"을 클릭하세요. 변환은 브라우저 안에서 로컬로 실행됩니다.',
+    '결과 카드에서 "다운로드"를 클릭하면 A4 페이지당 이미지 한 장씩, 추가한 순서대로 images.pdf로 저장됩니다.',
   ],
   sections: [
     {
-      heading: 'Step-by-step: converting images with CoolPDF',
+      heading: '단계별 안내: CPdf로 이미지 변환하기',
       paragraphs: [
-        'Open the [JPG to PDF tool](/jpg-to-pdf/) — nothing to install, no account to create. Add images by dragging them onto the upload area, or click it to pick them from a file dialog. You can add files in several batches; each entry shows the file name and size, and a trash icon removes anything added by mistake.',
-        'Decide the page order before converting: images become pages in exactly the order you added them, one per page, so add the cover photo or first scan first. There are no reorder handles here — to fix the order, remove the misplaced file and add it again.',
-        'Set the two options (covered next), then click "Convert to PDF". Because the conversion runs on your device, the time depends on image sizes, not your internet connection. When the "Your file is ready" card appears, click Download — the file is always named images.pdf, and the originals are never modified.',
+        '[JPG를 PDF로 도구](/jpg-to-pdf/)를 엽니다. 설치할 것도, 만들 계정도 없습니다. 이미지를 업로드 영역으로 드래그하거나 영역을 클릭해 파일 선택 창에서 고르세요. 여러 번에 나눠 추가할 수 있으며, 각 항목에는 파일 이름과 크기가 표시되고 휴지통 아이콘으로 잘못 추가한 파일을 제거할 수 있습니다.',
+        '변환 전에 페이지 순서를 정하세요. 이미지는 추가한 순서 그대로 페이지가 되며 한 페이지에 한 장씩 들어가므로, 표지 사진이나 첫 번째 스캔본부터 추가하세요. 여기에는 순서 변경 핸들이 없습니다. 순서를 고치려면 잘못 놓인 파일을 제거하고 다시 추가하세요.',
+        '두 가지 옵션을 설정하고(다음에서 설명) "PDF로 변환"을 클릭하세요. 변환은 기기에서 실행되므로 소요 시간은 인터넷 속도가 아니라 이미지 크기에 따라 결정됩니다. "파일이 준비되었습니다" 카드가 나타나면 다운로드를 클릭하세요. 파일 이름은 항상 images.pdf이며 원본은 변경되지 않습니다.',
       ],
       bullets: [
-        'Up to 20 JPG or PNG images per conversion',
-        'Up to 100 MB per image on desktop, 50 MB on mobile',
-        'One image per A4 page, in the order the files were added',
-        'Output is always saved as images.pdf',
+        '한 번에 JPG 또는 PNG 이미지 최대 20장',
+        '이미지당 최대 100 MB(데스크톱), 50 MB(모바일)',
+        'A4 페이지당 이미지 한 장, 파일을 추가한 순서대로',
+        '결과는 항상 images.pdf로 저장',
       ],
       image: {
         src: '/guides/how-to-convert-jpg-to-pdf/step-1.png',
-        alt: 'The CoolPDF JPG to PDF upload area with four image files added, each row showing the file name, its size, and a remove button.',
+        alt: 'CPdf JPG를 PDF로 도구에 이미지 파일 네 개가 추가된 화면. 각 항목에 파일 이름, 크기, 제거 버튼이 표시되어 있다.',
       },
     },
     {
-      heading: 'Orientation and placement: getting the pages to look right',
+      heading: '방향과 배치: 페이지를 원하는 모습으로',
       paragraphs: [
-        'Page orientation offers Auto, Portrait, and Landscape. Auto looks at the first image: wider than tall means landscape pages, otherwise portrait. The choice applies to every page, so when mixing portrait scans with wide screenshots, either force an orientation or accept generous margins on some pages.',
-        'Image placement controls how each image sits on its A4 page. Fit — the default — scales the image proportionally until it is fully visible, centered with margins; nothing is cropped, which suits receipts and screenshots. Fill covers the whole page and crops what spills over the edges, for a full-bleed photo look. Original draws at natural pixel size (1 pixel = 1 point), centered — high-resolution photos overflow the page, so use it only when you know the dimensions.',
+        '페이지 방향에는 자동, 세로, 가로가 있습니다. 자동은 첫 이미지를 기준으로 삼습니다. 가로가 길면 가로 페이지, 아니면 세로 페이지가 됩니다. 이 선택은 모든 페이지에 적용되므로, 세로로 찍은 스캔본과 넓은 스크린샷을 함께 넣을 때는 방향을 강제로 지정하거나 일부 페이지에 넓은 여백이 생기는 것을 감수하세요.',
+        '이미지 배치는 각 이미지가 A4 페이지 위에 어떻게 놓일지 결정합니다. 기본값인 맞춤은 이미지 전체가 보이도록 비율을 유지해 가운데 놓습니다. 잘리는 부분이 없어 영수증이나 스크린샷에 적합합니다. 채우기는 페이지 전체를 덮고 밖으로 넘치는 부분을 잘라내어 사진이 빈틈없이 꽉 차게 합니다. 원본은 실제 픽셀 크기(1픽셀 = 1포인트)로 가운데 그립니다. 고해상도 사진은 페이지를 넘어가므로 크기를 알고 있을 때만 사용하세요.',
       ],
       image: {
         src: '/guides/how-to-convert-jpg-to-pdf/step-2.png',
-        alt: 'The two option dropdowns of the JPG to PDF tool: Page orientation set to Auto (match the first image), and Image placement set to Fit — whole image visible, with margins.',
+        alt: 'JPG를 PDF로 도구의 옵션 두 개가 보이는 화면. 페이지 방향은 자동, 이미지 배치는 맞춤(전체 이미지 표시, 여백 있음)으로 설정되어 있다.',
       },
     },
     {
-      heading: 'Passport scans, receipts, whiteboards: why local conversion matters',
+      heading: '여권 스캔, 영수증, 화이트보드 — 로컬 변환이 중요한 이유',
       paragraphs: [
-        'The images people turn into PDFs are rarely casual snapshots — passport copies for a visa application, receipts for an expense report, a signed contract captured on a phone. A typical online converter uploads every image to a server, leaving your pictures on infrastructure you do not control.',
-        'CoolPDF does the same job without the upload: your browser reads the images, lays them out on A4 pages, and saves the PDF to your own disk. Nothing is transmitted, so the tool is safe for identity documents and NDA material — it even works offline once loaded. Phone photos get extra care: the EXIF orientation tag is applied automatically, so portrait shots never land sideways.',
+        'PDF로 만드는 이미지는 흔한 일상 사진이 아닌 경우가 많습니다. 비자 신청용 여권 사본, 경비 정산용 영수증, 휴대폰으로 촬영한 서명된 계약서 등입니다. 일반적인 온라인 변환기는 모든 이미지를 서버에 업로드하므로, 사진이 내가 통제하지 않는 인프라에 남습니다.',
+        'CPdf는 업로드 없이 같은 일을 합니다. 브라우저가 이미지를 읽고 A4 페이지에 배치한 뒤 PDF를 내 디스크에 저장합니다. 전송되는 것이 아무것도 없어 신분증이나 NDA 자료에도 안전하며, 페이지를 불러온 뒤에는 오프라인에서도 작동합니다. 휴대폰 사진은 별도로 신경 씁니다. EXIF 방향 태그를 자동으로 적용해 세로로 찍은 사진이 눕지 않습니다.',
       ],
     },
     {
-      heading: 'What to do with your new PDF',
+      heading: '새 PDF로 할 수 있는 일',
       paragraphs: [
-        'Converting is often one step in a larger job. If the PDF came out too heavy to email, run it through [Compress PDF](/compress-pdf/). To combine it with an existing document, such as scanned pages appended to a contract, use [Merge PDF](/merge-pdf/).',
-        'If the page order is not right after all, [Organize PDF](/organize-pdf/) rearranges, rotates, or deletes pages visually instead of reconverting. And for the reverse direction — pulling the pages of a PDF back out as images — [PDF to JPG](/pdf-to-jpg/) does exactly that.',
+        '변환은 큰 작업의 한 단계인 경우가 많습니다. PDF가 너무 커서 이메일로 보내기 어렵다면 [PDF 압축](/compress-pdf/)을 이용하세요. 계약서에 스캔 페이지를 덧붙이는 등 기존 문서와 합치려면 [PDF 병합](/merge-pdf/)을 사용하세요.',
+        '페이지 순서가 마음에 들지 않으면 다시 변환하지 말고 [PDF 페이지 정리](/organize-pdf/)로 페이지를 끌어 재배치, 회전, 삭제하세요. 반대로 PDF 페이지를 이미지로 꺼낼 때는 [PDF를 JPG로](/pdf-to-jpg/)를 사용하세요.',
       ],
     },
   ],
   alternatives: [
     {
-      heading: 'Windows: Print to PDF',
+      heading: 'Windows: 인쇄를 PDF로',
       paragraphs: [
-        'Windows converts images without extra software: select the JPGs in File Explorer, right-click, choose Print, and pick the Microsoft Print to PDF printer with a full-page photo layout. It is free and offline, but layout controls are basic and ordering follows your selection. CoolPDF gives you explicit orientation and fit controls with the same offline privacy.',
+        'Windows는 별도 소프트웨어 없이도 이미지를 변환할 수 있습니다. 파일 탐색기에서 JPG를 선택하고 마우스 오른쪽 버튼을 클릭한 뒤 인쇄를 선택하고, Microsoft Print to PDF 프린터에 페이지를 꽉 채우는 사진 레이아웃을 지정하세요. 무료이며 오프라인에서 되지만 레이아웃 조절은 기본적이고 순서는 선택한 순서를 따릅니다. CPdf는 동일한 오프라인 프라이버시에 방향과 맞춤 조절을 명확하게 제공합니다.',
       ],
     },
     {
-      heading: 'macOS Preview',
+      heading: 'macOS 미리보기(Preview)',
       paragraphs: [
-        'On a Mac, open the images together in Preview, then File → Print → Save as PDF. It is free and offline, but macOS-only, and margin or full-bleed options are buried in the print dialog. CoolPDF does the same job in any browser, with the fit options up front.',
+        'Mac에서는 이미지를 미리보기에 함께 연 뒤 파일 → 인쇄 → PDF로 저장을 선택하세요. 무료이고 오프라인에서 되지만 macOS에서만 되며, 여백이나 빈틈없는 인쇄 옵션은 인쇄 대화상자 안에 숨어 있습니다. CPdf는 브라우저라면 어디서나 같은 일을 하며 맞춤 옵션이 바로 보입니다.',
       ],
     },
     {
-      heading: 'Adobe\u2019s online converter',
+      heading: 'Adobe의 온라인 변환기',
       paragraphs: [
-        'Adobe\u2019s web-based JPG to PDF converter is polished: drag in images, convert, download. But images are uploaded to Adobe\u2019s servers, and heavy use pushes you toward an account with a limited free tier. A local tool covers the same ground with no upload and no quota.',
+        'Adobe의 웹 기반 JPG to PDF 변환기는 다듬어져 있습니다. 이미지를 끌어 넣고 변환하고 다운로드하면 됩니다. 하지만 이미지는 Adobe 서버에 업로드되며, 많이 쓰면 무료 한도가 있는 계정으로 유도합니다. 로컬 도구는 업로드도, 한도도 없이 같은 일을 합니다.',
       ],
     },
   ],
   edgeCases: [
     {
-      heading: 'WebP, HEIC, and GIF files are skipped',
+      heading: 'WebP, HEIC, GIF 파일은 건너뛰기',
       paragraphs: [
-        'The tool accepts only JPG and PNG — anything else you drop is skipped, with a notice saying so. iPhone photos saved as HEIC are the common case: set the camera to Most Compatible in iOS settings for future shots, and export existing HEIC photos as JPEG before converting.',
+        '이 도구는 JPG와 PNG만 지원합니다. 나머지 형식은 떨어뜨리면 안내와 함께 건너뜁니다. 흔한 경우는 HEIC으로 저장된 iPhone 사진입니다. 앞으로 찍을 사진은 iOS 설정에서 호환성 우선(Most Compatible)으로 바꾸고, 기존 HEIC 사진은 변환 전에 JPEG로 내보내세요.',
       ],
     },
     {
-      heading: 'Pages come out in the wrong order',
+      heading: '페이지 순서가 뒤바뀌어 나오는 경우',
       paragraphs: [
-        'Images become pages in the order you added them, and the list has no reorder buttons. The quick fix: remove the misplaced file and add it again — it lands at the end. Already converted? Open the PDF in [Organize PDF](/organize-pdf/) and drag the pages into place visually.',
+        '이미지는 추가한 순서대로 페이지가 되며 목록에 순서 변경 버튼이 없습니다. 빠른 해결법은 잘못 놓인 파일을 제거하고 다시 추가하면 맨 뒤에 놓인다는 것입니다. 이미 변환했다면 [PDF 페이지 정리](/organize-pdf/)에서 페이지를 끌어 원하는 위치로 옮기세요.',
       ],
     },
     {
-      heading: 'An image exceeds the size limit',
+      heading: '이미지가 크기 제한을 초과하는 경우',
       paragraphs: [
-        'Each image can be up to 100 MB on desktop and 50 MB on mobile — the limit exists because every image is held in memory during conversion. Oversized files are rejected with a message naming the file and the limit. If a photo exceeds it, resize or re-save it at a lower resolution first; the PDF will be smaller as a bonus.',
+        '이미지당 최대 100 MB(데스크톱), 50 MB(모바일)입니다. 변환 중 모든 이미지가 메모리에 올라가기 때문에 제한이 있습니다. 초과한 파일은 파일 이름과 제한을 알리는 메시지와 함께 거부됩니다. 사진이 제한을 넘으면 먼저 크기를 줄이거나 낮은 해상도로 다시 저장하세요. 덤으로 PDF도 작아집니다.',
       ],
     },
   ],
   faqs: [
     {
-      q: 'Is converting JPG to PDF with CoolPDF really free?',
-      a: 'Yes — every tool on CoolPDF is free forever, with no daily quotas, watermarks, or premium tiers. The conversion runs on your own device, so there is no server bill to pass on to you.',
+      q: 'CPdf로 JPG를 PDF로 변환하는 것은 정말 무료인가요?',
+      a: '네. CPdf의 모든 도구는 영원히 무료이며 일일 한도, 워터마크, 유료 요금제가 없습니다. 변환은 내 기기에서 실행되므로 서버 비용을 사용자에게 전가할 일이 없습니다.',
     },
     {
-      q: 'How many images can I convert at once, and how big can they be?',
-      a: 'Up to 20 JPG or PNG images per conversion. Each image can be up to 100 MB on a desktop computer, or 50 MB on mobile devices.',
+      q: '한 번에 몇 장까지, 얼마나 큰 이미지를 변환할 수 있나요?',
+      a: '한 번에 JPG 또는 PNG 이미지 최대 20장까지 변환할 수 있습니다. 이미지당 최대 크기는 데스크톱 100 MB, 모바일 50 MB입니다.',
     },
     {
-      q: 'Are my photos uploaded anywhere?',
-      a: 'No. Your images are processed locally in your browser and never leave your device. You can even disconnect from the internet after the page loads and the conversion still works; closing the tab removes every trace of your files.',
+      q: '제 사진이 어딘가에 업로드되나요?',
+      a: '아니요. 이미지는 브라우저 안에서 로컬로 처리되며 기기를 떠나지 않습니다. 페이지를 불러온 뒤 인터넷 연결을 끊어도 변환이 되고, 탭을 닫으면 파일의 모든 흔적이 사라집니다.',
     },
     {
-      q: 'Do I need to sign up or install anything?',
-      a: 'No. There is no account, no email address, and nothing to install. Open the tool page, add your images, and convert — it works in any modern browser, on desktop and mobile.',
+      q: '가입하거나 설치해야 하나요?',
+      a: '아니요. 계정도, 이메일 주소도, 설치할 것도 없습니다. 도구 페이지를 열고 이미지를 추가한 뒤 변환하면 됩니다. 데스크톱과 모바일의 모든 최신 브라우저에서 작동합니다.',
     },
     {
-      q: 'Will converting reduce the quality of my images?',
-      a: 'No. Images are embedded into the PDF exactly as they are — no recompression. The one exception is a phone photo with an EXIF rotation tag: it is re-encoded once at high quality so it appears upright.',
+      q: '변환하면 이미지 품질이 떨어지나요?',
+      a: '아니요. 이미지는 있는 그대로 PDF에 삽입되며 재압축하지 않습니다. 유일한 예외는 EXIF 회전 태그가 있는 휴대폰 사진으로, 올바르게 표시되도록 고품질로 한 번만 다시 인코딩됩니다.',
     },
   ],
   related: ['how-to-convert-pdf-to-jpg', 'how-to-merge-pdf', 'how-to-compress-pdf'],

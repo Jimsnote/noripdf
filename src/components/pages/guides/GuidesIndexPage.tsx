@@ -6,19 +6,19 @@ import { tools } from '@/lib/tools';
 
 /**
  * Guides index (/guides/): one card per guide with its title, a one-line
- * summary, and a link to the associated tool. Guides are English-only.
+ * summary, and a link to the associated tool. The site is Korean-only.
  */
 export function GuidesIndexPage() {
-  const dict = getDictionary('en');
+  const dict = getDictionary('ko');
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
       <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-        PDF Guides &amp; Tutorials
+        PDF 가이드 및 튜토리얼
       </h1>
       <p className="mt-4 max-w-2xl text-lg leading-relaxed text-slate-600">
-        Step-by-step tutorials for every CoolPDF tool — free, browser-based, and private by
-        design.
+        모든 CPdf 도구를 위한 단계별 튜토리얼 — 무료이며 브라우저에서 바로 동작하고, 사생활 보호를
+        전제로 설계되었습니다.
       </p>
 
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -42,7 +42,7 @@ export function GuidesIndexPage() {
                   href={`/${tool.slug}/`}
                   className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-brand-700 hover:text-brand-800"
                 >
-                  Open {dict.tools[tool.i18nKey].name}
+                  {dict.tools[tool.i18nKey].name} 도구 열기
                   <ArrowRight className="h-4 w-4" aria-hidden />
                 </Link>
               ) : null}

@@ -18,7 +18,7 @@ import { howToSplitPdf } from './how-to-split-pdf';
 import { howToUnlockPdf } from './how-to-unlock-pdf';
 
 /**
- * Central guide registry, in display order. Guides are English-only and are
+ * Central guide registry, in display order. Guides are Korean-only and are
  * rendered at /guides/<slug>/; the sitemap and both guide routes derive from
  * this list, so adding a guide here is enough to publish it.
  */

@@ -1,5 +1,5 @@
 /** Central, overridable site constants. */
-export const SITE_NAME = 'CoolPDF';
+export const SITE_NAME = 'CPdf';
 
 export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL ?? 'https://getcoolpdf.com'

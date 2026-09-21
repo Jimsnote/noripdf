@@ -1,4 +1,4 @@
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 
 type ToolKey = keyof Dictionary['tools'];
 

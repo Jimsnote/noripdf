@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { Download, FileCheck2, FileText, Loader2, Trash2 } from 'lucide-react';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 import { ocrPdf, type OcrProgress } from '@/lib/pdf/ocr';
 import { FileDropzone } from './FileDropzone';
 import { ToolShell } from './ToolShell';

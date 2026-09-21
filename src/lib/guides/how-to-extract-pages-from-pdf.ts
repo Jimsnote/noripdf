@@ -3,58 +3,58 @@ import type { Guide } from './types';
 export const howToExtractPagesFromPdf: Guide = {
   slug: 'how-to-extract-pages-from-pdf',
   toolSlug: 'extract-pages',
-  title: 'How to Extract Pages from a PDF — Free, No Upload',
+  title: 'PDF에서 페이지 추출하는 방법 — 무료, 업로드 없음',
   description:
-    'Save selected pages of a PDF as a new document — click the pages you want, extract them in your browser. Free, no uploads, no sign-up, files never leave your device.',
+    'PDF에서 원하는 페이지만 골라 새 문서로 저장하세요. 브라우저에서 클릭 한 번으로 추출합니다. 무료, 업로드 없음, 가입 불필요, 파일이 기기를 벗어나지 않습니다.',
   intro:
-    'The simplest way to extract pages from a PDF is to pick them visually in your browser: open the free [CoolPDF Extract Pages tool](/extract-pages/), drop in your file, click the thumbnails of the pages you want — a chapter, a signature page, one invoice out of many — and download just those pages as extracted.pdf. Everything runs locally; the document never leaves your device.',
+    'PDF에서 페이지를 추출하는 가장 간단한 방법은 브라우저에서 직접 눈으로 골라 추출하는 것입니다. 무료 [CPdf 페이지 추출 도구](/extract-pages/)를 열고 파일을 놓으면, 원하는 페이지의 썸네일을 클릭하기만 하면 됩니다 — 챕터 한 개, 서명 페이지, 여러 장 중 인보이스 한 장 등. 그 페이지만 extracted.pdf로 다운로드됩니다. 모든 처리는 기기 안에서 이루어지며 문서는 어디에도 업로드되지 않습니다.',
   quickSteps: [
-    'Open the Extract Pages tool and drop in your PDF — every page appears as a live thumbnail.',
-    'Click the pages you want to extract; selected pages get a highlighted border and checkmark.',
-    'Confirm the selected count in the toolbar counter.',
-    'Click "Extract selected pages" to save just those pages as extracted.pdf.',
+    '페이지 추출 도구를 열고 PDF를 추가하세요. 모든 페이지가 실시간 썸네일로 표시됩니다.',
+    '추출할 페이지를 클릭하세요. 선택한 페이지는 강조 테두리와 체크 표시가 생깁니다.',
+    '툴의 카운터에서 선택한 페이지 수를 확인하세요.',
+    '"선택한 페이지 추출" 버튼을 클릭하면 해당 페이지만 extracted.pdf로 저장됩니다.',
   ],
   sections: [
     {
-      heading: 'Step-by-step: extracting PDF pages with CoolPDF',
+      heading: '단계별: CPdf로 PDF 페이지 추출하기',
       paragraphs: [
-        'Open the [Extract Pages tool](/extract-pages/) and add your PDF. Every page renders as a thumbnail, so picking "page 47 of 60" is a visual task, not a counting exercise.',
-        'Click each page you want — any combination, in any order. Selected pages show a highlighted border and a checkmark; click again to deselect. The counter keeps track of how many pages you have picked.',
-        'Click "Extract selected pages". The picked pages are assembled into a new document locally and saved as extracted.pdf — in their original document order, with text and images untouched.',
+        '[페이지 추출 도구](/extract-pages/)를 열고 PDF를 추가하세요. 모든 페이지가 썸네일로 표시되므로 "60페이지 중 47페이지"를 고르는 일은 숫자를 세는 것이 아니라 눈으로 확인하는 작업입니다.',
+        '원하는 페이지를 하나씩 클릭하세요. 어떤 조합이든, 어떤 순서든 가능합니다. 선택한 페이지에는 강조 테두리와 체크 표시가 나타나며, 다시 클릭하면 선택이 해제됩니다. 카운터가 선택한 페이지 수를 알려 줍니다.',
+        '"선택한 페이지 추출"을 클릭하세요. 고른 페이지들은 기기 안에서 새 문서로 조립되어 extracted.pdf로 저장됩니다. 원래 문서 순서를 그대로 유지하며 텍스트와 이미지는 전혀 손상되지 않습니다.',
       ],
       bullets: [
-        'Files up to 100 MB (50 MB on mobile), no page limit',
-        'Pick any combination of pages, in any order',
-        'Output keeps the original page order and full quality',
-        'Saved as extracted.pdf',
+        '최대 100 MB(모바일 50 MB) 파일, 페이지 수 제한 없음',
+        '어떤 순서든 원하는 페이지를 자유롭게 선택',
+        '출력은 원래 페이지 순서와 원본 품질 유지',
+        'extracted.pdf로 저장',
       ],
     },
     {
-      heading: 'Share only the pages you mean to — privately',
+      heading: '의도한 페이지만 공유하세요 — 사생활 보호',
       paragraphs: [
-        'Extraction is how you send one chapter of a report, one page of a contract, or a single receipt out of a book-length scan — without exposing everything else. With an upload-based tool, the whole document lands on someone else’s server first, even the parts you never meant to share.',
-        'CoolPDF does the selection and the rebuild entirely in your browser: the source file is read from your own disk and the new PDF is written back to it. No account, no server copy, no traces after you close the tab.',
+        '추출은 보고서의 한 챕터, 계약서의 한 페이지, 책처럼 두꺼운 스캔 파일 속 영수증 한 장을 나머지 부분을 노출하지 않고 볼 수 있는 방법입니다. 업로드 방식 도구는 공유할 생각이 없던 부분까지 전체 문서가 먼저 다른 사람의 서버에 올라갑니다.',
+        'CPdf는 선택과 재구성 전 과정을 브라우저 안에서 처리합니다. 원본 파일은 내 디스크에서 읽히고 새 PDF도 그곳에 저장됩니다. 계정도 없고 서버에 복사본도 없으며 탭을 닫으면 흔적도 남지 않습니다.',
       ],
     },
     {
-      heading: 'Everyday wins: one invoice, one receipt, one page',
+      heading: '일상 속 활용: 인보이스 한 장, 영수증 한 장, 페이지 한 장',
       paragraphs: [
-        'The most common extraction is a single page. Your bookkeeping software exports a 60-page PDF of the month, and all you need is the one invoice on page 38 for a reimbursement claim. Open the file, scroll to the thumbnail, click once, extract — done in seconds, and nobody else’s server ever sees your accounts.',
-        'The same move covers a receipt out of a scanned expenses book, one payslip from a yearly bundle, or the single bank statement an agency asked for. When the need is "just this one page", visual picking beats typing page numbers every time.',
+        '가장 흔한 추출은 단일 페이지입니다. 회계 소프트웨어에서 이번 달 내역이 60페이지짜리 PDF로 나왔는데 경비 정산에 필요한 것은 38페이지의 인보이스 한 장뿐이라면, 파일을 열고 썸네일로 스크롤해서 한 번 클릭하고 추출하면 됩니다. 몇 초면 끝나고 내 장부는 다른 누구의 서버에도 보이지 않습니다.',
+        '스캔한 경비 장부에서 영수증을 뽑거나, 연간 묶음 파일에서 급여명세서 한 장을 뽑거나, 기관에서 요구한 통장 거래내역 한 장을 뽑을 때도 같은 방식입니다. "이 페이지 하나만" 필요할 때는 페이지 번호를 입력하는 것보다 눈으로 고르는 편이 항상 낫습니다.',
       ],
     },
     {
-      heading: 'Contracts and reports: share a page, not the whole file',
+      heading: '계약서와 보고서: 전체 파일이 아니라 페이지만 공유',
       paragraphs: [
-        'Sometimes the point is not convenience but restraint. A counterparty asks for proof of signature — send them the signature page, not all eighty clauses. A professor asks for chapter three — extract it instead of the full thesis. An application form asks for "page 1 of your transcript" — that is one click, not a re-scan.',
-        'Because the selection happens on your device, this is also the safe way to share excerpts of sensitive documents: the parts you keep to yourself never go anywhere. That is the whole point of extracting locally.',
+        '때로는 편의가 아니라 절제가 요구됩니다. 계약 상대방이 서명 증빙을 요구하면 80개 조항 전체가 아니라 서명 페이지만 추출해 전달합니다. 교수님이 3장을 요구하면 전체 논문이 아니라 해당 장만 추출합니다. 신청 서식에 "성적증명서 1페이지"를 요구하면 재스캔이 아니라 클릭 한 번이면 됩니다.',
+        '선택이 내 기기에서 이루어지므로 민감한 문서의 일부를 공유하는 안전한 방법이기도 합니다. 내게만 남기려는 부분은 어디에도 가지 않습니다. 이것이 바로 로컬 추출의 핵심입니다.',
       ],
     },
     {
-      heading: 'Extract vs remove vs split: pick the right tool',
+      heading: '추출 vs 삭제 vs 분할: 맞는 도구 고르기',
       paragraphs: [
-        'Use **Extract** when you want a few pages out of many. Use [Remove Pages](/remove-pages/) when you want to delete a few pages and keep the rest. And use [Split PDF](/split-pdf/) when you want to break a document into ranges or fixed-size chunks in one go (e.g. every 10 pages).',
-        'Need the pages rearranged before exporting? Drag the thumbnails into a new order right in the same grid, or use [Reorder Pages](/reorder-pages/) for a dedicated view.',
+        '여러 페이지 중 몇 장만 뽑을 때는 **추출**을 사용하세요. 몇 장을 삭제하고 나머지를 유지하고 싶을 때는 [페이지 삭제](/remove-pages/)를, 문서를 범위나 고정 크기 덩어리로 한 번에 나누고 싶을 때(예: 10페이지마다)는 [PDF 분할](/split-pdf/)을 사용하세요.',
+        '페이지를 뽑아내기 전에 순서를 바꿔야 하나요? 썸네일을 그리드에서 바로 드래그해 새 순서로 만들거나, 전용 화면이 필요하면 [페이지 순서 변경](/reorder-pages/)을 사용하세요.',
       ],
     },
   ],
@@ -62,54 +62,54 @@ export const howToExtractPagesFromPdf: Guide = {
     {
       heading: 'macOS Preview',
       paragraphs: [
-        'On a Mac, open the PDF in Preview, show thumbnails, select the pages you want, then copy them into a new document via File → New from Clipboard (or drag them to the desktop). Free and offline, but macOS-only, and awkward for documents with many pages. CoolPDF gives the same local privacy in any browser.',
+        'Mac에서 Preview로 PDF를 열고 썸네일을 표시한 뒤 원하는 페이지를 선택하고 파일 → 클립보드에서 새로 만들기(또는 바탕화면으로 드래그)로 새 문서에 복사하세요. 무료이며 오프라인에서 동작하지만 macOS에서만 가능하고 페이지가 많은 문서에는 불편합니다. CPdf는 어떤 브라우저에서도 동일한 로컬 사생활 보호를 제공합니다.',
       ],
     },
     {
-      heading: 'Print to PDF (page range)',
+      heading: 'PDF로 인쇄(페이지 범위)',
       paragraphs: [
-        'Printing only a page range into a new PDF is a common workaround, but printing re-renders everything — links, form fields, and bookmarks are flattened, and quality can suffer. Extraction with CoolPDF copies the original pages losslessly, exactly as they are.',
+        '특정 페이지 범위만 새 PDF로 인쇄하는 것은 흔한 우회 방법이지만, 인쇄는 모든 것을 다시 렌더링합니다. 링크, 양식 필드, 북마크가 평탄화되고 품질이 저하될 수 있습니다. CPdf의 추출은 원본 페이지를 있는 그대로 무손실로 복사합니다.',
       ],
     },
   ],
   edgeCases: [
     {
-      heading: 'The PDF is password-protected',
+      heading: 'PDF에 비밀번호가 설정된 경우',
       paragraphs: [
-        'Encrypted PDFs cannot be opened until they are unlocked. If you know the password, run the file through [Unlock PDF](/unlock-pdf/) first, then extract. PDFs with only usage restrictions (no open password) usually unlock by leaving the password field empty.',
+        '암호화된 PDF는 잠금 해제 전까지 열 수 없습니다. 비밀번호를 알고 있다면 먼저 [PDF 잠금 해제](/unlock-pdf/)를 거친 뒤 추출하세요. 사용 제한만 있고 열기 비밀번호가 없는 PDF는 보통 비밀번호 칸을 비워 둔 채 잠금 해제하면 됩니다.',
       ],
     },
     {
-      heading: 'Very long documents',
+      heading: '페이지 수가 매우 많은 문서',
       paragraphs: [
-        'There is no page limit. For very long documents the previews render in batches (first 30, then 60 more per click), so the tool stays responsive even on book-length PDFs. If you need pages by number rather than visually, [Split PDF](/split-pdf/) accepts ranges like `47-52` directly.',
+        '페이지 수 제한은 없습니다. 미리보기는 배치로 렌더링되어(처음 30페이지, 이후 클릭할 때마다 60페이지씩) 책 수준의 두꺼운 PDF에서도 도구가 반응성을 유지합니다. 눈으로 고르는 대신 페이지 번호로 지정하고 싶다면 [PDF 분할](/split-pdf/)이 `47-52` 같은 범위를 직접 입력받습니다.',
       ],
     },
   ],
   faqs: [
     {
-      q: 'Is extracting pages from a PDF free?',
-      a: 'Yes — free forever, with no task limits, no watermarks, and no sign-up. Processing happens on your own device, so there is no server cost to pass on.',
+      q: 'PDF 페이지 추출은 무료인가요?',
+      a: '네 — 영구적으로 무료이며 작업 횟수 제한, 워터마크, 가입 요구가 없습니다. 처리는 내 기기에서 이루어지므로 전가할 서버 비용이 없습니다.',
     },
     {
-      q: 'Can I extract just one page?',
-      a: 'Yes — click only that page and extract; you get a one-page PDF losslessly copied from the original. If you already know the exact page number, [Split PDF](/split-pdf/) with a range like `38-38` does the same job.',
+      q: '페이지 한 장만 추출할 수 있나요?',
+      a: '네 — 해당 페이지만 클릭하고 추출하면 원본에서 무손실로 복사된 1페이지짜리 PDF를 받습니다. 정확한 페이지 번호를 이미 알고 있다면 `38-38` 같은 범위로 [PDF 분할](/split-pdf/)을 써도 같은 결과를 얻습니다.',
     },
     {
-      q: 'Can I extract pages from different parts of the document?',
-      a: 'Yes — click any combination of pages, in any order. The extracted file keeps the pages in their original document order, and you can drag thumbnails to rearrange them first.',
+      q: '문서 여러 부분에서 페이지를 함께 추출할 수 있나요?',
+      a: '네 — 어떤 순서든 원하는 페이지를 조합해 클릭하면 됩니다. 추출된 파일은 페이지를 원래 문서 순서로 유지하며, 미리 썸네일을 드래그해 순서를 바꿀 수도 있습니다.',
     },
     {
-      q: 'Does it work on scanned PDFs?',
-      a: 'Yes. Extraction copies pages at the object level, so scanned pages come out exactly as they went in — same images, same resolution. (If you need the text out of a scan, that requires OCR, which is a different job.)',
+      q: '스캔 PDF에서도 작동하나요?',
+      a: '네. 추출은 페이지를 객체 수준에서 복사하므로 스캔 페이지는 들어갔던 그대로 나옵니다. 이미지와 해상도 모두 동일합니다. (스캔에서 텍스트를 뽑으려면 OCR이 필요하며 이는 다른 작업입니다.)',
     },
     {
-      q: 'Does extraction reduce quality?',
-      a: 'No. Pages are copied into the new file at the object level — text stays selectable, links keep working, and images keep their original resolution. No re-rendering, no recompression.',
+      q: '추출하면 품질이 떨어지나요?',
+      a: '아니요. 페이지는 객체 수준에서 새 파일로 복사됩니다. 텍스트는 선택 가능한 상태를 유지하고 링크는 계속 작동하며 이미지는 원래 해상도를 유지합니다. 재렌더링도 재압축도 없습니다.',
     },
     {
-      q: 'Is it safe to extract pages from confidential documents?',
-      a: 'Yes. Everything runs locally in your browser — the file is never uploaded. You can disconnect from the internet after the page loads and it still works; closing the tab removes every trace.',
+      q: '기밀 문서의 페이지도 안전하게 추출할 수 있나요?',
+      a: '네. 모든 처리는 브라우저 안에서 로컬로 이루어지며 파일은 업로드되지 않습니다. 페이지가 로드된 후 인터넷을 끊어도 작동하고, 탭을 닫으면 모든 흔적이 사라집니다.',
     },
   ],
   related: ['how-to-remove-pages-from-pdf', 'how-to-split-pdf', 'how-to-organize-pdf-pages'],

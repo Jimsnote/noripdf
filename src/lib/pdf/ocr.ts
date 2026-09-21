@@ -46,7 +46,7 @@ export async function ocrPdf(
   let worker: Worker | null = null;
   try {
     let currentPage = 0;
-    worker = await createWorker('eng', 1, {
+    worker = await createWorker(['eng', 'kor'], 1, {
       workerPath: `${TESSERACT_PATH}/worker.min.js`,
       corePath: TESSERACT_PATH,
       langPath: TESSERACT_PATH,

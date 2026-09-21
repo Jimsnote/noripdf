@@ -1,5 +1,5 @@
 import { Loader2 } from 'lucide-react';
-import type { Dictionary } from '@/i18n/locales/en';
+import type { Dictionary } from '@/i18n/locales/ko';
 import type { HeavyProgress } from '@/lib/pdf/heavy-worker';
 
 interface EngineStatusProps {
