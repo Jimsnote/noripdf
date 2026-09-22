@@ -17,7 +17,10 @@ import { fileURLToPath } from 'node:url';
 
 const HOST = 'noripdf.com';
 const KEY = '58395c2f24c9698dc16736b1d5933a51';
-const ENDPOINT = 'https://api.indexnow.org/indexnow';
+const ENDPOINTS = [
+  'https://api.indexnow.org/indexnow', // Bing, Yandex, ...
+  'https://searchadvisor.naver.com/indexnow', // Naver
+];
 
 const HTTP_STATUS = {
   200: 'OK（提交成功）',
@@ -55,15 +58,18 @@ async function main() {
   }
 
   console.log(`正在向 IndexNow 提交 ${urls.length} 个 URL...`);
-  const res = await fetch(ENDPOINT, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json; charset=utf-8' },
-    body: JSON.stringify({ host: HOST, key: KEY, urlList: urls }),
-  });
-
-  const meaning = HTTP_STATUS[res.status] || '未知状态';
-  console.log(`响应：HTTP ${res.status} ${meaning}`);
-  process.exit(res.status === 200 || res.status === 202 ? 0 : 1);
+  let ok = true;
+  for (const endpoint of ENDPOINTS) {
+    const res = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json; charset=utf-8' },
+      body: JSON.stringify({ host: HOST, key: KEY, urlList: urls }),
+    });
+    const meaning = HTTP_STATUS[res.status] || '未知状态';
+    console.log(`${endpoint} → HTTP ${res.status} ${meaning}`);
+    if (res.status !== 200 && res.status !== 202) ok = false;
+  }
+  process.exit(ok ? 0 : 1);
 }
 
 main().catch((err) => {
