@@ -1,6 +1,9 @@
 # Retire the old localized URL space after the Korean-only relaunch:
 # every /de/, /fr/, /it/, /es/, /pt/, /zh/, /ja/ URL (with or without a
 # subpath) 301-redirects to the matching unprefixed Korean page.
+# Naver site verification: serve the token at the exact .html URL with a 200
+# rewrite (the asset layer would otherwise 307 .html to an extensionless 404).
+/naver0328d788954f25894168cb82edc720ac.html /naver-verify-0328 200
 /de / 301
 /de/* /:splat 301
 /fr / 301
