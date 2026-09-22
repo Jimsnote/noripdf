@@ -33,7 +33,8 @@ export type ToolSlug =
   | 'sign-pdf'
   | 'qr-code'
   | 'ocr-pdf'
-  | 'hwpx-to-pdf';
+  | 'hwpx-to-pdf'
+  | 'hwp-to-pdf';
 
 interface ToolPageScaffoldProps {
   locale: Locale;

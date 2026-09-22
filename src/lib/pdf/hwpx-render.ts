@@ -1,6 +1,4 @@
 import type { PDFDocument, PDFPage, PDFFont, RGB } from '@cantoo/pdf-lib';
-import { concatTransformationMatrix, popGraphicsState, pushGraphicsState } from '@cantoo/pdf-lib';
-import fontkit from '@pdf-lib/fontkit';
 import { getPdfLib } from './pdf-lib';
 import type {
   HwpxBorderFill,
@@ -24,10 +22,22 @@ import type {
  */
 
 export interface HwpxFonts {
-  gothicRegular: Uint8Array;
-  gothicBold: Uint8Array;
-  myeongjoRegular: Uint8Array;
-  myeongjoBold: Uint8Array;
+  regular: Uint8Array;
+  bold: Uint8Array;
+}
+
+/** True when the document's dominant declared font is a 바탕/명조 face. */
+export function docPrefersSerif(doc: HwpxDoc): boolean {
+  const votes = { serif: 0, sans: 0 };
+  for (const section of doc.sections) {
+    for (const block of section.blocks) walkBlocks(block, (item) => {
+      if (item.kind === 'text' || item.kind === 'field') {
+        if (SERIF_RE.test(item.char.fontFamily)) votes.serif += item.text.length || 1;
+        else votes.sans += item.text.length || 1;
+      }
+    });
+  }
+  return votes.serif > votes.sans;
 }
 
 export interface RenderProgress {
@@ -70,15 +80,27 @@ interface Token {
 
 function collectTokens(items: HwpxParaItem[]): Token[] | null {
   // Returns null when non-text items make char-offset mapping unsafe.
+  // Adjacent runs sharing ONE char-style object merge into a single segment
+  // (same style id resolves to the same object) — one drawText per merged
+  // segment keeps PDF text extraction clean instead of per-run fragments.
   const tokens: Token[] = [];
+  const segByChar = new Map<HwpxCharStyle, TextSegment>();
+  const segOf = (char: HwpxCharStyle): TextSegment => {
+    let seg = segByChar.get(char);
+    if (!seg) {
+      seg = { text: '', char };
+      segByChar.set(char, seg);
+    }
+    return seg;
+  };
   for (const item of items) {
     if (item.kind === 'text') {
       for (const ch of item.text) {
         if (ch === '\n' || ch === '\r') continue;
-        tokens.push({ ch: ch === '\t' ? '⇥' : ch, seg: { text: '', char: item.char } });
+        tokens.push({ ch: ch === '\t' ? '⇥' : ch, seg: segOf(item.char) });
       }
     } else if (item.kind === 'field') {
-      for (const ch of item.text) tokens.push({ ch, seg: { text: '', char: item.char } });
+      for (const ch of item.text) tokens.push({ ch, seg: segOf(item.char) });
     } else {
       return null;
     }
@@ -184,40 +206,30 @@ interface PageState {
   contentLeft: number;
   contentWidth: number;
   height: number;
-  /** vertpos of the first lineseg placed on the current page (reset detection). */
+  /** vertpos of the first lineseg placed on the current page (page anchor). */
   vertAnchor: number | null;
+  /** current producer page index (placements pre-computed per section). */
+  producerPage: number;
 }
 
 export async function renderHwpxToPdf(
   doc: HwpxDoc,
   fonts: HwpxFonts,
   onProgress?: (p: RenderProgress) => void,
+  onBreak?: (cause: string) => void,
 ): Promise<{ bytes: Uint8Array; pages: number }> {
-  const { rgb, PDFDocument } = await getPdfLib();
+  const { rgb, PDFDocument, pushGraphicsState, popGraphicsState, concatTransformationMatrix } =
+    await getPdfLib();
+  const fontkit = (await import('@pdf-lib/fontkit')).default;
   const pdf = await PDFDocument.create();
   pdf.registerFontkit(fontkit);
   pdf.setTitle(doc.title ?? 'HWPX converted');
 
-  // ---- font family selection: dominant declared font wins ----
-  const familyVotes = { serif: 0, sans: 0 };
-  for (const section of doc.sections) {
-    for (const block of section.blocks) walkBlocks(block, (item) => {
-      if (item.kind === 'text' || item.kind === 'field') {
-        if (SERIF_RE.test(item.char.fontFamily)) familyVotes.serif += item.text.length || 1;
-        else familyVotes.sans += item.text.length || 1;
-      }
-    });
-  }
-  const useSerif = familyVotes.serif > familyVotes.sans;
-
-  const fontRegular = (await pdf.embedFont(
-    useSerif ? fonts.myeongjoRegular : fonts.gothicRegular,
-    { subset: true },
-  )) as unknown as PDFFont;
-  const fontBold = (await pdf.embedFont(
-    useSerif ? fonts.myeongjoBold : fonts.gothicBold,
-    { subset: true },
-  )) as unknown as PDFFont;
+  // the orchestrator embedded the family this document prefers
+  const fontRegular = (await pdf.embedFont(fonts.regular, { subset: true })) as unknown as PDFFont;
+  const fontBold = fonts.bold.length
+    ? ((await pdf.embedFont(fonts.bold, { subset: true })) as unknown as PDFFont)
+    : fontRegular;
 
   const pickFont = (c: HwpxCharStyle): PDFFont => (c.bold ? fontBold : fontRegular);
   const meas: Measurer = { widthOf: (text, size) => fontRegular.widthOfTextAtSize(text, size) };
@@ -243,8 +255,11 @@ export async function renderHwpxToPdf(
     contentWidth: 0,
     height: 0,
     vertAnchor: null as number | null,
+    producerPage: 0,
   };
 
+  let lastCause = 'init';
+  const cause = () => lastCause;
   const newPage = (setup: HwpxPage): void => {
     state.page = pdf.addPage([setup.width, setup.height]);
     state.index = ++totalPages;
@@ -258,7 +273,7 @@ export async function renderHwpxToPdf(
   };
 
   const ensureSpace = (height: number, setup: HwpxPage): void => {
-    if (state.y + height > state.contentBottom) newPage(setup);
+    if (state.y + height > state.contentBottom) { lastCause = 'ensureSpace'; newPage(setup); } onBreak?.(cause());
   };
 
   const page = (): PDFPage => state.page;
@@ -349,17 +364,96 @@ export async function renderHwpxToPdf(
   };
 
   /**
-   * Line positions taken from the producer's linesegarray. Hangul stores
-   * ABSOLUTE positions from the page text-area top: vertpos grows through
-   * the page and resets when a new page starts (a paragraph spanning pages
-   * is split by the producer). A reset is detected when a paragraph's first
-   * line sits above the current flow position → new page.
+   * Producer pagination, pre-computed from the linesegarrays alone: within
+   * one producer page vertpos never decreases and never exceeds one page of
+   * capacity, so a drop (or overflow) marks a page boundary. Every paragraph
+   * that carries a linesegarray — including ones hosting tables/images —
+   * gets a (producer page, page anchor) pair; drawing then follows the
+   * producer's pagination exactly instead of re-deriving it at runtime.
    */
-  const drawParaWithSegs = (para: HwpxPara, segs: HwpxLineSeg[], setup: HwpxPage): void => {
+  interface ParaPlacement {
+    page: number;
+    anchor: number;
+  }
+
+  const computePlacements = (
+    blocks: import('./hwpx-parse').HwpxBlock[],
+    setup: HwpxPage,
+  ): { map: Map<HwpxPara, ParaPlacement>; pageAnchors: number[] } => {
+    const capacity = Math.max(1000, (setup.height - setup.margin.bottom - setup.margin.top) * 100);
+    const map = new Map<HwpxPara, ParaPlacement>();
+    const pageAnchors: number[] = [];
+    const segParas = blocks.filter(
+      (b): b is HwpxPara => b.kind === 'p' && !!b.lineSegs && b.lineSegs.length > 0,
+    );
+    let anchor: number | null = null;
+    let maxVert: number | null = null;
+    for (let i = 0; i < segParas.length; i += 1) {
+      const b = segParas[i];
+      const segs = b.lineSegs as HwpxLineSeg[];
+      const v0 = segs[0].vertpos;
+      const isDrop = maxVert !== null && v0 < maxVert - 1000 && v0 <= 12000;
+      const isCapacity = v0 - (anchor ?? v0) > capacity;
+      if (anchor !== null && (isDrop || isCapacity)) {
+        // Real page starts stay below the old page's max; floating-object
+        // content (text boxes) dips below for a few paragraphs and then the
+        // body resumes ABOVE the old max. Look ahead to tell them apart.
+        let resumed = false;
+        if (isDrop && !isCapacity) {
+          for (let j = i + 1; j < Math.min(i + 8, segParas.length); j += 1) {
+            const w0 = (segParas[j].lineSegs as HwpxLineSeg[])[0].vertpos;
+            if (w0 > (maxVert as number) - 1000) {
+              resumed = true;
+              break;
+            }
+          }
+        }
+        if (!resumed) {
+          anchor = v0;
+          pageAnchors.push(anchor);
+          maxVert = null;
+        }
+      }
+      const last = segs[segs.length - 1];
+      maxVert = Math.max(maxVert ?? last.vertpos, last.vertpos);
+      if (anchor === null) {
+        anchor = v0;
+        pageAnchors.push(anchor);
+      }
+      map.set(b, { page: pageAnchors.length - 1, anchor });
+    }
+    return { map, pageAnchors };
+  };
+
+  /** Advance the canvas to the producer page a paragraph belongs to. */
+  const advanceToProducerPage = (placement: ParaPlacement, setup: HwpxPage): void => {
+    while (state.producerPage < placement.page) {
+      lastCause = 'producer-page';
+      newPage(setup);
+      onBreak?.(cause());
+      state.producerPage += 1;
+    }
+    state.vertAnchor = placement.anchor;
+  };
+
+  /** Producer-declared paragraph bottom, session-relative. */
+  const paraSegBottom = (segs: HwpxLineSeg[], setup: HwpxPage): number => {
+    const last = segs[segs.length - 1];
+    return (
+      setup.margin.top +
+      (last.vertpos + last.vertsize + last.spacing - (state.vertAnchor ?? last.vertpos)) / 100
+    );
+  };
+
+  const drawParaWithSegs = (
+    para: HwpxPara,
+    segs: HwpxLineSeg[],
+    setup: HwpxPage,
+    placement: ParaPlacement,
+  ): void => {
     const tokens = collectTokens(para.items);
     if (!tokens) return;
     const style = para.style;
-    const abs = (vertposHwp: number): number => setup.margin.top + vertposHwp / 100;
 
     if (tokens.length > 0) {
       // alignment sanity: char offsets must cover the token stream
@@ -376,19 +470,17 @@ export async function renderHwpxToPdf(
         const end = li + 1 < segs.length ? segs[li + 1].textpos : tokens.length;
         if (end <= start) continue;
 
-        // page detection: within a page vertpos never decreases; a drop
-        // means the producer moved to the next page
-        if (state.vertAnchor === null) state.vertAnchor = seg.vertpos;
-        if (seg.vertpos < state.vertAnchor) {
-          newPage(setup);
-          state.vertAnchor = seg.vertpos;
-        }
-
         const lineTokens = tokens.slice(start, end);
-        const baseline = abs(seg.vertpos + seg.baseline);
-        // safety: producer overflow (shouldn't happen) → advance to next page
-        if (baseline > state.contentBottom + seg.vertsize / 100) {
+        const anchor = placement.anchor;
+        const baseline = setup.margin.top + (seg.vertpos + seg.baseline - anchor) / 100;
+        const lineTop = setup.margin.top + (seg.vertpos - anchor) / 100;
+        // safety: never draw below the content area (desyncs producerPage,
+        // but only happens when our measurements exceed the producer's)
+        if (lineTop + seg.vertsize / 100 > state.contentBottom + 1) {
+          lastCause = 'seg-overflow';
           newPage(setup);
+          onBreak?.(cause());
+          state.producerPage += 1;
           state.vertAnchor = seg.vertpos;
         }
 
@@ -426,11 +518,9 @@ export async function renderHwpxToPdf(
       }
     }
 
-    const lastSeg = segs[segs.length - 1];
-    const segBottom = abs(lastSeg.vertpos + lastSeg.vertsize + lastSeg.spacing);
     // absolute placement must never move the flow cursor backwards
     // (tables / fallback paragraphs may already have drawn further down)
-    state.y = Math.max(state.y, segBottom);
+    state.y = Math.max(state.y, paraSegBottom(segs, setup));
   };
 
   const layoutCell = (cell: HwpxCell, width: number): CellParaLayout[] =>
@@ -516,56 +606,84 @@ export async function renderHwpxToPdf(
     const colLeft = (c: number): number =>
       state.contentLeft + widths.slice(0, c).reduce((a, b) => a + b, 0);
 
-    // whole-table height (rows are not split across pages yet)
-    const tableHeight = rowHeights.reduce((a, b) => a + b, 0);
-    const pageCapacity = state.contentBottom - setup.margin.top;
-    if (state.y + tableHeight > state.contentBottom && tableHeight <= pageCapacity) {
-      newPage(setup);
-    }
-
-    const tableTop = state.y;
+    // draw row by row, splitting across pages when a row doesn't fit
+    const rowsMap = new Map<number, GridCell[]>();
     for (const c of cells) {
-      const left = colLeft(c.col);
-      const top = tableTop + rowHeights.slice(0, c.row).reduce((a, b) => a + b, 0);
-      const w = widths.slice(c.col, c.col + c.colSpan).reduce((a, b) => a + b, 0);
-      const h = rowHeights.slice(c.row, c.row + c.rowSpan).reduce((a, b) => a + b, 0);
-      const layouts = cellLayouts.get(c) ?? [];
-      const innerTop = top + c.cell.margin.top;
-      drawCellContent(layouts, left + c.cell.margin.left, innerTop);
-
-      const fill = c.cell.borderFillId ? doc.borderFills.get(c.cell.borderFillId) : undefined;
-      const sides: ['top' | 'bottom' | 'left' | 'right', number, number, number, number][] = [
-        ['top', left, top, left + w, top],
-        ['bottom', left, top + h, left + w, top + h],
-        ['left', left, top, left, top + h],
-        ['right', left + w, top, left + w, top + h],
-      ];
-      for (const [side, x1, y1, x2, y2] of sides) {
-        const s = borderSide(fill, side);
-        if (!s || s.type === 'NONE') continue;
-        page().drawLine({
-          start: { x: x1, y: lineY(y1) },
-          end: { x: x2, y: lineY(y2) },
-          thickness: Math.max(0.3, s.widthPt),
-          color: colorOf(s.color),
-        });
-      }
+      const list = rowsMap.get(c.row) ?? [];
+      list.push(c);
+      rowsMap.set(c.row, list);
     }
-    state.y = tableTop + tableHeight;
+
+    let rowTop = state.y;
+    for (let r = 0; r < rowCount; r += 1) {
+      const rh = rowHeights[r];
+      const rowCells = rowsMap.get(r) ?? [];
+      if (rowTop + rh > state.contentBottom && rh <= state.contentBottom - setup.margin.top) {
+        lastCause = 'table-row-split';
+        newPage(setup);
+        onBreak?.(cause());
+        rowTop = setup.margin.top;
+      }
+      for (const c of rowCells) {
+        const left = colLeft(c.col);
+        const top = rowTop;
+        const w = widths.slice(c.col, c.col + c.colSpan).reduce((a, b) => a + b, 0);
+        const h = rowHeights.slice(c.row, c.row + c.rowSpan).reduce((a, b) => a + b, 0);
+        const layouts = cellLayouts.get(c) ?? [];
+        drawCellContent(layouts, left + c.cell.margin.left, top + c.cell.margin.top);
+
+        const fill = c.cell.borderFillId ? doc.borderFills.get(c.cell.borderFillId) : undefined;
+        const sides: ['top' | 'bottom' | 'left' | 'right', number, number, number, number][] = [
+          ['top', left, top, left + w, top],
+          ['bottom', left, top + h, left + w, top + h],
+          ['left', left, top, left, top + h],
+          ['right', left + w, top, left + w, top + h],
+        ];
+        for (const [side, x1, y1, x2, y2] of sides) {
+          const s = borderSide(fill, side);
+          if (!s || s.type === 'NONE') continue;
+          page().drawLine({
+            start: { x: x1, y: lineY(y1) },
+            end: { x: x2, y: lineY(y2) },
+            thickness: Math.max(0.3, s.widthPt),
+            color: colorOf(s.color),
+          });
+        }
+      }
+      rowTop += rh;
+    }
+    state.y = rowTop;
   };
 
-  const drawPara = async (para: HwpxPara, setup: HwpxPage): Promise<void> => {
+  const drawPara = async (
+    para: HwpxPara,
+    setup: HwpxPage,
+    placements: Map<HwpxPara, ParaPlacement>,
+  ): Promise<void> => {
     state.y += para.style.spaceBeforePt;
     const hasNonText = para.items.some((i) => i.kind === 'img' || i.kind === 'tbl');
     const textItems = para.items.filter(
       (i): i is Extract<HwpxParaItem, { kind: 'text' | 'field' }> => i.kind === 'text' || i.kind === 'field',
     );
 
-    if (textItems.length && para.lineSegs && !hasNonText) {
-      drawParaWithSegs(para, para.lineSegs, setup);
+    // follow the producer's pagination: advance to the page this paragraph
+    // belongs to (tables/images hosted here land there too)
+    const placement = para.lineSegs ? placements.get(para) : undefined;
+    if (placement) advanceToProducerPage(placement, setup);
+    const producerTop =
+      placement && para.lineSegs
+        ? setup.margin.top + (para.lineSegs[0].vertpos - placement.anchor) / 100
+        : null;
+
+    if (textItems.length && para.lineSegs && !hasNonText && placement) {
+      drawParaWithSegs(para, para.lineSegs, setup, placement);
     } else if (textItems.length) {
       const lines = wrapText(textItems, state.contentWidth - para.style.indentPt, meas);
       lines.forEach((line, i) => drawLine(line, para, i === lines.length - 1, setup));
+    }
+
+    if (hasNonText && producerTop !== null && state.y < producerTop) {
+      state.y = producerTop;
     }
 
     for (const item of para.items) {
@@ -592,13 +710,17 @@ export async function renderHwpxToPdf(
         drawTable(item, setup);
       }
     }
+    if (para.lineSegs) state.y = Math.max(state.y, paraSegBottom(para.lineSegs, setup));
     state.y += para.style.spaceAfterPt;
   };
 
   for (const section of doc.sections) {
     newPage(section.page);
+    state.producerPage = 0;
+    const { map: placements, pageAnchors } = computePlacements(section.blocks, section.page);
+    state.vertAnchor = pageAnchors[0] ?? null;
     for (const block of section.blocks) {
-      if (block.kind === 'p') await drawPara(block, section.page);
+      if (block.kind === 'p') await drawPara(block, section.page, placements);
       else drawTable(block as HwpxTable, section.page);
     }
   }

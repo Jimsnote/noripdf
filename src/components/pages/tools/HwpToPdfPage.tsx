@@ -3,15 +3,15 @@ import type { Dictionary } from '@/i18n/locales/ko';
 import { HwpxToPdfTool } from '@/components/tools/HwpxToPdfTool';
 import { ToolPageScaffold } from './ToolPageScaffold';
 
-interface HwpxToPdfPageProps {
+interface HwpToPdfPageProps {
   locale: Locale;
   dict: Dictionary;
 }
 
-export function HwpxToPdfPage({ locale, dict }: HwpxToPdfPageProps) {
+export function HwpToPdfPage({ locale, dict }: HwpToPdfPageProps) {
   return (
-    <ToolPageScaffold locale={locale} dict={dict} slug="hwpx-to-pdf">
-      <HwpxToPdfTool dict={dict} slug="hwpx-to-pdf" />
+    <ToolPageScaffold locale={locale} dict={dict} slug="hwp-to-pdf">
+      <HwpxToPdfTool dict={dict} slug="hwp-to-pdf" />
     </ToolPageScaffold>
   );
 }

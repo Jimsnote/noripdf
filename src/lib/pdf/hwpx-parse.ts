@@ -515,5 +515,10 @@ export async function parseHwpx(bytes: Uint8Array): Promise<HwpxDoc> {
   }
 
   if (sections.length === 0) throw new HwpxError('empty');
+  const totalItems = sections.reduce(
+    (s, x) => s + x.blocks.reduce((a, b) => a + (b.kind === 'p' ? b.items.length : 1), 0),
+    0,
+  );
+  if (totalItems === 0) throw new HwpxError('empty');
   return { title, encrypted: false, sections, borderFills };
 }

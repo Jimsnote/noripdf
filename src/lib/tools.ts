@@ -21,6 +21,7 @@ import {
   ImagePlus,
   QrCode,
   ScanText,
+  FileArchive,
   type LucideIcon,
 } from 'lucide-react';
 import type { Dictionary } from '@/i18n/locales/ko';
@@ -51,6 +52,7 @@ export const tools: Tool[] = [
   { slug: 'docx-to-markdown', icon: FileType, i18nKey: 'docx-to-markdown', status: 'live' },
   { slug: 'xlsx-to-markdown', icon: FileSpreadsheet, i18nKey: 'xlsx-to-markdown', status: 'live' },
   { slug: 'hwpx-to-pdf', icon: FileText, i18nKey: 'hwpx-to-pdf', status: 'live' },
+  { slug: 'hwp-to-pdf', icon: FileArchive, i18nKey: 'hwp-to-pdf', status: 'live' },
   { slug: 'extract-images', icon: Images, i18nKey: 'extract-images', status: 'live' },
   { slug: 'pdf-to-jpg', icon: Image, i18nKey: 'pdf-to-jpg', status: 'live' },
   { slug: 'jpg-to-pdf', icon: FileImage, i18nKey: 'jpg-to-pdf', status: 'live' },

@@ -3,20 +3,23 @@
 import { useEffect, useState } from 'react';
 import { FileText, Loader2, Trash2 } from 'lucide-react';
 import type { Dictionary } from '@/i18n/locales/ko';
-import { hwpxToPdf, hwpxErrorKey } from '@/lib/pdf/hwpx';
-import { FileDropzone } from './FileDropzone';
+import { hwpxToPdf, hwpxErrorKey, type HwpxProgress } from '@/lib/pdf/hwpx';
+import { FileDropzone, type AcceptedKind } from './FileDropzone';
 import { ToolShell } from './ToolShell';
 import { DownloadCard, formatBytes } from './DownloadCard';
+import { ChainNext } from './ChainNext';
 import { pdfBlob } from './blob';
 
 interface HwpxToPdfToolProps {
   dict: Dictionary;
+  slug: 'hwpx-to-pdf' | 'hwp-to-pdf';
 }
 
 interface Result {
   name: string;
   size: number;
   url: string;
+  blob: Blob;
 }
 
 interface Progress {
@@ -29,13 +32,15 @@ const MAX_SIZE_BYTES = 100 * 1024 * 1024;
 const MOBILE_MAX_BYTES = 50 * 1024 * 1024;
 
 /**
- * HWPX(한글 2024+) → PDF. Pure in-browser pipeline: OPC zip parse, a small
- * layout engine, pdf-lib output with the embedded Nanum Gothic (OFL).
- * First use downloads the Korean font (~4 MB) with progress, then caches it.
+ * HWPX(한글 2014+) / HWP(한글 2002+) → PDF. Pure in-browser pipeline: OPC
+ * zip parse (or HWP→HWPX conversion, dynamically imported so the binary
+ * parser stays out of the HWPX page bundle), a layout engine driven by the
+ * producer's own line data, pdf-lib output with the embedded Nanum family
+ * (OFL). Fonts download lazily on first use (~4–6 MB) with progress.
  */
-export function HwpxToPdfTool({ dict }: HwpxToPdfToolProps) {
+export function HwpxToPdfTool({ dict, slug }: HwpxToPdfToolProps) {
   const ui = dict.toolUi;
-  const copy = dict.toolPages['hwpx-to-pdf'];
+  const copy = dict.toolPages[slug];
   const [file, setFile] = useState<File | null>(null);
   const [maxSizeBytes, setMaxSizeBytes] = useState(MAX_SIZE_BYTES);
   const [busy, setBusy] = useState(false);
@@ -59,9 +64,16 @@ export function HwpxToPdfTool({ dict }: HwpxToPdfToolProps) {
     setBusy(true);
     setError(null);
     setResult(null);
+    let convert: (b: Uint8Array, cb?: (p: HwpxProgress) => void) => Promise<{ pdfBytes: Uint8Array; pageCount: number }> = hwpxToPdf;
+    let keyFn: (err: unknown) => string = hwpxErrorKey;
     try {
       const bytes = new Uint8Array(await file.arrayBuffer());
-      const { pdfBytes } = await hwpxToPdf(bytes, (p) => {
+      if (slug === 'hwp-to-pdf') {
+        const m = await import('@/lib/pdf/hwp');
+        convert = m.hwpToPdf;
+        keyFn = m.hwpErrorKey;
+      }
+      const onProgress = (p: HwpxProgress) => {
         if (p.stage === 'engine') {
           setProgress({ stage: 'engine', ratio: p.ratio });
         } else if (p.stage === 'parse') {
@@ -69,14 +81,21 @@ export function HwpxToPdfTool({ dict }: HwpxToPdfToolProps) {
         } else {
           setProgress({ stage: 'render', ratio: 0, pages: p.pages ?? 0 });
         }
-      });
+      };
+      const { pdfBytes } = await convert(bytes, onProgress);
       const blob = pdfBlob(pdfBytes);
-      setResult({ name: 'converted.pdf', size: blob.size, url: URL.createObjectURL(blob) });
+      setResult({ name: 'converted.pdf', size: blob.size, url: URL.createObjectURL(blob), blob });
     } catch (err) {
-      const key = hwpxErrorKey(err);
-      setError(
-        key === 'encrypted' ? copy.errorEncrypted : key === 'empty' ? copy.errorEmpty : copy.errorInvalid,
-      );
+      const key = keyFn(err);
+      const extra = copy as { errorUnsupported?: string; errorEngine?: string };
+      const messages: Record<string, string> = {
+        encrypted: copy.errorEncrypted,
+        empty: copy.errorEmpty,
+        invalid: copy.errorInvalid,
+        unsupported: extra.errorUnsupported ?? copy.errorInvalid,
+        engine: extra.errorEngine ?? copy.errorInvalid,
+      };
+      setError(messages[key] ?? copy.errorInvalid);
     } finally {
       setBusy(false);
       setProgress(null);
@@ -102,7 +121,7 @@ export function HwpxToPdfTool({ dict }: HwpxToPdfToolProps) {
       upload={
         <>
           <FileDropzone
-            accept="hwpx"
+            accept={slug === 'hwp-to-pdf' ? ('hwp' as AcceptedKind) : ('hwpx' as AcceptedKind)}
             multiple={false}
             maxFiles={1}
             currentCount={file ? 1 : 0}
@@ -172,13 +191,16 @@ export function HwpxToPdfTool({ dict }: HwpxToPdfToolProps) {
       }
       result={
         result ? (
-          <DownloadCard
-            fileName={result.name}
-            sizeBytes={result.size}
-            url={result.url}
-            title={ui.readyTitle}
-            downloadLabel={ui.download}
-          />
+          <>
+            <DownloadCard
+              fileName={result.name}
+              sizeBytes={result.size}
+              url={result.url}
+              title={ui.readyTitle}
+              downloadLabel={ui.download}
+            />
+            <ChainNext dict={dict} slug={slug} blob={result.blob} fileName={result.name} />
+          </>
         ) : undefined
       }
     />
