@@ -8,17 +8,18 @@
 
 ## 1. 项目一句话
 
-CPdf（品牌 2026-09 由 CoolPDF 更名，规避与 coolpdf.com 撞名；域名 getcoolpdf.com 不变）是**面向韩国用户的纯浏览器端 PDF 工具站**（类 ilovepdf.com），**零后端**：全部 22 个工具的处理都在浏览器（JS/WASM/Web Worker）完成。核心卖点三支柱（韩语固定术语见 ko.ts，此处不转写避免错字）：**无上传（文件永不离开设备）/ 免注册 / 永久免费**。变现目标 Google AdSense（未接入，接入清单见 `docs/TODO.md`）。
+NoriPDF（品牌沿革：CoolPDF → CPdf → NoriPDF；2026-09 起主攻韩国市场，弃用 getcoolpdf.com）是**面向韩国用户的纯浏览器端 PDF 工具站**（类 ilovepdf.com），**零后端**：全部 22 个工具的处理都在浏览器（JS/WASM/Web Worker）完成。核心卖点三支柱（韩语固定术语见 ko.ts，此处不转写避免错字）：**无上传（文件永不离开设备）/ 免注册 / 永久免费**。变现目标 Google AdSense（未接入，接入清单见 `docs/TODO.md`）。
 
-- **线上**：https://getcoolpdf.com（Cloudflare Workers Static Assets，www 已 301 到主域）
-- **仓库**：https://github.com/Jimsnote/coolpdf（Public，**AGPL-3.0**——因压缩用 Ghostscript WASM）
+- **线上**：https://noripdf.com（Cloudflare Workers Static Assets；www 计划 301 到主域，同旧站做法）
+- **仓库**：https://github.com/Jimsnote/noripdf（由 Jimsnote/coolpdf 改名而来，Public，**AGPL-3.0**——因压缩用 Ghostscript WASM）
+- **旧站**：getcoolpdf.com 已弃用（无流量）；旧 worker `coolpdf` 停用构建待拆除
 - **域名**：Cloudflare Registrar，~$10.44/年
 
 ## 2. 技术栈与硬约束
 
 - Next.js 15（App Router，`output: 'export'` 静态导出到 `out/`）+ React 19 + TypeScript **strict** + Tailwind 3.4
 - Node 22（`.nvmrc` + `engines: >=20 <23`，勿升级换大版本）
-- 韩语单语 i18n：**ko 为唯一语言兼默认语言，全部页面在根路径（无前缀）**；route group 单根布局 `src/app/(ko)/`（`<html lang="ko">`）。旧 7 语言前缀 URL 由 `public/_redirects` 301 到对应根路径页面
+- 韩语单语 i18n：**ko 为唯一语言兼默认语言，全部页面在根路径（无前缀）**；route group 单根布局 `src/app/(ko)/`（`<html lang="ko">`）。`public/_redirects` 保留旧 7 语言前缀 URL 的 301（来自 getcoolpdf.com 时代，无害）
 - 核心库：`@cantoo/pdf-lib`（页面对象操作，**必须经 `src/lib/pdf/pdf-lib.ts` 的 `getPdfLib()` 动态 import，禁止静态 import 进首屏**）、`pdfjs-dist` v6（渲染/文本提取，懒加载经 `src/lib/pdf/pdfjs.ts`）、`@jspawn/ghostscript-wasm` + `@jspawn/qpdf-wasm`（Worker 内）、`heic-to/csp`（HEIC 解码，**LGPL-3.0**，libheif wasm 内嵌、blob URL 起 Worker，零 eval 过 CSP，懒加载）、jszip、@dnd-kit
 - 部署：`wrangler.jsonc`（assets → ./out）+ Deploy command `npx wrangler deploy`；`public/_headers`（CSP）；`scripts/copy-wasm.mjs`（postinstall+prebuild 生成 `public/wasm/`（含 manifest.json）与 `public/tesseract/`（OCR 引擎/语言包），两目录均 gitignore）
 - PWA：`public/sw.js`（Service Worker，访问过的页面与静态资源离线可用）+ `public/manifest.webmanifest` + `src/components/layout/ServiceWorkerRegister.tsx`（仅生产注册）
@@ -51,7 +52,7 @@ src/
 │   ├── seo/             # JsonLd / FactSummary（GEO 定型文案）
 │   └── ads/AdBanner.tsx # 未放置；env 控制
 ├── i18n/locales/ko.ts   # 唯一字典，**Dictionary 类型源头**（`export type Dictionary = typeof ko`，结构即契约）
-├── lib/site.ts          # SITE_URL / GITHUB_URL（env 可覆盖）
+├── lib/site.ts          # SITE_URL（默认 https://noripdf.com）/ GITHUB_URL / CONTACT_EMAIL（support@noripdf.com，CF Email Routing 转发）
 ├── lib/seo.ts           # buildAlternates / pageMetadata / localizedPath / OG_IMAGE_URL
 ├── lib/tools.ts         # 22 工具注册表（slug/图标/status）
 ├── lib/guides/          # 教程内容系统（韩语）：types.ts + index.ts 注册表 + 每篇一个 <slug>.ts 数据文件
@@ -77,6 +78,6 @@ src/
 
 ## 7. 当前状态与下一步
 
-- 已完成：M1-M4 工具全量（22 个）+ SEO/GEO 基建；三路对抗审查 + 两批修复闭环；上线；www 统一；压缩/保护/解锁生产实测通过；siritools 对标批次①-④（上传计数器、FAQ 首句加粗、工具链推荐、PWA、QR 码、OCR）；**2026-09 韩语单语化 + 品牌更名 CPdf**（删除 7 语言及 `(i18n)/[locale]` 路由、新增 ko.ts 全量字典、guides/compare/llms.txt/manifest 全韩化、OCR 升级 eng+kor 双语种识别、旧前缀 URL 走 `_redirects` 301）
+- 已完成：M1-M4 工具全量（22 个）+ SEO/GEO 基建；三路对抗审查 + 两批修复闭环；上线；www 统一；压缩/保护/解锁生产实测通过；siritools 对标批次①-④（上传计数器、FAQ 首句加粗、工具链推荐、PWA、QR 码、OCR）；**2026-09 韩语单语化 + 品牌更名（CoolPDF→CPdf→NoriPDF，域名 noripdf.com）**（删除 7 语言及 `(i18n)/[locale]` 路由、新增 ko.ts 全量字典、guides/compare/llms.txt/manifest 全韩化、OCR 升级 eng+kor 双语种识别、旧前缀 URL 走 `_redirects` 301）
 - 进行中/待办：`docs/TODO.md`（Search Console / Naver Search Advisor 提交 → 养收录 → AdSense；二期：证件照排版；OCR 更多语言）
 - 已知限制：文字水印 canvas 路径、EXIF 重编码路径未经 Node 测试（浏览器已人工验收）；qpdf AES-256 下 accessibility 权限不生效（规范行为，FAQ 已说明）
