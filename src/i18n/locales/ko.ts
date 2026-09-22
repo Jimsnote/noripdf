@@ -143,6 +143,10 @@ export const ko = {
       name: 'XLSX를 Markdown으로',
       description: '스프레드시트 시트를 Markdown 표로 만드세요.',
     },
+    'hwpx-to-pdf': {
+      name: 'HWPX를 PDF로',
+      description: '한글 문서를 어디서나 열리는 PDF로 변환하세요.',
+    },
     'extract-images': {
       name: '이미지 추출',
       description: 'PDF에 내장된 모든 이미지를 꺼내세요.',
@@ -423,6 +427,7 @@ export const ko = {
     dropDocx: 'Word 문서(.docx)를 여기에 놓거나 클릭해서 찾아보세요',
     dropExcel: 'Excel 워크북(.xlsx/.xls)을 여기에 놓거나 클릭해서 찾아보세요',
     dropHeic: 'HEIC 또는 HEIF 사진을 여기에 놓거나 클릭해서 찾아보세요',
+    dropHwpx: 'HWPX 파일을 여기에 놓거나 클릭해서 찾아보세요',
     moveUp: '위로 이동',
     moveDown: '아래로 이동',
     remove: '제거',
@@ -440,6 +445,7 @@ export const ko = {
       onlyDocx: '.docx Word 문서만 지원됩니다(구형 .doc은 지원되지 않음).',
       onlyExcel: 'Excel 워크북(.xlsx/.xls)만 지원됩니다.',
       onlyHeic: 'HEIC/HEIF 사진만 지원됩니다.',
+      onlyHwpx: 'HWPX(.hwpx) 파일만 지원합니다.',
       noImages: '이 PDF에서 내장된 이미지를 찾지 못했습니다.',
       tooManyFiles: '최대 {max}개의 파일까지 추가할 수 있습니다.',
       fileTooLarge: '"{name}"이(가) 너무 큽니다. 파일당 최대 {max} MB입니다.',
@@ -1017,6 +1023,49 @@ export const ko = {
         {
           question: '.xls 파일은 어떻게 되나요?',
           answer: '최신 .xlsx와 구형 .xls 워크북 모두 지원됩니다.',
+        },
+      ],
+    },
+    'hwpx-to-pdf': {
+      metaTitle: 'HWPX를 PDF로 — 온라인 무료, 업로드 없이 | NoriPDF',
+      metaDescription:
+        '한글(HWPX) 문서를 PDF로 변환하세요. 서식·표·이미지 유지. 100% 브라우저 내 처리, 업로드 없음, 가입 없이, 영원히 무료.',
+      heading: 'HWPX를 PDF로',
+      intro:
+        '한글(Hancom Hangul) 2014 이상의 기본 문서 형식인 HWPX를 PDF로 변환하세요. 글자 서식, 표, 이미지를 유지하며, 모든 처리는 100% 브라우저 안에서 로컬로 이루어집니다. 파일은 기기를 떠나지 않습니다.',
+      button: 'PDF로 변환',
+      stepsHeading: 'HWPX를 PDF로 변환하는 방법',
+      steps: [
+        'HWPX 파일을 업로드 영역에 놓거나 클릭해서 찾아보세요.',
+        '"PDF로 변환"을 클릭하세요. 처음 사용할 때만 한글 폰트 나눔고딕(약 4 MB)을 다운로드하며 진행 상황이 표시됩니다. 변환은 브라우저에서 로컬로 실행됩니다.',
+        'converted.pdf 파일을 다운로드하세요.',
+      ],
+      statusFonts: '한글 폰트(Nanum Gothic)를 불러오는 중… {percent}%',
+      statusParse: '문서를 분석하는 중…',
+      statusRender: 'PDF로 만들고 있습니다…',
+      statusRenderDone: '{pages}페이지 PDF를 만들었습니다.',
+      errorEncrypted: '이 HWPX 파일은 암호로 보호되어 있습니다. 암호를 해제한 후 다시 시도해 주세요.',
+      errorEmpty: '문서에서 변환할 내용을 찾지 못했습니다. 파일이 손상되었거나 지원하지 않는 구성일 수 있습니다.',
+      errorInvalid: '올바른 HWPX 파일이 아닙니다. 한글 2014 이상에서 저장한 .hwpx 파일인지 확인해 주세요.',
+      privacyHeading: '한글 문서는 기기 안에서 안전하게 PDF로',
+      privacyText:
+        '한글로 작성된 문서는 공문서, 계약서, 견적서, 제안서처럼 민감한 내용이 많습니다. 이런 문서를 변환하려고 서버에 업로드하는 순간, 통제할 수 없는 인프라에 내용이 노출될 수 있습니다. NoriPDF는 변환을 전적으로 브라우저 안에서 처리합니다. 문서는 사용자의 기기에서 읽히고 PDF로 다시 저장되며, 업로드되는 것은 아무것도 없습니다. 탭을 닫으면 모든 흔적이 사라집니다.',
+      faqHeading: '자주 묻는 질문',
+      faq: [
+        {
+          question: '어떤 형식을 지원하나요?',
+          answer:
+            'HWPX(한글 2014 이상, OWPML 문서 형식)만 지원합니다. 이전 이진 .hwp 형식이나 암호로 보호된 HWPX 파일은 지원하지 않습니다.',
+        },
+        {
+          question: '서식은 얼마나 유지되나요?',
+          answer:
+            '글자 크기, 굵게, 밑줄, 색상, 정렬, 표, 이미지는 유지됩니다. 머리글, 바닥글, 각주, 자동 번호 매기기, 문서에 임베드된 글꼴은 현재 변환되지 않으며, 출력에는 OFL 라이선스 나눔고딕이 내장되어 원문 글꼴과 미세하게 다를 수 있습니다. 기울임꼴은 보통체로 출력됩니다.',
+        },
+        {
+          question: '파일은 안전한가요? 크기 제한은 어떻게 되나요?',
+          answer:
+            '모든 처리는 100% 브라우저 안에서 이루어지며 파일은 업로드되지 않습니다. 파일 크기 제한은 100 MB(모바일 50 MB)입니다. 처음 사용할 때만 한글 폰트 약 4 MB를 다운로드하며, 이후에는 기기에 캐시됩니다.',
         },
       ],
     },

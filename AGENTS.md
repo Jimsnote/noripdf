@@ -8,7 +8,7 @@
 
 ## 1. 项目一句话
 
-NoriPDF（品牌沿革：CoolPDF → CPdf → NoriPDF；2026-09 起主攻韩国市场，弃用 getcoolpdf.com）是**面向韩国用户的纯浏览器端 PDF 工具站**（类 ilovepdf.com），**零后端**：全部 22 个工具的处理都在浏览器（JS/WASM/Web Worker）完成。核心卖点三支柱（韩语固定术语见 ko.ts，此处不转写避免错字）：**无上传（文件永不离开设备）/ 免注册 / 永久免费**。变现目标 Google AdSense（未接入，接入清单见 `docs/TODO.md`）。
+NoriPDF（品牌沿革：CoolPDF → CPdf → NoriPDF；2026-09 起主攻韩国市场，弃用 getcoolpdf.com）是**面向韩国用户的纯浏览器端 PDF 工具站**（类 ilovepdf.com），**零后端**：全部 23 个工具的处理都在浏览器（JS/WASM/Web Worker）完成。核心卖点三支柱（韩语固定术语见 ko.ts，此处不转写避免错字）：**无上传（文件永不离开设备）/ 免注册 / 永久免费**。变现目标 Google AdSense（未接入，接入清单见 `docs/TODO.md`）。
 
 - **线上**：https://noripdf.com（Cloudflare Workers Static Assets；www 计划 301 到主域，同旧站做法）
 - **仓库**：https://github.com/Jimsnote/noripdf（由 Jimsnote/coolpdf 改名而来，Public，**AGPL-3.0**——因压缩用 Ghostscript WASM）
@@ -54,7 +54,7 @@ src/
 ├── i18n/locales/ko.ts   # 唯一字典，**Dictionary 类型源头**（`export type Dictionary = typeof ko`，结构即契约）
 ├── lib/site.ts          # SITE_URL（默认 https://noripdf.com）/ GITHUB_URL / CONTACT_EMAIL（support@noripdf.com，CF Email Routing 转发）
 ├── lib/seo.ts           # buildAlternates / pageMetadata / localizedPath / OG_IMAGE_URL
-├── lib/tools.ts         # 22 工具注册表（slug/图标/status）
+├── lib/tools.ts         # 23 工具注册表（slug/图标/status）
 ├── lib/guides/          # 教程内容系统（韩语）：types.ts + index.ts 注册表 + 每篇一个 <slug>.ts 数据文件
 └── lib/pdf/             # 纯函数处理层（与 React 解耦，Node 可测）
 ```
@@ -78,6 +78,7 @@ src/
 
 ## 7. 当前状态与下一步
 
-- 已完成：M1-M4 工具全量（22 个）+ SEO/GEO 基建；三路对抗审查 + 两批修复闭环；上线；www 统一；压缩/保护/解锁生产实测通过；siritools 对标批次①-④（上传计数器、FAQ 首句加粗、工具链推荐、PWA、QR 码、OCR）；**2026-09 韩语单语化 + 品牌更名（CoolPDF→CPdf→NoriPDF，域名 noripdf.com）**（删除 7 语言及 `(i18n)/[locale]` 路由、新增 ko.ts 全量字典、guides/compare/llms.txt/manifest 全韩化、OCR 升级 eng+kor 双语种识别、旧前缀 URL 走 `_redirects` 301）
+- 已完成：M1-M4 工具全量（23 个）+ SEO/GEO 基建；三路对抗审查 + 两批修复闭环；上线；www 统一；压缩/保护/解锁生产实测通过；siritools 对标批次①-④（上传计数器、FAQ 首句加粗、工具链推荐、PWA、QR 码、OCR）；**2026-09 韩语单语化 + 品牌更名（CoolPDF→CPdf→NoriPDF，域名 noripdf.com）**（删除 7 语言及 `(i18n)/[locale]` 路由、新增 ko.ts 全量字典、guides/compare/llms.txt/manifest 全韩化、OCR 升级 eng+kor 双语种识别、旧前缀 URL 走 `_redirects` 301）
+- 新增 2026-09：第 23 个工具 **HWPX→PDF**（韩国 한글 2014+ 格式；自研 OPC/ZIP 解析 `lib/pdf/hwpx-parse.ts` + 迷你布局引擎 `hwpx-render.ts` + pdf-lib 输出；内嵌 OFL 的 Nanum Gothic，存 `public/fonts/` 懒加载带进度；纯 JS 无 WASM）。已知限制：머리글/바닥글/각주/자동번호/내장글꼴 미지원，斜体按正体输出，.hwp(구형) 与 암호 HWPX 不支持
 - 进行中/待办：`docs/TODO.md`（Search Console / Naver Search Advisor 提交 → 养收录 → AdSense；二期：证件照排版；OCR 更多语言）
 - 已知限制：文字水印 canvas 路径、EXIF 重编码路径未经 Node 测试（浏览器已人工验收）；qpdf AES-256 下 accessibility 权限不生效（规范行为，FAQ 已说明）

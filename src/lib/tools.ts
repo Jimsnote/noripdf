@@ -50,6 +50,7 @@ export const tools: Tool[] = [
   { slug: 'reorder-pages', icon: ArrowUpDown, i18nKey: 'reorder-pages', status: 'live' },
   { slug: 'docx-to-markdown', icon: FileType, i18nKey: 'docx-to-markdown', status: 'live' },
   { slug: 'xlsx-to-markdown', icon: FileSpreadsheet, i18nKey: 'xlsx-to-markdown', status: 'live' },
+  { slug: 'hwpx-to-pdf', icon: FileText, i18nKey: 'hwpx-to-pdf', status: 'live' },
   { slug: 'extract-images', icon: Images, i18nKey: 'extract-images', status: 'live' },
   { slug: 'pdf-to-jpg', icon: Image, i18nKey: 'pdf-to-jpg', status: 'live' },
   { slug: 'jpg-to-pdf', icon: FileImage, i18nKey: 'jpg-to-pdf', status: 'live' },

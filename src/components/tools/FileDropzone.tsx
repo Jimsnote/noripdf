@@ -6,7 +6,7 @@ import type { Dictionary } from '@/i18n/locales/ko';
 import { takeHandoff } from '@/lib/tool-handoff';
 import { UploadMeter } from './UploadMeter';
 
-type AcceptedKind = 'pdf' | 'images' | 'docx' | 'excel' | 'heic';
+type AcceptedKind = 'pdf' | 'images' | 'docx' | 'excel' | 'heic' | 'hwpx';
 
 interface FileDropzoneProps {
   accept: AcceptedKind;
@@ -27,6 +27,7 @@ function isAccepted(file: File, accept: AcceptedKind): boolean {
   const name = file.name.toLowerCase();
   if (accept === 'pdf') return file.type === 'application/pdf' || name.endsWith('.pdf');
   if (accept === 'docx') return name.endsWith('.docx');
+  if (accept === 'hwpx') return name.endsWith('.hwpx');
   if (accept === 'excel') return /\.(xlsx|xls)$/.test(name);
   if (accept === 'heic') {
     return (
@@ -99,6 +100,11 @@ export function FileDropzone({
       drop: toolUi.dropHeic,
       only: toolUi.errors.onlyHeic,
       acceptAttr: '.heic,.heif,image/heic,image/heif',
+    },
+    hwpx: {
+      drop: toolUi.dropHwpx,
+      only: toolUi.errors.onlyHwpx,
+      acceptAttr: '.hwpx,application/hwp+zip,application/haansofthwpx',
     },
   }[accept];
 
