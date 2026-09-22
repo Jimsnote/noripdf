@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   },
   description: SITE_TAGLINE,
   manifest: '/manifest.webmanifest',
+  verification: {
+    other: {
+      'naver-site-verification': 'f90bb6b16c59fd165b0fdec30633b6e7b498b314',
+    },
+  },
 };
 
 export const viewport: Viewport = {
