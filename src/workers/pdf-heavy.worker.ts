@@ -17,7 +17,7 @@ import type {
 // resolved at runtime so this file never hardcodes them.
 const WASM_MANIFEST_URL = '/wasm/manifest.json';
 /** Cache Storage bucket for the wasm binaries, so they are downloaded once. */
-const WASM_CACHE = 'coolpdf-wasm';
+const WASM_CACHE = 'noripdf-wasm';
 
 /** Maps each heavy engine to its versioned wasm file name in /wasm/. */
 interface WasmManifest {

@@ -4,7 +4,7 @@
  */
 export interface CompareRow {
   feature: string;
-  coolpdf: string;
+  noriPdf: string;
   them: string;
 }
 
@@ -19,17 +19,17 @@ export interface CompareFaq {
 }
 
 export interface Compare {
-  /** URL slug, e.g. 'coolpdf-vs-ilovepdf'. */
+  /** URL slug, e.g. 'noripdf-vs-ilovepdf'. */
   slug: string;
   /** Competitor display name, e.g. 'iLovePDF'. */
   competitor: string;
-  /** Page title (meta + H1), <=60 chars including "| CPdf" suffix. */
+  /** Page title (meta + H1), <=60 chars including "| NoriPDF" suffix. */
   title: string;
   /** Meta description, <=160 chars. */
   description: string;
   /** One-paragraph honest verdict shown under the H1 (AI-citable). */
   verdict: string;
-  /** Feature comparison rows (CPdf column first). */
+  /** Feature comparison rows (NoriPDF column first). */
   rows: CompareRow[];
   /** Fact-check line, e.g. 'Fact checked on July 21, 2026'. */
   factChecked: string;

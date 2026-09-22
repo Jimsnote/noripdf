@@ -12,8 +12,8 @@ export function generateMetadata(): Metadata {
   return pageMetadata(
     locale,
     '/compare',
-    'CPdf vs iLovePDF, Smallpdf, Sejda — 정직한 비교 | CPdf',
-    '사실 확인된 비교: 100% 로컬 처리, 영원히 무료, 무제한인 CPdf가 iLovePDF, Smallpdf, Sejda와 어떻게 다른지 — 상대가 진짜로 나은 부분까지 포함합니다.',
+    'NoriPDF vs iLovePDF, Smallpdf, Sejda — 정직한 비교 | NoriPDF',
+    '사실 확인된 비교: 100% 로컬 처리, 영원히 무료, 무제한인 NoriPDF가 iLovePDF, Smallpdf, Sejda와 어떻게 다른지 — 상대가 진짜로 나은 부분까지 포함합니다.',
   );
 }
 

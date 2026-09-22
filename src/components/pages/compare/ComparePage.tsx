@@ -10,7 +10,7 @@ interface ComparePageProps {
 
 /**
  * Renders a /compare/ page: breadcrumb, H1, honest verdict, feature
- * comparison table (CPdf column highlighted), the competitor's genuine
+ * comparison table (NoriPDF column highlighted), the competitor's genuine
  * strengths, fact-check line with sources, FAQ accordion, and a closing CTA.
  * Emits Article and FAQPage JSON-LD from the same data as the visible content.
  */
@@ -50,7 +50,7 @@ export function ComparePage({ compare }: ComparePageProps) {
       </nav>
 
       <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-        {compare.title.replace(/ \| CPdf$/, '')}
+        {compare.title.replace(/ \| NoriPDF$/, '')}
       </h1>
       <p className="mt-4 text-lg leading-relaxed text-slate-700">{compare.verdict}</p>
 
@@ -62,7 +62,7 @@ export function ComparePage({ compare }: ComparePageProps) {
                 <span className="sr-only">기능</span>
               </th>
               <th className="bg-brand-50 px-4 py-3 font-bold text-brand-700" scope="col">
-                CPdf
+                NoriPDF
               </th>
               <th className="px-4 py-3 font-semibold text-slate-700" scope="col">
                 {compare.competitor}
@@ -75,7 +75,7 @@ export function ComparePage({ compare }: ComparePageProps) {
                 <th className="px-4 py-3 font-medium text-slate-600" scope="row">
                   {row.feature}
                 </th>
-                <td className="bg-brand-50/60 px-4 py-3 text-slate-800">{row.coolpdf}</td>
+                <td className="bg-brand-50/60 px-4 py-3 text-slate-800">{row.noriPdf}</td>
                 <td className="px-4 py-3 text-slate-600">{row.them}</td>
               </tr>
             ))}
@@ -125,7 +125,7 @@ export function ComparePage({ compare }: ComparePageProps) {
           href="/"
           className="mt-4 inline-flex items-center gap-2 rounded-lg bg-brand-600 px-6 py-3 text-base font-semibold text-white shadow-sm transition-colors hover:bg-brand-700"
         >
-          CPdf 도구 열기 <ArrowRight className="h-5 w-5" aria-hidden />
+          NoriPDF 도구 열기 <ArrowRight className="h-5 w-5" aria-hidden />
         </Link>
       </div>
 

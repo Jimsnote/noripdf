@@ -1,13 +1,13 @@
 import type { Compare } from './types';
-import { coolpdfVsIlovepdf } from './coolpdf-vs-ilovepdf';
-import { coolpdfVsSejda } from './coolpdf-vs-sejda';
-import { coolpdfVsSmallpdf } from './coolpdf-vs-smallpdf';
+import { noriPdfVsIlovepdf } from './noripdf-vs-ilovepdf';
+import { noriPdfVsSejda } from './noripdf-vs-sejda';
+import { noriPdfVsSmallpdf } from './noripdf-vs-smallpdf';
 
 /**
  * Central registry for /compare/ pages (Korean-only). Adding a page here is
  * enough to publish it: the compare routes and sitemap derive from this list.
  */
-export const compares: Compare[] = [coolpdfVsIlovepdf, coolpdfVsSmallpdf, coolpdfVsSejda];
+export const compares: Compare[] = [noriPdfVsIlovepdf, noriPdfVsSmallpdf, noriPdfVsSejda];
 
 /** Looks up a comparison page by its URL slug. */
 export function getCompare(slug: string): Compare | undefined {

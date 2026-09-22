@@ -64,7 +64,7 @@ async function makePdf(name, pageCount, label) {
     const [r, g, b] = colors[i % colors.length];
     page.drawRectangle({ x: 0, y: 0, width: 595, height: 842, color: rgb(r, g, b) });
     page.drawText(`${label} — Page ${i + 1}`, { x: 60, y: 700, size: 28, font, color: rgb(0.2, 0.25, 0.5) });
-    page.drawText('CPdf guide sample document', { x: 60, y: 660, size: 14, font, color: rgb(0.4, 0.45, 0.6) });
+    page.drawText('NoriPDF guide sample document', { x: 60, y: 660, size: 14, font, color: rgb(0.4, 0.45, 0.6) });
   }
   await writeFile(join(TMP, name), await doc.save());
   return join(TMP, name);

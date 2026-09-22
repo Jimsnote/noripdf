@@ -8,7 +8,7 @@ const SITE_TAGLINE = '개인정보를 지켜주는 무료 PDF 도구';
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? 'https://getcoolpdf.com',
+    process.env.NEXT_PUBLIC_SITE_URL ?? 'https://noripdf.com',
   ),
   title: {
     default: `${SITE_TAGLINE} | ${SITE_NAME}`,

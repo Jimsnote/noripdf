@@ -38,7 +38,7 @@ export interface Guide {
   slug: string;
   /** Slug of the tool this guide belongs to (lib/tools.ts), if any. */
   toolSlug: string | null;
-  /** H1 of the page; the route appends ' | CPdf' for the meta title. */
+  /** H1 of the page; the route appends ' | NoriPDF' for the meta title. */
   title: string;
   /** Meta description, <= 160 chars. */
   description: string;

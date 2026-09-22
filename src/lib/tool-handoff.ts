@@ -5,7 +5,7 @@
  * 读取后即删除（一次性消费），不会在用户设备上累积数据。
  */
 
-const DB_NAME = 'coolpdf-handoff';
+const DB_NAME = 'noripdf-handoff';
 const STORE = 'files';
 const RECORD_KEY = 'latest';
 

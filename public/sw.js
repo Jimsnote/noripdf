@@ -1,5 +1,5 @@
 /**
- * CPdf Service Worker — 离线可用的核心。
+ * NoriPDF Service Worker — 离线可用的核心。
  *
  * 缓存策略：
  * - /_next/static/**（内容哈希、不可变）：cache-first
@@ -14,9 +14,9 @@
  */
 
 const VERSION = 'v1';
-const STATIC_CACHE = `coolpdf-static-${VERSION}`;
-const PAGES_CACHE = `coolpdf-pages-${VERSION}`;
-const RUNTIME_CACHE = `coolpdf-runtime-${VERSION}`;
+const STATIC_CACHE = `noripdf-static-${VERSION}`;
+const PAGES_CACHE = `noripdf-pages-${VERSION}`;
+const RUNTIME_CACHE = `noripdf-runtime-${VERSION}`;
 const ALL_CACHES = [STATIC_CACHE, PAGES_CACHE, RUNTIME_CACHE];
 
 self.addEventListener('install', () => {
@@ -30,7 +30,7 @@ self.addEventListener('activate', (event) => {
       .then((keys) =>
         Promise.all(
           keys
-            .filter((key) => key.startsWith('coolpdf-') && !ALL_CACHES.includes(key))
+            .filter((key) => (key.startsWith('noripdf-') || key.startsWith('coolpdf-')) && !ALL_CACHES.includes(key))
             .map((key) => caches.delete(key)),
         ),
       )

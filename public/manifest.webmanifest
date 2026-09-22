@@ -1,6 +1,6 @@
 {
-  "name": "CPdf — 개인정보를 지켜주는 무료 PDF 도구",
-  "short_name": "CPdf",
+  "name": "NoriPDF — 개인정보를 지켜주는 무료 PDF 도구",
+  "short_name": "NoriPDF",
   "description": "브라우저에서 완전히 실행되는 무료 PDF 도구. 업로드 없음, 가입 없음, 영구 무료.",
   "start_url": "/",
   "scope": "/",

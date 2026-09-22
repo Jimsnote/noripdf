@@ -27,10 +27,10 @@ export function Header({ locale, dict }: HeaderProps) {
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link href={homeHref} className="flex items-center gap-2" aria-label="CPdf">
+        <Link href={homeHref} className="flex items-center gap-2" aria-label="NoriPDF">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.svg" alt="CPdf" className="h-8 w-8" />
-          <span className="text-xl font-bold text-brand-700">CPdf</span>
+          <img src="/logo.svg" alt="NoriPDF" className="h-8 w-8" />
+          <span className="text-xl font-bold text-brand-700">NoriPDF</span>
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex" aria-label="Main">

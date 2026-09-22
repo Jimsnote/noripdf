@@ -17,7 +17,7 @@ import { formatBytes } from './DownloadCard';
  */
 
 const ANALYTICS_HOSTS = ['clarity.ms', 'cloudflareinsights.com'];
-const PATCHED = Symbol.for('coolpdf.uploadMeter.patched');
+const PATCHED = Symbol.for('noripdf.uploadMeter.patched');
 
 let totalBytes = 0;
 const listeners = new Set<(bytes: number) => void>();
@@ -84,14 +84,14 @@ function patchOnce() {
     username?: string | null,
     password?: string | null,
   ) {
-    (this as unknown as { __coolpdfUrl?: string }).__coolpdfUrl = String(url);
+    (this as unknown as { __noripdfUrl?: string }).__noripdfUrl = String(url);
     return originalOpen.call(this, method, url, async, username, password);
   };
 
   const originalSend = XMLHttpRequest.prototype.send;
   XMLHttpRequest.prototype.send = function patchedSend(body?: Document | XMLHttpRequestBodyInit | null) {
     try {
-      report((this as unknown as { __coolpdfUrl?: string }).__coolpdfUrl ?? '', body ?? null);
+      report((this as unknown as { __noripdfUrl?: string }).__noripdfUrl ?? '', body ?? null);
     } catch {
       // 同上
     }

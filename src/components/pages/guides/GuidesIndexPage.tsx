@@ -17,7 +17,7 @@ export function GuidesIndexPage() {
         PDF 가이드 및 튜토리얼
       </h1>
       <p className="mt-4 max-w-2xl text-lg leading-relaxed text-slate-600">
-        모든 CPdf 도구를 위한 단계별 튜토리얼 — 무료이며 브라우저에서 바로 동작하고, 사생활 보호를
+        모든 NoriPDF 도구를 위한 단계별 튜토리얼 — 무료이며 브라우저에서 바로 동작하고, 사생활 보호를
         전제로 설계되었습니다.
       </p>
 

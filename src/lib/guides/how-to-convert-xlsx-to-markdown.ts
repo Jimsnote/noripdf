@@ -11,7 +11,7 @@ export const howToConvertXlsxToMarkdown: Guide = {
   description:
     '단계별 안내: .xlsx/.xls 워크북을 Markdown 표로 변환하기 — 시트당 하나의 섹션 — 브라우저에서 로컬로 처리합니다. 무료, 업로드 없음, 가입 불필요.',
   intro:
-    'Excel 워크북을 Markdown으로 변환하는 가장 빠른 방법은 브라우저에서 로컬로 처리하는 것입니다: 무료인 [CPdf XLSX를 Markdown으로 도구](/xlsx-to-markdown/)를 열고, .xlsx 또는 .xls 파일을 놓은 뒤, "Markdown으로 변환" 버튼을 클릭하고 결과를 download.md로 다운로드하세요. 내용이 있는 모든 시트는 GitHub Flavored Markdown 표가 포함된 "## Sheet: <name>" 섹션이 되며, 모든 처리는 사용자의 기기에서 이루어집니다 — 워크북은 업로드되지 않고 계정도 필요 없습니다.',
+    'Excel 워크북을 Markdown으로 변환하는 가장 빠른 방법은 브라우저에서 로컬로 처리하는 것입니다: 무료인 [NoriPDF XLSX를 Markdown으로 도구](/xlsx-to-markdown/)를 열고, .xlsx 또는 .xls 파일을 놓은 뒤, "Markdown으로 변환" 버튼을 클릭하고 결과를 download.md로 다운로드하세요. 내용이 있는 모든 시트는 GitHub Flavored Markdown 표가 포함된 "## Sheet: <name>" 섹션이 되며, 모든 처리는 사용자의 기기에서 이루어집니다 — 워크북은 업로드되지 않고 계정도 필요 없습니다.',
   quickSteps: [
     'XLSX를 Markdown으로 도구를 열고 .xlsx 또는 .xls 워크북을 놓습니다.',
     '"Markdown으로 변환"을 클릭하면 내용이 있는 모든 시트가 브라우저에서 로컬로 변환됩니다.',
@@ -20,7 +20,7 @@ export const howToConvertXlsxToMarkdown: Guide = {
   ],
   sections: [
     {
-      heading: '단계별 안내: CPdf로 변환하기',
+      heading: '단계별 안내: NoriPDF로 변환하기',
       paragraphs: [
         '[XLSX를 Markdown으로 도구](/xlsx-to-markdown/)를 엽니다 — 설치할 것도, 만들 계정도 없습니다. 워크북을 업로드 영역에 드래그하거나, 클릭해서 파일 선택 대화상자에서 골라도 됩니다. 최신 .xlsx와 구형 .xls 파일 모두 지원됩니다.',
         '"Markdown으로 변환"을 클릭하세요. 워크북에 있는 내용이 있는 모든 시트가 읽혀서 브라우저 탭 안에서 Markdown 표로 다시 만들어집니다.',
@@ -44,7 +44,7 @@ export const howToConvertXlsxToMarkdown: Guide = {
       heading: '표를 Markdown으로 만드는 이유 — 그리고 로컬로 처리하는 이유',
       paragraphs: [
         'Markdown 표는 어디에서나 잘 쓸 수 있습니다: 분기별 수치를 보고서에 붙여 넣거나, 가격표를 위키에 넣거나, 예산 전체를 스크린샷보다 훨씬 잘, 다시 입력하는 것보다 훨씬 적은 비용으로 ChatGPT나 Claude가 안정적으로 파싱할 수 있는 형태로 전달할 수 있습니다. 차이 비교에도 친화적이라서, 스프레드시트 데이터가 마침내 버전 관리 안에서 살 수 있습니다.',
-        '스프레드시트에는 가장 중요한 숫자가 들어 있는 경우가 많습니다: 예산, 급여, 고객 목록, 재무 모델. 업로드 방식 변환기는 이 모든 것을 먼저 다른 사람의 인프라로 보냅니다. CPdf는 워크북을 읽고 Markdown을 만드는 전 과정을 사용자의 기기에서 수행합니다 — 전송되는 것은 아무것도 없고, 탭을 닫으면 모든 흔적이 사라집니다.',
+        '스프레드시트에는 가장 중요한 숫자가 들어 있는 경우가 많습니다: 예산, 급여, 고객 목록, 재무 모델. 업로드 방식 변환기는 이 모든 것을 먼저 다른 사람의 인프라로 보냅니다. NoriPDF는 워크북을 읽고 Markdown을 만드는 전 과정을 사용자의 기기에서 수행합니다 — 전송되는 것은 아무것도 없고, 탭을 닫으면 모든 흔적이 사라집니다.',
       ],
     },
     {
@@ -59,7 +59,7 @@ export const howToConvertXlsxToMarkdown: Guide = {
     {
       heading: 'Excel에서 복사하여 붙여 넣기',
       paragraphs: [
-        '범위를 선택해 편집기에 붙여 넣으면 탭으로 구분된 텍스트가 됩니다: 값은 들어오지만 | --- | 표 마크업이 없으므로 표 서식은 여전히 손으로 만들어야 합니다. 셀 몇 개라면 이렇게 합니다. 그런데 워크북 전체라면 CPdf가 표를 대신 작성합니다.',
+        '범위를 선택해 편집기에 붙여 넣으면 탭으로 구분된 텍스트가 됩니다: 값은 들어오지만 | --- | 표 마크업이 없으므로 표 서식은 여전히 손으로 만들어야 합니다. 셀 몇 개라면 이렇게 합니다. 그런데 워크북 전체라면 NoriPDF가 표를 대신 작성합니다.',
       ],
     },
     {
@@ -97,8 +97,8 @@ export const howToConvertXlsxToMarkdown: Guide = {
   ],
   faqs: [
     {
-      q: 'CPdf에서 Excel을 Markdown으로 변환하는 것은 무료인가요?',
-      a: '그렇습니다 — 모든 CPdf 도구는 워터마크, 일일 제한, 프리미엄 요금제 없이 영원히 무료입니다. 변환은 사용자의 기기에서 실행되므로 전달할 서버 비용도 없습니다.',
+      q: 'NoriPDF에서 Excel을 Markdown으로 변환하는 것은 무료인가요?',
+      a: '그렇습니다 — 모든 NoriPDF 도구는 워터마크, 일일 제한, 프리미엄 요금제 없이 영원히 무료입니다. 변환은 사용자의 기기에서 실행되므로 전달할 서버 비용도 없습니다.',
     },
     {
       q: '시트는 어떻게 처리되나요?',

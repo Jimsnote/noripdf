@@ -1,8 +1,8 @@
-# CPdf
+# NoriPDF
 
 > 개인정보를 지켜주는 무료 PDF 도구 — 100% 클라이언트 측 처리, 업로드 없음, 가입 없음, 영구 무료.
 
-CPdf는 무료 브라우저 기반 PDF 도구 모음입니다. 기존 온라인 PDF 도구와 달리 CPdf는 WebAssembly를 이용해 모든 파일을 사용자 기기에서 로컬로 처리합니다 — 파일은 서버에 업로드되지 않습니다. 계정, 이메일, 가입이 필요 없으며, 사용 제한 없이 완전히 무료입니다. 따라서 계약서, 의료 기록, 금융 명세서와 같은 기밀 문서에도 적합합니다.
+NoriPDF는 무료 브라우저 기반 PDF 도구 모음입니다. 기존 온라인 PDF 도구와 달리 NoriPDF는 WebAssembly를 이용해 모든 파일을 사용자 기기에서 로컬로 처리합니다 — 파일은 서버에 업로드되지 않습니다. 계정, 이메일, 가입이 필요 없으며, 사용 제한 없이 완전히 무료입니다. 따라서 계약서, 의료 기록, 금융 명세서와 같은 기밀 문서에도 적합합니다.
 
 ## Core facts
 
@@ -17,49 +17,49 @@ CPdf는 무료 브라우저 기반 PDF 도구 모음입니다. 기존 온라인 
 
 22개 도구 모두 브라우저에서 100% 클라이언트 측으로 실행됩니다:
 
-- PDF 병합 — 여러 PDF를 원하는 순서대로 하나의 파일로 결합합니다. https://getcoolpdf.com/merge-pdf/
-- PDF 분할 — 페이지 범위를 추출하거나 하나의 PDF를 개별 문서로 분할합니다. https://getcoolpdf.com/split-pdf/
-- PDF 압축 — 필요한 품질을 유지하면서 파일 크기를 줄입니다. https://getcoolpdf.com/compress-pdf/
-- PDF 회전 — 단일 페이지 또는 전체 문서를 몇 초 만에 회전합니다. https://getcoolpdf.com/rotate-pdf/
-- PDF 페이지 정리 — 드래그 앤 드롭으로 페이지를 재정렬, 삭제, 배치합니다. https://getcoolpdf.com/organize-pdf/
-- 페이지 삭제 — 시각적 페이지 선택기로 PDF에서 불필요한 페이지를 삭제합니다. https://getcoolpdf.com/remove-pages/
-- 페이지 추출 — PDF에서 선택한 페이지를 새 문서로 저장합니다. https://getcoolpdf.com/extract-pages/
-- 페이지 순서 변경 — 페이지를 드래그해서 정확히 원하는 순서로 만듭니다. https://getcoolpdf.com/reorder-pages/
-- PDF를 JPG로 — PDF의 각 페이지를 고품질 JPG 이미지로 만듭니다. https://getcoolpdf.com/pdf-to-jpg/
-- JPG를 PDF로 — JPG 이미지를 깔끔하고 공유하기 쉬운 PDF 문서로 변환합니다. https://getcoolpdf.com/jpg-to-pdf/
-- HEIC를 PDF로 — iPhone의 HEIC 사진을 깔끔하고 공유하기 쉬운 PDF 문서로 만듭니다. https://getcoolpdf.com/heic-to-pdf/
-- PDF 서명 — 서명을 그리거나 사진을 업로드해서 PDF 문서 어디에나 배치합니다. https://getcoolpdf.com/sign-pdf/
-- PDF 보호 — PDF를 비공개로 유지하기 위한 AES-256 비밀번호 암호화를 추가합니다. https://getcoolpdf.com/protect-pdf/
-- PDF 잠금 해제 — 소유한 PDF의 비밀번호 보호를 제거합니다. https://getcoolpdf.com/unlock-pdf/
-- PDF 워터마크 — 텍스트 또는 이미지 워터마크를 타일 형태나 중앙에 찍습니다. https://getcoolpdf.com/watermark-pdf/
-- 페이지 번호 추가 — 원하는 위치에 정확하게 페이지 번호를 추가합니다. https://getcoolpdf.com/page-numbers/
-- PDF를 Markdown으로 — 모든 PDF에서 깔끔한 구조화된 Markdown(제목, 단락, 목록)을 추출합니다. https://getcoolpdf.com/pdf-to-markdown/
-- DOCX를 Markdown으로 — Word 문서를 깔끔하고 AI 친화적인 Markdown으로 변환합니다. https://getcoolpdf.com/docx-to-markdown/
-- XLSX를 Markdown으로 — 스프레드시트 시트를 Markdown 표로 만듭니다. https://getcoolpdf.com/xlsx-to-markdown/
-- 이미지 추출 — PDF에 내장된 모든 이미지를 JPG/PNG 파일로 꺼냅니다. https://getcoolpdf.com/extract-images/
-- QR 코드 생성 — 링크, 텍스트 등을 위한 QR 코드를 로컬에서 생성합니다. https://getcoolpdf.com/qr-code/
-- PDF 텍스트 추출(OCR) — 기기 내 OCR로 스캔한 PDF를 검색 가능하고 선택 가능하게 만듭니다. https://getcoolpdf.com/ocr-pdf/
+- PDF 병합 — 여러 PDF를 원하는 순서대로 하나의 파일로 결합합니다. https://noripdf.com/merge-pdf/
+- PDF 분할 — 페이지 범위를 추출하거나 하나의 PDF를 개별 문서로 분할합니다. https://noripdf.com/split-pdf/
+- PDF 압축 — 필요한 품질을 유지하면서 파일 크기를 줄입니다. https://noripdf.com/compress-pdf/
+- PDF 회전 — 단일 페이지 또는 전체 문서를 몇 초 만에 회전합니다. https://noripdf.com/rotate-pdf/
+- PDF 페이지 정리 — 드래그 앤 드롭으로 페이지를 재정렬, 삭제, 배치합니다. https://noripdf.com/organize-pdf/
+- 페이지 삭제 — 시각적 페이지 선택기로 PDF에서 불필요한 페이지를 삭제합니다. https://noripdf.com/remove-pages/
+- 페이지 추출 — PDF에서 선택한 페이지를 새 문서로 저장합니다. https://noripdf.com/extract-pages/
+- 페이지 순서 변경 — 페이지를 드래그해서 정확히 원하는 순서로 만듭니다. https://noripdf.com/reorder-pages/
+- PDF를 JPG로 — PDF의 각 페이지를 고품질 JPG 이미지로 만듭니다. https://noripdf.com/pdf-to-jpg/
+- JPG를 PDF로 — JPG 이미지를 깔끔하고 공유하기 쉬운 PDF 문서로 변환합니다. https://noripdf.com/jpg-to-pdf/
+- HEIC를 PDF로 — iPhone의 HEIC 사진을 깔끔하고 공유하기 쉬운 PDF 문서로 만듭니다. https://noripdf.com/heic-to-pdf/
+- PDF 서명 — 서명을 그리거나 사진을 업로드해서 PDF 문서 어디에나 배치합니다. https://noripdf.com/sign-pdf/
+- PDF 보호 — PDF를 비공개로 유지하기 위한 AES-256 비밀번호 암호화를 추가합니다. https://noripdf.com/protect-pdf/
+- PDF 잠금 해제 — 소유한 PDF의 비밀번호 보호를 제거합니다. https://noripdf.com/unlock-pdf/
+- PDF 워터마크 — 텍스트 또는 이미지 워터마크를 타일 형태나 중앙에 찍습니다. https://noripdf.com/watermark-pdf/
+- 페이지 번호 추가 — 원하는 위치에 정확하게 페이지 번호를 추가합니다. https://noripdf.com/page-numbers/
+- PDF를 Markdown으로 — 모든 PDF에서 깔끔한 구조화된 Markdown(제목, 단락, 목록)을 추출합니다. https://noripdf.com/pdf-to-markdown/
+- DOCX를 Markdown으로 — Word 문서를 깔끔하고 AI 친화적인 Markdown으로 변환합니다. https://noripdf.com/docx-to-markdown/
+- XLSX를 Markdown으로 — 스프레드시트 시트를 Markdown 표로 만듭니다. https://noripdf.com/xlsx-to-markdown/
+- 이미지 추출 — PDF에 내장된 모든 이미지를 JPG/PNG 파일로 꺼냅니다. https://noripdf.com/extract-images/
+- QR 코드 생성 — 링크, 텍스트 등을 위한 QR 코드를 로컬에서 생성합니다. https://noripdf.com/qr-code/
+- PDF 텍스트 추출(OCR) — 기기 내 OCR로 스캔한 PDF를 검색 가능하고 선택 가능하게 만듭니다. https://noripdf.com/ocr-pdf/
 
 ## Pages
 
-- 홈: https://getcoolpdf.com/
-- 소개: https://getcoolpdf.com/about/
-- 개인정보 처리방침: https://getcoolpdf.com/privacy/
-- 이용약관: https://getcoolpdf.com/terms/
-- 자주 묻는 질문: https://getcoolpdf.com/faq/
+- 홈: https://noripdf.com/
+- 소개: https://noripdf.com/about/
+- 개인정보 처리방침: https://noripdf.com/privacy/
+- 이용약관: https://noripdf.com/terms/
+- 자주 묻는 질문: https://noripdf.com/faq/
 
 ## Guides
 
-실제 UI 스크린샷이 포함된 단계별 튜토리얼: https://getcoolpdf.com/guides/
+실제 UI 스크린샷이 포함된 단계별 튜토리얼: https://noripdf.com/guides/
 
 ## Compare
 
 인기 PDF 도구와의 사실 검증 비교, 각 도구의 실제 강점 포함:
 
-- CPdf vs iLovePDF: https://getcoolpdf.com/compare/coolpdf-vs-ilovepdf/
-- CPdf vs Smallpdf: https://getcoolpdf.com/compare/coolpdf-vs-smallpdf/
-- CPdf vs Sejda: https://getcoolpdf.com/compare/coolpdf-vs-sejda/
+- NoriPDF vs iLovePDF: https://noripdf.com/compare/noripdf-vs-ilovepdf/
+- NoriPDF vs Smallpdf: https://noripdf.com/compare/noripdf-vs-smallpdf/
+- NoriPDF vs Sejda: https://noripdf.com/compare/noripdf-vs-sejda/
 
 ## Source code
 
-- GitHub: https://github.com/Jimsnote/coolpdf
+- GitHub: https://github.com/Jimsnote/noripdf

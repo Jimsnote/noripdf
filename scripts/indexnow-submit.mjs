@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * IndexNow URL 提交脚本（getcoolpdf.com）
+ * IndexNow URL 提交脚本（noripdf.com）
  *
  * 用法：
  *   node scripts/indexnow-submit.mjs                  # 提交 out/sitemap.xml 中的全部 URL（需先 npm run build）
@@ -8,14 +8,14 @@
  *
  * 协议文档：https://www.indexnow.org/documentation
  * key 文件：public/58395c2f24c9698dc16736b1d5933a51.txt
- *   部署后位于 https://getcoolpdf.com/58395c2f24c9698dc16736b1d5933a51.txt
+ *   部署后位于 https://noripdf.com/58395c2f24c9698dc16736b1d5933a51.txt
  *   key 不是机密——搜索引擎靠公网抓取该文件验证站点所有权。
  */
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const HOST = 'getcoolpdf.com';
+const HOST = 'noripdf.com';
 const KEY = '58395c2f24c9698dc16736b1d5933a51';
 const ENDPOINT = 'https://api.indexnow.org/indexnow';
 

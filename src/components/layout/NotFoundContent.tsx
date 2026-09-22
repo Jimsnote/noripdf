@@ -13,7 +13,7 @@ export function NotFoundContent() {
         href="/"
         className="mt-8 rounded-lg bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-700"
       >
-        CPdf 홈으로 돌아가기
+        NoriPDF 홈으로 돌아가기
       </Link>
     </div>
   );

@@ -9,10 +9,10 @@ export function CompareIndexPage() {
   return (
     <div className="mx-auto max-w-4xl">
       <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-        CPdf 비교
+        NoriPDF 비교
       </h1>
       <p className="mt-3 leading-relaxed text-slate-600">
-        CPdf와 인기 PDF 도구들 사이의 정직하고 사실 확인된 비교 — 상대편이 실제로 더
+        NoriPDF와 인기 PDF 도구들 사이의 정직하고 사실 확인된 비교 — 상대편이 실제로 더
         나은 부분까지 포함합니다.
       </p>
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -23,7 +23,7 @@ export function CompareIndexPage() {
             className="group rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
           >
             <h2 className="font-bold text-slate-900 group-hover:text-brand-700">
-              CPdf vs {compare.competitor}
+              NoriPDF vs {compare.competitor}
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-slate-600">{compare.description}</p>
             <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-brand-700">
