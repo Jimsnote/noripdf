@@ -2,9 +2,9 @@ import { parseHwpx, HwpxError } from './hwpx-parse';
 import { renderHwpxToPdf, type HwpxFonts, type RenderProgress } from './hwpx-render';
 
 /**
- * HWPX → PDF orchestration. The Korean font (Noto Sans KR, OFL-1.1) is
- * fetched lazily on first use with progress, then cached for the session.
- * Everything runs locally — the file never leaves the device.
+ * HWPX → PDF orchestration. Korean fonts (Nanum Gothic + Nanum Myeongjo,
+ * OFL-1.1) are fetched lazily on first use with progress, then cached for
+ * the session. Everything runs locally — the file never leaves the device.
  */
 
 export type HwpxStage = 'engine' | 'parse' | 'render';
@@ -23,33 +23,17 @@ export interface HwpxToPdfResult {
   pageCount: number;
 }
 
-const FONT_REGULAR_URL = '/fonts/NanumGothic-Regular.ttf';
-const FONT_BOLD_URL = '/fonts/NanumGothic-Bold.ttf';
+const FONT_SOURCES = [
+  ['gothicRegular', '/fonts/NanumGothic-Regular.ttf', 2_054_744],
+  ['gothicBold', '/fonts/NanumGothic-Bold.ttf', 2_073_868],
+  ['myeongjoRegular', '/fonts/NanumMyeongjo-Regular.ttf', 3_058_408],
+  ['myeongjoBold', '/fonts/NanumMyeongjo-Bold.ttf', 3_074_720],
+] as const;
+
+type FontKey = (typeof FONT_SOURCES)[number][0];
+const FONT_TOTAL = FONT_SOURCES.reduce((s, f) => s + f[2], 0);
 
 let fontCache: Promise<HwpxFonts> | null = null;
-
-async function fetchWithProgress(url: string, onRatio: (r: number) => void): Promise<Uint8Array> {
-  const res = await fetch(url);
-  if (!res.ok || !res.body) throw new Error(`font fetch failed: ${url}`);
-  const total = Number(res.headers.get('content-length') ?? 0);
-  const reader = res.body.getReader();
-  const chunks: Uint8Array[] = [];
-  let received = 0;
-  for (;;) {
-    const { done, value } = await reader.read();
-    if (done) break;
-    chunks.push(value);
-    received += value.length;
-    if (total > 0) onRatio(Math.min(1, received / total));
-  }
-  const out = new Uint8Array(received);
-  let offset = 0;
-  for (const c of chunks) {
-    out.set(c, offset);
-    offset += c.length;
-  }
-  return out;
-}
 
 /** Preload/cache the Korean fonts. In tests, inject bytes via `injectFonts`. */
 export function loadHwpxFonts(
@@ -57,18 +41,39 @@ export function loadHwpxFonts(
 ): Promise<HwpxFonts> {
   if (!fontCache) {
     fontCache = (async () => {
-      const REGULAR_TOTAL = 2_054_744;
-      const BOLD_TOTAL = 2_073_868;
-      const regular = await fetchWithProgress(FONT_REGULAR_URL, (r) =>
-        onProgress?.(Math.round(r * REGULAR_TOTAL), REGULAR_TOTAL + BOLD_TOTAL),
+      const progress: Record<FontKey, number> = {
+        gothicRegular: 0,
+        gothicBold: 0,
+        myeongjoRegular: 0,
+        myeongjoBold: 0,
+      };
+      const loaded = {} as Record<FontKey, Uint8Array>;
+      await Promise.all(
+        FONT_SOURCES.map(async ([key, url]) => {
+          const res = await fetch(url);
+          if (!res.ok || !res.body) throw new Error(`font fetch failed: ${url}`);
+          const reader = res.body.getReader();
+          const chunks: Uint8Array[] = [];
+          for (;;) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            chunks.push(value);
+            progress[key] += value.length;
+            onProgress?.(
+              FONT_SOURCES.reduce((s, f) => s + progress[f[0]], 0),
+              FONT_TOTAL,
+            );
+          }
+          const out = new Uint8Array(progress[key]);
+          let offset = 0;
+          for (const c of chunks) {
+            out.set(c, offset);
+            offset += c.length;
+          }
+          loaded[key] = out;
+        }),
       );
-      const bold = await fetchWithProgress(FONT_BOLD_URL, (r) =>
-        onProgress?.(
-          REGULAR_TOTAL + Math.round(r * BOLD_TOTAL),
-          REGULAR_TOTAL + BOLD_TOTAL,
-        ),
-      );
-      return { regular, bold };
+      return loaded as unknown as HwpxFonts;
     })();
   }
   return fontCache;
