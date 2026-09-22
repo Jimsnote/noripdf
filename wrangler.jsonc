@@ -8,9 +8,6 @@
   "assets": {
     "directory": "./out",
     // Site is pre-rendered HTML (not an SPA): unknown paths get the 404 page.
-    "not_found_handling": "404-page",
-    // Serve .html at its literal path with 200 (no extension-stripping 307s):
-    // search-engine verification files (Naver/IndexNow) must answer 200 directly.
-    "html_handling": "none"
+    "not_found_handling": "404-page"
   }
 }
